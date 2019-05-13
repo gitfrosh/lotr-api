@@ -1,0 +1,10 @@
+{
+  "name": "lotr-api",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "hapi": "^18.1.0",
+    "mongoose": "^5.5.7",
+    "rest-hapi": "^1.6.0"
+  }
+}
