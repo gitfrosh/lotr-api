@@ -6,7 +6,7 @@ module.exports = function(mongoose) {
       Name: {
         type: Types.String,
         required: true,
-        unique: true
+        // unique: true
       },
       RuntimeInMinutes: {
         type: Types.Number,

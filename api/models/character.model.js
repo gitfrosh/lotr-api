@@ -5,7 +5,7 @@ module.exports = function(mongoose) {
     Name: {
       type: Types.String,
       required: true,
-      unique: true
+      unique: false
     },
     Url: {
       type: Types.String,
@@ -14,12 +14,45 @@ module.exports = function(mongoose) {
     Race: {
       type: Types.String,
       required: true
+    },
+    birth: {
+      type: Types.String,
+      required: false
+    },
+    death: {
+      type: Types.String,
+      required: false
+    },
+    hair: {
+      type: Types.String,
+      required: false
+    },
+    height: {
+      type: Types.String,
+      required: false
+    },
+    realm: {
+      type: Types.String,
+      required: false
+    },
+    spouse: {
+      type: Types.String,
+      required: false
     }
   });
 
   Schema.statics = {
     collectionName: modelName,
-    routeOptions: {}
+    routeOptions: {
+      associations: {
+        quotes: {
+          type: "ONE_MANY",
+          alias: "quote",
+          foreignField: "character",
+          model: "quote"
+        }
+      }
+    }
   };
 
   return Schema;
