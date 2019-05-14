@@ -12,21 +12,22 @@ module.exports = function(mongoose) {
     id: {
       type: Types.Number,
       required: true,
-      unique: true
-    },
-    char: {
-      type: Types.String,
-      required: false
+      // unique: true
     },
     dialog: {
       type: Types.String,
       required: true
     },
     movie: {
-        type: Types.ObjectId,
-        ref: "movie",
-        required: true
-      }
+      type: Types.ObjectId,
+      ref: "movie",
+      required: true
+    },
+    character: {
+      type: Types.ObjectId || Types.String,
+      ref: "character",
+      required: false
+    }
   });
 
   Schema.statics = {
@@ -36,6 +37,10 @@ module.exports = function(mongoose) {
         movie: {
           type: "MANY_ONE",
           model: "movie"
+        },
+        character: {
+          type: "MANY_ONE",
+          model: "character"
         }
       }
     }
