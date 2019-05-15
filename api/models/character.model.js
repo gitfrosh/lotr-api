@@ -19,6 +19,10 @@ module.exports = function(mongoose) {
       type: Types.String,
       required: false
     },
+    gender:  {
+      type: Types.String,
+      required: false
+    },
     death: {
       type: Types.String,
       required: false
