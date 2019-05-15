@@ -24,7 +24,7 @@ module.exports = function(mongoose) {
       required: true
     },
     character: {
-      type: Types.ObjectId || Types.String,
+      type: Types.ObjectId,
       ref: "character",
       required: false
     }
