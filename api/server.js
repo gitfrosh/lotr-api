@@ -4,6 +4,7 @@ const Path = require("path");
 let mongoose = require("mongoose");
 let RestHapi = require("rest-hapi");
 const AuthBearer = require("hapi-auth-bearer-token");
+let AuthJwt = require("hapi-auth-jwt2");
 
 async function api() {
   try {
@@ -24,26 +25,21 @@ async function api() {
     });
 
     let config = {
-      appTitle: "rest-hapi-demo",
+      appTitle: "lotr-api",
       enableTextSearch: true,
       logRoutes: true,
       docExpansion: "list",
       swaggerHost: "localhost:8080",
       mongo: {
         URI: "mongodb://localhost:27017/lotr"
-      },
-      // authStrategy: Auth.strategy
+      }
+      // authStrategy: AuthJwt.strategy
     };
 
     await server.register(Inert);
     await server.register(AuthBearer);
-    await server.register({
-      plugin: RestHapi,
-      options: {
-        mongoose: mongoose,
-        config: config
-      }
-    });
+    await server.register(AuthJwt);
+    // await server.register(AuthJwt);
 
     server.auth.strategy("simple", "bearer-access-token", {
       allowQueryToken: true, // optional, false by default
@@ -59,7 +55,48 @@ async function api() {
       }
     });
 
+    const validate = (decodedToken, request, h) => {
+      let { user } = decodedToken;
+      if (!user) {
+        return { isValid: false };
+      }
+      /* check for additional auth requirements if necessary */
+      return {
+        isValid: true,
+        credentials: { user }
+      };
+    };
+
+    function createToken(user) {
+      const Jwt = require("jsonwebtoken");
+
+      const { email, _id } = user;
+
+      token = Jwt.sign({ user: { email, _id } }, jwtSecret, {
+        algorithm: "HS256",
+        expiresIn: "1m"
+      });
+
+      return token;
+    }
+
+    server.auth.strategy("jwt", "jwt", {
+      key: "NeverShareYourSecret",
+      validate,
+      verifyOptions: { algorithms: ["HS256"] }
+    });
+
     server.auth.default("simple");
+
+    server.method("createToken", createToken, {});
+
+    await server.register({
+      plugin: RestHapi,
+      options: {
+        mongoose: mongoose,
+        config: config
+      }
+    });
 
     await server.start();
 

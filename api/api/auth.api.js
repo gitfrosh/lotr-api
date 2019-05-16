@@ -37,60 +37,77 @@ module.exports = function(server, mongoose, logger) {
   })();
 
   // Login Endpoint
-//   (function() {
-//     const Log = logger.bind("Login");
-//     const User = mongoose.model("user");
+  (function() {
+    const Log = logger.bind("Login");
+    const User = mongoose.model("user");
 
-//     const Boom = require("boom");
+    const Boom = require("boom");
 
-//     Log.note("Generating Login endpoint");
+    Log.note("Generating Login endpoint");
 
-//     const loginHandler = async function(request, h) {
-//       let token = "";
-//       let response = {};
+    const loginHandler = async function(request, h) {
+      let token = "";
+      let response = {};
 
-//       let user = await User.findByCredentials(
-//         request.payload.email,
-//         request.payload.password,
-//         Log
-//       );
+      let user = await User.findByCredentials(
+        request.payload.email,
+        request.payload.password,
+        Log
+      );
 
-//       if (!user) {
-//         throw Boom.unauthorized("Invalid Email or Password.");
-//       }
+      if (!user) {
+        throw Boom.unauthorized("Invalid Email or Password.");
+      }
 
-//       delete user.password;
+      delete user.password;
 
-//       token = server.methods.createToken(user);
+      token = server.methods.createToken(user);
 
-//       response = {
-//         user,
-//         token
-//       };
+      response = {
+        user,
+        token
+      };
 
-//       return response;
-//     };
+      return response;
+    };
 
-//     // server.route({
-//     //   method: "POST",
-//     //   path: "/login",
-//     //   config: {
-//     //     handler: loginHandler,
-//     //     auth: false,
-//     //     validate: {
-//     //       payload: {
-//     //         email: Joi.string()
-//     //           .email()
-//     //           .lowercase()
-//     //           .required(),
-//     //         password: Joi.string().required()
-//     //       }
-//     //     },
-//     //     tags: ["api", "login"],
-//     //     plugins: {
-//     //       "hapi-swagger": {}
-//     //     }
-//     //   }
-//     // });
-//   })();
+    server.route({
+      method: "POST",
+      path: "/login",
+      config: {
+        handler: loginHandler,
+        auth: false,
+        validate: {
+          payload: {
+            email: Joi.string()
+              .email()
+              .lowercase()
+              .required(),
+            password: Joi.string().required()
+          }
+        },
+        tags: ["api", "login"],
+        plugins: {
+          "hapi-swagger": {}
+        }
+      }
+    });
+
+    server.route({
+      method: "GET",
+      path: "/account",
+      config: {
+        handler: async function(request, h) {
+          return await "Account Page"
+        },
+        auth: {
+            strategy: 'jwt',
+            },
+        tags: ["api", "account"],
+        plugins: {
+          "hapi-swagger": {}
+        }
+      }
+    });
+  })();
 };
