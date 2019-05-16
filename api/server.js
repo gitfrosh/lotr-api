@@ -5,6 +5,12 @@ let mongoose = require("mongoose");
 let RestHapi = require("rest-hapi");
 const AuthBearer = require("hapi-auth-bearer-token");
 let AuthJwt = require("hapi-auth-jwt2");
+const Vision = require("@hapi/vision");
+const HapiReactViews = require("hapi-react-views");
+
+require("babel-register")({
+  presets: ["es2015", "react"]
+});
 
 async function api() {
   try {
@@ -18,9 +24,9 @@ async function api() {
             throw err;
           }
         },
-        files: {
-          relativeTo: Path.join(__dirname, "public")
-        }
+        // files: {
+        //   relativeTo: Path.join(__dirname, "public")
+        // }
       }
     });
 
@@ -39,7 +45,35 @@ async function api() {
     await server.register(Inert);
     await server.register(AuthBearer);
     await server.register(AuthJwt);
-    // await server.register(AuthJwt);
+    await server.register(Vision);
+
+    server.views({
+      engines: {
+        jsx: HapiReactViews
+      },
+      relativeTo: __dirname,
+      path: "views",
+      compileOptions: {
+        renderMethod: 'renderToString',
+        layoutPath: Path.join(__dirname, 'views'),
+        layout: 'home'
+    }
+    });
+
+    server.route({
+      method: "GET",
+      path: "/assets/{path*}",
+      config: {
+        auth: false,
+      },
+      handler: {
+      directory: {
+          path: "./assets",
+          index: false,
+          listing: false
+        },
+      }
+    });
 
     server.auth.strategy("simple", "bearer-access-token", {
       allowQueryToken: true, // optional, false by default
