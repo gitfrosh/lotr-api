@@ -42,7 +42,11 @@ module.exports = function(mongoose) {
           type: "MANY_ONE",
           model: "character"
         }
-      }
+      },
+      readAuth: true,
+      createAuth: true,
+      updateAuth: true,
+      deleteAuth: true
     }
   };
 

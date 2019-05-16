@@ -45,7 +45,11 @@ module.exports = function(mongoose) {
           foreignField: "movie",
           model: "quote"
         }
-      }
+      },
+      readAuth: true,
+      createAuth: true,
+      updateAuth: true,
+      deleteAuth: true
     }
   };
 

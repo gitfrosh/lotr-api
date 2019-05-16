@@ -55,7 +55,7 @@ module.exports = function(mongoose) {
           foreignField: "character",
           model: "quote"
         }
-      }
+      },
     }
   };
 
