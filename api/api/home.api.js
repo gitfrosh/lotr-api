@@ -20,7 +20,7 @@ module.exports = function(server, mongoose, logger) {
           // let data = await response.json();
           const context = { foo: "baz" };
           context.state = `window.state = ${JSON.stringify(context)};`;
-          return h.view("html", context);
+          return h.view("home", context);
         },
         // directory: {
         //   path: Path.join(__dirname, "..", "public"),
