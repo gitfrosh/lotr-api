@@ -1,7 +1,7 @@
 "use strict";
 
 const React = require("react");
-const Layout = require("./app.jsx/index.js");
+const Layout = require("./app.jsx");
 
 class AboutView extends React.Component {
   render() {

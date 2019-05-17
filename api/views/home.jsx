@@ -1,7 +1,7 @@
 "use strict";
 
 const React = require("react");
-const Layout = require("./app.jsx");
+const Layout = require("./layout.jsx");
 const fetch = require("isomorphic-unfetch");
 
 class View extends React.Component {
@@ -10,7 +10,23 @@ class View extends React.Component {
     this.state = { quote: "fdsff" };
   }
 
-  async componentWillMount() {
+  fetchQuote() {
+    alert("Hi " + this.props.foo);
+    console.log("fetch", e);
+    //   let response = await fetch(
+    // `http://localhost:8080/quote/5cd96e05de30eff6ebcce7e9`
+    // );
+    // let data = await response.json();
+    //   this.setState({
+    //     quote: data
+    //   });
+  }
+
+  handleClick () {
+    alert('Hi ' + this.props.foo);
+  }
+
+  componentWillMount() {
     console.log("did mount!", this.props.foo);
     // console.log(window)
     // let response = await fetch(
@@ -24,9 +40,9 @@ class View extends React.Component {
 
   render() {
     return (
-      <Layout title="About Page">
+      <Layout title="Home">
         <section id="banner">
-          <div class="inner">
+          <div className="inner">
             <header>
               <h2>The LOTR API</h2>
             </header>
@@ -38,9 +54,9 @@ class View extends React.Component {
               by <a href="http://html5up.net">HTML5 UP</a>.
             </p>
             <footer>
-              <ul class="buttons stacked">
+              <ul className="buttons stacked">
                 <li>
-                  <a href="#main" class="button fit scrolly">
+                  <a href="#main" className="button fit scrolly">
                     Tell Me More
                   </a>
                 </li>
@@ -49,12 +65,18 @@ class View extends React.Component {
           </div>
         </section>
         <article id="main">
-          <header class="special container">
-            <span class="icon fa-bar-chart-o" />
+          <header className="special container">
+            <span className="icon fa-bar-chart-o" />
             <h2>
               As this is my <strong>twentieth</strong> freebie for HTML5 UP
               <br />I decided to give it a really creative name.
             </h2>
+            <div>
+              <h1>Foo: ({this.props.foo})</h1>
+              <button onClick={() => this.fetchQuote}>Event test</button>
+              <button onClick={this.handleClick.bind(this)}>Event test</button>
+
+            </div>
             <p>
               Turns out <strong>Twenty</strong> was the best I could come up
               with. Anyway, lame name aside,
@@ -70,9 +92,9 @@ class View extends React.Component {
             </p>
           </header>
 
-          <section class="wrapper style2 container special-alt">
-            <div class="row gtr-50">
-              <div class="col-8 col-12-narrower">
+          <section className="wrapper style2 container special-alt">
+            <div className="row gtr-50">
+              <div className="col-8 col-12-narrower">
                 <header>
                   <h2>
                     Behold the <strong>icons</strong> that visualize what you’re
@@ -87,45 +109,45 @@ class View extends React.Component {
                   Aliquam eu elit eget arcu commodo.
                 </p>
                 <footer>
-                  <ul class="buttons">
+                  <ul className="buttons">
                     <li>
-                      <a href="#" class="button">
+                      <a href="#" className="button">
                         Find Out More
                       </a>
                     </li>
                   </ul>
                 </footer>
               </div>
-              <div class="col-4 col-12-narrower imp-narrower">
-                <ul class="featured-icons">
+              <div className="col-4 col-12-narrower imp-narrower">
+                <ul className="featured-icons">
                   <li>
-                    <span class="icon fa-clock-o">
-                      <span class="label">Feature 1</span>
+                    <span className="icon fa-clock-o">
+                      <span className="label">Feature 1</span>
                     </span>
                   </li>
                   <li>
-                    <span class="icon fa-volume-up">
-                      <span class="label">Feature 2</span>
+                    <span className="icon fa-volume-up">
+                      <span className="label">Feature 2</span>
                     </span>
                   </li>
                   <li>
-                    <span class="icon fa-laptop">
-                      <span class="label">Feature 3</span>
+                    <span className="icon fa-laptop">
+                      <span className="label">Feature 3</span>
                     </span>
                   </li>
                   <li>
-                    <span class="icon fa-inbox">
-                      <span class="label">Feature 4</span>
+                    <span className="icon fa-inbox">
+                      <span className="label">Feature 4</span>
                     </span>
                   </li>
                   <li>
-                    <span class="icon fa-lock">
-                      <span class="label">Feature 5</span>
+                    <span className="icon fa-lock">
+                      <span className="label">Feature 5</span>
                     </span>
                   </li>
                   <li>
-                    <span class="icon fa-cog">
-                      <span class="label">Feature 6</span>
+                    <span className="icon fa-cog">
+                      <span className="label">Feature 6</span>
                     </span>
                   </li>
                 </ul>
@@ -133,11 +155,11 @@ class View extends React.Component {
             </div>
           </section>
 
-          <section class="wrapper style1 container special">
-            <div class="row">
-              <div class="col-4 col-12-narrower">
+          <section className="wrapper style1 container special">
+            <div className="row">
+              <div className="col-4 col-12-narrower">
                 <section>
-                  <span class="icon featured fa-check" />
+                  <span className="icon featured fa-check" />
                   <header>
                     <h3>This is Something</h3>
                   </header>
@@ -148,9 +170,9 @@ class View extends React.Component {
                   </p>
                 </section>
               </div>
-              <div class="col-4 col-12-narrower">
+              <div className="col-4 col-12-narrower">
                 <section>
-                  <span class="icon featured fa-check" />
+                  <span className="icon featured fa-check" />
                   <header>
                     <h3>Also Something</h3>
                   </header>
@@ -161,9 +183,9 @@ class View extends React.Component {
                   </p>
                 </section>
               </div>
-              <div class="col-4 col-12-narrower">
+              <div className="col-4 col-12-narrower">
                 <section>
-                  <span class="icon featured fa-check" />
+                  <span className="icon featured fa-check" />
                   <header>
                     <h3>Probably Something</h3>
                   </header>
@@ -177,17 +199,17 @@ class View extends React.Component {
             </div>
           </section>
 
-          <section class="wrapper style3 container special">
-            <header class="major">
+          <section className="wrapper style3 container special">
+            <header className="major">
               <h2>
                 Next look at this <strong>cool stuff</strong>
               </h2>
             </header>
 
-            <div class="row">
-              <div class="col-6 col-12-narrower">
+            <div className="row">
+              <div className="col-6 col-12-narrower">
                 <section>
-                  <a href="#" class="image featured">
+                  <a href="#" className="image featured">
                     <img src="assets/images/pic01.jpg" alt="" />
                   </a>
                   <header>
@@ -201,9 +223,9 @@ class View extends React.Component {
                   </p>
                 </section>
               </div>
-              <div class="col-6 col-12-narrower">
+              <div className="col-6 col-12-narrower">
                 <section>
-                  <a href="#" class="image featured">
+                  <a href="#" className="image featured">
                     <img src="images/pic02.jpg" alt="" />
                   </a>
                   <header>
@@ -218,10 +240,10 @@ class View extends React.Component {
                 </section>
               </div>
             </div>
-            <div class="row">
-              <div class="col-6 col-12-narrower">
+            <div className="row">
+              <div className="col-6 col-12-narrower">
                 <section>
-                  <a href="#" class="image featured">
+                  <a href="#" className="image featured">
                     <img src="assets/images/pic03.jpg" alt="" />
                   </a>
                   <header>
@@ -235,9 +257,9 @@ class View extends React.Component {
                   </p>
                 </section>
               </div>
-              <div class="col-6 col-12-narrower">
+              <div className="col-6 col-12-narrower">
                 <section>
-                  <a href="#" class="image featured">
+                  <a href="#" className="image featured">
                     <img src="assets/images/pic04.jpg" alt="" />
                   </a>
                   <header>
@@ -253,10 +275,10 @@ class View extends React.Component {
               </div>
             </div>
 
-            <footer class="major">
-              <ul class="buttons">
+            <footer className="major">
+              <ul className="buttons">
                 <li>
-                  <a href="#" class="button">
+                  <a href="#" className="button">
                     See More
                   </a>
                 </li>
@@ -274,14 +296,14 @@ class View extends React.Component {
             </p>
           </header>
           <footer>
-            <ul class="buttons">
+            <ul className="buttons">
               <li>
-                <a href="#" class="button primary">
+                <a href="#" className="button primary">
                   Take My Money
                 </a>
               </li>
               <li>
-                <a href="#" class="button">
+                <a href="#" className="button">
                   LOL Wut
                 </a>
               </li>

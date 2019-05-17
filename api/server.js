@@ -7,15 +7,17 @@ const AuthBearer = require("hapi-auth-bearer-token");
 let AuthJwt = require("hapi-auth-jwt2");
 const Vision = require("@hapi/vision");
 const HapiReactViews = require("hapi-react-views");
+require('babel-polyfill');
 
-require("babel-register")({
-  presets: ["es2015", "react"]
+require('babel-core/register')({
+  presets: ['react', 'env']
 });
+
 
 async function api() {
   try {
     let server = Hapi.Server({
-      port: 8080,
+      port: 8088,
       host: "localhost",
       routes: {
         validate: {
@@ -23,7 +25,7 @@ async function api() {
             RestHapi.logger.error(err);
             throw err;
           }
-        },
+        }
         // files: {
         //   relativeTo: Path.join(__dirname, "public")
         // }
@@ -54,24 +56,32 @@ async function api() {
       relativeTo: __dirname,
       path: "views",
       compileOptions: {
-        renderMethod: 'renderToString',
-        layoutPath: Path.join(__dirname, 'views'),
-        layout: 'home'
-    }
+        renderMethod: "renderToString",
+        layoutPath: Path.join(__dirname, "views"),
+        layout: "html"
+      }
+    });
+
+    server.route({
+      method: "GET",
+      path: "/assets/client.js",
+      handler: {
+        file: Path.join(__dirname, "./assets/js/client.js")
+      }
     });
 
     server.route({
       method: "GET",
       path: "/assets/{path*}",
       config: {
-        auth: false,
+        auth: false
       },
       handler: {
-      directory: {
+        directory: {
           path: "./assets",
           index: false,
           listing: false
-        },
+        }
       }
     });
 

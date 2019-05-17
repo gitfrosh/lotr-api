@@ -18,7 +18,7 @@ class Html extends React.Component {
                     <script id="app-state"
                         dangerouslySetInnerHTML={{ __html: this.props.state }}
                     />
-                    <script src="assets/client.js" />
+                    <script src="/assets/js/client.js" />
                 </body>
             </html>
         );
