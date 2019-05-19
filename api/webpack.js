@@ -3,7 +3,7 @@
 const Path = require("path");
 
 module.exports = {
-  entry: Path.join(__dirname, "./client.js"),
+  entry: [Path.join(__dirname, "./client.js")],
   resolve: {
     extensions: [".js", ".jsx"]
   },
@@ -12,12 +12,15 @@ module.exports = {
     filename: "./assets/js/client.js"
   },
   module: {
-    rules: [{
+    rules: [
+      {
         test: /\.jsx$/,
-        loader: 'babel-loader',
+        loader: "babel-loader",
         query: {
-            presets: ['react', 'env']
+          presets: ["react", "env"]
         }
-    }]
-}
+      }
+    ]
+  },
+  plugins: []
 };
