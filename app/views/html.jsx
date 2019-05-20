@@ -15,16 +15,15 @@ class Html extends React.Component {
           />
           <link
             rel="stylesheet"
-            href="http://maxbeier.github.io/tawian-frontend/tawian-frontend.css"
+            href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+            integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+            crossOrigin="anonymous"
           />
           <link
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Cousine:400,400i,700,700i"
+            href="https://fonts.googleapis.com/css?family=Quicksand&display=swap"
           />
-           <link rel="stylesheet" href="assets/css/main.css" />
-        {/*  <noscript>
-            <link rel="stylesheet" href="assets/css/noscript.css" />
-          </noscript> */}
+          <link rel="stylesheet" href="assets/css/main.css" />
         </head>
         <body>
           <div
@@ -36,6 +35,8 @@ class Html extends React.Component {
             dangerouslySetInnerHTML={{ __html: this.props.state }}
           />
           <script src="assets/js/client.js" />
+          <script src="assets/js/jquery.min.js" />
+          <script src="assets/js/caramel.min.js" />
         </body>
       </html>
     );

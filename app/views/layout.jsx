@@ -6,45 +6,50 @@ class LayoutView extends React.Component {
   render() {
     return (
       <body>
-        <div className="container">
-          <header className="site-header dashed-bottom">
-            <a className="site-title" href="#">
-              The <strong>The Lord of the Rings</strong> API
-            </a>
-            <nav className="responsive-nav">
-              {/* <label for="navigation-toggle">
-               <svg className="i"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="icons.svg#i-menu"></use></svg>
-            </label> */}
-            </nav>
-            <input type="checkbox" id="navigation-toggle" />
-              <nav className="site-nav nav-separated">
-                {/* <form className="site-search" action="." method="GET">
-                  <input type="search" name="search" placeholder="search" />
-                </form> */}
-                <ul>
-                  <li>
-                    <a href="#">About</a>
-                  </li>
-                  <li>
-                    <a href="#">Documentation</a>
-                  </li>
-                  <li>
-                    <a href="#">Link</a>
-                  </li>
-                </ul>
-              </nav>
-          </header>
-          {this.props.children}
-          <footer className="site-footer dashed-top">
-            Footer text –{" "}
-            <a href="#" title="Link">
-              Link
-            </a>{" "}
-            <a href="#" title="Link">
-              Link
-            </a>
-          </footer>
-        </div>
+        <header>
+          <nav className="nav bar thick dark">
+            <ul>
+              <li className="collapse">
+                <a href="#" className="menu">
+                  <i className="fa fa-bars" />
+                </a>
+              </li>
+
+              <li className="brand">
+                <a href="/home">
+                  <i className="fa fa-ring" /> The
+                  <strong>The Lord of the Rings</strong> API
+                </a>
+              </li>
+
+              <ul className="right">
+                <li>
+                  <a href="/about">about</a>
+                </li>
+                <li>
+                  <a href="/documentation">docs</a>
+                </li>
+                <li className="dropdown">
+                  <a href="#" className="dropdownitem">
+                    <strong>welcome, john!</strong>
+                  </a>
+                  <ul>
+                    <li>
+                      <a href="/account">account</a>
+                    </li>
+                    <li>
+                      <a href="/logout">logout</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </ul>
+          </nav>
+        </header>
+        {this.props.children}
+        <footer>
+          <center>Made with &hearts; and #Hapi.js in 2019.</center>
+        </footer>
       </body>
     );
   }

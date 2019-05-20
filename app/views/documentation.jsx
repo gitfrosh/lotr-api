@@ -1,12 +1,12 @@
 "use strict";
 
 const React = require("react");
-const Layout = require("./app.jsx");
+const Layout = require("./layout.jsx");
 
 class AboutView extends React.Component {
   render() {
     return (
-      <Layout title="About Page">
+      <Layout>
         <h1>The doc.</h1>
       </Layout>
     );
