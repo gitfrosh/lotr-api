@@ -16,6 +16,8 @@ require('babel-core/register')({
 
 async function api() {
   try {
+
+    // general settings
     let server = Hapi.Server({
       port: 8088,
       host: "localhost",
@@ -26,9 +28,6 @@ async function api() {
             throw err;
           }
         }
-        // files: {
-        //   relativeTo: Path.join(__dirname, "public")
-        // }
       }
     });
 
@@ -49,6 +48,7 @@ async function api() {
     await server.register(AuthJwt);
     await server.register(Vision);
 
+    // set static view files and view engine hapi react views
     server.views({
       engines: {
         jsx: HapiReactViews
@@ -62,14 +62,7 @@ async function api() {
       }
     });
 
-    server.route({
-      method: "GET",
-      path: "/assets/client.js",
-      handler: {
-        file: Path.join(__dirname, "./assets/js/client.js")
-      }
-    });
-
+    // serve assets
     server.route({
       method: "GET",
       path: "/assets/{path*}",
@@ -85,6 +78,7 @@ async function api() {
       }
     });
 
+    // config auth strategy #1 (access key!) for endpoints
     server.auth.strategy("simple", "bearer-access-token", {
       allowQueryToken: true, // optional, false by default
       validate: async (request, token, h) => {
@@ -99,12 +93,12 @@ async function api() {
       }
     });
 
+    // auth strategy #2 (JWT) for user registration, login, logout
     const validate = (decodedToken, request, h) => {
       let { user } = decodedToken;
       if (!user) {
         return { isValid: false };
       }
-      /* check for additional auth requirements if necessary */
       return {
         isValid: true,
         credentials: { user }
