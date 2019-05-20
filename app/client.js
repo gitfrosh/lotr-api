@@ -4,7 +4,6 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
 const AppComponent = require('./views/home.jsx');
-require('babel-polyfill');
 
 const App = React.createFactory(AppComponent);
 const mountNode = document.getElementById('app-mount');
