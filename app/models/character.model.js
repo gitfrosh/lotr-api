@@ -16,7 +16,7 @@ module.exports = function(mongoose) {
       required: true
     },
     birth: {
-      type: Types.String,
+      type: Types.String || Types.Number || null,
       required: false
     },
     gender:  {
@@ -24,7 +24,7 @@ module.exports = function(mongoose) {
       required: false
     },
     death: {
-      type: Types.String,
+      type: Types.String || Types.Number,
       required: false
     },
     hair: {

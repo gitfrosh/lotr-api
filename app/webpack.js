@@ -3,6 +3,7 @@
 const Path = require("path");
 
 module.exports = {
+  mode: "development",
   entry: [Path.join(__dirname, "./client.js")],
   resolve: {
     extensions: [".js", ".jsx"]
