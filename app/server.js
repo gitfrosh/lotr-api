@@ -19,7 +19,7 @@ async function api() {
     let server = Hapi.Server({
       port: 8088,
       host: "localhost",
-      debug: { request: ['*'] },
+      debug: { request: ["*"] },
       routes: {
         validate: {
           failAction: async (request, h, err) => {
@@ -118,6 +118,83 @@ async function api() {
 
     server.method("createToken", createToken, {});
 
+    // routing
+    server.route({
+      method: "GET",
+      path: "/",
+      config: {
+        handler: (request, h) => {
+          // get initial data for frontend if necessary here
+          // let response = await fetch(
+          //   `http://localhost:8080/quote/5cd96e05de30eff6ebcce7e9`
+          // );
+          // let data = await response.json();
+          const context = { foo: "baz" };
+          context.state = `window.state = ${JSON.stringify(context)};`;
+          return h.view("home", context);
+        },
+        auth: false,
+        tags: ["api", "app", "home"]
+      }
+    });
+
+    server.route({
+      method: "GET",
+      path: "/about",
+      config: {
+        handler: (request, h) => {
+          return h.view("about");
+        },
+        auth: false,
+        tags: ["api", "app", "about"]
+      }
+    });
+    server.route({
+      method: "GET",
+      path: "/documentation",
+      config: {
+        handler: (request, h) => {
+          return h.view("documentation");
+        },
+        auth: false,
+        tags: ["api", "app", "documenation"]
+      }
+    });
+
+    server.route({
+      method: "GET",
+      path: "/account",
+      config: {
+        handler: async function(request, h) {
+          return h.view("account");
+        },
+        auth: {
+          strategy: "jwt"
+        },
+        tags: ["api", "auth", "account"],
+        plugins: {
+          "hapi-swagger": {}
+        }
+      }
+    });
+
+    server.route({
+      method: "GET",
+      path: "/login",
+      config: {
+        handler: async function(request, h) {
+          return h.view("login");
+        },
+        auth: false,
+        tags: ["api", "auth", "account"],
+        plugins: {
+          "hapi-swagger": {}
+        }
+      }
+    });
+
+    //  server route logout???
+
     let config = {
       appTitle: "lotr-api",
       enableTextSearch: true,
@@ -128,18 +205,29 @@ async function api() {
       mongo: {
         URI: "mongodb://localhost:27017/lotr"
       },
-      authStrategy: "simple" ///??????
+      authStrategy: "simple"
     };
 
-    await server.register({
-      plugin: RestHapi,
-      options: {
-        mongoose,
-        config
+    await server.register([
+      {
+        plugin: RestHapi,
+        options: {
+          mongoose,
+          config
+        },
+        routes: {
+          prefix: "/api"
+        }
       }
-    });
+    ]);
 
-    await server.start();
+    await server.start(err => {
+      if (err) {
+        throw err;
+      }
+
+      console.log(`Server started at: ${process.env.PORT}`);
+    });
 
     RestHapi.logUtil.logActionComplete(
       RestHapi.logger,

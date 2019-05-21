@@ -92,22 +92,5 @@ module.exports = function(server, mongoose, logger) {
         }
       }
     });
-
-    server.route({
-      method: "GET",
-      path: "/account",
-      config: {
-        handler: async function(request, h) {
-          return await "Account Page";
-        },
-        auth: {
-          strategy: "jwt"
-        },
-        tags: ["api", "auth", "account"],
-        plugins: {
-          "hapi-swagger": {}
-        }
-      }
-    });
   })();
 };
