@@ -29,7 +29,7 @@ module.exports = function(server, mongoose, logger) {
         // }
         // },
         auth: false,
-        tags: ["api", "home"],
+        tags: ["api", "app", "home"],
         plugins: {
           "hapi-swagger": {}
         }
@@ -43,7 +43,7 @@ module.exports = function(server, mongoose, logger) {
           return h.view("about");
         },
         auth: false,
-        tags: ["api", "about"],
+        tags: ["api", "app", "about"],
         plugins: {
           "hapi-swagger": {}
         }
@@ -57,7 +57,7 @@ module.exports = function(server, mongoose, logger) {
           return h.view("documentation");
         },
         auth: false,
-        tags: ["api", "documenation"],
+        tags: ["api",  "app","documenation"],
         plugins: {
           "hapi-swagger": {}
         }

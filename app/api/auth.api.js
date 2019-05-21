@@ -28,7 +28,7 @@ module.exports = function(server, mongoose, logger) {
             password: Joi.string().required()
           }
         },
-        tags: ["api", "register"],
+        tags: ["api", "auth", "register"],
         plugins: {
           "hapi-swagger": {}
         }
@@ -86,7 +86,7 @@ module.exports = function(server, mongoose, logger) {
             password: Joi.string().required()
           }
         },
-        tags: ["api", "login"],
+        tags: ["api","auth",  "login"],
         plugins: {
           "hapi-swagger": {}
         }
@@ -98,12 +98,12 @@ module.exports = function(server, mongoose, logger) {
       path: "/account",
       config: {
         handler: async function(request, h) {
-          return await "Account Page"
+          return await "Account Page";
         },
         auth: {
-            strategy: 'jwt',
-            },
-        tags: ["api", "account"],
+          strategy: "jwt"
+        },
+        tags: ["api", "auth", "account"],
         plugins: {
           "hapi-swagger": {}
         }

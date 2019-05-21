@@ -23,9 +23,10 @@ module.exports = function(mongoose) {
     collectionName: modelName,
     routeOptions: {
       readAuth: true,
-      createAuth: true,
-      updateAuth: true,
-      deleteAuth: true
+      allowCreate: false,
+      allowUpdate: false,
+      allowDelete: false,
+
     }
   };
 
