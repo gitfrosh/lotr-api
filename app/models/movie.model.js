@@ -38,18 +38,20 @@ module.exports = function(mongoose) {
   Schema.statics = {
     collectionName: modelName,
     routeOptions: {
+      readAuth: false, //disable authentication
+      allowCreate: false,
+      allowUpdate: false,
+      allowDelete: false,
       associations: {
         quotes: {
           type: "ONE_MANY",
           alias: "quote",
           foreignField: "movie",
-          model: "quote"
+          model: "quote",
+          allowAdd: false,
+          allowRemove: false,
         }
       },
-      readAuth: true,
-      createAuth: true,
-      updateAuth: true,
-      deleteAuth: true
     }
   };
 

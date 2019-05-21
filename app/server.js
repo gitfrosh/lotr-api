@@ -7,20 +7,19 @@ const AuthBearer = require("hapi-auth-bearer-token");
 let AuthJwt = require("hapi-auth-jwt2");
 const Vision = require("@hapi/vision");
 const HapiReactViews = require("hapi-react-views");
-require('babel-polyfill');
+require("babel-polyfill");
 
-require('babel-core/register')({
-  presets: ['react', 'env']
+require("babel-core/register")({
+  presets: ["react", "env"]
 });
-
 
 async function api() {
   try {
-
     // general settings
     let server = Hapi.Server({
       port: 8088,
       host: "localhost",
+      debug: { request: ['*'] },
       routes: {
         validate: {
           failAction: async (request, h, err) => {
@@ -30,18 +29,6 @@ async function api() {
         }
       }
     });
-
-    let config = {
-      appTitle: "lotr-api",
-      enableTextSearch: true,
-      logRoutes: true,
-      docExpansion: "list",
-      swaggerHost: "localhost:8080",
-      mongo: {
-        URI: "mongodb://localhost:27017/lotr"
-      }
-      // authStrategy: AuthJwt.strategy
-    };
 
     await server.register(Inert);
     await server.register(AuthBearer);
@@ -82,10 +69,12 @@ async function api() {
     server.auth.strategy("simple", "bearer-access-token", {
       allowQueryToken: true, // optional, false by default
       validate: async (request, token, h) => {
+        console.log("authorising bearer token...");
         // here is where you validate your token
         // comparing with token from your database for example
-        const isValid = token === "1234";
-
+        //const isValid = token === "1234";
+        const isValid = true;
+        // const isValid = false;
         const credentials = { token };
         const artifacts = { test: "info" };
 
@@ -95,6 +84,7 @@ async function api() {
 
     // auth strategy #2 (JWT) for user registration, login, logout
     const validate = (decodedToken, request, h) => {
+      console.log("authorising jwt...");
       let { user } = decodedToken;
       if (!user) {
         return { isValid: false };
@@ -128,11 +118,24 @@ async function api() {
 
     server.method("createToken", createToken, {});
 
+    let config = {
+      appTitle: "lotr-api",
+      enableTextSearch: true,
+      // logRoutes: true,
+      loglevel: "INTERNAL",
+      docExpansion: "list",
+      swaggerHost: "localhost:8080",
+      mongo: {
+        URI: "mongodb://localhost:27017/lotr"
+      },
+      authStrategy: "simple" ///??????
+    };
+
     await server.register({
       plugin: RestHapi,
       options: {
-        mongoose: mongoose,
-        config: config
+        mongoose,
+        config
       }
     });
 

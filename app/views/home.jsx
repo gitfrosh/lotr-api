@@ -7,7 +7,25 @@ const fetch = require("isomorphic-unfetch");
 class View extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { quote: "fdsff" };
+    this.state = {
+      quote: "fdsff",
+      url: "/movie/5cd95395de30eff6ebccde5b",
+      movie: ""
+    };
+  }
+  fetchMovie() {
+    const that = this;
+    fetch("http://localhost:8088" + this.state.url)
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(myJson) {
+        console.log(JSON.stringify(myJson));
+        that.setState({
+          movie: JSON.stringify(myJson,null,'\t')
+
+        });
+      });
   }
 
   fetchQuote() {
@@ -91,14 +109,19 @@ class View extends React.Component {
                   <div className="panel-body">
                     <div>
                       <span>GET</span>
-                      <input type="text" defaultValue="/movies/1" />
-                      <button className="btn default dark">Fetch</button>
+                      <input type="text" value={this.state.url} />
+                      <button
+                        onClick={this.fetchMovie.bind(this)}
+                        className="btn default dark"
+                      >
+                        Fetch
+                      </button>
                     </div>
                     <div
                       className="alert info"
                       style={{ overflowY: "scroll", height: "140px" }}
                     >
-                      {"lorem ipsum"}
+                      <pre>{this.state.movie}</pre>
                     </div>
                     <div className="notice dark">
                       There are many more endpoints available, but you need to{" "}
