@@ -22,7 +22,7 @@ body {
 }
 
 body::after {
-  content: '';
+  content: "";
   display: block;
   height: 50px; /* Set same as footer's height */
 }
@@ -162,9 +162,22 @@ hr {
 }
 
 .alert.success {
-  color: #5c848e;
+  color: #1d2323;
   border: 1px solid #52c652;
   background: #5ac95a;
+}
+
+.alert.success a {
+  color: #1d2323;
+  border: 1px solid #decdc3;
+  background: #decdc3;
+}
+
+.alert.success a:hover,
+.alert.success a:active {
+  color: #1d2323;
+  border: 1px solid #E0E0EC;
+  background: #E0E0EC;
 }
 
 .alert.success.clean {
@@ -1162,9 +1175,9 @@ img {
 }
 
 section .dark a {
-    color: #e0e0ec;
-    border-bottom: #e0e0ec solid 1px;
-  }
+  color: #e0e0ec;
+  border-bottom: #e0e0ec solid 1px;
+}
 
 .dark a:hover,
 .dark a:focus {
@@ -1712,18 +1725,23 @@ sup {
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 
- @font-face {
-    font-family: "FontAwesome";
-    font-weight: normal;
-    font-style : normal;
-           src : url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?v=4.3.0");
-           src : url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"),
-                 url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0") format("woff2"),
-                 url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff?v=4.3.0") format("woff"),
-                 url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.ttf?v=4.3.0") format("truetype"),
-                 url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg");
-    }
-    
+@font-face {
+  font-family: "FontAwesome";
+  font-weight: normal;
+  font-style: normal;
+  src: url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?v=4.3.0");
+  src: url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0")
+      format("embedded-opentype"),
+    url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0")
+      format("woff2"),
+    url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff?v=4.3.0")
+      format("woff"),
+    url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.ttf?v=4.3.0")
+      format("truetype"),
+    url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular")
+      format("svg");
+}
+
 .sr-only {
   position: absolute;
   width: 1px;

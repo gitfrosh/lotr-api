@@ -1,33 +1,35 @@
 const bcrypt = require("bcryptjs");
+const preProcessNewUser = require("../api/util/userFunctions")
+  .preProcessNewUser;
 
 module.exports = function(mongoose) {
   let modelName = "user";
   let Types = mongoose.Schema.Types;
-  let Schema = new mongoose.Schema({
-    email: {
-      type: Types.String,
-      unique: true
+  let Schema = new mongoose.Schema(
+    {
+      email: {
+        type: Types.String,
+        unique: true
+      },
+      password: {
+        type: Types.String,
+        required: true,
+        exclude: true,
+        allowOnUpdate: false
+      }
     },
-    password: {
-      type: Types.String,
-      required: true,
-      exclude: true,
-      allowOnUpdate: false
+    {
+      collection: "user"
     }
-  });
+  );
 
   Schema.statics = {
     collectionName: modelName,
     routeOptions: {
       create: {
-        pre: function(payload, logger) {
-          let hashedPassword = mongoose
-            .model("user")
-            .generatePasswordHash(payload.password);
-
-          payload.password = hashedPassword;
-
-          return payload;
+        // TODO: Before the route handler runs, verify that the user is unique
+        pre: function(payload, request, Log) {
+          return preProcessNewUser(payload, mongoose);
         }
       }
     },
