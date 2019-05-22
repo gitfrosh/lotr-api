@@ -2,10 +2,8 @@
 
 const React = require("react");
 const Layout = require("./layout.jsx");
-var XMLHttpRequest = require('xhr2');
-var xhr = new XMLHttpRequest();
 
-class LoginView extends React.Component {
+class RegistrationView extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -15,12 +13,12 @@ class LoginView extends React.Component {
     };
   }
 
-  login(e) {
+  signUp(e) {
     // e.preventDefault();
-    var url = "http://localhost:8088/api/login";
+    var url = "http://localhost:8088/api/register";
     let status = undefined;
     fetch(url, {
-      method: "POST",
+      method: "POST", // or 'PUT'
       body: JSON.stringify({
         email: this.state.email,
         password: this.state.password
@@ -37,13 +35,11 @@ class LoginView extends React.Component {
         console.log("Response:", JSON.stringify(response));
         console.log(status);
         if (status === 200) {
-          console.log("logged in!");
-          console.log(response);
-          window.localStorage.setItem("JWT_KEY", response.token);
-          xhr.open("GET", "http://localhost:8088/account", true);
-          xhr.setRequestHeader("Authorization", response.token);
-          xhr.send();
-          // window.location.href = "http://localhost:8088/account";
+          this.setState({
+            response: {
+              type: "SUCCESS"
+            }
+          });
         } else {
           this.setState({
             response: {
@@ -84,7 +80,9 @@ class LoginView extends React.Component {
                 <div className="box col-8">
                   {this.state.response.type !== "SUCCESS" && (
                     <div className="panel dark">
-                      <div className="panel-head">Login to your account</div>
+                      <div className="panel-head">
+                        Sign up to get your access token
+                      </div>
                       <div className="panel-body">
                         E-Mail address:
                         <br />
@@ -96,7 +94,7 @@ class LoginView extends React.Component {
                           name="email"
                         />
                         <br />
-                        Password:
+                        Choose a password:
                         <br />
                         <input
                           required
@@ -107,10 +105,10 @@ class LoginView extends React.Component {
                         />
                         <br />
                         <button
-                          onClick={this.login.bind(this)}
+                          onClick={this.signUp.bind(this)}
                           className="btn default dark"
                         >
-                          Login
+                          Sign up
                         </button>
                       </div>
                     </div>
@@ -118,6 +116,13 @@ class LoginView extends React.Component {
                   {this.state.response.type === "ERROR" && (
                     <div class="alert error">
                       {this.state.response.response}
+                    </div>
+                  )}
+                  {this.state.response.type === "SUCCESS" && (
+                    <div class="alert success">
+                      Your new user account has been created. You can{" "}
+                      <a href="/login">login</a>{" "}
+                      and grab your access token now.
                     </div>
                   )}
                 </div>
@@ -131,4 +136,4 @@ class LoginView extends React.Component {
   }
 }
 
-module.exports = LoginView;
+module.exports = RegistrationView;

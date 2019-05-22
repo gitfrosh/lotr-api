@@ -13,9 +13,18 @@ class View extends React.Component {
       movie: ""
     };
   }
+
+  changeApi(e)  {
+    console.log(e.target.value)
+    this.setState({
+      url: e.target.value
+
+    });
+  }
+
   fetchMovie() {
     const that = this;
-    fetch("http://localhost:8088" + this.state.url)
+    fetch("http://localhost:8088/api" + this.state.url)
       .then(function(response) {
         return response.json();
       })
@@ -109,7 +118,7 @@ class View extends React.Component {
                   <div className="panel-body">
                     <div>
                       <span>GET</span>
-                      <input type="text" value={this.state.url} />
+                      <input type="text" onChange={this.changeApi.bind(this)} value={this.state.url} />
                       <button
                         onClick={this.fetchMovie.bind(this)}
                         className="btn default dark"

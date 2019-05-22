@@ -84,19 +84,21 @@ async function api() {
 
     // auth strategy #2 (JWT) for user registration, login, logout
     const validate = (decodedToken, request, h) => {
+      console.log(decodedToken, request, h)
       console.log("authorising jwt...");
-      let { user } = decodedToken;
-      if (!user) {
-        return { isValid: false };
-      }
+      // let { user } = decodedToken;
+      // if (!user) {
+      //   return { isValid: false };
+      // }
       return {
         isValid: true,
-        credentials: { user }
+        // credentials: { user }
       };
     };
 
     function createToken(user) {
       const Jwt = require("jsonwebtoken");
+      const jwtSecret = "NeverShareYourSecret";
 
       const { email, _id } = user;
 
@@ -175,6 +177,18 @@ async function api() {
         plugins: {
           "hapi-swagger": {}
         }
+      }
+    });
+
+    server.route({
+      method: "GET",
+      path: "/sign-up",
+      config: {
+        handler: async function(request, h) {
+          return h.view("sign-up");
+        },
+        auth: false,
+        tags: ["api", "auth", "sign-up"]
       }
     });
 

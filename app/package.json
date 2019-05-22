@@ -25,7 +25,8 @@
     "react-dom": "^16.8.6",
     "rest-hapi": "^1.6.0",
     "webpack": "^4.31.0",
-    "webpack-hot-middleware": "^2.25.0"
+    "webpack-hot-middleware": "^2.25.0",
+    "xhr2": "^0.1.4"
   },
   "devDependencies": {
     "webpack-cli": "^3.3.2"
