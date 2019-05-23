@@ -1,8 +1,36 @@
 "use strict";
 
 const React = require("react");
+const Cookies = require("js-cookie");
 
 class LayoutView extends React.Component {
+  getCookie(name) {
+
+  }
+  componentWillMount() {
+    if (typeof window !== "undefined") {
+      console.log(document.cookie)
+      // console.log(isLoggedIn);
+    }
+  }
+
+  logout() {
+    const url = "http://localhost:8088/api/logout";
+    fetch(url, {
+      method: "GET"
+    })
+      .then(res => {
+        return res.json();
+      })
+      .then(response => {
+        console.log("Response:", JSON.stringify(response));
+        window.location.href = "http://localhost:8088/";
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }
+
   render() {
     return (
       <body>
@@ -38,7 +66,9 @@ class LayoutView extends React.Component {
                       <a href="/account">account</a>
                     </li>
                     <li>
-                      <a href="/logout">logout</a>
+                      <a onClick={this.logout.bind(this)} href="#">
+                        logout
+                      </a>
                     </li>
                   </ul>
                 </li>

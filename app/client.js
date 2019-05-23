@@ -15,13 +15,16 @@ switch (filter) {
   case "about":
     AppComponent = require("./views/about.jsx");
     break;
-    case "documentation":
+  case "documentation":
     AppComponent = require("./views/documentation.jsx");
     break;
-    case "sign-up":
+  case "account":
+    AppComponent = require("./views/account.jsx");
+    break;
+  case "sign-up":
     AppComponent = require("./views/sign-up.jsx");
     break;
-    case "login":
+  case "login":
     AppComponent = require("./views/login.jsx");
     break;
   default:

@@ -39,11 +39,8 @@ class LoginView extends React.Component {
         if (status === 200) {
           console.log("logged in!");
           console.log(response);
-          window.localStorage.setItem("JWT_KEY", response.token);
-          xhr.open("GET", "http://localhost:8088/account", true);
-          xhr.setRequestHeader("Authorization", response.token);
-          xhr.send();
-          // window.location.href = "http://localhost:8088/account";
+          // window.localStorage.setItem("JWT_KEY", response.token);
+          window.location.href = "http://localhost:8088/account";
         } else {
           this.setState({
             response: {
