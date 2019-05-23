@@ -4,13 +4,10 @@ const React = require("react");
 const Cookies = require("js-cookie");
 
 class LayoutView extends React.Component {
-  getCookie(name) {
-
-  }
   componentWillMount() {
     if (typeof window !== "undefined") {
-      console.log(document.cookie)
-      // console.log(isLoggedIn);
+      const isLoggedIn = !!Cookies.get("token");
+      console.log(isLoggedIn);
     }
   }
 
