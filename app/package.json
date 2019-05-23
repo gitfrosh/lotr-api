@@ -8,6 +8,7 @@
   "dependencies": {
     "@hapi/inert": "^5.2.0",
     "@hapi/vision": "^5.5.2",
+    "aguid": "^2.0.0",
     "babel-cli": "6.x.x",
     "babel-core": "6.x.x",
     "babel-loader": "7.x.x",
@@ -20,6 +21,7 @@
     "hapi-auth-jwt2": "^8.6.1",
     "hapi-react-views": "^10.0.1",
     "isomorphic-unfetch": "^3.0.0",
+    "js-cookie": "^2.2.0",
     "mongoose": "^5.5.7",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",

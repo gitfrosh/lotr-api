@@ -84,12 +84,12 @@ async function api() {
 
     // auth strategy #2 (JWT) for user registration, login, logout
     const validate = (decodedToken, request, h) => {
-      console.log(decodedToken, request, h)
+      // console.log(decodedToken, request, h)
       console.log("authorising jwt...");
-      // let { user } = decodedToken;
-      // if (!user) {
-      //   return { isValid: false };
-      // }
+      let { user } = decodedToken;
+      if (!user) {
+        return { isValid: false };
+      }
       return {
         isValid: true,
         // credentials: { user }
@@ -200,7 +200,7 @@ async function api() {
           return h.view("login");
         },
         auth: false,
-        tags: ["api", "auth", "account"],
+        tags: ["api", "auth", "login"],
         plugins: {
           "hapi-swagger": {}
         }
