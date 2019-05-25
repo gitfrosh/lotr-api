@@ -70,6 +70,7 @@ class RegistrationView extends React.Component {
   }
 
   render() {
+    console.log(this.state.response)
     return (
       <Layout title="Home">
         <main>
@@ -115,7 +116,7 @@ class RegistrationView extends React.Component {
                   )}
                   {this.state.response.type === "ERROR" && (
                     <div class="alert error">
-                      {this.state.response.response}
+                      {this.state.response.response.message}
                     </div>
                   )}
                   {this.state.response.type === "SUCCESS" && (

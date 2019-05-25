@@ -1,6 +1,6 @@
 const Joi = require("joi");
 const RestHapi = require("rest-hapi");
-var aguid = require("aguid"); // https://github.com/ideaq/aguid
+var nanoid = require('nanoid')
 
 var cookie_options = {
   ttl: 365 * 24 * 60 * 60 * 1000, // expires a year from today
@@ -51,12 +51,8 @@ module.exports = function(server, mongoose, logger) {
         handler: async function(request, h) {
           const { email, password } = request.payload;
           // create bearer token!!
-          const token = Math.floor(
-            1000000000000000 + Math.random() * 9000000000000000
-          )
-            .toString(36)
-            .substr(0, 10);
-          return await RestHapi.create(User, { email, password, token }, Log);
+          const access_token = nanoid(20);
+          return await RestHapi.create(User, { email, password, access_token }, Log);
         },
         auth: false,
         validate: {
@@ -128,11 +124,6 @@ module.exports = function(server, mongoose, logger) {
 
     const loginHandler = async function(request, h) {
       let token = "";
-      var session = {
-        valid: true, // this will be set to false when the person logs out
-        id: aguid(), // a random session id
-        exp: new Date().getTime() + 30 * 60 * 1000 // expires in 30 minutes time
-      };
 
       let user = await User.findByCredentials(
         request.payload.email,

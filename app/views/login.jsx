@@ -114,7 +114,7 @@ class LoginView extends React.Component {
                   )}
                   {this.state.response.type === "ERROR" && (
                     <div class="alert error">
-                      {this.state.response.response}
+                      {this.state.response.response.message}
                     </div>
                   )}
                 </div>

@@ -38,9 +38,9 @@ async function register(server, options) {
 function createToken(user) {
   const Jwt = require("jsonwebtoken");
 
-  const { email, _id } = user;
+  const { email, _id, access_token } = user;
 
-  token = Jwt.sign({ user: { email, _id } }, jwtSecret, {
+  token = Jwt.sign({ user: { email, _id, access_token } }, jwtSecret, {
     algorithm: "HS256",
     expiresIn: "1m"
   });

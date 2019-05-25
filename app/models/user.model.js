@@ -17,7 +17,7 @@ module.exports = function(mongoose) {
         exclude: true,
         allowOnUpdate: false
       },
-      token: {
+      access_token: {
         type: Types.String,
         required: true
       }

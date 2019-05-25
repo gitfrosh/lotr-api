@@ -48,7 +48,7 @@ class AccountView extends React.Component {
                       </p>
                       Your e-mail address: {this.state.user.email} <br />
                       You have signed up for an access token. Your access token:
-                      <div className="alert dark">{this.state.user.token}</div>
+                      <div className="alert dark">{this.state.user.access_token}</div>
                     </div>
                   </div>
                 </div>
