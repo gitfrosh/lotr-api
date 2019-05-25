@@ -7,6 +7,7 @@ const AuthBearer = require("hapi-auth-bearer-token");
 let AuthJwt = require("hapi-auth-jwt2");
 const Vision = require("@hapi/vision");
 const HapiReactViews = require("hapi-react-views");
+const HapiError = require("hapi-error");
 require("babel-polyfill");
 
 require("babel-core/register")({
@@ -34,6 +35,7 @@ async function api() {
     await server.register(AuthBearer);
     await server.register(AuthJwt);
     await server.register(Vision);
+    await server.register(HapiError);
 
     // set static view files and view engine hapi react views
     server.views({

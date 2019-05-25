@@ -2,11 +2,12 @@
 
 const React = require("react");
 const Cookies = require("js-cookie");
+let isLoggedIn = false;
 
 class LayoutView extends React.Component {
   componentWillMount() {
     if (typeof window !== "undefined") {
-      const isLoggedIn = !!Cookies.get("token");
+      isLoggedIn = !!Cookies.get("token");
       console.log(isLoggedIn);
     }
   }
@@ -30,7 +31,7 @@ class LayoutView extends React.Component {
 
   render() {
     return (
-      <body>
+      <div>
         <header>
           <nav className="nav bar thick dark">
             <ul>
@@ -41,7 +42,7 @@ class LayoutView extends React.Component {
               </li>
 
               <li className="brand">
-                <a href="/home">
+                <a href="/">
                   <i className="fa fa-ring" /> The
                   <strong>The Lord of the Rings</strong> API
                 </a>
@@ -54,21 +55,33 @@ class LayoutView extends React.Component {
                 <li>
                   <a href="/documentation">docs</a>
                 </li>
-                <li className="dropdown">
-                  <a href="#" className="dropdownitem">
-                    <strong>welcome, john!</strong>
-                  </a>
-                  <ul>
+                {isLoggedIn && (
+                  <li className="dropdown">
+                    <a href="#" className="dropdownitem">
+                      <strong>welcome!</strong> <i class="fas fa-caret-down"></i>
+                    </a>
+                    <ul>
+                      <li>
+                        <a href="/account">account</a>
+                      </li>
+                      <li>
+                        <a onClick={this.logout.bind(this)} href="#">
+                          logout
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                )}
+                {!isLoggedIn && (
+                  <span>
                     <li>
-                      <a href="/account">account</a>
+                      <a href="/login">login</a>
                     </li>
                     <li>
-                      <a onClick={this.logout.bind(this)} href="#">
-                        logout
-                      </a>
+                      <a href="/sign-up">sign up</a>
                     </li>
-                  </ul>
-                </li>
+                  </span>
+                )}
               </ul>
             </ul>
           </nav>
@@ -77,7 +90,7 @@ class LayoutView extends React.Component {
         <footer>
           <center>Made with &hearts; and #Hapi.js in 2019.</center>
         </footer>
-      </body>
+      </div>
     );
   }
 }
