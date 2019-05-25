@@ -187,7 +187,7 @@ hr {
 }
 
 .alert.error {
-  color: #5c848e;
+  color: #000;
   border: 1px solid #e93f3c;
   background: #ea4845;
 }
@@ -223,7 +223,7 @@ hr {
 }
 
 .alert.dark {
-  color: #5c848e;
+  color: #fff;
   border: 1px solid #decdc3;
   background: #575757;
 }

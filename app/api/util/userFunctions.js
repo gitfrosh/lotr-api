@@ -3,7 +3,6 @@
 "use strict";
 
 const Boom = require("boom");
-const User = require("../../models/user.model");
 
 async function preProcessNewUser(payload, mongoose) {
   // Before the route handler runs, verify that the user is unique
@@ -19,12 +18,10 @@ async function preProcessNewUser(payload, mongoose) {
 
   let user = await mongooseQuery.lean();
   if (user) {
-    if (user.email === payload.email) {
       console.log("Boom?");
       throw Boom.badRequest(
         "Sorry, this e-mail address is already registered."
       );
-    }
   } else {
     console.log(user);
     // If everything checks out, send the payload through

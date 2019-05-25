@@ -7,7 +7,7 @@ class AboutView extends React.Component {
   render() {
     return (
       <Layout>
-        <h1>The doc.</h1>
+
       </Layout>
     );
   }

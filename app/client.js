@@ -9,7 +9,7 @@ let AppComponent = undefined;
 
 // switch routes
 switch (filter) {
-  case "":
+  case "home":
     AppComponent = require("./views/home.jsx");
     break;
   case "about":
@@ -27,11 +27,8 @@ switch (filter) {
   case "login":
     AppComponent = require("./views/login.jsx");
     break;
-  case "error":
-    AppComponent = require("./views/error_template.jsx");
-    break;
-  // default:
-  //   AppComponent = require("./views/error_template.jsx");
+  default:
+    AppComponent = require("./views/home.jsx");
 }
 
 const App = React.createFactory(AppComponent);
