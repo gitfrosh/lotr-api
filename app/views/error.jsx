@@ -11,7 +11,6 @@ class ErrorView extends React.Component {
   render() {
     console.log(this.props);
     return (
-      <Layout>
         <main>
           <center>
             <section>
@@ -23,7 +22,7 @@ class ErrorView extends React.Component {
                     <div className="panel-body">
                       <div className="error">
                         <h2 className="emoji">&#x25D5; &#xFE35; &#x25D5;</h2>
-                        <p>{this.props.errorMessage}</p>
+                        <p>{this.props.errName}</p>
                         <p><strong>{this.props.statusCode}</strong></p>
                       </div>
                     </div>
@@ -34,7 +33,6 @@ class ErrorView extends React.Component {
             </section>
           </center>
         </main>
-      </Layout>
     );
   }
 }

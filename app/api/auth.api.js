@@ -1,6 +1,7 @@
 const Joi = require("joi");
 const RestHapi = require("rest-hapi");
 var nanoid = require('nanoid')
+const Boom = require('boom');
 
 var cookie_options = {
   ttl: 365 * 24 * 60 * 60 * 1000, // expires a year from today

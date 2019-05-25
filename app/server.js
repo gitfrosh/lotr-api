@@ -91,7 +91,7 @@ async function api() {
         return { isValid: false };
       }
       return {
-        isValid: true,
+        isValid: true
         // credentials: { user }
       };
     };
@@ -119,6 +119,23 @@ async function api() {
     server.auth.default("simple");
 
     server.method("createToken", createToken, {});
+
+    server.ext("onPreResponse", (request, h) => {
+      if (request.response.isBoom) {
+        const err = request.response;
+        const errName = err.output.payload.error;
+        const statusCode = err.output.payload.statusCode;
+
+        return h
+          .view("error", {
+            statusCode: statusCode,
+            errName: errName
+          })
+          .code(statusCode);
+      }
+
+     return h.continue;
+    });
 
     // routing
     server.route({
