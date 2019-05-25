@@ -22,7 +22,9 @@ module.exports = function(server, mongoose, logger) {
       path: "/logout",
       config: {
         handler: async function(request, h) {
-          return h.response({ response: "Bye" }).unstate("token", cookie_options);
+          return h
+            .response({ response: "Bye" })
+            .unstate("token", cookie_options);
         },
         auth: false,
         tags: ["api", "auth", "logout"],
@@ -49,7 +51,12 @@ module.exports = function(server, mongoose, logger) {
         handler: async function(request, h) {
           const { email, password } = request.payload;
           // create bearer token!!
-          return await RestHapi.create(User, { email, password }, Log);
+          const token = Math.floor(
+            1000000000000000 + Math.random() * 9000000000000000
+          )
+            .toString(36)
+            .substr(0, 10);
+          return await RestHapi.create(User, { email, password, token }, Log);
         },
         auth: false,
         validate: {
@@ -61,6 +68,47 @@ module.exports = function(server, mongoose, logger) {
             password: Joi.string().required()
           }
         },
+        tags: ["api", "auth", "register"],
+        plugins: {
+          "hapi-swagger": {}
+        }
+      }
+    });
+  })();
+  // get user
+  (function() {
+    const Log = logger.bind("Get user");
+    const User = mongoose.model("user");
+
+    Log.note("Generating Get user endpoint");
+
+    server.route({
+      method: "GET",
+      path: "/get-user",
+      config: {
+        handler: async function(request, h) {
+          const Jwt = require("jsonwebtoken");
+          const jwtSecret = "NeverShareYourSecret";
+          let token = request.headers.cookie;
+          if (token) {
+            const requToken = token.split("=")[1];
+
+            return Jwt.verify(requToken, jwtSecret, function(
+              err,
+              decodedToken
+            ) {
+              if (err) {
+                console.log(err);
+                throw Boom.unauthorized("Could not retrieve user.");
+              } else {
+                return h.response({ decodedToken });
+              }
+            });
+          } else {
+            throw Boom.unauthorized("Could not retrieve user.");
+          }
+        },
+        auth: false,
         tags: ["api", "auth", "register"],
         plugins: {
           "hapi-swagger": {}

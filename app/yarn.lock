@@ -2342,6 +2342,13 @@ hapi-auth-jwt2@^8.6.1:
     cookie "^0.3.1"
     jsonwebtoken "^8.1.0"
 
+hapi-error@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/hapi-error/-/hapi-error-2.1.0.tgz#41b55ce3378a5a7e382e67c76ae9582153a22b63"
+  integrity sha512-SxA2LSmnb/ZJ6bZKFvpx+qWzIyfLiBe9E6ncC/GjxGj5BZjXQr7i/ffMkzwJziw9SKino0boWpbN/grxj78qiQ==
+  dependencies:
+    hoek "^5.0.3"
+
 hapi-react-views@^10.0.1:
   version "10.0.1"
   resolved "https://registry.yarnpkg.com/hapi-react-views/-/hapi-react-views-10.0.1.tgz#0e9a422f612e9a0d5d848c8dd9cbde63cf26c251"

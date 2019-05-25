@@ -16,6 +16,10 @@ module.exports = function(mongoose) {
         required: true,
         exclude: true,
         allowOnUpdate: false
+      },
+      token: {
+        type: Types.String,
+        required: true
       }
     },
     {
