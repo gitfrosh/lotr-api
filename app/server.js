@@ -125,15 +125,15 @@ async function api() {
         const err = request.response;
         const errName = err.output.payload.error;
         const statusCode = err.output.payload.statusCode;
-
-        return h
+        if (statusCode === 505) {
+          return h
           .view("error", {
             statusCode: statusCode,
             errName: errName
           })
           .code(statusCode);
+        }
       }
-
      return h.continue;
     });
 
