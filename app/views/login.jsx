@@ -42,6 +42,7 @@ class LoginView extends React.Component {
           // window.localStorage.setItem("JWT_KEY", response.token);
           window.location.href = "http://localhost:8088/account";
         } else {
+          console.log(response)
           this.setState({
             response: {
               type: "ERROR",
@@ -53,6 +54,7 @@ class LoginView extends React.Component {
         return;
       })
       .catch(error => {
+        console.log(error)
         this.setState({
           response: {
             type: "ERROR",
