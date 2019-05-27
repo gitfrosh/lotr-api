@@ -2,8 +2,8 @@
 
 const React = require("react");
 const Layout = require("./layout.jsx");
-var XMLHttpRequest = require('xhr2');
-var xhr = new XMLHttpRequest();
+const { Formik } = require("formik");
+const Yup = require("yup");
 
 class LoginView extends React.Component {
   constructor(props) {
@@ -15,15 +15,16 @@ class LoginView extends React.Component {
     };
   }
 
-  login(e) {
+  login(values) {
     // e.preventDefault();
     var url = "http://localhost:8088/api/login";
     let status = undefined;
+    const data = values.values;
     fetch(url, {
       method: "POST",
       body: JSON.stringify({
-        email: this.state.email,
-        password: this.state.password
+        email: values.email,
+        password: values.password
       }),
       headers: {
         "Content-Type": "application/json"
@@ -42,7 +43,7 @@ class LoginView extends React.Component {
           // window.localStorage.setItem("JWT_KEY", response.token);
           window.location.href = "http://localhost:8088/account";
         } else {
-          console.log(response)
+          console.log(response);
           this.setState({
             response: {
               type: "ERROR",
@@ -54,7 +55,7 @@ class LoginView extends React.Component {
         return;
       })
       .catch(error => {
-        console.log(error)
+        console.log(error);
         this.setState({
           response: {
             type: "ERROR",
@@ -85,32 +86,100 @@ class LoginView extends React.Component {
                     <div className="panel dark">
                       <div className="panel-head">Login to your account</div>
                       <div className="panel-body">
-                        E-Mail address:
-                        <br />
-                        <input
-                          required
-                          onChange={this.changeEmail.bind(this)}
-                          value={this.state.email}
-                          type="email"
-                          name="email"
-                        />
-                        <br />
-                        Password:
-                        <br />
-                        <input
-                          required
-                          onChange={this.changePassword.bind(this)}
-                          value={this.state.password}
-                          type="password"
-                          name="password"
-                        />
-                        <br />
-                        <button
-                          onClick={this.login.bind(this)}
-                          className="btn default dark"
+                        <Formik
+                          initialValues={{ email: "", password: "" }}
+                          onSubmit={(values, { setSubmitting }) => {
+                            setTimeout(() => {
+                              this.login(values);
+                              setSubmitting(false);
+                            }, 500);
+                          }}
+                          validationSchema={Yup.object().shape({
+                            email: Yup.string()
+                              .email()
+                              .required("E-Mail required"),
+                            password: Yup.string()
+                              .trim()
+                              .required("Password required")
+                          })}
                         >
-                          Login
-                        </button>
+                          {props => {
+                            const {
+                              values,
+                              touched,
+                              errors,
+                              dirty,
+                              isSubmitting,
+                              handleChange,
+                              handleBlur,
+                              handleSubmit,
+                              handleReset
+                            } = props;
+                            return (
+                              <form onSubmit={handleSubmit}>
+                                <label
+                                  htmlFor="email"
+                                  // style={{ display: "block" }}
+                                >
+                                  E-Mail
+                                </label>
+                                <input
+                                  id="email"
+                                  type="text"
+                                  value={values.email}
+                                  onChange={handleChange}
+                                  onBlur={handleBlur}
+                                  className={
+                                    errors.email && touched.email
+                                      ? "text-input error"
+                                      : "text-input"
+                                  }
+                                />
+                                <br />
+                                <label
+                                  htmlFor="password"
+                                  // style={{ display: "block" }}
+                                >
+                                  Password
+                                </label>
+                                <input
+                                  id="password"
+                                  type="password"
+                                  value={values.password}
+                                  onChange={handleChange}
+                                  onBlur={handleBlur}
+                                  className={
+                                    errors.password && touched.password
+                                      ? "text-input error"
+                                      : "text-input"
+                                  }
+                                />
+                                {errors.email && touched.email && (
+                                  <p>{errors.email}</p>
+                                )}
+                                {errors.password && touched.password && (
+                                  <p> {errors.password}</p>
+                                )}
+                                <br />
+                                <button
+                                  type="button"
+                                  className="btn default clean"
+                                  onClick={handleReset}
+                                  disabled={!dirty || isSubmitting}
+                                >
+                                  Reset
+                                </button>{" "}
+                                <button
+                                  className="btn default dark"
+                                  type="submit"
+                                  disabled={isSubmitting}
+                                >
+                                  Submit
+                                </button>
+                              </form>
+                            );
+                          }}
+                        </Formik>
                       </div>
                     </div>
                   )}

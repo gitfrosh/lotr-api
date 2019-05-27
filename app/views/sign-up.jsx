@@ -2,26 +2,26 @@
 
 const React = require("react");
 const Layout = require("./layout.jsx");
+const { Formik } = require("formik");
+const Yup = require("yup");
 
 class RegistrationView extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: "",
-      password: "",
       response: {}
     };
   }
 
-  signUp(e) {
+  signUp(values) {
     // e.preventDefault();
     var url = "http://localhost:8088/api/register";
     let status = undefined;
     fetch(url, {
-      method: "POST", // or 'PUT'
+      method: "POST",
       body: JSON.stringify({
-        email: this.state.email,
-        password: this.state.password
+        email: values.email,
+        password: values.password
       }),
       headers: {
         "Content-Type": "application/json"
@@ -70,7 +70,7 @@ class RegistrationView extends React.Component {
   }
 
   render() {
-    console.log(this.state.response)
+    console.log(this.state.response);
     return (
       <Layout title="Home">
         <main>
@@ -85,32 +85,135 @@ class RegistrationView extends React.Component {
                         Sign up to get your access token
                       </div>
                       <div className="panel-body">
-                        E-Mail address:
-                        <br />
-                        <input
-                          required
-                          onChange={this.changeEmail.bind(this)}
-                          value={this.state.email}
-                          type="email"
-                          name="email"
-                        />
-                        <br />
-                        Choose a password:
-                        <br />
-                        <input
-                          required
-                          onChange={this.changePassword.bind(this)}
-                          value={this.state.password}
-                          type="password"
-                          name="password"
-                        />
-                        <br />
-                        <button
-                          onClick={this.signUp.bind(this)}
-                          className="btn default dark"
+                        <Formik
+                          initialValues={{
+                            email: "",
+                            password: "",
+                            passwordConfirm: ""
+                          }}
+                          onSubmit={(values, { setSubmitting }) => {
+                            setTimeout(() => {
+                              this.signUp(values);
+                              setSubmitting(false);
+                            }, 500);
+                          }}
+                          validationSchema={Yup.object().shape({
+                            email: Yup.string()
+                              .email()
+                              .required("E-Mail required"),
+                            password: Yup.string()
+                              .trim()
+                              .required("Password required"),
+                            passwordConfirm: Yup
+                              .string()
+                              .required("Password confirm required")
+                              .oneOf(
+                                [Yup.ref("password"), null],
+                                "Passwords don't match"
+                              )
+                          })}
                         >
-                          Sign up
-                        </button>
+                          {props => {
+                            const {
+                              values,
+                              touched,
+                              errors,
+                              dirty,
+                              isSubmitting,
+                              handleChange,
+                              handleBlur,
+                              handleSubmit,
+                              handleReset
+                            } = props;
+                            return (
+                              <form onSubmit={handleSubmit}>
+                                <label
+                                  htmlFor="email"
+                                  // style={{ display: "block" }}
+                                >
+                                  E-Mail
+                                </label>
+                                <input
+                                  id="email"
+                                  type="text"
+                                  value={values.email}
+                                  onChange={handleChange}
+                                  onBlur={handleBlur}
+                                  className={
+                                    errors.email && touched.email
+                                      ? "text-input error"
+                                      : "text-input"
+                                  }
+                                />
+                                <br />
+                                <label
+                                  htmlFor="password"
+                                  // style={{ display: "block" }}
+                                >
+                                  Choose a Password
+                                </label>
+                                <input
+                                  id="password"
+                                  type="password"
+                                  value={values.password}
+                                  onChange={handleChange}
+                                  onBlur={handleBlur}
+                                  className={
+                                    errors.password && touched.password
+                                      ? "text-input error"
+                                      : "text-input"
+                                  }
+                                />{" "}
+                                <br />
+                                <label
+                                  htmlFor="password"
+                                  // style={{ display: "block" }}
+                                >
+                                  Confirm Password
+                                </label>
+                                <input
+                                  id="passwordConfirm"
+                                  type="password"
+                                  value={values.passwordConfirm}
+                                  onChange={handleChange}
+                                  onBlur={handleBlur}
+                                  className={
+                                    errors.passwordConfirm &&
+                                    touched.passwordConfirm
+                                      ? "text-input error"
+                                      : "text-input"
+                                  }
+                                />
+                                {errors.email && touched.email && (
+                                  <p>{errors.email}</p>
+                                )}
+                                {errors.password && touched.password && (
+                                  <p> {errors.password}</p>
+                                )}
+                                {errors.passwordConfirm &&
+                                  touched.passwordConfirm && (
+                                    <p> {errors.passwordConfirm}</p>
+                                  )}
+                                <br />
+                                <button
+                                  type="button"
+                                  className="btn default clean"
+                                  onClick={handleReset}
+                                  disabled={!dirty || isSubmitting}
+                                >
+                                  Reset
+                                </button>{" "}
+                                <button
+                                  className="btn default dark"
+                                  type="submit"
+                                  disabled={isSubmitting}
+                                >
+                                  Submit
+                                </button>
+                              </form>
+                            );
+                          }}
+                        </Formik>
                       </div>
                     </div>
                   )}
@@ -122,8 +225,7 @@ class RegistrationView extends React.Component {
                   {this.state.response.type === "SUCCESS" && (
                     <div class="alert success">
                       Your new user account has been created. You can{" "}
-                      <a href="/login">login</a>{" "}
-                      and grab your access token now.
+                      <a href="/login">login</a> and grab your access token now.
                     </div>
                   )}
                 </div>
