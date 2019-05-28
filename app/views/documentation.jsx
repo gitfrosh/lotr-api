@@ -37,8 +37,8 @@ class AboutView extends React.Component {
                     <p>
                       {" "}
                       Well, if you don't know or neither like "The Lord of the
-                      Rings", the epic masterpiece literature by J.R.R. Tolkien
-                      then this API is mostly likely not for you. But if you do,
+                      Rings", the epic masterpiece epos by J.R.R. Tolkien
+                      then this API is most likely not for you. But if you do,
                       this massive database will provide you with information
                       about the books, the movie trilogy, many characters and
                       quotes. You are welcome to use the data in your own apps,
@@ -65,7 +65,7 @@ class AboutView extends React.Component {
                     </p>
                     <h3>Which routes are available?</h3>
                     All routes must be prefixed with{" "}
-                    <em>https://one-api/v1/</em>. There are 4 base urls:
+                    <em>https://the-one-api/v1/</em>. There are 4 base urls:
                     <br />
                     * /movie <br />
                     * /book
