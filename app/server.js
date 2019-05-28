@@ -71,14 +71,19 @@ async function api() {
       validate: async (request, token, h) => {
         console.log("authorising bearer token...");
         // here is where you validate your token
-        // comparing with token from your database for example
-        //const isValid = token === "1234";
-        const isValid = true;
-        // const isValid = false;
+        const User = mongoose.model("user");
+        let isValid = false;
+        await User.findOne({ access_token: token }, function(err, user) {
+          if (err) {
+            console.log(err)
+            isValid = false;
+          }
+          if (user) {
+            isValid = true;
+          }
+        });
         const credentials = { token };
-        const artifacts = { test: "info" };
-
-        return { isValid, credentials, artifacts };
+        return { isValid, credentials };
       }
     });
 
@@ -125,16 +130,16 @@ async function api() {
         const err = request.response;
         const errName = err.output.payload.error;
         const statusCode = err.output.payload.statusCode;
-        if (statusCode === 505) {
+        if (statusCode === 500) {
           return h
-          .view("error", {
-            statusCode: statusCode,
-            errName: errName
-          })
-          .code(statusCode);
+            .view("error", {
+              statusCode: statusCode,
+              errName: errName
+            })
+            .code(statusCode);
         }
       }
-     return h.continue;
+      return h.continue;
     });
 
     // routing
