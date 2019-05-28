@@ -1,7 +1,7 @@
 const Joi = require("joi");
 const RestHapi = require("rest-hapi");
-var nanoid = require('nanoid')
-const Boom = require('boom');
+var nanoid = require("nanoid");
+const Boom = require("boom");
 
 var cookie_options = {
   ttl: 365 * 24 * 60 * 60 * 1000, // expires a year from today
@@ -30,7 +30,10 @@ module.exports = function(server, mongoose, logger) {
         auth: false,
         tags: ["api", "auth", "logout"],
         plugins: {
-          "hapi-swagger": {}
+          "hapi-swagger": {},
+          "hapi-rate-limit": {
+            enabled: false
+          }
         }
       }
     });
@@ -53,7 +56,11 @@ module.exports = function(server, mongoose, logger) {
           const { email, password } = request.payload;
           // create bearer token!!
           const access_token = nanoid(20);
-          return await RestHapi.create(User, { email, password, access_token }, Log);
+          return await RestHapi.create(
+            User,
+            { email, password, access_token },
+            Log
+          );
         },
         auth: false,
         validate: {
@@ -67,7 +74,10 @@ module.exports = function(server, mongoose, logger) {
         },
         tags: ["api", "auth", "register"],
         plugins: {
-          "hapi-swagger": {}
+          "hapi-swagger": {},
+          "hapi-rate-limit": {
+            enabled: false
+          }
         }
       }
     });
@@ -108,7 +118,10 @@ module.exports = function(server, mongoose, logger) {
         auth: false,
         tags: ["api", "auth", "register"],
         plugins: {
-          "hapi-swagger": {}
+          "hapi-swagger": {},
+          "hapi-rate-limit": {
+            enabled: false
+          }
         }
       }
     });
@@ -171,7 +184,10 @@ module.exports = function(server, mongoose, logger) {
         },
         tags: ["api", "auth", "login"],
         plugins: {
-          "hapi-swagger": {}
+          "hapi-swagger": {},
+          "hapi-rate-limit": {
+            enabled: false
+          }
         }
       }
     });

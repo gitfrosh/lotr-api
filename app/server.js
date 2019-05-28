@@ -7,6 +7,7 @@ const AuthBearer = require("hapi-auth-bearer-token");
 let AuthJwt = require("hapi-auth-jwt2");
 const Vision = require("@hapi/vision");
 const HapiReactViews = require("hapi-react-views");
+const HapiRateLimit = require("hapi-rate-limit");
 require("babel-polyfill");
 
 require("babel-core/register")({
@@ -54,7 +55,12 @@ async function api() {
       method: "GET",
       path: "/assets/{path*}",
       config: {
-        auth: false
+        auth: false,
+        plugins: {
+          "hapi-rate-limit": {
+            enabled: false
+          }
+        }
       },
       handler: {
         directory: {
@@ -73,16 +79,18 @@ async function api() {
         // here is where you validate your token
         const User = mongoose.model("user");
         let isValid = false;
+        let credentials = {};
         await User.findOne({ access_token: token }, function(err, user) {
           if (err) {
-            console.log(err)
+            console.log(err);
             isValid = false;
+            credentials = {};
           }
           if (user) {
             isValid = true;
+            credentials = { user };
           }
         });
-        const credentials = { token };
         return { isValid, credentials };
       }
     });
@@ -93,11 +101,11 @@ async function api() {
       console.log("authorising jwt...");
       let { user } = decodedToken;
       if (!user) {
-        return { isValid: false };
+        return { isValid: false, credentials: {} };
       }
       return {
-        isValid: true
-        // credentials: { user }
+        isValid: true,
+        credentials: { user }
       };
     };
 
@@ -158,7 +166,12 @@ async function api() {
           return h.view("home", context);
         },
         auth: false,
-        tags: ["api", "app", "home"]
+        tags: ["api", "app", "home"],
+        plugins: {
+          "hapi-rate-limit": {
+            enabled: false
+          }
+        }
       }
     });
 
@@ -170,7 +183,12 @@ async function api() {
           return h.view("about");
         },
         auth: false,
-        tags: ["api", "app", "about"]
+        tags: ["api", "app", "about"],
+        plugins: {
+          "hapi-rate-limit": {
+            enabled: false
+          }
+        }
       }
     });
     server.route({
@@ -181,7 +199,12 @@ async function api() {
           return h.view("documentation");
         },
         auth: false,
-        tags: ["api", "app", "documenation"]
+        tags: ["api", "app", "documenation"],
+        plugins: {
+          "hapi-rate-limit": {
+            enabled: false
+          }
+        }
       }
     });
 
@@ -197,7 +220,10 @@ async function api() {
         },
         tags: ["api", "auth", "account"],
         plugins: {
-          "hapi-swagger": {}
+          "hapi-swagger": {},
+          "hapi-rate-limit": {
+            enabled: false
+          }
         }
       }
     });
@@ -210,7 +236,12 @@ async function api() {
           return h.view("sign-up");
         },
         auth: false,
-        tags: ["api", "auth", "sign-up"]
+        tags: ["api", "auth", "sign-up"],
+        plugins: {
+          "hapi-rate-limit": {
+            enabled: false
+          }
+        }
       }
     });
 
@@ -224,7 +255,10 @@ async function api() {
         auth: false,
         tags: ["api", "auth", "login"],
         plugins: {
-          "hapi-swagger": {}
+          "hapi-swagger": {},
+          "hapi-rate-limit": {
+            enabled: false
+          }
         }
       }
     });
@@ -253,6 +287,17 @@ async function api() {
         },
         routes: {
           prefix: "/api"
+        }
+      }
+    ]);
+
+    await server.register([
+      {
+        plugin: HapiRateLimit,
+        options: {
+          enabled: true,
+          userLimit: 100,
+          userAttribute: "_id"
         }
       }
     ]);
