@@ -53,7 +53,7 @@
     "@hapi/joi" "15.x.x"
     lru-cache "4.1.x"
 
-"@hapi/joi@15.x.x":
+"@hapi/joi@15.x.x", "@hapi/joi@^15.0.3":
   version "15.0.3"
   resolved "https://registry.yarnpkg.com/@hapi/joi/-/joi-15.0.3.tgz#e94568fd859e5e945126d5675e7dd218484638a7"
   integrity sha512-z6CesJ2YBwgVCi+ci8SI8zixoj8bGFn/vZb9MBPbSyoxsS2PnWYjHcyTM17VLK6tx64YVK38SDIh10hJypB+ig==
@@ -2423,6 +2423,14 @@ hapi-error@^2.1.0:
   integrity sha512-SxA2LSmnb/ZJ6bZKFvpx+qWzIyfLiBe9E6ncC/GjxGj5BZjXQr7i/ffMkzwJziw9SKino0boWpbN/grxj78qiQ==
   dependencies:
     hoek "^5.0.3"
+
+hapi-rate-limit@^3.1.3:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/hapi-rate-limit/-/hapi-rate-limit-3.1.3.tgz#c76d0331c4a0a9146598ac4e5ff24d5cc876eee3"
+  integrity sha512-iVbr/ddprCRS22UJX8ddpmNjqh6Ec1PanJgM+lXynO9mwdKjbw1mYDe0fCSys7edLHXy8K9gwSVKbHaUaNp4Wg==
+  dependencies:
+    "@hapi/boom" "^7.4.2"
+    "@hapi/joi" "^15.0.3"
 
 hapi-react-views@^10.0.1:
   version "10.0.1"
