@@ -13,7 +13,7 @@ class LayoutView extends React.Component {
   }
 
   logout() {
-    const url = "http://localhost:8088/api/logout";
+    const url = "http://localhost:8088/v1/logout";
     fetch(url, {
       method: "GET"
     })

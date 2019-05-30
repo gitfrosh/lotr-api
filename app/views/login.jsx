@@ -17,7 +17,7 @@ class LoginView extends React.Component {
 
   login(values) {
     // e.preventDefault();
-    var url = "http://localhost:8088/api/login";
+    var url = "http://localhost:8088/v1/login";
     let status = undefined;
     const data = values.values;
     fetch(url, {

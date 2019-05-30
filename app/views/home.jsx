@@ -24,7 +24,7 @@ class View extends React.Component {
 
   fetchMovie() {
     const that = this;
-    fetch("http://localhost:8088/api" + this.state.url)
+    fetch("http://localhost:8088/v1" + this.state.url)
       .then(function(response) {
         return response.json();
       })

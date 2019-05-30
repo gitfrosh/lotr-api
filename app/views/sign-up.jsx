@@ -15,7 +15,7 @@ class RegistrationView extends React.Component {
 
   signUp(values) {
     // e.preventDefault();
-    var url = "http://localhost:8088/api/register";
+    var url = "http://localhost:8088/v1/register";
     let status = undefined;
     fetch(url, {
       method: "POST",
