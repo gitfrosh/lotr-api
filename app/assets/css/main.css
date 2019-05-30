@@ -1427,6 +1427,7 @@ section .dark a {
   width: 100%;
   max-width: 100%;
   word-wrap: break-word;
+  /* word-break:break-all; */
   border-spacing: 0;
   border-collapse: collapse;
   -webkit-border-radius: 2px;
@@ -1446,6 +1447,9 @@ section .dark a {
 
 .table tr {
   border-bottom: 1px solid #eee;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+
 }
 
 .table tr th,
@@ -1517,6 +1521,7 @@ h2 {
 h3 {
   font-size: 1.3rem;
   font-weight: 300;
+  line-height: 2.0rem;
   margin: 0.3rem 0;
 }
 

@@ -286,7 +286,7 @@ async function api() {
           config
         },
         routes: {
-          prefix: "/api"
+          prefix: "/v1"
         }
       }
     ]);
