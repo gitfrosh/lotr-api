@@ -1,5 +1,5 @@
 module.exports = function(mongoose) {
-  let modelName = "book";
+  let modelName = "chapter";
   let Types = mongoose.Schema.Types;
   let Schema = new mongoose.Schema({
     BookName: {
