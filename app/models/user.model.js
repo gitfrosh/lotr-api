@@ -30,6 +30,10 @@ module.exports = function(mongoose) {
   Schema.statics = {
     collectionName: modelName,
     routeOptions: {
+      allowRead: false,
+      allowCreate: true,
+      allowUpdate: false,
+      allowDelete: false,
       create: {
         // TODO: Before the route handler runs, verify that the user is unique
         pre: function(payload, request, Log) {
