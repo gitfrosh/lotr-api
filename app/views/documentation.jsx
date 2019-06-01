@@ -79,7 +79,7 @@ class AboutView extends React.Component {
                       Rings", the epic masterpiece epos by J.R.R. Tolkien then
                       this API is most likely not for you. But if you do, this
                       massive database will provide you with information about
-                      the books, the movie trilogy, many characters and quotes.
+                      the ss, the movie trilogy, many characters and quotes.
                       You are welcome to use the data in your own apps, mixups
                       and (fun) projects — like I did with creating this API.
                     </p>
@@ -128,14 +128,14 @@ class AboutView extends React.Component {
                   <div className="panel-body">
                     <h3>Which routes are available?</h3>
                     All routes must be prefixed with{" "}
-                    <em>https://the-one-api/v1</em>.
+                    <em>https://the-one-api/v1</em>. Only the first endpoint is
+                    available without authentication.
                     <br />
-                    * /movie <br />
                     <table className="table">
                       <thead>
                         <tr>
                           <th width="20%">Endpoint</th>
-                          <th width="60%">Reponse</th>
+                          <th width="60%">Response</th>
                           <th width="20%">Token required</th>
                         </tr>
                       </thead>
@@ -212,13 +212,6 @@ class AboutView extends React.Component {
                         </tr>
                       </tbody>
                     </table>
-                    * /book
-                    <br />
-                    * /character
-                    <br />
-                    * /quote
-                    <br />
-                    Only the first endpoint is available without authentication.
                   </div>
                 </div>
               </div>
