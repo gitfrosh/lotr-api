@@ -79,9 +79,9 @@ class AboutView extends React.Component {
                       Rings", the epic masterpiece epos by J.R.R. Tolkien then
                       this API is most likely not for you. But if you do, this
                       massive database will provide you with information about
-                      the ss, the movie trilogy, many characters and quotes.
-                      You are welcome to use the data in your own apps, mixups
-                      and (fun) projects — like I did with creating this API.
+                      the ss, the movie trilogy, many characters and quotes. You
+                      are welcome to use the data in your own apps, mixups and
+                      (fun) projects — like I did with creating this API.
                     </p>
                   </div>
                 </div>
@@ -128,7 +128,7 @@ class AboutView extends React.Component {
                   <div className="panel-body">
                     <h3>Which routes are available?</h3>
                     All routes must be prefixed with{" "}
-                    <em>https://the-one-api/v1</em>. Only the first endpoint is
+                    <em>https://the-one-api/v1</em>. Only the <strong>/book</strong> endpoint is
                     available without authentication.
                     <br />
                     <table className="table">
@@ -142,18 +142,39 @@ class AboutView extends React.Component {
                       <tbody>
                         <tr>
                           <td>
+                            <strong>/book</strong>
+                          </td>
+                          <td>List of all "The Lord of the Rings" books</td>
+                          <td>no</td>
+                        </tr>
+                        <tr>
+                          <td>
+                          /book/&#123;id&#125;
+                          </td>
+                          <td>Request one specific book</td>
+                          <td>no</td>
+                        </tr>
+                        <tr>
+                          <td>
+                          /book/&#123;id&#125;/chapter
+                          </td>
+                          <td>Request all chapters of one specific book</td>
+                          <td>no</td>
+                        </tr>
+                        <tr>
+                          <td>
                             <strong>/movie</strong>
                           </td>
                           <td>
                             List of all movies, including the "The Lord of the
                             Rings" and the "The Hobbit" trilogies
                           </td>
-                          <td>no</td>
+                          <td>yes</td>
                         </tr>
                         <tr>
                           <td>/movie/&#123;id&#125;</td>
                           <td>Request one specific movie</td>
-                          <td>no</td>
+                          <td>yes</td>
                         </tr>
                         <tr>
                           <td>/movie/&#123;id&#125;/quote</td>
@@ -161,7 +182,7 @@ class AboutView extends React.Component {
                             Request all movie quotes for one specific movie
                             (only working for the LotR trilogy)
                           </td>
-                          <td>no</td>
+                          <td>yes</td>
                         </tr>
                         <tr>
                           <td>
@@ -201,7 +222,7 @@ class AboutView extends React.Component {
                           <td>
                             <strong>/chapter</strong>
                           </td>
-                          <td>List of all book chapters and their contents</td>
+                          <td>List of all book chapters</td>
                           <td>yes</td>
                         </tr>
                         <tr>
