@@ -9,11 +9,11 @@ module.exports = function(mongoose) {
   let modelName = "quote";
   let Types = mongoose.Schema.Types;
   let Schema = new mongoose.Schema({
-    id: {
-      type: Types.Number,
-      required: true,
-      // unique: true
-    },
+    // id: {
+    //   type: Types.Number,
+    //   required: true,
+    //   // unique: true
+    // },
     dialog: {
       type: Types.String,
       required: true

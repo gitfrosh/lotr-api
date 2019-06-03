@@ -8,16 +8,31 @@ from bson.objectid import ObjectId
 
 client = MongoClient('mongodb://localhost:27017/')
 mydb = client["lotr"]
-mycol = mydb["characters"]
+mycol = mydb["chapters"]
+
+# mycollection.find_one_and_update({"_id": mongo_id},
+#                                  {"$set": {"newfield": "abc"}})
 
 cursor = mycol.find({})
-for char in cursor:
+for chap in cursor:
     # print(type(char["_id"]))
-    if type(char["_id"]) is str:
-        print(char["_id"])
-        r = mycol.delete_one(char)
-        print(r)
+    book = chap["BookName"]["Case"]
+    if book == "TheFellowshipOfTheRing":
+        chap["bookName"] = "The Fellowship Of The Ring"
+        mycol.save(chap)
+    if book == "TheTwoTowers":
+        chap["bookName"] = "The Two Towers"
+        mycol.save(chap)
+    if book == "TheReturnOfTheKing":
+        chap["bookName"] = "The Return Of The King"
+        mycol.save(chap)
+#     if type(char["_id"]) is str:
+#         print(char["_id"])
+#         r = mycol.delete_one(char)
+#         print(r)
 
+
+print (mycol.find())
 
 ################################################################################
 

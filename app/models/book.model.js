@@ -1,38 +1,30 @@
 module.exports = function(mongoose) {
-  let modelName = "chapter";
+  let modelName = "book";
   let Types = mongoose.Schema.Types;
   let Schema = new mongoose.Schema({
-    chapterName: {
+    name: {
       type: Types.String,
       required: true
       // unique: true
-    },
-    book: {
-      type: Types.ObjectId,
-      ref: "book",
-      required: true
-    },
-    // ChapterData: {
-    //   type: Types.String,
-    //   required: true
-    //   // unique: true
-    // }
+    }
   });
 
   Schema.statics = {
     collectionName: modelName,
     routeOptions: {
-      readAuth: true,
+      readAuth: false, //disable authentication
       allowCreate: false,
       allowUpdate: false,
       allowDelete: false,
       associations: {
-        book: {
-          type: "MANY_ONE",
-          model: "book",
+        chapters: {
+          type: "ONE_MANY",
+          alias: "chapter",
+          foreignField: "book",
+          model: "chapter",
           allowAdd: false,
-          allowRemove: false,
-        },
+          allowRemove: false
+        }
       }
     }
   };
