@@ -38,7 +38,7 @@ module.exports = function(mongoose) {
   Schema.statics = {
     collectionName: modelName,
     routeOptions: {
-      readAuth: false, //disable authentication
+      readAuth: true,
       allowCreate: false,
       allowUpdate: false,
       allowDelete: false,
