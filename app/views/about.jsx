@@ -17,23 +17,43 @@ class AboutView extends React.Component {
                   <div className="panel-body">
                     {" "}
                     The <strong>one API to rule them all</strong> is a project
-                    by Rike (https://rike.dev) made during th #100DaysOfCode
-                    challenge and is brought to you via DigitalOcean. You have
-                    some questions or suggestions? Find me on Twitter
-                    (@frankanka)!
+                    by <a href="https://rike.dev">Rike</a> made during the
+                    <a href="https://www.100daysofcode.com/">
+                      #100DaysOfCode challenge
+                    </a>{" "}
+                    and is brought to you via{" "}
+                    <a href="https://www.digitalocean.com/">DigitalOcean</a>.
+                    You have some questions or suggestions? Find me on Twitter (
+                    <a href="https://twitter.com/frankanka">@frankanka</a>)!
                     <br />
-                    <img src="../assets/images/icon_gandalf.gif" />
                     <br />
                     <p>
                       <strong>Credits</strong>
                     </p>
                     This project was made with &hearts; and some awesome
-                    technologies: - Node.js - Hapi.js - MongoDB, Mongoose -
-                    Fontawesome - Rest Hapi - Webpack / Babel. It could not gave
-                    been made without the scraping work of Moko Sharma
-                    (https://www.kaggle.com/mokosan/lord-of-the-rings-character-data)
-                    and Paul Mooney
-                    (https://www.kaggle.com/paultimothymooney/lord-of-the-rings-data).{" "}
+                    technologies: - <a href="https://nodejs.org/en/">Node.js</a>{" "}
+                    - <a href="https://hapijs.com/">Hapi.js</a> -{" "}
+                    <a href="https://www.mongodb.com/de">MongoDB</a> -{" "}
+                    <a href="https://mongoosejs.com/">Mongoose</a> -{" "}
+                    <a href="https://fontawesome.com/">Fontawesome</a> -{" "}
+                    <a href="https://www.toptal.com/designers/subtlepatterns/">
+                      Subtle Patterns
+                    </a>{" "}
+                    - <a href="https://resthapi.com/">Rest Hapi</a> -{" "}
+                    <a href="https://webpack.js.org/">Webpack</a> /{" "}
+                    <a href="https://babeljs.io/">Babel</a>. It could not gave
+                    been made without the scraping work of Moko Sharma (
+                    <a href="(https://www.kaggle.com/mokosan/lord-of-the-rings-character-data">
+                      Kaggle
+                    </a>
+                    ) and Paul Mooney (
+                    <a href="https://www.kaggle.com/paultimothymooney/lord-of-the-rings-data">
+                      Kaggle
+                    </a>
+                    ) .
+                    <br />
+                    <br />
+                    <img src="../assets/images/icon_gandalf.gif" />{" "}
                   </div>
                 </div>
               </div>

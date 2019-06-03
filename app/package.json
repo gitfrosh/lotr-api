@@ -16,6 +16,7 @@
     "babel-preset-env": "1.x.x",
     "babel-preset-react": "6.x.x",
     "bcryptjs": "^2.4.3",
+    "dotenv": "^8.0.0",
     "formik": "^1.5.7",
     "hapi": "^18.1.0",
     "hapi-auth-bearer-token": "^6.1.1",

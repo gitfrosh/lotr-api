@@ -9,7 +9,7 @@ const Vision = require("@hapi/vision");
 const HapiReactViews = require("hapi-react-views");
 const HapiRateLimit = require("hapi-rate-limit");
 require("babel-polyfill");
-
+require("dotenv").config();
 require("babel-core/register")({
   presets: ["react", "env"]
 });
@@ -18,8 +18,8 @@ async function api() {
   try {
     // general settings
     let server = Hapi.Server({
-      port: 8088,
-      host: "localhost",
+      port: process.env.APP_PORT,
+      host: process.env.HOST,
       debug: { request: ["*"] },
       routes: {
         validate: {
@@ -263,17 +263,20 @@ async function api() {
       }
     });
 
-    //  server route logout???
-
     let config = {
       appTitle: "lotr-api",
       enableTextSearch: true,
       // logRoutes: true,
       loglevel: "INTERNAL",
       docExpansion: "list",
-      swaggerHost: "localhost:8080",
       mongo: {
-        URI: "mongodb://localhost:27017/lotr"
+        URI:
+          "mongodb://" +
+          process.env.HOST +
+          ":" +
+          process.env.DB_PORT +
+          "/" +
+          process.env.DB_NAME
       },
       authStrategy: "simple"
     };
