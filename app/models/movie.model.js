@@ -3,32 +3,32 @@ module.exports = function(mongoose) {
   let Types = mongoose.Schema.Types;
   let Schema = new mongoose.Schema(
     {
-      Name: {
+      name: {
         type: Types.String,
         required: true,
         // unique: true
       },
-      RuntimeInMinutes: {
+      runtimeInMinutes: {
         type: Types.Number,
         required: true
       },
-      BudgetInMillions: {
+      budgetInMillions: {
         type: Types.Number,
         required: true
       },
-      BoxOfficeRevenueInMillions: {
+      boxOfficeRevenueInMillions: {
         type: Types.Number,
         required: true
       },
-      AcademyAwardNominations: {
+      academyAwardNominations: {
         type: Types.Number,
         required: true
       },
-      AcademyAwardWins: {
+      academyAwardWins: {
         type: Types.Number,
         required: true
       },
-      RottenTomatoesScore: {
+      rottenTomatoesScore: {
         type: Types.Number,
         required: true
       }

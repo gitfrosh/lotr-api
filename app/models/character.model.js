@@ -2,16 +2,16 @@ module.exports = function(mongoose) {
   let modelName = "character";
   let Types = mongoose.Schema.Types;
   let Schema = new mongoose.Schema({
-    Name: {
+    name: {
       type: Types.String,
       required: true,
       unique: false
     },
-    Url: {
+    wikiUrl: {
       type: Types.String,
       required: true
     },
-    Race: {
+    race: {
       type: Types.String,
       required: true
     },
