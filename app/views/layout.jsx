@@ -8,7 +8,7 @@ class LayoutView extends React.Component {
   componentWillMount() {
     if (typeof window !== "undefined") {
       isLoggedIn = !!Cookies.get("token");
-      console.log(isLoggedIn);
+      // console.log(isLoggedIn);
     }
   }
 
@@ -21,7 +21,7 @@ class LayoutView extends React.Component {
         return res.json();
       })
       .then(response => {
-        console.log("Response:", JSON.stringify(response));
+        //console.log("Response:", JSON.stringify(response));
         window.location.href = "http://localhost:8088/";
       })
       .catch(error => {
@@ -58,7 +58,7 @@ class LayoutView extends React.Component {
                 {isLoggedIn && (
                   <li className="dropdown">
                     <a href="#" className="dropdownitem">
-                      <strong>welcome!</strong> <i class="fas fa-caret-down"></i>
+                      <strong>welcome!</strong> <i class="fas fa-caret-down" />
                     </a>
                     <ul>
                       <li>

@@ -33,7 +33,6 @@ class AccountView extends React.Component {
 
   render() {
     let content = "";
-    console.log(this.state.user)
     if (!this.state.user) {
       content = (
         <div>

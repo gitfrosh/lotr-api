@@ -32,8 +32,8 @@ class RegistrationView extends React.Component {
         return res.json();
       })
       .then(response => {
-        console.log("Response:", JSON.stringify(response));
-        console.log(status);
+        // console.log("Response:", JSON.stringify(response));
+        // console.log(status);
         if (status === 200) {
           this.setState({
             response: {
@@ -70,7 +70,6 @@ class RegistrationView extends React.Component {
   }
 
   render() {
-    console.log(this.state.response);
     return (
       <Layout title="Home">
         <main>
