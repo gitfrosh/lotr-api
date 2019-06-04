@@ -75,7 +75,7 @@ async function api() {
     server.auth.strategy("simple", "bearer-access-token", {
       allowQueryToken: true, // optional, false by default
       validate: async (request, token, h) => {
-        console.log("authorising bearer token...");
+        // console.log("authorising bearer token...");
         // here is where you validate your token
         const User = mongoose.model("user");
         let isValid = false;
@@ -98,7 +98,7 @@ async function api() {
     // auth strategy #2 (JWT) for user registration, login, logout
     const validate = (decodedToken, request, h) => {
       // console.log(decodedToken, request, h)
-      console.log("authorising jwt...");
+      // console.log("authorising jwt...");
       let { user } = decodedToken;
       if (!user) {
         return { isValid: false, credentials: {} };

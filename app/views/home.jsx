@@ -14,11 +14,9 @@ class View extends React.Component {
     };
   }
 
-  changeApi(e)  {
-    console.log(e.target.value)
+  changeApi(e) {
     this.setState({
       url: e.target.value
-
     });
   }
 
@@ -29,24 +27,19 @@ class View extends React.Component {
         return response.json();
       })
       .then(function(myJson) {
-        console.log(JSON.stringify(myJson));
         that.setState({
-          book: JSON.stringify(myJson,null,'\t')
-
+          book: JSON.stringify(myJson, null, "\t")
         });
       });
   }
 
   fetchQuote() {
     const that = this;
-    alert("Hi " + this.props.foo);
-    console.log("fetch");
     fetch("http://localhost:8088/quote/5cd96e05de30eff6ebcce7e9")
       .then(function(response) {
         return response.json();
       })
       .then(function(myJson) {
-        console.log(JSON.stringify(myJson));
         that.setState({
           quote: myJson.dialog
         });
@@ -57,17 +50,7 @@ class View extends React.Component {
     alert("Hi " + this.props.foo);
   }
 
-  componentWillMount() {
-    console.log("did mount!", this.props.foo);
-    // console.log(window)
-    // let response = await fetch(
-    //   `http://localhost:8080/quote/5cd96e05de30eff6ebcce7e9`
-    // );
-    // let data = await response.json();
-    // this.setState({
-    //   quote: data
-    // });
-  }
+  componentWillMount() {}
 
   render() {
     return (
@@ -99,10 +82,9 @@ class View extends React.Component {
                   <div className="panel-body">
                     <em>Mellon</em>, this is the API (What the hell is an
                     Application Programming Interface?) that serves your needs
-                    regarding data about{" "}
-                    <strong>The Lord of the Rings</strong>, the epic books by J.
-                    R. R. Tolkien and the official movie adaptions by Peter
-                    Jackson.
+                    regarding data about <strong>The Lord of the Rings</strong>,
+                    the epic books by J. R. R. Tolkien and the official movie
+                    adaptions by Peter Jackson.
                   </div>
                 </div>
               </div>
@@ -118,7 +100,11 @@ class View extends React.Component {
                   <div className="panel-body">
                     <div>
                       <span>GET</span>
-                      <input type="text" onChange={this.changeApi.bind(this)} value={this.state.url} />
+                      <input
+                        type="text"
+                        onChange={this.changeApi.bind(this)}
+                        value={this.state.url}
+                      />
                       <button
                         onClick={this.fetchBook.bind(this)}
                         className="btn default dark"

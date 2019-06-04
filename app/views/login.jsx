@@ -35,15 +35,15 @@ class LoginView extends React.Component {
         return res.json();
       })
       .then(response => {
-        console.log("Response:", JSON.stringify(response));
-        console.log(status);
+        // console.log("Response:", JSON.stringify(response));
+        //  console.log(status);
         if (status === 200) {
-          console.log("logged in!");
-          console.log(response);
+          // console.log("logged in!");
+          // console.log(response);
           // window.localStorage.setItem("JWT_KEY", response.token);
           window.location.href = "http://localhost:8088/account";
         } else {
-          console.log(response);
+          // console.log(response);
           this.setState({
             response: {
               type: "ERROR",
