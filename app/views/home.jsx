@@ -9,8 +9,8 @@ class View extends React.Component {
     super(props);
     this.state = {
       quote: "fdsff",
-      url: "/movie/5cd95395de30eff6ebccde5b",
-      movie: ""
+      url: "/book/5cf5805fb53e011a64671582",
+      book: ""
     };
   }
 
@@ -22,7 +22,7 @@ class View extends React.Component {
     });
   }
 
-  fetchMovie() {
+  fetchBook() {
     const that = this;
     fetch("http://localhost:8088/v1" + this.state.url)
       .then(function(response) {
@@ -31,7 +31,7 @@ class View extends React.Component {
       .then(function(myJson) {
         console.log(JSON.stringify(myJson));
         that.setState({
-          movie: JSON.stringify(myJson,null,'\t')
+          book: JSON.stringify(myJson,null,'\t')
 
         });
       });
@@ -120,7 +120,7 @@ class View extends React.Component {
                       <span>GET</span>
                       <input type="text" onChange={this.changeApi.bind(this)} value={this.state.url} />
                       <button
-                        onClick={this.fetchMovie.bind(this)}
+                        onClick={this.fetchBook.bind(this)}
                         className="btn default dark"
                       >
                         Fetch
@@ -130,7 +130,7 @@ class View extends React.Component {
                       className="alert info"
                       style={{ overflowY: "scroll", height: "140px" }}
                     >
-                      <pre>{this.state.movie}</pre>
+                      <pre>{this.state.book}</pre>
                     </div>
                     <div className="notice dark">
                       There are many more endpoints available, but you need to{" "}

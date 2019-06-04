@@ -2,7 +2,7 @@ module.exports = function(mongoose) {
   let modelName = "chapter";
   let Types = mongoose.Schema.Types;
   let Schema = new mongoose.Schema({
-    chapterName: {
+    name: {
       type: Types.String,
       required: true
       // unique: true
