@@ -13,7 +13,7 @@ class LayoutView extends React.Component {
   }
 
   logout() {
-    const url = process.env.APP_URL + "/v1/logout";
+    const url = process.env.APP_ENV === "prod" ? process.env.APP_URL : "" + + "/v1/logout";
     fetch(url, {
       method: "GET"
     })
@@ -22,7 +22,7 @@ class LayoutView extends React.Component {
       })
       .then(response => {
         //console.log("Response:", JSON.stringify(response));
-        window.location.href = process.env.APP_URL;
+        window.location.href = process.env.APP_ENV === "prod" ? process.env.APP_URL : "";
       })
       .catch(error => {
         console.log(error);
