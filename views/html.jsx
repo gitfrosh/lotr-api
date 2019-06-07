@@ -8,6 +8,7 @@ class Html extends React.Component {
       <html>
         <head>
           <title>The LOTR API</title>
+          <link rel="icon" type="image/gif" href="assets/images/icon_gandalf.gif"></link>
           <meta charSet="utf-8" />
           <meta
             name="viewport"
