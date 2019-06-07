@@ -42,7 +42,7 @@ class AboutView extends React.Component {
                     </a>{" "}
                     - <a href="https://resthapi.com/">Rest Hapi</a> -{" "}
                     <a href="https://webpack.js.org/">Webpack</a> /{" "}
-                    <a href="https://babeljs.io/">Babel</a>. It could not gave
+                    <a href="https://babeljs.io/">Babel</a>. It could not have
                     been made without the scraping work of Moko Sharma (
                     <a href="(https://www.kaggle.com/mokosan/lord-of-the-rings-character-data">
                       Kaggle
