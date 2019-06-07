@@ -15,7 +15,7 @@ class RegistrationView extends React.Component {
 
   signUp(values) {
     // e.preventDefault();
-    var url = process.env.APP_URL + "/v1/register";
+    var url = process.env.APP_ENV === "prod" ? process.env.APP_URL : "" + "/v1/register";
     let status = undefined;
     fetch(url, {
       method: "POST",

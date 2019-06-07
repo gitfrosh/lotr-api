@@ -12,8 +12,8 @@ require("babel-polyfill");
 require("babel-core/register")({
   presets: ["react", "env"]
 });
-// require("custom-env").env(true); // load env variables dynamically from current env
-require('dotenv').config()
+require("custom-env").env(true); // load env variables dynamically from current env
+// require('dotenv').config()
 
 var server_port = process.env.PORT || 80;
 var server_host = process.env.HOST || '0.0.0.0';
