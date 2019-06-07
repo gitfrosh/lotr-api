@@ -282,7 +282,7 @@ async function api() {
           "/" +
           process.env.DB_NAME;
 
-    console.log(uri);
+    // console.log(uri);
     let config = {
       appTitle: "lotr-api",
       enableTextSearch: true,

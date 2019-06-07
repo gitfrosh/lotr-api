@@ -1,0 +1,762 @@
+_id,Name,Url,Race
+ObjectId(5cd99d4bde30eff6ebccfbbe),Adanel,http://lotr.wikia.com//wiki/Adanel,Human
+ObjectId(5cd99d4bde30eff6ebccfbbf),Adrahil I,http://lotr.wikia.com//wiki/Adrahil_I,Human
+ObjectId(5cd99d4bde30eff6ebccfbc0),Adrahil II,http://lotr.wikia.com//wiki/Adrahil_II,Human
+ObjectId(5cd99d4bde30eff6ebccfbc1),Aegnor,http://lotr.wikia.com//wiki/Aegnor,Elf
+ObjectId(5cd99d4bde30eff6ebccfbc2),Aerin,http://lotr.wikia.com//wiki/Aerin,Human
+ObjectId(5cd99d4bde30eff6ebccfbc3),Ailinel,http://lotr.wikia.com//wiki/Ailinel,Human
+ObjectId(5cd99d4bde30eff6ebccfbc4),Aglahad,http://lotr.wikia.com//wiki/Aglahad,Human
+ObjectId(5cd99d4bde30eff6ebccfbc5),Algund,http://lotr.wikia.com//wiki/Algund,Human
+ObjectId(5cd99d4bde30eff6ebccfbc6),Almiel,http://lotr.wikia.com//wiki/Almiel,Human
+ObjectId(5cd99d4bde30eff6ebccfbc7),Alphros,http://lotr.wikia.com//wiki/Alphros,Human
+ObjectId(5cd99d4bde30eff6ebccfbc8),Almarian,http://lotr.wikia.com//wiki/Almarian,Human
+ObjectId(5cd99d4bde30eff6ebccfbc9),Amandil,http://lotr.wikia.com//wiki/Amandil,Human
+ObjectId(5cd99d4bde30eff6ebccfbca),Amarië,http://lotr.wikia.com//wiki/Amari%C3%AB,Elf
+ObjectId(5cd99d4bde30eff6ebccfbcb),Aldor,http://lotr.wikia.com//wiki/Aldor,Human
+ObjectId(5cd99d4bde30eff6ebccfbcc),Aldamir,http://lotr.wikia.com//wiki/Aldamir,Human
+ObjectId(5cd99d4bde30eff6ebccfbcd),Amlaith,http://lotr.wikia.com//wiki/Amlaith,Human
+ObjectId(5cd99d4bde30eff6ebccfbce),Amroth,http://lotr.wikia.com//wiki/Amroth,Elf
+ObjectId(5cd99d4bde30eff6ebccfbcf),Amrothos,http://lotr.wikia.com//wiki/Amrothos,Human
+ObjectId(5cd99d4bde30eff6ebccfbd0),Anairë,http://lotr.wikia.com//wiki/Anair%C3%AB,Elf
+ObjectId(5cd99d4bde30eff6ebccfbd1),Anardil,http://lotr.wikia.com//wiki/Anardil,Human
+ObjectId(5cd99d4bde30eff6ebccfbd2),Anborn,http://lotr.wikia.com//wiki/Anborn,Human
+ObjectId(5cd99d4bde30eff6ebccfbd3),Andreth,http://lotr.wikia.com//wiki/Andreth,Human
+ObjectId(5cd99d4bde30eff6ebccfbd4),Andróg,http://lotr.wikia.com//wiki/Andr%C3%B3g,Human
+ObjectId(5cd99d4bde30eff6ebccfbd5),Amras,http://lotr.wikia.com//wiki/Amras,Elf
+ObjectId(5cd99d4bde30eff6ebccfbd6),Angamaitë,http://lotr.wikia.com//wiki/Angamait%C3%AB,Human
+ObjectId(5cd99d4bde30eff6ebccfbd7),Amdír,http://lotr.wikia.com//wiki/Amd%C3%ADr,Elf
+ObjectId(5cd99d4bde30eff6ebccfbd8),Amrod,http://lotr.wikia.com//wiki/Amrod,Elf
+ObjectId(5cd99d4bde30eff6ebccfbd9),Annael,http://lotr.wikia.com//wiki/Annael,Elf
+ObjectId(5cd99d4bde30eff6ebccfbda),Angbor,http://lotr.wikia.com//wiki/Angbor,Human
+ObjectId(5cd99d4bde30eff6ebccfbdb),Angelimir,http://lotr.wikia.com//wiki/Angelimir,Human
+ObjectId(5cd99d4bde30eff6ebccfbdc),Angrod,http://lotr.wikia.com//wiki/Angrod,Elf
+ObjectId(5cd99d4bde30eff6ebccfbdd),Anárion,http://lotr.wikia.com//wiki/An%C3%A1rion,Human
+ObjectId(5cd99d4bde30eff6ebccfbde),Ar-Adûnakhôr,http://lotr.wikia.com//wiki/Ar-Ad%C3%BBnakh%C3%B4r,Human
+ObjectId(5cd99d4bde30eff6ebccfbdf),Ar-Gimilzôr,http://lotr.wikia.com//wiki/Ar-Gimilz%C3%B4r,Human
+ObjectId(5cd99d4bde30eff6ebccfbe0),Ar-Zimrathôn,http://lotr.wikia.com//wiki/Ar-Zimrath%C3%B4n,Human
+ObjectId(5cd99d4bde30eff6ebccfbe1),Ar-Pharazôn,http://lotr.wikia.com//wiki/Ar-Pharaz%C3%B4n,Human
+ObjectId(5cd99d4bde30eff6ebccfbe2),Ar-Sakalthôr,http://lotr.wikia.com//wiki/Ar-Sakalth%C3%B4r,Human
+ObjectId(5cd99d4bde30eff6ebccfbe3),Arador,http://lotr.wikia.com//wiki/Arador,Human
+ObjectId(5cd99d4bde30eff6ebccfbe4),Araglas,http://lotr.wikia.com//wiki/Araglas,Human
+ObjectId(5cd99d4bde30eff6ebccfbe5),Aragorn I,http://lotr.wikia.com//wiki/Aragorn_I,Human
+ObjectId(5cd99d4bde30eff6ebccfbe6),Aragorn II Elessar,http://lotr.wikia.com//wiki/Aragorn_II_Elessar,Human
+ObjectId(5cd99d4bde30eff6ebccfbe7),Aragost,http://lotr.wikia.com//wiki/Aragost,Human
+ObjectId(5cd99d4bde30eff6ebccfbe8),Arahad I,http://lotr.wikia.com//wiki/Arahad_I,Human
+ObjectId(5cd99d4bde30eff6ebccfbe9),Arahad II,http://lotr.wikia.com//wiki/Arahad_II,Human
+ObjectId(5cd99d4bde30eff6ebccfbea),Arahael,http://lotr.wikia.com//wiki/Arahael,Human
+ObjectId(5cd99d4bde30eff6ebccfbeb),Aranarth,http://lotr.wikia.com//wiki/Aranarth,Human
+ObjectId(5cd99d4bde30eff6ebccfbec),Arantar,http://lotr.wikia.com//wiki/Arantar,Human
+ObjectId(5cd99d4bde30eff6ebccfbed),Aranuir,http://lotr.wikia.com//wiki/Aranuir,Human
+ObjectId(5cd99d4bde30eff6ebccfbee),Aranwë,http://lotr.wikia.com//wiki/Aranw%C3%AB,Elf
+ObjectId(5cd99d4bde30eff6ebccfbef),Araphant,http://lotr.wikia.com//wiki/Araphant,Human
+ObjectId(5cd99d4bde30eff6ebccfbf0),Arathorn I,http://lotr.wikia.com//wiki/Arathorn_I,Human
+ObjectId(5cd99d4bde30eff6ebccfbf1),Arathorn II,http://lotr.wikia.com//wiki/Arathorn_II,Human
+ObjectId(5cd99d4bde30eff6ebccfbf2),Araval,http://lotr.wikia.com//wiki/Araval,Human
+ObjectId(5cd99d4bde30eff6ebccfbf3),Aravir,http://lotr.wikia.com//wiki/Aravir,Human
+ObjectId(5cd99d4bde30eff6ebccfbf4),Aravorn,http://lotr.wikia.com//wiki/Aravorn,Human
+ObjectId(5cd99d4bde30eff6ebccfbf5),Arciryas,http://lotr.wikia.com//wiki/Arciryas,Human
+ObjectId(5cd99d4bde30eff6ebccfbf6),Arassuil,http://lotr.wikia.com//wiki/Arassuil,Human
+ObjectId(5cd99d4bde30eff6ebccfbf7),Araphor,http://lotr.wikia.com//wiki/Araphor,Human
+ObjectId(5cd99d4bde30eff6ebccfbf8),Aratan,http://lotr.wikia.com//wiki/Aratan,Human
+ObjectId(5cd99d4bde30eff6ebccfbf9),Ardamir (son of Axantur),http://lotr.wikia.com//wiki/Ardamir_(son_of_Axantur),Human
+ObjectId(5cd99d4bde30eff6ebccfbfa),Aredhel,http://lotr.wikia.com//wiki/Aredhel,Elf
+ObjectId(5cd99d4bde30eff6ebccfbfb),Argeleb I,http://lotr.wikia.com//wiki/Argeleb_I,Human
+ObjectId(5cd99d4bde30eff6ebccfbfc),Arminas,http://lotr.wikia.com//wiki/Arminas,Elf
+ObjectId(5cd99d4bde30eff6ebccfbfd),Arthad,http://lotr.wikia.com//wiki/Arthad,Human
+ObjectId(5cd99d4bde30eff6ebccfbfe),Arvedui,http://lotr.wikia.com//wiki/Arvedui,Human
+ObjectId(5cd99d4bde30eff6ebccfbff),Arvegil,http://lotr.wikia.com//wiki/Arvegil,Human
+ObjectId(5cd99d4bde30eff6ebccfc00),Arveleg I,http://lotr.wikia.com//wiki/Arveleg_I,Human
+ObjectId(5cd99d4bde30eff6ebccfc01),Arveleg II,http://lotr.wikia.com//wiki/Arveleg_II,Human
+ObjectId(5cd99d4bde30eff6ebccfc02),Argon,http://lotr.wikia.com//wiki/Argon,Elf
+ObjectId(5cd99d4bde30eff6ebccfc03),Argonui,http://lotr.wikia.com//wiki/Argonui,Human
+ObjectId(5cd99d4bde30eff6ebccfc04),Argeleb II,http://lotr.wikia.com//wiki/Argeleb_II,Human
+ObjectId(5cd99d4bde30eff6ebccfc05),Atanatar II,http://lotr.wikia.com//wiki/Atanatar_II,Human
+ObjectId(5cd99d4bde30eff6ebccfc06),Atanalcar,http://lotr.wikia.com//wiki/Atanalcar,Human
+ObjectId(5cd99d4bde30eff6ebccfc07),Arwen,http://lotr.wikia.com//wiki/Arwen,Elf
+ObjectId(5cd99d4bde30eff6ebccfc08),Azaghâl,http://lotr.wikia.com//wiki/Azagh%C3%A2l,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfc09),Aulendil (Vardamir's son),http://lotr.wikia.com//wiki/Aulendil_(Vardamir%27s_son),Human
+ObjectId(5cd99d4bde30eff6ebccfc0a),Angelica Baggins,http://lotr.wikia.com//wiki/Angelica_Baggins,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc0b),Axantur,http://lotr.wikia.com//wiki/Axantur,Human
+ObjectId(5cd99d4bde30eff6ebccfc0c),Balbo Baggins,http://lotr.wikia.com//wiki/Balbo_Baggins,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc0d),Atanatar I,http://lotr.wikia.com//wiki/Atanatar_I,Human
+ObjectId(5cd99d4bde30eff6ebccfc0e),Belladonna (Took) Baggins,http://lotr.wikia.com//wiki/Belladonna_(Took)_Baggins,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc0f),Berylla (Boffin) Baggins,http://lotr.wikia.com//wiki/Berylla_(Boffin)_Baggins,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc10),Bungo Baggins,http://lotr.wikia.com//wiki/Bungo_Baggins,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc11),Dudo Baggins,http://lotr.wikia.com//wiki/Dudo_Baggins,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc12),Laura (Grubb) Baggins,http://lotr.wikia.com//wiki/Laura_(Grubb)_Baggins,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc13),Fosco Baggins,http://lotr.wikia.com//wiki/Fosco_Baggins,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc14),Drogo Baggins,http://lotr.wikia.com//wiki/Drogo_Baggins,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc15),Frodo Baggins,http://lotr.wikia.com//wiki/Frodo_Baggins,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc16),Longo Baggins,http://lotr.wikia.com//wiki/Longo_Baggins,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc17),Mungo Baggins,http://lotr.wikia.com//wiki/Mungo_Baggins,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc18),Peony (Baggins) Burrows,http://lotr.wikia.com//wiki/Peony_(Baggins)_Burrows,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc19),Ponto Baggins,http://lotr.wikia.com//wiki/Ponto_Baggins,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc1a),Ponto Baggins II,http://lotr.wikia.com//wiki/Ponto_Baggins_II,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc1b),Balin,http://lotr.wikia.com//wiki/Balin,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfc1c),Baragund,http://lotr.wikia.com//wiki/Baragund,Human
+ObjectId(5cd99d4bde30eff6ebccfc1d),Porto Baggins,http://lotr.wikia.com//wiki/Porto_Baggins,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc1e),Baran,http://lotr.wikia.com//wiki/Baran,Human
+ObjectId(5cd99d4bde30eff6ebccfc1f),Bain,http://lotr.wikia.com//wiki/Bain,Human
+ObjectId(5cd99d4bde30eff6ebccfc20),Baranor (Gondor),http://lotr.wikia.com//wiki/Baranor_(Gondor),Human
+ObjectId(5cd99d4bde30eff6ebccfc21),Bard,http://lotr.wikia.com//wiki/Bard,Human
+ObjectId(5cd99d4bde30eff6ebccfc22),Bard II,http://lotr.wikia.com//wiki/Bard_II,Human
+ObjectId(5cd99d4bde30eff6ebccfc23),Beldir,http://lotr.wikia.com//wiki/Beldir,Human
+ObjectId(5cd99d4bde30eff6ebccfc24),Beldis,http://lotr.wikia.com//wiki/Beldis,Human
+ObjectId(5cd99d4bde30eff6ebccfc25),Barahir,http://lotr.wikia.com//wiki/Barahir,Human
+ObjectId(5cd99d4bde30eff6ebccfc26),Belecthor I,http://lotr.wikia.com//wiki/Belecthor_I,Human
+ObjectId(5cd99d4bde30eff6ebccfc27),Beleg of Arnor,http://lotr.wikia.com//wiki/Beleg_of_Arnor,Human
+ObjectId(5cd99d4bde30eff6ebccfc28),Belegorn,http://lotr.wikia.com//wiki/Belegorn,Human
+ObjectId(5cd99d4bde30eff6ebccfc29),Belegund,http://lotr.wikia.com//wiki/Belegund,Human
+ObjectId(5cd99d4bde30eff6ebccfc2a),Belemir,http://lotr.wikia.com//wiki/Belemir,Human
+ObjectId(5cd99d4bde30eff6ebccfc2b),Belen,http://lotr.wikia.com//wiki/Belen,Human
+ObjectId(5cd99d4bde30eff6ebccfc2c),Beorn,http://lotr.wikia.com//wiki/Beorn,Human
+ObjectId(5cd99d4bde30eff6ebccfc2d),Bereg,http://lotr.wikia.com//wiki/Bereg,Human
+ObjectId(5cd99d4bde30eff6ebccfc2e),Beregond,http://lotr.wikia.com//wiki/Beregond,Human
+ObjectId(5cd99d4bde30eff6ebccfc2f),Beregond (Captain),http://lotr.wikia.com//wiki/Beregond_(Captain),Human
+ObjectId(5cd99d4bde30eff6ebccfc30),Berelach,http://lotr.wikia.com//wiki/Berelach,Human
+ObjectId(5cd99d4bde30eff6ebccfc31),Beren,http://lotr.wikia.com//wiki/Beren,Human
+ObjectId(5cd99d4bde30eff6ebccfc32),Baranor,http://lotr.wikia.com//wiki/Baranor,Human
+ObjectId(5cd99d4bde30eff6ebccfc33),Beren (Steward),http://lotr.wikia.com//wiki/Beren_(Steward),Human
+ObjectId(5cd99d4bde30eff6ebccfc34),Beren (Belemir's son),http://lotr.wikia.com//wiki/Beren_(Belemir%27s_son),Human
+ObjectId(5cd99d4bde30eff6ebccfc35),Bergil,http://lotr.wikia.com//wiki/Bergil,Human
+ObjectId(5cd99d4bde30eff6ebccfc36),Barahir (Steward),http://lotr.wikia.com//wiki/Barahir_(Steward),Human
+ObjectId(5cd99d4bde30eff6ebccfc37),Bifur,http://lotr.wikia.com//wiki/Bifur,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfc38),Bilbo Baggins,http://lotr.wikia.com//wiki/Bilbo_Baggins,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc39),Bladorthin,http://lotr.wikia.com//wiki/Bladorthin,Human
+ObjectId(5cd99d4bde30eff6ebccfc3a),Black Serpent,http://lotr.wikia.com//wiki/Black_Serpent,Human
+ObjectId(5cd99d4bde30eff6ebccfc3b),Blanco,http://lotr.wikia.com//wiki/Blanco,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc3c),Belecthor II,http://lotr.wikia.com//wiki/Belecthor_II,Human
+ObjectId(5cd99d4bde30eff6ebccfc3d),Bob,http://lotr.wikia.com//wiki/Bob,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc3e),Donnamira (Took) Boffin,http://lotr.wikia.com//wiki/Donnamira_(Took)_Boffin,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc3f),Daisy (Baggins) Boffin,http://lotr.wikia.com//wiki/Daisy_(Baggins)_Boffin,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc40),Bosco Boffin,http://lotr.wikia.com//wiki/Bosco_Boffin,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc41),Folco Boffin,http://lotr.wikia.com//wiki/Folco_Boffin,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc42),Gerda (Boffin) Bolger,http://lotr.wikia.com//wiki/Gerda_(Boffin)_Bolger,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc43),Griffo Boffin,http://lotr.wikia.com//wiki/Griffo_Boffin,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc44),Hugo Boffin,http://lotr.wikia.com//wiki/Hugo_Boffin,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc45),Ivy (Goodenough) Boffin,http://lotr.wikia.com//wiki/Ivy_(Goodenough)_Boffin,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc46),Basso Boffin,http://lotr.wikia.com//wiki/Basso_Boffin,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc47),Otto Boffin,http://lotr.wikia.com//wiki/Otto_Boffin,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc48),Rollo Boffin,http://lotr.wikia.com//wiki/Rollo_Boffin,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc49),Tosto Boffin,http://lotr.wikia.com//wiki/Tosto_Boffin,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc4a),Vigo Boffin,http://lotr.wikia.com//wiki/Vigo_Boffin,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc4b),Druda Burrows Boffin,http://lotr.wikia.com//wiki/Druda_Burrows_Boffin,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc4c),Filibert Bolger,http://lotr.wikia.com//wiki/Filibert_Bolger,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc4d),Fredegar Bolger,http://lotr.wikia.com//wiki/Fredegar_Bolger,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc4e),Jessamine (Boffin) Bolger,http://lotr.wikia.com//wiki/Jessamine_(Boffin)_Bolger,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc4f),Bofur,http://lotr.wikia.com//wiki/Bofur,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfc50),Odovacar Bolger,http://lotr.wikia.com//wiki/Odovacar_Bolger,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc51),Rosamunda (Took) Bolger,http://lotr.wikia.com//wiki/Rosamunda_(Took)_Bolger,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc52),Jago Boffin,http://lotr.wikia.com//wiki/Jago_Boffin,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc53),Buffo Boffin,http://lotr.wikia.com//wiki/Buffo_Boffin,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc54),Bombur,http://lotr.wikia.com//wiki/Bombur,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfc55),Borlad,http://lotr.wikia.com//wiki/Borlad,Human
+ObjectId(5cd99d4bde30eff6ebccfc56),Borlas,http://lotr.wikia.com//wiki/Borlas,Human
+ObjectId(5cd99d4bde30eff6ebccfc57),Boromir,http://lotr.wikia.com//wiki/Boromir,Human
+ObjectId(5cd99d4bde30eff6ebccfc58),Boromir (House of Bëor),http://lotr.wikia.com//wiki/Boromir_(House_of_B%C3%ABor),Human
+ObjectId(5cd99d4bde30eff6ebccfc59),Boromir (Steward),http://lotr.wikia.com//wiki/Boromir_(Steward),Human
+ObjectId(5cd99d4bde30eff6ebccfc5a),Wilibald Bolger,http://lotr.wikia.com//wiki/Wilibald_Bolger,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc5b),Borondir,http://lotr.wikia.com//wiki/Borondir,Human
+ObjectId(5cd99d4bde30eff6ebccfc5c),Borthand,http://lotr.wikia.com//wiki/Borthand,Human
+ObjectId(5cd99d4bde30eff6ebccfc5d),Blanco Bracegirdle,http://lotr.wikia.com//wiki/Blanco_Bracegirdle,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc5e),Bruno Bracegirdle,http://lotr.wikia.com//wiki/Bruno_Bracegirdle,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc5f),Primrose Bracegirdle,http://lotr.wikia.com//wiki/Primrose_Bracegirdle,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc60),Brand,http://lotr.wikia.com//wiki/Brand,Human
+ObjectId(5cd99d4bde30eff6ebccfc61),Brandir,http://lotr.wikia.com//wiki/Brandir,Human
+ObjectId(5cd99d4bde30eff6ebccfc62),Adaldrida (Bolger) Brandybuck,http://lotr.wikia.com//wiki/Adaldrida_(Bolger)_Brandybuck,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc63),Amaranth Brandybuck,http://lotr.wikia.com//wiki/Amaranth_Brandybuck,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc64),Borlach,http://lotr.wikia.com//wiki/Borlach,Human
+ObjectId(5cd99d4bde30eff6ebccfc65),Esmeralda Brandybuck,http://lotr.wikia.com//wiki/Esmeralda_Brandybuck,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc66),Estella (Bolger) Brandybuck,http://lotr.wikia.com//wiki/Estella_(Bolger)_Brandybuck,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc67),Hilda Brandybuck,http://lotr.wikia.com//wiki/Hilda_Brandybuck,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc68),Madoc Brandybuck,http://lotr.wikia.com//wiki/Madoc_Brandybuck,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc69),Melilot Brandybuck,http://lotr.wikia.com//wiki/Melilot_Brandybuck,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc6a),Mentha Brandybuck,http://lotr.wikia.com//wiki/Mentha_Brandybuck,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc6b),Borin,http://lotr.wikia.com//wiki/Borin,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfc6c),Mirabella (Took) Brandybuck,http://lotr.wikia.com//wiki/Mirabella_(Took)_Brandybuck,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc6d),Primula (Brandybuck) Baggins,http://lotr.wikia.com//wiki/Primula_(Brandybuck)_Baggins,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc6e),Seredic Brandybuck,http://lotr.wikia.com//wiki/Seredic_Brandybuck,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc6f),Brego,http://lotr.wikia.com//wiki/Brego,Human
+ObjectId(5cd99d4bde30eff6ebccfc70),Bregolas,http://lotr.wikia.com//wiki/Bregolas,Human
+ObjectId(5cd99d4bde30eff6ebccfc71),Bregor,http://lotr.wikia.com//wiki/Bregor,Human
+ObjectId(5cd99d4bde30eff6ebccfc72),Sapphira (Brockhouse) Boffin,http://lotr.wikia.com//wiki/Sapphira_(Brockhouse)_Boffin,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc73),Bucca of the Marish,http://lotr.wikia.com//wiki/Bucca_of_the_Marish,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc74),Asphodel (Brandybuck) Burrows,http://lotr.wikia.com//wiki/Asphodel_(Brandybuck)_Burrows,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc75),Milo Burrows,http://lotr.wikia.com//wiki/Milo_Burrows,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc76),Celandine Brandybuck,http://lotr.wikia.com//wiki/Celandine_Brandybuck,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc77),Bëor,http://lotr.wikia.com//wiki/B%C3%ABor,Human
+ObjectId(5cd99d4bde30eff6ebccfc78),Bór,http://lotr.wikia.com//wiki/B%C3%B3r,Human
+ObjectId(5cd99d4bde30eff6ebccfc79),Calimehtar,http://lotr.wikia.com//wiki/Calimehtar,Human
+ObjectId(5cd99d4bde30eff6ebccfc7a),Minto Burrows,http://lotr.wikia.com//wiki/Minto_Burrows,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc7b),Boron,http://lotr.wikia.com//wiki/Boron,Human
+ObjectId(5cd99d4bde30eff6ebccfc7c),Meriadoc Brandybuck,http://lotr.wikia.com//wiki/Meriadoc_Brandybuck,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc7d),Calmacil,http://lotr.wikia.com//wiki/Calmacil,Human
+ObjectId(5cd99d4bde30eff6ebccfc7e),Celeborn,http://lotr.wikia.com//wiki/Celeborn,Elf
+ObjectId(5cd99d4bde30eff6ebccfc7f),Celebrimbor,http://lotr.wikia.com//wiki/Celebrimbor,Elf
+ObjectId(5cd99d4bde30eff6ebccfc80),Celebrindor,http://lotr.wikia.com//wiki/Celebrindor,Human
+ObjectId(5cd99d4bde30eff6ebccfc81),Celebrían,http://lotr.wikia.com//wiki/Celebr%C3%ADan,Elf
+ObjectId(5cd99d4bde30eff6ebccfc82),Celegorm,http://lotr.wikia.com//wiki/Celegorm,Elf
+ObjectId(5cd99d4bde30eff6ebccfc83),Celepharn,http://lotr.wikia.com//wiki/Celepharn,Human
+ObjectId(5cd99d4bde30eff6ebccfc84),Cemendur,http://lotr.wikia.com//wiki/Cemendur,Human
+ObjectId(5cd99d4bde30eff6ebccfc85),Cemendur (son of Axantur),http://lotr.wikia.com//wiki/Cemendur_(son_of_Axantur),Human
+ObjectId(5cd99d4bde30eff6ebccfc86),Ceorl,http://lotr.wikia.com//wiki/Ceorl,Human
+ObjectId(5cd99d4bde30eff6ebccfc87),Caliondo,http://lotr.wikia.com//wiki/Caliondo,Human
+ObjectId(5cd99d4bde30eff6ebccfc88),Cirion,http://lotr.wikia.com//wiki/Cirion,Human
+ObjectId(5cd99d4bde30eff6ebccfc89),Ciryandil,http://lotr.wikia.com//wiki/Ciryandil,Human
+ObjectId(5cd99d4bde30eff6ebccfc8a),Ciryatur,http://lotr.wikia.com//wiki/Ciryatur,Human
+ObjectId(5cd99d4bde30eff6ebccfc8b),Ciryon,http://lotr.wikia.com//wiki/Ciryon,Human
+ObjectId(5cd99d4bde30eff6ebccfc8c),Bowman Cotton,http://lotr.wikia.com//wiki/Bowman_Cotton,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc8d),Lily Cotton,http://lotr.wikia.com//wiki/Lily_Cotton,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc8e),Marigold (Gamgee) Cotton,http://lotr.wikia.com//wiki/Marigold_(Gamgee)_Cotton,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc8f),Rosie Cotton,http://lotr.wikia.com//wiki/Rosie_Cotton,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc90),Tolman Cotton,http://lotr.wikia.com//wiki/Tolman_Cotton,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc91),Castamir the Usurper,http://lotr.wikia.com//wiki/Castamir_the_Usurper,Human
+ObjectId(5cd99d4bde30eff6ebccfc92),Curufin,http://lotr.wikia.com//wiki/Curufin,Elf
+ObjectId(5cd99d4bde30eff6ebccfc93),Círdan,http://lotr.wikia.com//wiki/C%C3%ADrdan,Elf
+ObjectId(5cd99d4bde30eff6ebccfc94),Dairuin,http://lotr.wikia.com//wiki/Dairuin,Human
+ObjectId(5cd99d4bde30eff6ebccfc95),Damrod,http://lotr.wikia.com//wiki/Damrod,Human
+ObjectId(5cd99d4bde30eff6ebccfc96),User:Deathshriek,http://lotr.wikia.com//wiki/User:Deathshriek,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfc97),Denethor (First Age),http://lotr.wikia.com//wiki/Denethor_(First_Age),Elf
+ObjectId(5cd99d4bde30eff6ebccfc98),Falco Chubb-Baggins,http://lotr.wikia.com//wiki/Falco_Chubb-Baggins,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc99),Caranthir,http://lotr.wikia.com//wiki/Caranthir,Elf
+ObjectId(5cd99d4bde30eff6ebccfc9a),Denethor II,http://lotr.wikia.com//wiki/Denethor_II,Human
+ObjectId(5cd99d4bde30eff6ebccfc9b),Diamond Took,http://lotr.wikia.com//wiki/Diamond_Took,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc9c),Dinodas Brandybuck,http://lotr.wikia.com//wiki/Dinodas_Brandybuck,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc9d),Dior (Steward),http://lotr.wikia.com//wiki/Dior_(Steward),Human
+ObjectId(5cd99d4bde30eff6ebccfc9e),Dodinas Brandybuck,http://lotr.wikia.com//wiki/Dodinas_Brandybuck,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfc9f),Dori,http://lotr.wikia.com//wiki/Dori,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfca0),Dorlas,http://lotr.wikia.com//wiki/Dorlas,Human
+ObjectId(5cd99d4bde30eff6ebccfca1),Denethor I,http://lotr.wikia.com//wiki/Denethor_I,Human
+ObjectId(5cd99d4bde30eff6ebccfca2),Duinhir,http://lotr.wikia.com//wiki/Duinhir,Human
+ObjectId(5cd99d4bde30eff6ebccfca3),Durin VII,http://lotr.wikia.com//wiki/Durin_VII,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfca4),Dwalin,http://lotr.wikia.com//wiki/Dwalin,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfca5),Dáin I,http://lotr.wikia.com//wiki/D%C3%A1in_I,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfca6),Dervorin,http://lotr.wikia.com//wiki/Dervorin,Human
+ObjectId(5cd99d4bde30eff6ebccfca7),Déagol,http://lotr.wikia.com//wiki/D%C3%A9agol,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfca8),Déor,http://lotr.wikia.com//wiki/D%C3%A9or,Human
+ObjectId(5cd99d4bde30eff6ebccfca9),Derufin,http://lotr.wikia.com//wiki/Derufin,Human
+ObjectId(5cd99d4bde30eff6ebccfcaa),Duilin,http://lotr.wikia.com//wiki/Duilin,Human
+ObjectId(5cd99d4bde30eff6ebccfcab),Dáin II Ironfoot,http://lotr.wikia.com//wiki/D%C3%A1in_II_Ironfoot,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfcac),Déorwine,http://lotr.wikia.com//wiki/D%C3%A9orwine,Human
+ObjectId(5cd99d4bde30eff6ebccfcad),Dírhael,http://lotr.wikia.com//wiki/D%C3%ADrhael,Human
+ObjectId(5cd99d4bde30eff6ebccfcae),Dírhavel,http://lotr.wikia.com//wiki/D%C3%ADrhavel,Human
+ObjectId(5cd99d4bde30eff6ebccfcaf),Dís,http://lotr.wikia.com//wiki/D%C3%ADs,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfcb0),Dúnhere,http://lotr.wikia.com//wiki/D%C3%BAnhere,Human
+ObjectId(5cd99d4bde30eff6ebccfcb1),Ecthelion II,http://lotr.wikia.com//wiki/Ecthelion_II,Human
+ObjectId(5cd99d4bde30eff6ebccfcb2),Ecthelion I,http://lotr.wikia.com//wiki/Ecthelion_I,Human
+ObjectId(5cd99d4bde30eff6ebccfcb3),Edrahil,http://lotr.wikia.com//wiki/Edrahil,Elf
+ObjectId(5cd99d4bde30eff6ebccfcb4),Egalmoth,http://lotr.wikia.com//wiki/Egalmoth,Human
+ObjectId(5cd99d4bde30eff6ebccfcb5),Eglantine (Banks) Took,http://lotr.wikia.com//wiki/Eglantine_(Banks)_Took,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfcb6),Eilinel,http://lotr.wikia.com//wiki/Eilinel,Human
+ObjectId(5cd99d4bde30eff6ebccfcb7),Elatan,http://lotr.wikia.com//wiki/Elatan,Human
+ObjectId(5cd99d4bde30eff6ebccfcb8),Eldacar (King of Arnor),http://lotr.wikia.com//wiki/Eldacar_(King_of_Arnor),Human
+ObjectId(5cd99d4bde30eff6ebccfcb9),Eldarion,http://lotr.wikia.com//wiki/Eldarion,Human
+ObjectId(5cd99d4bde30eff6ebccfcba),Eldacar (King of Gondor),http://lotr.wikia.com//wiki/Eldacar_(King_of_Gondor),Human
+ObjectId(5cd99d4bde30eff6ebccfcbb),Elemmírë (elf),http://lotr.wikia.com//wiki/Elemm%C3%ADr%C3%AB_(elf),Elf
+ObjectId(5cd99d4bde30eff6ebccfcbc),Elendil,http://lotr.wikia.com//wiki/Elendil,Human
+ObjectId(5cd99d4bde30eff6ebccfcbd),Elendur,http://lotr.wikia.com//wiki/Elendur,Human
+ObjectId(5cd99d4bde30eff6ebccfcbe),Elendur of Arnor,http://lotr.wikia.com//wiki/Elendur_of_Arnor,Human
+ObjectId(5cd99d4bde30eff6ebccfcbf),Elboron,http://lotr.wikia.com//wiki/Elboron,Human
+ObjectId(5cd99d4bde30eff6ebccfcc0),Eldalótë,http://lotr.wikia.com//wiki/Eldal%C3%B3t%C3%AB,Elf
+ObjectId(5cd99d4bde30eff6ebccfcc1),Elenwë,http://lotr.wikia.com//wiki/Elenw%C3%AB,Elf
+ObjectId(5cd99d4bde30eff6ebccfcc2),Elfhelm,http://lotr.wikia.com//wiki/Elfhelm,Human
+ObjectId(5cd99d4bde30eff6ebccfcc3),Elfhild,http://lotr.wikia.com//wiki/Elfhild,Human
+ObjectId(5cd99d4bde30eff6ebccfcc4),Elfwine,http://lotr.wikia.com//wiki/Elfwine,Human
+ObjectId(5cd99d4bde30eff6ebccfcc5),Elladan and Elrohir,http://lotr.wikia.com//wiki/Elladan_and_Elrohir,Elf
+ObjectId(5cd99d4bde30eff6ebccfcc6),Emeldir,http://lotr.wikia.com//wiki/Emeldir,Human
+ObjectId(5cd99d4bde30eff6ebccfcc7),Elphir,http://lotr.wikia.com//wiki/Elphir,Human
+ObjectId(5cd99d4bde30eff6ebccfcc8),Elrond,http://lotr.wikia.com//wiki/Elrond,Elf
+ObjectId(5cd99d4bde30eff6ebccfcc9),Enel,http://lotr.wikia.com//wiki/Enel,Elf
+ObjectId(5cd99d4bde30eff6ebccfcca),Enelyë,http://lotr.wikia.com//wiki/Enely%C3%AB,Elf
+ObjectId(5cd99d4bde30eff6ebccfccb),Enerdhil,http://lotr.wikia.com//wiki/Enerdhil,Elf
+ObjectId(5cd99d4bde30eff6ebccfccc),Éomer,http://lotr.wikia.com//wiki/%C3%89omer,Human
+ObjectId(5cd99d4bde30eff6ebccfccd),Erchirion,http://lotr.wikia.com//wiki/Erchirion,Human
+ObjectId(5cd99d4bde30eff6ebccfcce),Erellont,http://lotr.wikia.com//wiki/Erellont,Elf
+ObjectId(5cd99d4bde30eff6ebccfccf),Erendis,http://lotr.wikia.com//wiki/Erendis,Human
+ObjectId(5cd99d4bde30eff6ebccfcd0),Erestor,http://lotr.wikia.com//wiki/Erestor,Elf
+ObjectId(5cd99d4bde30eff6ebccfcd1),Éowyn,http://lotr.wikia.com//wiki/%C3%89owyn,Human
+ObjectId(5cd99d4bde30eff6ebccfcd2),Eorl the Young,http://lotr.wikia.com//wiki/Eorl_the_Young,Human
+ObjectId(5cd99d4bde30eff6ebccfcd3),Erkenbrand,http://lotr.wikia.com//wiki/Erkenbrand,Human
+ObjectId(5cd99d4bde30eff6ebccfcd4),Estelmo,http://lotr.wikia.com//wiki/Estelmo,Human
+ObjectId(5cd99d4bde30eff6ebccfcd5),Eradan,http://lotr.wikia.com//wiki/Eradan,Human
+ObjectId(5cd99d4bde30eff6ebccfcd6),Eärendur of Númenor,http://lotr.wikia.com//wiki/E%C3%A4rendur_of_N%C3%BAmenor,Human
+ObjectId(5cd99d4bde30eff6ebccfcd7),Eärnil I,http://lotr.wikia.com//wiki/E%C3%A4rnil_I,Human
+ObjectId(5cd99d4bde30eff6ebccfcd8),Eärnil II,http://lotr.wikia.com//wiki/E%C3%A4rnil_II,Human
+ObjectId(5cd99d4bde30eff6ebccfcd9),Eärnur,http://lotr.wikia.com//wiki/E%C3%A4rnur,Human
+ObjectId(5cd99d4bde30eff6ebccfcda),Eärwen,http://lotr.wikia.com//wiki/E%C3%A4rwen,Elf
+ObjectId(5cd99d4bde30eff6ebccfcdb),Eärendur (Lord of Andúnië),http://lotr.wikia.com//wiki/E%C3%A4rendur_(Lord_of_And%C3%BAni%C3%AB),Human
+ObjectId(5cd99d4bde30eff6ebccfcdc),Eöl,http://lotr.wikia.com//wiki/E%C3%B6l,Elf
+ObjectId(5cd99d4bde30eff6ebccfcdd),Eärendil of Gondor,http://lotr.wikia.com//wiki/E%C3%A4rendil_of_Gondor,Human
+ObjectId(5cd99d4bde30eff6ebccfcde),Eärendur of Arnor,http://lotr.wikia.com//wiki/E%C3%A4rendur_of_Arnor,Human
+ObjectId(5cd99d4bde30eff6ebccfcdf),Faramir (son of Ondoher),http://lotr.wikia.com//wiki/Faramir_(son_of_Ondoher),Human
+ObjectId(5cd99d4bde30eff6ebccfce0),Fastred,http://lotr.wikia.com//wiki/Fastred,Human
+ObjectId(5cd99d4bde30eff6ebccfce1),Fastred (Pelennor Fields),http://lotr.wikia.com//wiki/Fastred_(Pelennor_Fields),Human
+ObjectId(5cd99d4bde30eff6ebccfce2),Fengel,http://lotr.wikia.com//wiki/Fengel,Human
+ObjectId(5cd99d4bde30eff6ebccfce3),Ferumbras Took II,http://lotr.wikia.com//wiki/Ferumbras_Took_II,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfce4),Finarfin,http://lotr.wikia.com//wiki/Finarfin,Elf
+ObjectId(5cd99d4bde30eff6ebccfce5),Findegil,http://lotr.wikia.com//wiki/Findegil,Human
+ObjectId(5cd99d4bde30eff6ebccfce6),Findis,http://lotr.wikia.com//wiki/Findis,Elf
+ObjectId(5cd99d4bde30eff6ebccfce7),Finduilas,http://lotr.wikia.com//wiki/Finduilas,Elf
+ObjectId(5cd99d4bde30eff6ebccfce8),Finduilas of Dol Amroth,http://lotr.wikia.com//wiki/Finduilas_of_Dol_Amroth,Human
+ObjectId(5cd99d4bde30eff6ebccfce9),Fingolfin,http://lotr.wikia.com//wiki/Fingolfin,Elf
+ObjectId(5cd99d4bde30eff6ebccfcea),Farin,http://lotr.wikia.com//wiki/Farin,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfceb),Fingon,http://lotr.wikia.com//wiki/Fingon,Elf
+ObjectId(5cd99d4bde30eff6ebccfcec),Finrod,http://lotr.wikia.com//wiki/Finrod,Elf
+ObjectId(5cd99d4bde30eff6ebccfced),Finwë,http://lotr.wikia.com//wiki/Finw%C3%AB,Elf
+ObjectId(5cd99d4bde30eff6ebccfcee),Flói,http://lotr.wikia.com//wiki/Fl%C3%B3i,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfcef),Faramir,http://lotr.wikia.com//wiki/Faramir,Human
+ObjectId(5cd99d4bde30eff6ebccfcf0),Folca,http://lotr.wikia.com//wiki/Folca,Human
+ObjectId(5cd99d4bde30eff6ebccfcf1),Fastolph Bolger,http://lotr.wikia.com//wiki/Fastolph_Bolger,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfcf2),Folcred,http://lotr.wikia.com//wiki/Folcred,Human
+ObjectId(5cd99d4bde30eff6ebccfcf3),Forlong,http://lotr.wikia.com//wiki/Forlong,Human
+ObjectId(5cd99d4bde30eff6ebccfcf4),Folcwine,http://lotr.wikia.com//wiki/Folcwine,Human
+ObjectId(5cd99d4bde30eff6ebccfcf5),Fortinbras Took I,http://lotr.wikia.com//wiki/Fortinbras_Took_I,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfcf6),Forthwini,http://lotr.wikia.com//wiki/Forthwini,Human
+ObjectId(5cd99d4bde30eff6ebccfcf7),Forweg,http://lotr.wikia.com//wiki/Forweg,Human
+ObjectId(5cd99d4bde30eff6ebccfcf8),Freca,http://lotr.wikia.com//wiki/Freca,Human
+ObjectId(5cd99d4bde30eff6ebccfcf9),Fram,http://lotr.wikia.com//wiki/Fram,Human
+ObjectId(5cd99d4bde30eff6ebccfcfa),Frerin,http://lotr.wikia.com//wiki/Frerin,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfcfb),Frumgar,http://lotr.wikia.com//wiki/Frumgar,Human
+ObjectId(5cd99d4bde30eff6ebccfcfc),Fréawine,http://lotr.wikia.com//wiki/Fr%C3%A9awine,Human
+ObjectId(5cd99d4bde30eff6ebccfcfd),Frór,http://lotr.wikia.com//wiki/Fr%C3%B3r,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfcfe),Frár,http://lotr.wikia.com//wiki/Fr%C3%A1r,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfcff),Fundin,http://lotr.wikia.com//wiki/Fundin,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfd00),Fréa,http://lotr.wikia.com//wiki/Fr%C3%A9a,Human
+ObjectId(5cd99d4bde30eff6ebccfd01),Fréaláf Hildeson,http://lotr.wikia.com//wiki/Fr%C3%A9al%C3%A1f_Hildeson,Human
+ObjectId(5cd99d4bde30eff6ebccfd02),Fëanor,http://lotr.wikia.com//wiki/F%C3%ABanor,Elf
+ObjectId(5cd99d4bde30eff6ebccfd03),Fíriel,http://lotr.wikia.com//wiki/F%C3%ADriel,Human
+ObjectId(5cd99d4bde30eff6ebccfd04),Fíli and Kíli,http://lotr.wikia.com//wiki/F%C3%ADli_and_K%C3%ADli,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfd05),Galar,http://lotr.wikia.com//wiki/Galar,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfd06),Galadriel,http://lotr.wikia.com//wiki/Galadriel,Elf
+ObjectId(5cd99d4bde30eff6ebccfd07),Galdor,http://lotr.wikia.com//wiki/Galdor,Human
+ObjectId(5cd99d4bde30eff6ebccfd08),Galion,http://lotr.wikia.com//wiki/Galion,Elf
+ObjectId(5cd99d4bde30eff6ebccfd09),Daisy Gamgee I,http://lotr.wikia.com//wiki/Daisy_Gamgee_I,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfd0a),Frodo Gardner,http://lotr.wikia.com//wiki/Frodo_Gardner,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfd0b),Hamson Gamgee,http://lotr.wikia.com//wiki/Hamson_Gamgee,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfd0c),May Gamgee,http://lotr.wikia.com//wiki/May_Gamgee,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfd0d),Samwise Gamgee,http://lotr.wikia.com//wiki/Samwise_Gamgee,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfd0e),Gamling,http://lotr.wikia.com//wiki/Gamling,Human
+ObjectId(5cd99d4bde30eff6ebccfd0f),Elanor Gardner,http://lotr.wikia.com//wiki/Elanor_Gardner,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfd10),Gelmir,http://lotr.wikia.com//wiki/Gelmir,Elf
+ObjectId(5cd99d4bde30eff6ebccfd11),Hamfast Gamgee,http://lotr.wikia.com//wiki/Hamfast_Gamgee,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfd12),Halfred Gamgee,http://lotr.wikia.com//wiki/Halfred_Gamgee,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfd13),Galdor of the Havens,http://lotr.wikia.com//wiki/Galdor_of_the_Havens,Elf
+ObjectId(5cd99d4bde30eff6ebccfd14),Gil-galad,http://lotr.wikia.com//wiki/Gil-galad,Elf
+ObjectId(5cd99d4bde30eff6ebccfd15),Gildis,http://lotr.wikia.com//wiki/Gildis,Human
+ObjectId(5cd99d4bde30eff6ebccfd16),Gildor (Edain),http://lotr.wikia.com//wiki/Gildor_(Edain),Human
+ObjectId(5cd99d4bde30eff6ebccfd17),Gildor Inglorion,http://lotr.wikia.com//wiki/Gildor_Inglorion,Elf
+ObjectId(5cd99d4bde30eff6ebccfd18),Gilfanon,http://lotr.wikia.com//wiki/Gilfanon,Elf
+ObjectId(5cd99d4bde30eff6ebccfd19),Ghân-buri-Ghân,http://lotr.wikia.com//wiki/Gh%C3%A2n-buri-Gh%C3%A2n,Human
+ObjectId(5cd99d4bde30eff6ebccfd1a),Gethron,http://lotr.wikia.com//wiki/Gethron,Human
+ObjectId(5cd99d4bde30eff6ebccfd1b),Gilraen,http://lotr.wikia.com//wiki/Gilraen,Human
+ObjectId(5cd99d4bde30eff6ebccfd1c),Gelmir (of Angrod's kin),http://lotr.wikia.com//wiki/Gelmir_(of_Angrod%27s_kin),Elf
+ObjectId(5cd99d4bde30eff6ebccfd1d),Girion,http://lotr.wikia.com//wiki/Girion,Human
+ObjectId(5cd99d4bde30eff6ebccfd1e),Gimilzagar,http://lotr.wikia.com//wiki/Gimilzagar,Human
+ObjectId(5cd99d4bde30eff6ebccfd1f),Glorfindel,http://lotr.wikia.com//wiki/Glorfindel,Elf
+ObjectId(5cd99d4bde30eff6ebccfd20),Glirhuin,http://lotr.wikia.com//wiki/Glirhuin,Human
+ObjectId(5cd99d4bde30eff6ebccfd21),Gléowine,http://lotr.wikia.com//wiki/Gl%C3%A9owine,Human
+ObjectId(5cd99d4bde30eff6ebccfd22),Gimilkhâd,http://lotr.wikia.com//wiki/Gimilkh%C3%A2d,Human
+ObjectId(5cd99d4bde30eff6ebccfd23),Gimli,http://lotr.wikia.com//wiki/Gimli,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfd24),Golasgil,http://lotr.wikia.com//wiki/Golasgil,Human
+ObjectId(5cd99d4bde30eff6ebccfd25),Goldwine,http://lotr.wikia.com//wiki/Goldwine,Human
+ObjectId(5cd99d4bde30eff6ebccfd26),Hanna (Goldworthy) Brandybuck,http://lotr.wikia.com//wiki/Hanna_(Goldworthy)_Brandybuck,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfd27),Gorbulas Brandybuck,http://lotr.wikia.com//wiki/Gorbulas_Brandybuck,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfd28),Gorhendad (Oldbuck) Brandybuck,http://lotr.wikia.com//wiki/Gorhendad_(Oldbuck)_Brandybuck,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfd29),Gorlim,http://lotr.wikia.com//wiki/Gorlim,Human
+ObjectId(5cd99d4bde30eff6ebccfd2a),Glóin (King of Durin's Folk),http://lotr.wikia.com//wiki/Gl%C3%B3in_(King_of_Durin%27s_Folk),Dwarf
+ObjectId(5cd99d4bde30eff6ebccfd2b),Glóin,http://lotr.wikia.com//wiki/Gl%C3%B3in,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfd2c),Glóredhel,http://lotr.wikia.com//wiki/Gl%C3%B3redhel,Human
+ObjectId(5cd99d4bde30eff6ebccfd2d),Gormadoc Deepdelver Brandybuck,http://lotr.wikia.com//wiki/Gormadoc_%22Deepdelver%22_Brandybuck,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfd2e),Gram,http://lotr.wikia.com//wiki/Gram,Human
+ObjectId(5cd99d4bde30eff6ebccfd2f),Holman Greenhand,http://lotr.wikia.com//wiki/Holman_Greenhand,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfd30),Rose Greenhand,http://lotr.wikia.com//wiki/Rose_Greenhand,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfd31),Grimbeorn,http://lotr.wikia.com//wiki/Grimbeorn,Human
+ObjectId(5cd99d4bde30eff6ebccfd32),Grimbold,http://lotr.wikia.com//wiki/Grimbold,Human
+ObjectId(5cd99d4bde30eff6ebccfd33),Grithnir,http://lotr.wikia.com//wiki/Grithnir,Human
+ObjectId(5cd99d4bde30eff6ebccfd34),Gróin,http://lotr.wikia.com//wiki/Gr%C3%B3in,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfd35),Halfred Greenhand,http://lotr.wikia.com//wiki/Halfred_Greenhand,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfd36),Erling Greenhand,http://lotr.wikia.com//wiki/Erling_Greenhand,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfd37),Guilin,http://lotr.wikia.com//wiki/Guilin,Elf
+ObjectId(5cd99d4bde30eff6ebccfd38),Hending Greenhand,http://lotr.wikia.com//wiki/Hending_Greenhand,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfd39),Grór,http://lotr.wikia.com//wiki/Gr%C3%B3r,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfd3a),Gundor,http://lotr.wikia.com//wiki/Gundor,Human
+ObjectId(5cd99d4bde30eff6ebccfd3b),Guthláf,http://lotr.wikia.com//wiki/Guthl%C3%A1f,Human
+ObjectId(5cd99d4bde30eff6ebccfd3c),Hador,http://lotr.wikia.com//wiki/Hador,Human
+ObjectId(5cd99d4bde30eff6ebccfd3d),Hador (Steward),http://lotr.wikia.com//wiki/Hador_(Steward),Human
+ObjectId(5cd99d4bde30eff6ebccfd3e),Halbarad,http://lotr.wikia.com//wiki/Halbarad,Human
+ObjectId(5cd99d4bde30eff6ebccfd3f),Haldir (Haladin),http://lotr.wikia.com//wiki/Haldir_(Haladin),Human
+ObjectId(5cd99d4bde30eff6ebccfd40),Gálmód,http://lotr.wikia.com//wiki/G%C3%A1lm%C3%B3d,Human
+ObjectId(5cd99d4bde30eff6ebccfd41),Gwindor,http://lotr.wikia.com//wiki/Gwindor,Elf
+ObjectId(5cd99d4bde30eff6ebccfd42),Haldir (Lorien),http://lotr.wikia.com//wiki/Haldir_(Lorien),Elf
+ObjectId(5cd99d4bde30eff6ebccfd43),Haleth,http://lotr.wikia.com//wiki/Haleth,Human
+ObjectId(5cd99d4bde30eff6ebccfd44),Gárulf,http://lotr.wikia.com//wiki/G%C3%A1rulf,Human
+ObjectId(5cd99d4bde30eff6ebccfd45),Haleth (Helm's son),http://lotr.wikia.com//wiki/Haleth_(Helm%27s_son),Human
+ObjectId(5cd99d4bde30eff6ebccfd46),Hallacar,http://lotr.wikia.com//wiki/Hallacar,Human
+ObjectId(5cd99d4bde30eff6ebccfd47),Hallas (Steward),http://lotr.wikia.com//wiki/Hallas_(Steward),Human
+ObjectId(5cd99d4bde30eff6ebccfd48),Halmir,http://lotr.wikia.com//wiki/Halmir,Human
+ObjectId(5cd99d4bde30eff6ebccfd49),Hallatan,http://lotr.wikia.com//wiki/Hallatan,Human
+ObjectId(5cd99d4bde30eff6ebccfd4a),Hamfast of Gamwich,http://lotr.wikia.com//wiki/Hamfast_of_Gamwich,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfd4b),Hareth,http://lotr.wikia.com//wiki/Hareth,Human
+ObjectId(5cd99d4bde30eff6ebccfd4c),Harding,http://lotr.wikia.com//wiki/Harding,Human
+ObjectId(5cd99d4bde30eff6ebccfd4d),Hardang,http://lotr.wikia.com//wiki/Hardang,Human
+ObjectId(5cd99d4bde30eff6ebccfd4e),Hathaldir,http://lotr.wikia.com//wiki/Hathaldir,Human
+ObjectId(5cd99d4bde30eff6ebccfd4f),Hatholdir,http://lotr.wikia.com//wiki/Hatholdir,Human
+ObjectId(5cd99d4bde30eff6ebccfd50),Helm Hammerhand,http://lotr.wikia.com//wiki/Helm_Hammerhand,Human
+ObjectId(5cd99d4bde30eff6ebccfd51),Hathol,http://lotr.wikia.com//wiki/Hathol,Human
+ObjectId(5cd99d4bde30eff6ebccfd52),Handir,http://lotr.wikia.com//wiki/Handir,Human
+ObjectId(5cd99d4bde30eff6ebccfd53),Henderch,http://lotr.wikia.com//wiki/Henderch,Human
+ObjectId(5cd99d4bde30eff6ebccfd54),Herefara,http://lotr.wikia.com//wiki/Herefara,Human
+ObjectId(5cd99d4bde30eff6ebccfd55),Hendor,http://lotr.wikia.com//wiki/Hendor,Elf
+ObjectId(5cd99d4bde30eff6ebccfd56),Herion,http://lotr.wikia.com//wiki/Herion,Human
+ObjectId(5cd99d4bde30eff6ebccfd57),Herubrand,http://lotr.wikia.com//wiki/Herubrand,Human
+ObjectId(5cd99d4bde30eff6ebccfd58),Herucalmo,http://lotr.wikia.com//wiki/Herucalmo,Human
+ObjectId(5cd99d4bde30eff6ebccfd59),Hirgon,http://lotr.wikia.com//wiki/Hirgon,Human
+ObjectId(5cd99d4bde30eff6ebccfd5a),Hirluin,http://lotr.wikia.com//wiki/Hirluin,Human
+ObjectId(5cd99d4bde30eff6ebccfd5b),Hob Gammidge,http://lotr.wikia.com//wiki/Hob_Gammidge,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfd5c),Hob Hayward,http://lotr.wikia.com//wiki/Hob_Hayward,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfd5d),Tobias Hornblower,http://lotr.wikia.com//wiki/Tobias_Hornblower,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfd5e),Holfast Gardner,http://lotr.wikia.com//wiki/Holfast_Gardner,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfd5f),Horn,http://lotr.wikia.com//wiki/Horn,Human
+ObjectId(5cd99d4bde30eff6ebccfd60),Hundad,http://lotr.wikia.com//wiki/Hundad,Human
+ObjectId(5cd99d4bde30eff6ebccfd61),Hundar,http://lotr.wikia.com//wiki/Hundar,Human
+ObjectId(5cd99d4bde30eff6ebccfd62),Hunthor,http://lotr.wikia.com//wiki/Hunthor,Human
+ObjectId(5cd99d4bde30eff6ebccfd63),Huor,http://lotr.wikia.com//wiki/Huor,Human
+ObjectId(5cd99d4bde30eff6ebccfd64),Hyarmendacil I,http://lotr.wikia.com//wiki/Hyarmendacil_I,Human
+ObjectId(5cd99d4bde30eff6ebccfd65),Hyarmendacil II,http://lotr.wikia.com//wiki/Hyarmendacil_II,Human
+ObjectId(5cd99d4bde30eff6ebccfd66),Háma,http://lotr.wikia.com//wiki/H%C3%A1ma,Human
+ObjectId(5cd99d4bde30eff6ebccfd67),Húrin II,http://lotr.wikia.com//wiki/H%C3%BArin_II,Human
+ObjectId(5cd99d4bde30eff6ebccfd68),Háma (Helm's son),http://lotr.wikia.com//wiki/H%C3%A1ma_(Helm%27s_son),Human
+ObjectId(5cd99d4bde30eff6ebccfd69),Húrin of Emyn Arnen,http://lotr.wikia.com//wiki/H%C3%BArin_of_Emyn_Arnen,Human
+ObjectId(5cd99d4bde30eff6ebccfd6a),Húrin,http://lotr.wikia.com//wiki/H%C3%BArin,Human
+ObjectId(5cd99d4bde30eff6ebccfd6b),Imin,http://lotr.wikia.com//wiki/Imin,Elf
+ObjectId(5cd99d4bde30eff6ebccfd6c),Iminyë,http://lotr.wikia.com//wiki/Iminy%C3%AB,Elf
+ObjectId(5cd99d4bde30eff6ebccfd6d),Imlach,http://lotr.wikia.com//wiki/Imlach,Human
+ObjectId(5cd99d4bde30eff6ebccfd6e),Imrahil,http://lotr.wikia.com//wiki/Imrahil,Human
+ObjectId(5cd99d4bde30eff6ebccfd6f),Imrazôr,http://lotr.wikia.com//wiki/Imraz%C3%B4r,Human
+ObjectId(5cd99d4bde30eff6ebccfd70),Idril,http://lotr.wikia.com//wiki/Idril,Elf
+ObjectId(5cd99d4bde30eff6ebccfd71),Ibûn,http://lotr.wikia.com//wiki/Ib%C3%BBn,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfd72),Indis,http://lotr.wikia.com//wiki/Indis,Elf
+ObjectId(5cd99d4bde30eff6ebccfd73),Húrin I,http://lotr.wikia.com//wiki/H%C3%BArin_I,Human
+ObjectId(5cd99d4bde30eff6ebccfd74),Ingwë,http://lotr.wikia.com//wiki/Ingw%C3%AB,Elf
+ObjectId(5cd99d4bde30eff6ebccfd75),Inzilbêth,http://lotr.wikia.com//wiki/Inzilb%C3%AAth,Human
+ObjectId(5cd99d4bde30eff6ebccfd76),Ioreth,http://lotr.wikia.com//wiki/Ioreth,Human
+ObjectId(5cd99d4bde30eff6ebccfd77),Iorlas,http://lotr.wikia.com//wiki/Iorlas,Human
+ObjectId(5cd99d4bde30eff6ebccfd78),Isembold Took,http://lotr.wikia.com//wiki/Isembold_Took,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfd79),Ingold,http://lotr.wikia.com//wiki/Ingold,Human
+ObjectId(5cd99d4bde30eff6ebccfd7a),Isengrim Took III,http://lotr.wikia.com//wiki/Isengrim_Took_III,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfd7b),Indor,http://lotr.wikia.com//wiki/Indor,Human
+ObjectId(5cd99d4bde30eff6ebccfd7c),Ingwion,http://lotr.wikia.com//wiki/Ingwion,Elf
+ObjectId(5cd99d4bde30eff6ebccfd7d),Isilmo,http://lotr.wikia.com//wiki/Isilmo,Human
+ObjectId(5cd99d4bde30eff6ebccfd7e),Ivriniel,http://lotr.wikia.com//wiki/Ivriniel,Human
+ObjectId(5cd99d4bde30eff6ebccfd7f),Lalaith,http://lotr.wikia.com//wiki/Lalaith,Human
+ObjectId(5cd99d4bde30eff6ebccfd80),Larnach,http://lotr.wikia.com//wiki/Larnach,Human
+ObjectId(5cd99d4bde30eff6ebccfd81),Legolas,http://lotr.wikia.com//wiki/Legolas,Elf
+ObjectId(5cd99d4bde30eff6ebccfd82),Isildur,http://lotr.wikia.com//wiki/Isildur,Human
+ObjectId(5cd99d4bde30eff6ebccfd83),Lindir,http://lotr.wikia.com//wiki/Lindir,Elf
+ObjectId(5cd99d4bde30eff6ebccfd84),Lindissë,http://lotr.wikia.com//wiki/Lindiss%C3%AB,Human
+ObjectId(5cd99d4bde30eff6ebccfd85),Isilmë,http://lotr.wikia.com//wiki/Isilm%C3%AB,Human
+ObjectId(5cd99d4bde30eff6ebccfd86),Lindo,http://lotr.wikia.com//wiki/Lindo,Elf
+ObjectId(5cd99d4bde30eff6ebccfd87),Ivorwen,http://lotr.wikia.com//wiki/Ivorwen,Human
+ObjectId(5cd99d4bde30eff6ebccfd88),Lindórië,http://lotr.wikia.com//wiki/Lind%C3%B3ri%C3%AB,Human
+ObjectId(5cd99d4bde30eff6ebccfd89),Lenwë,http://lotr.wikia.com//wiki/Lenw%C3%AB,Elf
+ObjectId(5cd99d4bde30eff6ebccfd8a),Lorgan,http://lotr.wikia.com//wiki/Lorgan,Human
+ObjectId(5cd99d4bde30eff6ebccfd8b),Lothíriel,http://lotr.wikia.com//wiki/Loth%C3%ADriel,Human
+ObjectId(5cd99d4bde30eff6ebccfd8c),Léod,http://lotr.wikia.com//wiki/L%C3%A9od,Human
+ObjectId(5cd99d4bde30eff6ebccfd8d),Brytta Léofa,http://lotr.wikia.com//wiki/Brytta_L%C3%A9ofa,Human
+ObjectId(5cd99d4bde30eff6ebccfd8e),Lóni,http://lotr.wikia.com//wiki/L%C3%B3ni,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfd8f),Lúthien,http://lotr.wikia.com//wiki/L%C3%BAthien,Elf
+ObjectId(5cd99d4bde30eff6ebccfd90),Farmer Maggot,http://lotr.wikia.com//wiki/Farmer_Maggot,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfd91),Mablung the Ranger,http://lotr.wikia.com//wiki/Mablung_the_Ranger,Human
+ObjectId(5cd99d4bde30eff6ebccfd92),Maglor,http://lotr.wikia.com//wiki/Maglor,Elf
+ObjectId(5cd99d4bde30eff6ebccfd93),Maedhros,http://lotr.wikia.com//wiki/Maedhros,Elf
+ObjectId(5cd99d4bde30eff6ebccfd94),Mahtan,http://lotr.wikia.com//wiki/Mahtan,Elf
+ObjectId(5cd99d4bde30eff6ebccfd95),Magor,http://lotr.wikia.com//wiki/Magor,Human
+ObjectId(5cd99d4bde30eff6ebccfd96),Mairen,http://lotr.wikia.com//wiki/Mairen,Human
+ObjectId(5cd99d4bde30eff6ebccfd97),Malach,http://lotr.wikia.com//wiki/Malach,Human
+ObjectId(5cd99d4bde30eff6ebccfd98),Maeglin,http://lotr.wikia.com//wiki/Maeglin,Elf
+ObjectId(5cd99d4bde30eff6ebccfd99),Malvegil,http://lotr.wikia.com//wiki/Malvegil,Human
+ObjectId(5cd99d4bde30eff6ebccfd9a),Manthor,http://lotr.wikia.com//wiki/Manthor,Human
+ObjectId(5cd99d4bde30eff6ebccfd9b),Manwendil,http://lotr.wikia.com//wiki/Manwendil,Human
+ObjectId(5cd99d4bde30eff6ebccfd9c),Malva Headstrong Brandybuck,http://lotr.wikia.com//wiki/Malva_%22Headstrong%22_Brandybuck,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfd9d),Mallor,http://lotr.wikia.com//wiki/Mallor,Human
+ObjectId(5cd99d4bde30eff6ebccfd9e),Marach,http://lotr.wikia.com//wiki/Marach,Human
+ObjectId(5cd99d4bde30eff6ebccfd9f),Marcho,http://lotr.wikia.com//wiki/Marcho,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfda0),Mardil Voronwë,http://lotr.wikia.com//wiki/Mardil_Voronw%C3%AB,Human
+ObjectId(5cd99d4bde30eff6ebccfda1),Malbeth the Seer,http://lotr.wikia.com//wiki/Malbeth_the_Seer,Human
+ObjectId(5cd99d4bde30eff6ebccfda2),Marhwini,http://lotr.wikia.com//wiki/Marhwini,Human
+ObjectId(5cd99d4bde30eff6ebccfda3),Marmadas Brandybuck,http://lotr.wikia.com//wiki/Marmadas_Brandybuck,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfda4),Master of Laketown,http://lotr.wikia.com//wiki/Master_of_Laketown,Human
+ObjectId(5cd99d4bde30eff6ebccfda5),Meneldil,http://lotr.wikia.com//wiki/Meneldil,Human
+ObjectId(5cd99d4bde30eff6ebccfda6),Meleth,http://lotr.wikia.com//wiki/Meleth,Human
+ObjectId(5cd99d4bde30eff6ebccfda7),Meril-i-Turinqi,http://lotr.wikia.com//wiki/Meril-i-Turinqi,Elf
+ObjectId(5cd99d4bde30eff6ebccfda8),Merimas Brandybuck,http://lotr.wikia.com//wiki/Merimas_Brandybuck,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfda9),Minohtar,http://lotr.wikia.com//wiki/Minohtar,Human
+ObjectId(5cd99d4bde30eff6ebccfdaa),Marroc Brandybuck,http://lotr.wikia.com//wiki/Marroc_Brandybuck,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfdab),Marhari,http://lotr.wikia.com//wiki/Marhari,Human
+ObjectId(5cd99d4bde30eff6ebccfdac),Minardil,http://lotr.wikia.com//wiki/Minardil,Human
+ObjectId(5cd99d4bde30eff6ebccfdad),Mithrellas,http://lotr.wikia.com//wiki/Mithrellas,Elf
+ObjectId(5cd99d4bde30eff6ebccfdae),Morwen,http://lotr.wikia.com//wiki/Morwen,Human
+ObjectId(5cd99d4bde30eff6ebccfdaf),Morwen (Gondor),http://lotr.wikia.com//wiki/Morwen_(Gondor),Human
+ObjectId(5cd99d4bde30eff6ebccfdb0),Morwë,http://lotr.wikia.com//wiki/Morw%C3%AB,Elf
+ObjectId(5cd99d4bde30eff6ebccfdb1),Míriel,http://lotr.wikia.com//wiki/M%C3%ADriel,Elf
+ObjectId(5cd99d4bde30eff6ebccfdb2),Mîm,http://lotr.wikia.com//wiki/M%C3%AEm,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfdb3),Narmacil I,http://lotr.wikia.com//wiki/Narmacil_I,Human
+ObjectId(5cd99d4bde30eff6ebccfdb4),Nessanië,http://lotr.wikia.com//wiki/Nessani%C3%AB,Human
+ObjectId(5cd99d4bde30eff6ebccfdb5),Nimrodel,http://lotr.wikia.com//wiki/Nimrodel,Elf
+ObjectId(5cd99d4bde30eff6ebccfdb6),Nerdanel,http://lotr.wikia.com//wiki/Nerdanel,Elf
+ObjectId(5cd99d4bde30eff6ebccfdb7),Naugladur,http://lotr.wikia.com//wiki/Naugladur,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfdb8),Nina Lightfoot,http://lotr.wikia.com//wiki/Nina_Lightfoot,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfdb9),Nolondil,http://lotr.wikia.com//wiki/Nolondil,Human
+ObjectId(5cd99d4bde30eff6ebccfdba),Niënor,http://lotr.wikia.com//wiki/Ni%C3%ABnor,Human
+ObjectId(5cd99d4bde30eff6ebccfdbb),Nob,http://lotr.wikia.com//wiki/Nob,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfdbc),Narmacil II,http://lotr.wikia.com//wiki/Narmacil_II,Human
+ObjectId(5cd99d4bde30eff6ebccfdbd),Náin I,http://lotr.wikia.com//wiki/N%C3%A1in_I,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfdbe),Náin II,http://lotr.wikia.com//wiki/N%C3%A1in_II,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfdbf),Náli,http://lotr.wikia.com//wiki/N%C3%A1li,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfdc0),Nár,http://lotr.wikia.com//wiki/N%C3%A1r,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfdc1),Númendil,http://lotr.wikia.com//wiki/N%C3%BAmendil,Human
+ObjectId(5cd99d4bde30eff6ebccfdc2),Núneth,http://lotr.wikia.com//wiki/N%C3%BAneth,Human
+ObjectId(5cd99d4bde30eff6ebccfdc3),Nurwë,http://lotr.wikia.com//wiki/Nurw%C3%AB,Elf
+ObjectId(5cd99d4bde30eff6ebccfdc4),Nori,http://lotr.wikia.com//wiki/Nori,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfdc5),Náin (father of Dáin II Ironfoot),http://lotr.wikia.com//wiki/N%C3%A1in_(father_of_D%C3%A1in_II_Ironfoot),Dwarf
+ObjectId(5cd99d4bde30eff6ebccfdc6),Old Noakes,http://lotr.wikia.com//wiki/Old_Noakes,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfdc7),Olwë,http://lotr.wikia.com//wiki/Olw%C3%AB,Elf
+ObjectId(5cd99d4bde30eff6ebccfdc8),Orchaldor,http://lotr.wikia.com//wiki/Orchaldor,Human
+ObjectId(5cd99d4bde30eff6ebccfdc9),Ondoher,http://lotr.wikia.com//wiki/Ondoher,Human
+ObjectId(5cd99d4bde30eff6ebccfdca),Ori,http://lotr.wikia.com//wiki/Ori,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfdcb),Orodreth,http://lotr.wikia.com//wiki/Orodreth,Elf
+ObjectId(5cd99d4bde30eff6ebccfdcc),Orodreth (Steward),http://lotr.wikia.com//wiki/Orodreth_(Steward),Human
+ObjectId(5cd99d4bde30eff6ebccfdcd),Oromendil,http://lotr.wikia.com//wiki/Oromendil,Human
+ObjectId(5cd99d4bde30eff6ebccfdce),Ohtar,http://lotr.wikia.com//wiki/Ohtar,Human
+ObjectId(5cd99d4bde30eff6ebccfdcf),Ostoher,http://lotr.wikia.com//wiki/Ostoher,Human
+ObjectId(5cd99d4bde30eff6ebccfdd0),Orophin,http://lotr.wikia.com//wiki/Orophin,Elf
+ObjectId(5cd99d4bde30eff6ebccfdd1),Pelendur,http://lotr.wikia.com//wiki/Pelendur,Human
+ObjectId(5cd99d4bde30eff6ebccfdd2),Mrs. Proudfoot,http://lotr.wikia.com//wiki/Mrs._Proudfoot,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfdd3),Pengolodh,http://lotr.wikia.com//wiki/Pengolodh,Elf
+ObjectId(5cd99d4bde30eff6ebccfdd4),Otho Sackville-Baggins,http://lotr.wikia.com//wiki/Otho_Sackville-Baggins,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfdd5),Odo Proudfoot,http://lotr.wikia.com//wiki/Odo_Proudfoot,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfdd6),Radhruin,http://lotr.wikia.com//wiki/Radhruin,Human
+ObjectId(5cd99d4bde30eff6ebccfdd7),Oropher,http://lotr.wikia.com//wiki/Oropher,Elf
+ObjectId(5cd99d4bde30eff6ebccfdd8),Ragnir,http://lotr.wikia.com//wiki/Ragnir,Human
+ObjectId(5cd99d4bde30eff6ebccfdd9),Ragnor,http://lotr.wikia.com//wiki/Ragnor,Human
+ObjectId(5cd99d4bde30eff6ebccfdda),Rían,http://lotr.wikia.com//wiki/R%C3%ADan,Human
+ObjectId(5cd99d4bde30eff6ebccfddb),Rían (Gondor),http://lotr.wikia.com//wiki/R%C3%ADan_(Gondor),Human
+ObjectId(5cd99d4bde30eff6ebccfddc),Rowan Greenhand,http://lotr.wikia.com//wiki/Rowan_Greenhand,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfddd),Rudigar Bolger,http://lotr.wikia.com//wiki/Rudigar_Bolger,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfdde),Rufus Burrows,http://lotr.wikia.com//wiki/Rufus_Burrows,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfddf),Rómendacil I,http://lotr.wikia.com//wiki/R%C3%B3mendacil_I,Human
+ObjectId(5cd99d4bde30eff6ebccfde0),Lobelia Sackville-Baggins,http://lotr.wikia.com//wiki/Lobelia_Sackville-Baggins,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfde1),Rúmil (Noldo),http://lotr.wikia.com//wiki/R%C3%BAmil_(Noldo),Elf
+ObjectId(5cd99d4bde30eff6ebccfde2),Lotho Sackville-Baggins,http://lotr.wikia.com//wiki/Lotho_Sackville-Baggins,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfde3),Sadoc Brandybuck,http://lotr.wikia.com//wiki/Sadoc_Brandybuck,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfde4),Sador,http://lotr.wikia.com//wiki/Sador,Human
+ObjectId(5cd99d4bde30eff6ebccfde5),Saelon,http://lotr.wikia.com//wiki/Saelon,Human
+ObjectId(5cd99d4bde30eff6ebccfde6),Rúmil of Lórien,http://lotr.wikia.com//wiki/R%C3%BAmil_of_L%C3%B3rien,Elf
+ObjectId(5cd99d4bde30eff6ebccfde7),Sagroth,http://lotr.wikia.com//wiki/Sagroth,Human
+ObjectId(5cd99d4bde30eff6ebccfde8),Rómendacil II,http://lotr.wikia.com//wiki/R%C3%B3mendacil_II,Human
+ObjectId(5cd99d4bde30eff6ebccfde9),Silmariën,http://lotr.wikia.com//wiki/Silmari%C3%ABn,Human
+ObjectId(5cd99d4bde30eff6ebccfdea),Sangahyando,http://lotr.wikia.com//wiki/Sangahyando,Human
+ObjectId(5cd99d4bde30eff6ebccfdeb),Siriondil,http://lotr.wikia.com//wiki/Siriondil,Human
+ObjectId(5cd99d4bde30eff6ebccfdec),Saradas Brandybuck,http://lotr.wikia.com//wiki/Saradas_Brandybuck,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfded),Robin Smallburrow,http://lotr.wikia.com//wiki/Robin_Smallburrow,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfdee),Soronto,http://lotr.wikia.com//wiki/Soronto,Human
+ObjectId(5cd99d4bde30eff6ebccfdef),Morwen Steelsheen,http://lotr.wikia.com//wiki/Morwen_Steelsheen,Human
+ObjectId(5cd99d4bde30eff6ebccfdf0),Tar-Alcarin,http://lotr.wikia.com//wiki/Tar-Alcarin,Human
+ObjectId(5cd99d4bde30eff6ebccfdf1),Ted Sandyman,http://lotr.wikia.com//wiki/Ted_Sandyman,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfdf2),Tar-Aldarion,http://lotr.wikia.com//wiki/Tar-Aldarion,Human
+ObjectId(5cd99d4bde30eff6ebccfdf3),Tar-Amandil,http://lotr.wikia.com//wiki/Tar-Amandil,Human
+ObjectId(5cd99d4bde30eff6ebccfdf4),Tar-Ancalimon,http://lotr.wikia.com//wiki/Tar-Ancalimon,Human
+ObjectId(5cd99d4bde30eff6ebccfdf5),Tar-Anárion,http://lotr.wikia.com//wiki/Tar-An%C3%A1rion,Human
+ObjectId(5cd99d4bde30eff6ebccfdf6),Tar-Ardamin,http://lotr.wikia.com//wiki/Tar-Ardamin,Human
+ObjectId(5cd99d4bde30eff6ebccfdf7),Tar-Atanamir,http://lotr.wikia.com//wiki/Tar-Atanamir,Human
+ObjectId(5cd99d4bde30eff6ebccfdf8),Tar-Calmacil,http://lotr.wikia.com//wiki/Tar-Calmacil,Human
+ObjectId(5cd99d4bde30eff6ebccfdf9),Tar-Ciryatan,http://lotr.wikia.com//wiki/Tar-Ciryatan,Human
+ObjectId(5cd99d4bde30eff6ebccfdfa),Tar-Elendil,http://lotr.wikia.com//wiki/Tar-Elendil,Human
+ObjectId(5cd99d4bde30eff6ebccfdfb),Tar-Ancalimë,http://lotr.wikia.com//wiki/Tar-Ancalim%C3%AB,Human
+ObjectId(5cd99d4bde30eff6ebccfdfc),Tar-Palantir,http://lotr.wikia.com//wiki/Tar-Palantir,Human
+ObjectId(5cd99d4bde30eff6ebccfdfd),Tar-Súrion,http://lotr.wikia.com//wiki/Tar-S%C3%BArion,Human
+ObjectId(5cd99d4bde30eff6ebccfdfe),Tar-Minastir,http://lotr.wikia.com//wiki/Tar-Minastir,Human
+ObjectId(5cd99d4bde30eff6ebccfdff),Tar-Míriel,http://lotr.wikia.com//wiki/Tar-M%C3%ADriel,Human
+ObjectId(5cd99d4bde30eff6ebccfe00),Tar-Telperiën,http://lotr.wikia.com//wiki/Tar-Telperi%C3%ABn,Human
+ObjectId(5cd99d4bde30eff6ebccfe01),Tar-Vanimeldë,http://lotr.wikia.com//wiki/Tar-Vanimeld%C3%AB,Human
+ObjectId(5cd99d4bde30eff6ebccfe02),Tarannon Falastur,http://lotr.wikia.com//wiki/Tarannon_Falastur,Human
+ObjectId(5cd99d4bde30eff6ebccfe03),Tar-Telemmaitë,http://lotr.wikia.com//wiki/Tar-Telemmait%C3%AB,Human
+ObjectId(5cd99d4bde30eff6ebccfe04),Tarcil,http://lotr.wikia.com//wiki/Tarcil,Human
+ObjectId(5cd99d4bde30eff6ebccfe05),Tar-Meneldur,http://lotr.wikia.com//wiki/Tar-Meneldur,Human
+ObjectId(5cd99d4bde30eff6ebccfe06),Targon,http://lotr.wikia.com//wiki/Targon,Human
+ObjectId(5cd99d4bde30eff6ebccfe07),Tata,http://lotr.wikia.com//wiki/Tata,Elf
+ObjectId(5cd99d4bde30eff6ebccfe08),Tatië,http://lotr.wikia.com//wiki/Tati%C3%AB,Elf
+ObjectId(5cd99d4bde30eff6ebccfe09),Tarciryan,http://lotr.wikia.com//wiki/Tarciryan,Human
+ObjectId(5cd99d4bde30eff6ebccfe0a),Telchar,http://lotr.wikia.com//wiki/Telchar,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfe0b),Telemnar,http://lotr.wikia.com//wiki/Telemnar,Human
+ObjectId(5cd99d4bde30eff6ebccfe0c),Telumehtar,http://lotr.wikia.com//wiki/Telumehtar,Human
+ObjectId(5cd99d4bde30eff6ebccfe0d),The King of the Dead,http://lotr.wikia.com//wiki/The_King_of_the_Dead,Human
+ObjectId(5cd99d4bde30eff6ebccfe0e),Tarondor,http://lotr.wikia.com//wiki/Tarondor,Human
+ObjectId(5cd99d4bde30eff6ebccfe0f),Tarondor of Arnor,http://lotr.wikia.com//wiki/Tarondor_of_Arnor,Human
+ObjectId(5cd99d4bde30eff6ebccfe10),User:Technobliterator/Showcase,http://lotr.wikia.com//wiki/User:Technobliterator/Showcase,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe11),Thengel,http://lotr.wikia.com//wiki/Thengel,Human
+ObjectId(5cd99d4bde30eff6ebccfe12),Thorondir,http://lotr.wikia.com//wiki/Thorondir,Human
+ObjectId(5cd99d4bde30eff6ebccfe13),Thranduil,http://lotr.wikia.com//wiki/Thranduil,Elf
+ObjectId(5cd99d4bde30eff6ebccfe14),Thráin I,http://lotr.wikia.com//wiki/Thr%C3%A1in_I,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfe15),Thorin II Oakenshield,http://lotr.wikia.com//wiki/Thorin_II_Oakenshield,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfe16),Thráin II,http://lotr.wikia.com//wiki/Thr%C3%A1in_II,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfe17),Thorin III Stonehelm,http://lotr.wikia.com//wiki/Thorin_III_Stonehelm,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfe18),Thrór,http://lotr.wikia.com//wiki/Thr%C3%B3r,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfe19),Théoden,http://lotr.wikia.com//wiki/Th%C3%A9oden,Human
+ObjectId(5cd99d4bde30eff6ebccfe1a),Théodred,http://lotr.wikia.com//wiki/Th%C3%A9odred,Human
+ObjectId(5cd99d4bde30eff6ebccfe1b),Tindómiel,http://lotr.wikia.com//wiki/Tind%C3%B3miel,Human
+ObjectId(5cd99d4bde30eff6ebccfe1c),Thorin I,http://lotr.wikia.com//wiki/Thorin_I,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfe1d),Faramir Took I,http://lotr.wikia.com//wiki/Faramir_Took_I,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe1e),Isumbras Took I,http://lotr.wikia.com//wiki/Isumbras_Took_I,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe1f),Fortinbras Took II,http://lotr.wikia.com//wiki/Fortinbras_Took_II,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe20),Isumbras Took III,http://lotr.wikia.com//wiki/Isumbras_Took_III,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe21),Adalgrim Took,http://lotr.wikia.com//wiki/Adalgrim_Took,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe22),Adamanta (Chubb) Took,http://lotr.wikia.com//wiki/Adamanta_(Chubb)_Took,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe23),Isengrim Took II,http://lotr.wikia.com//wiki/Isengrim_Took_II,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe24),Adelard Took,http://lotr.wikia.com//wiki/Adelard_Took,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe25),Ferumbras III Took,http://lotr.wikia.com//wiki/Ferumbras_III_Took,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe26),Bandobras Took,http://lotr.wikia.com//wiki/Bandobras_Took,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe27),Hildifons Took,http://lotr.wikia.com//wiki/Hildifons_Took,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe28),Isembard Took,http://lotr.wikia.com//wiki/Isembard_Took,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe29),Hildigrim Took,http://lotr.wikia.com//wiki/Hildigrim_Took,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe2a),Gerontius Took,http://lotr.wikia.com//wiki/Gerontius_Took,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe2b),Hildibrand Took,http://lotr.wikia.com//wiki/Hildibrand_Took,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe2c),Paladin Took II,http://lotr.wikia.com//wiki/Paladin_Took_II,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe2d),Pearl Took,http://lotr.wikia.com//wiki/Pearl_Took,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe2e),Peregrin Took,http://lotr.wikia.com//wiki/Peregrin_Took,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe2f),Rosa (Baggins) Took,http://lotr.wikia.com//wiki/Rosa_(Baggins)_Took,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe30),Sigismond Took,http://lotr.wikia.com//wiki/Sigismond_Took,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe31),Turgon,http://lotr.wikia.com//wiki/Turgon,Elf
+ObjectId(5cd99d4bde30eff6ebccfe32),Turgon (Steward),http://lotr.wikia.com//wiki/Turgon_(Steward),Human
+ObjectId(5cd99d4bde30eff6ebccfe33),Túrin,http://lotr.wikia.com//wiki/T%C3%BArin,Human
+ObjectId(5cd99d4bde30eff6ebccfe34),Tulkastor,http://lotr.wikia.com//wiki/Tulkastor,Elf
+ObjectId(5cd99d4bde30eff6ebccfe35),Tuor,http://lotr.wikia.com//wiki/Tuor,Human
+ObjectId(5cd99d4bde30eff6ebccfe36),Turambar,http://lotr.wikia.com//wiki/Turambar,Human
+ObjectId(5cd99d4bde30eff6ebccfe37),Uldor,http://lotr.wikia.com//wiki/Uldor,Human
+ObjectId(5cd99d4bde30eff6ebccfe38),Túrin II,http://lotr.wikia.com//wiki/T%C3%BArin_II,Human
+ObjectId(5cd99d4bde30eff6ebccfe39),Ulfang,http://lotr.wikia.com//wiki/Ulfang,Human
+ObjectId(5cd99d4bde30eff6ebccfe3a),Ulfast,http://lotr.wikia.com//wiki/Ulfast,Human
+ObjectId(5cd99d4bde30eff6ebccfe3b),Ulbar,http://lotr.wikia.com//wiki/Ulbar,Human
+ObjectId(5cd99d4bde30eff6ebccfe3c),Túrin I,http://lotr.wikia.com//wiki/T%C3%BArin_I,Human
+ObjectId(5cd99d4bde30eff6ebccfe3d),Urthel,http://lotr.wikia.com//wiki/Urthel,Human
+ObjectId(5cd99d4bde30eff6ebccfe3e),Ulwarth,http://lotr.wikia.com//wiki/Ulwarth,Human
+ObjectId(5cd99d4bde30eff6ebccfe3f),Vairë (Elf),http://lotr.wikia.com//wiki/Vair%C3%AB_(Elf),Elf
+ObjectId(5cd99d4bde30eff6ebccfe40),Valacar,http://lotr.wikia.com//wiki/Valacar,Human
+ObjectId(5cd99d4bde30eff6ebccfe41),Valandil,http://lotr.wikia.com//wiki/Valandil,Human
+ObjectId(5cd99d4bde30eff6ebccfe42),Valandur,http://lotr.wikia.com//wiki/Valandur,Human
+ObjectId(5cd99d4bde30eff6ebccfe43),Valandil of Andúnië,http://lotr.wikia.com//wiki/Valandil_of_And%C3%BAni%C3%AB,Human
+ObjectId(5cd99d4bde30eff6ebccfe44),Vidugavia,http://lotr.wikia.com//wiki/Vidugavia,Human
+ObjectId(5cd99d4bde30eff6ebccfe45),Vardamir Nólimon,http://lotr.wikia.com//wiki/Vardamir_N%C3%B3limon,Human
+ObjectId(5cd99d4bde30eff6ebccfe46),Vardilmë,http://lotr.wikia.com//wiki/Vardilm%C3%AB,Human
+ObjectId(5cd99d4bde30eff6ebccfe47),Vidumavi,http://lotr.wikia.com//wiki/Vidumavi,Human
+ObjectId(5cd99d4bde30eff6ebccfe48),Vorondil,http://lotr.wikia.com//wiki/Vorondil,Human
+ObjectId(5cd99d4bde30eff6ebccfe49),Voronwë,http://lotr.wikia.com//wiki/Voronw%C3%AB,Elf
+ObjectId(5cd99d4bde30eff6ebccfe4a),Vëantur,http://lotr.wikia.com//wiki/V%C3%ABantur,Human
+ObjectId(5cd99d4bde30eff6ebccfe4b),Walda,http://lotr.wikia.com//wiki/Walda,Human
+ObjectId(5cd99d4bde30eff6ebccfe4c),Willie Banks,http://lotr.wikia.com//wiki/Willie_Banks,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe4d),Wiseman Gamwich,http://lotr.wikia.com//wiki/Wiseman_Gamwich,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe4e),Wulf I,http://lotr.wikia.com//wiki/Wulf_I,Human
+ObjectId(5cd99d4bde30eff6ebccfe4f),Wídfara,http://lotr.wikia.com//wiki/W%C3%ADdfara,Human
+ObjectId(5cd99d4bde30eff6ebccfe50),Éothain,http://lotr.wikia.com//wiki/%C3%89othain,Human
+ObjectId(5cd99d4bde30eff6ebccfe51),Írildë,http://lotr.wikia.com//wiki/%C3%8Drild%C3%AB,Human
+ObjectId(5cd99d4bde30eff6ebccfe52),Éofor,http://lotr.wikia.com//wiki/%C3%89ofor,Human
+ObjectId(5cd99d4bde30eff6ebccfe53),Írimë,http://lotr.wikia.com//wiki/%C3%8Drim%C3%AB,Elf
+ObjectId(5cd99d4bde30eff6ebccfe54),Éomund,http://lotr.wikia.com//wiki/%C3%89omund,Human
+ObjectId(5cd99d4bde30eff6ebccfe55),Óin,http://lotr.wikia.com//wiki/%C3%93in,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfe56),Yávien,http://lotr.wikia.com//wiki/Y%C3%A1vien,Human
+ObjectId(5cd99d4bde30eff6ebccfe57),Dora Baggins,http://lotr.wikia.com//wiki/Dora_Baggins,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe58),Largo Baggins,http://lotr.wikia.com//wiki/Largo_Baggins,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe59),Mimosa (Bunce) Baggins,http://lotr.wikia.com//wiki/Mimosa_(Bunce)_Baggins,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe5a),Pansy Baggins,http://lotr.wikia.com//wiki/Pansy_Baggins,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe5b),Polo Baggins,http://lotr.wikia.com//wiki/Polo_Baggins,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe5c),Ponto Baggins I,http://lotr.wikia.com//wiki/Ponto_Baggins_I,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe5d),Bingo Baggins,http://lotr.wikia.com//wiki/Bingo_Baggins,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe5e),Chica (Chubb) Baggins,http://lotr.wikia.com//wiki/Chica_(Chubb)_Baggins,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe5f),Óin (King of Durin's Folk),http://lotr.wikia.com//wiki/%C3%93in_(King_of_Durin%27s_Folk),Dwarf
+ObjectId(5cd99d4bde30eff6ebccfe60),Prisca (Baggins) Bolger,http://lotr.wikia.com//wiki/Prisca_(Baggins)_Bolger,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe61),Rudibert Bolger,http://lotr.wikia.com//wiki/Rudibert_Bolger,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe62),Theobald Bolger,http://lotr.wikia.com//wiki/Theobald_Bolger,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe63),Adalgar Bolger,http://lotr.wikia.com//wiki/Adalgar_Bolger,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe64),Ruby (Bolger) Baggins,http://lotr.wikia.com//wiki/Ruby_(Bolger)_Baggins,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe65),Wilimar Bolger,http://lotr.wikia.com//wiki/Wilimar_Bolger,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe66),Camellia (Sackville) Baggins,http://lotr.wikia.com//wiki/Camellia_(Sackville)_Baggins,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe67),Everard Took,http://lotr.wikia.com//wiki/Everard_Took,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe68),Gundahar Bolger,http://lotr.wikia.com//wiki/Gundahar_Bolger,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe69),Ferdinand Took,http://lotr.wikia.com//wiki/Ferdinand_Took,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe6a),Pervinca Took,http://lotr.wikia.com//wiki/Pervinca_Took,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe6b),Pimpernel Took,http://lotr.wikia.com//wiki/Pimpernel_Took,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe6c),Ferdibrand Took,http://lotr.wikia.com//wiki/Ferdibrand_Took,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe6d),Reginard Took,http://lotr.wikia.com//wiki/Reginard_Took,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe6e),Flambard Took,http://lotr.wikia.com//wiki/Flambard_Took,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe6f),Lalia (Clayhanger) Took,http://lotr.wikia.com//wiki/Lalia_(Clayhanger)_Took,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe70),Ruby Gamgee,http://lotr.wikia.com//wiki/Ruby_Gamgee,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe71),Rudolph Bolger,http://lotr.wikia.com//wiki/Rudolph_Bolger,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe72),Tanta (Hornblower) Baggins,http://lotr.wikia.com//wiki/Tanta_(Hornblower)_Baggins,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe73),Inigo Baggins,http://lotr.wikia.com//wiki/Inigo_Baggins,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe74),Tanta Hornblower,http://lotr.wikia.com//wiki/Tanta_Hornblower,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe75),Tobold Hornblower,http://lotr.wikia.com//wiki/Tobold_Hornblower,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe76),Lily (Baggins) Goodbody,http://lotr.wikia.com//wiki/Lily_(Baggins)_Goodbody,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe77),Togo Goodbody,http://lotr.wikia.com//wiki/Togo_Goodbody,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe78),Goldberry,http://lotr.wikia.com//wiki/Goldberry,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe79),Bell (Goodchild) Gamgee,http://lotr.wikia.com//wiki/Bell_(Goodchild)_Gamgee,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe7a),Goldilocks (Gardner) Took,http://lotr.wikia.com//wiki/Goldilocks_(Gardner)_Took,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe7b),Merry Gamgee,http://lotr.wikia.com//wiki/Merry_Gamgee,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe7c),Bilbo Gamgee,http://lotr.wikia.com//wiki/Bilbo_Gamgee,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe7d),Halfast Gamgee,http://lotr.wikia.com//wiki/Halfast_Gamgee,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe7e),Rose Gamgee,http://lotr.wikia.com//wiki/Rose_Gamgee,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe7f),Pippin Gamgee,http://lotr.wikia.com//wiki/Pippin_Gamgee,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe80),Durin,http://lotr.wikia.com//wiki/Durin,Dwarf
+ObjectId(5cd99d4bde30eff6ebccfe81),Poppy (Chubb-Baggins) Bolger,http://lotr.wikia.com//wiki/Poppy_(Chubb-Baggins)_Bolger,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe82),Robin Gardner,http://lotr.wikia.com//wiki/Robin_Gardner,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe83),Primrose Gardner,http://lotr.wikia.com//wiki/Primrose_Gardner,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe84),Hamfast Gardner,http://lotr.wikia.com//wiki/Hamfast_Gardner,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe85),Tolman Cotton Jr.,http://lotr.wikia.com//wiki/Tolman_Cotton_Jr.,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe86),Carl Cotton,http://lotr.wikia.com//wiki/Carl_Cotton,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe87),Wilcome Cotton,http://lotr.wikia.com//wiki/Wilcome_Cotton,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe88),Doderic Brandybuck,http://lotr.wikia.com//wiki/Doderic_Brandybuck,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe89),Daisy Gamgee,http://lotr.wikia.com//wiki/Daisy_Gamgee,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe8a),Berilac Brandybuck,http://lotr.wikia.com//wiki/Berilac_Brandybuck,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe8b),Gorbadoc Brandybuck,http://lotr.wikia.com//wiki/Gorbadoc_Brandybuck,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe8c),Marmadoc Brandybuck,http://lotr.wikia.com//wiki/Marmadoc_Brandybuck,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe8d),Ilberic Brandybuck,http://lotr.wikia.com//wiki/Ilberic_Brandybuck,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe8e),Orgulas Brandybuck,http://lotr.wikia.com//wiki/Orgulas_Brandybuck,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe8f),Rorimac Brandybuck,http://lotr.wikia.com//wiki/Rorimac_Brandybuck,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe90),Merimac Brandybuck,http://lotr.wikia.com//wiki/Merimac_Brandybuck,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe91),Salvia (Brandybuck) Bolger,http://lotr.wikia.com//wiki/Salvia_(Brandybuck)_Bolger,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe92),Bilbo Gardner,http://lotr.wikia.com//wiki/Bilbo_Gardner,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe93),Briffo Boffin,http://lotr.wikia.com//wiki/Briffo_Boffin,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe94),Gruffo Boffin,http://lotr.wikia.com//wiki/Gruffo_Boffin,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe95),Lavender (Grubb) Boffin,http://lotr.wikia.com//wiki/Lavender_(Grubb)_Boffin,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe96),Uffo Boffin,http://lotr.wikia.com//wiki/Uffo_Boffin,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe97),Bodo Proudfoot,http://lotr.wikia.com//wiki/Bodo_Proudfoot,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe98),Sancho Proudfoot,http://lotr.wikia.com//wiki/Sancho_Proudfoot,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe99),Olo Proudfoot,http://lotr.wikia.com//wiki/Olo_Proudfoot,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe9a),Saradoc Brandybuck,http://lotr.wikia.com//wiki/Saradoc_Brandybuck,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe9b),Nimloth (elf),http://lotr.wikia.com//wiki/Nimloth_(elf),Elf
+ObjectId(5cd99d4bde30eff6ebccfe9c),Linda (Baggins) Proudfoot,http://lotr.wikia.com//wiki/Linda_(Baggins)_Proudfoot,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe9d),Gríma Wormtongue,http://lotr.wikia.com//wiki/Gr%C3%ADma_Wormtongue,Human
+ObjectId(5cd99d4bde30eff6ebccfe9e),Gollum,http://lotr.wikia.com//wiki/Gollum,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfe9f),Legolas (elf of Gondolin),http://lotr.wikia.com//wiki/Legolas_(elf_of_Gondolin),Elf
+ObjectId(5cd99d4bde30eff6ebccfea0),Gandalf,http://lotr.wikia.com//wiki/Gandalf,Maiar
+ObjectId(5cd99d4bde30eff6ebccfea1),Radagast,http://lotr.wikia.com//wiki/Radagast,Maiar
+ObjectId(5cd99d4bde30eff6ebccfea2),Tilion,http://lotr.wikia.com//wiki/Tilion,Maiar
+ObjectId(5cd99d4bde30eff6ebccfea3),Elemmakil,http://lotr.wikia.com//wiki/Elemmakil,Elf
+ObjectId(5cd99d4bde30eff6ebccfea4),Saruman,http://lotr.wikia.com//wiki/Saruman,Maiar
+ObjectId(5cd99d4bde30eff6ebccfea5),Sauron,http://lotr.wikia.com//wiki/Sauron,Maiar
+ObjectId(5cd99d4bde30eff6ebccfea6),Eönwë,http://lotr.wikia.com//wiki/E%C3%B6nw%C3%AB,Maiar
+ObjectId(5cd99d4bde30eff6ebccfea7),Durin's Bane,http://lotr.wikia.com//wiki/Durin%27s_Bane,Maiar
+ObjectId(5cd99d4bde30eff6ebccfea8),Alatar,http://lotr.wikia.com//wiki/Alatar,Maiar
+ObjectId(5cd99d4bde30eff6ebccfea9),Arien,http://lotr.wikia.com//wiki/Arien,Maiar
+ObjectId(5cd99d4bde30eff6ebccfeaa),Uinen,http://lotr.wikia.com//wiki/Uinen,Maiar
+ObjectId(5cd99d4bde30eff6ebccfeab),Mosco Burrows,http://lotr.wikia.com//wiki/Mosco_Burrows,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfeac),Myrtle Burrows,http://lotr.wikia.com//wiki/Myrtle_Burrows,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfead),Pallando,http://lotr.wikia.com//wiki/Pallando,Maiar
+ObjectId(5cd99d4bde30eff6ebccfeae),Moro Burrows,http://lotr.wikia.com//wiki/Moro_Burrows,Hobbit
+ObjectId(5cd99d4bde30eff6ebccfeaf),Thingol,http://lotr.wikia.com//wiki/Thingol,Elf
+ObjectId(5cd99d4bde30eff6ebccfeb0),Théodwyn,http://lotr.wikia.com//wiki/Th%C3%A9odwyn,Human
+ObjectId(5cd99d4bde30eff6ebccfeb1),Eärendil,http://lotr.wikia.com//wiki/E%C3%A4rendil,Human
+ObjectId(5cd99d4bde30eff6ebccfeb2),Harry Goatleaf,http://lotr.wikia.com//wiki/Harry_Goatleaf,Human
+ObjectId(5cd9d533844dc4c55e47afed),Treebeard,http://lotr.wikia.com//wiki/Treebeard,Ent
+ObjectId(5cd9d576844dc4c55e47afee),Witch-King of Angmar,http://lotr.wikia.com//wiki/Witch-king_of_Angmar,Human
+ObjectId(5cd9d5a0844dc4c55e47afef),Mouth of Sauron,http://lotr.wikia.com//wiki/Mouth_of_Sauron,Human
+ObjectId(5cd9d5cf844dc4c55e47aff0),Irolas,http://lotr.wikia.com//wiki/Irolas,Human
