@@ -15,12 +15,15 @@ require("babel-core/register")({
 // require("custom-env").env(true); // load env variables dynamically from current env
 require('dotenv').config()
 
+var server_port = process.env.PORT || 80;
+var server_host = process.env.HOST || '0.0.0.0';
+
 async function api() {
   try {
     // general settings
     let server = Hapi.Server({
-      port: process.env.APP_PORT,
-      host: process.env.HOST,
+      port: server_port,
+      host: server_host,
       debug: { request: ["*"] },
       routes: {
         validate: {
@@ -305,7 +308,7 @@ async function api() {
         throw err;
       }
 
-      console.log(`Server started at: ${process.env.PORT}`);
+      console.log(`Server started at: ${server_port}`);
     });
 
     RestHapi.logUtil.logActionComplete(
