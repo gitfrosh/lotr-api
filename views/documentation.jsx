@@ -128,8 +128,9 @@ class AboutView extends React.Component {
                   <div className="panel-body">
                     <h3>Which routes are available?</h3>
                     All routes must be prefixed with{" "}
-                    <em>https://the-one-api/v1</em>. Only the <strong>/book</strong> endpoint is
+                    <em>https://the-one-api.herokuapp.com/v1</em>. Only the <strong>/book</strong> endpoint is
                     available without authentication.
+                    <br />
                     <br />
                     <table className="table">
                       <thead>
