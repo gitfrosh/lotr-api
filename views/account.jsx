@@ -12,7 +12,7 @@ class AccountView extends React.Component {
   }
 
   componentDidMount() {
-    var url = "http://localhost:8088/v1/get-user";
+    var url = process.env.APP_URL + "/v1/get-user";
     let status = undefined;
     fetch(url, {
       method: "GET"

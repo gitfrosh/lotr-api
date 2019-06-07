@@ -1,9 +1,10 @@
 "use strict";
 
 const Path = require("path");
+const webpack = require("webpack");
 
 module.exports = {
-  mode: "development",
+  mode: "production",
   entry: [Path.join(__dirname, "./client.js")],
   resolve: {
     extensions: [".js", ".jsx"]
@@ -23,5 +24,11 @@ module.exports = {
       }
     ]
   },
-  plugins: []
+  plugins: [
+    new webpack.DefinePlugin({
+      "process.env": {
+        APP_URL: JSON.stringify("http://localhost:8088")
+      }
+    })
+  ]
 };

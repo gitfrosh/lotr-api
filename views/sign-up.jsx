@@ -15,7 +15,7 @@ class RegistrationView extends React.Component {
 
   signUp(values) {
     // e.preventDefault();
-    var url = "http://localhost:8088/v1/register";
+    var url = process.env.APP_URL + "/v1/register";
     let status = undefined;
     fetch(url, {
       method: "POST",
@@ -103,8 +103,7 @@ class RegistrationView extends React.Component {
                             password: Yup.string()
                               .trim()
                               .required("Password required"),
-                            passwordConfirm: Yup
-                              .string()
+                            passwordConfirm: Yup.string()
                               .required("Password confirm required")
                               .oneOf(
                                 [Yup.ref("password"), null],
