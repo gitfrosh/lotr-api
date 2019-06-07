@@ -22,7 +22,7 @@ class AboutView extends React.Component {
                       #100DaysOfCode challenge
                     </a>{" "}
                     and is brought to you via{" "}
-                    <a href="https://www.digitalocean.com/">DigitalOcean</a>.
+                    <a href="https://www.heroku.com/">Heroku</a>.
                     You have some questions or suggestions? Find me on Twitter (
                     <a href="https://twitter.com/frankanka">@frankanka</a>)!
                     <br />
