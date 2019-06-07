@@ -13,7 +13,7 @@ class LayoutView extends React.Component {
   }
 
   logout() {
-    const url = process.env.APP_ENV === "prod" ? process.env.APP_URL : "" + + "/v1/logout";
+    const url = process.env.APP_ENV === "prod" ? process.env.APP_URL : "" + "/v1/logout";
     fetch(url, {
       method: "GET"
     })
