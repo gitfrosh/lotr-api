@@ -12,7 +12,8 @@ require("babel-polyfill");
 require("babel-core/register")({
   presets: ["react", "env"]
 });
-require("custom-env").env(true); // load env variables dynamically from current env
+// require("custom-env").env(true); // load env variables dynamically from current env
+require('dotenv').config()
 
 async function api() {
   try {
@@ -111,7 +112,7 @@ async function api() {
 
     function createToken(user) {
       const Jwt = require("jsonwebtoken");
-      const jwtSecret = "NeverShareYourSecret";
+      const jwtSecret = process.env.SECRET;
 
       const { email, _id, access_token } = user;
 
@@ -124,7 +125,7 @@ async function api() {
     }
 
     server.auth.strategy("jwt", "jwt", {
-      key: "NeverShareYourSecret",
+      key: process.env.SECRET,
       validate,
       verifyOptions: { algorithms: ["HS256"] }
     });
