@@ -25,10 +25,10 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.DefinePlugin({
-      "process.env": {
-        APP_URL: JSON.stringify("http://localhost:8088")
-      }
-    })
+    // new webpack.DefinePlugin({
+    //   "process.env": {
+    //     APP_URL: JSON.stringify("http://localhost:8088")
+    //   }
+    // })
   ]
 };
