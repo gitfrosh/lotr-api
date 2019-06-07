@@ -16,7 +16,7 @@ require("custom-env").env(true); // load env variables dynamically from current 
 // require('dotenv').config()
 
 var server_port = process.env.PORT || 80;
-var server_host = process.env.HOST || '0.0.0.0';
+var server_host = process.env.HOST || "0.0.0.0";
 
 async function api() {
   try {
@@ -115,7 +115,7 @@ async function api() {
 
     function createToken(user) {
       const Jwt = require("jsonwebtoken");
-      const jwtSecret = process.env.SECRET;
+      const jwtSecret = new Buffer(process.env.SECRET, "base64");
 
       const { email, _id, access_token } = user;
 
@@ -128,7 +128,7 @@ async function api() {
     }
 
     server.auth.strategy("jwt", "jwt", {
-      key: process.env.SECRET,
+      key: new Buffer(process.env.SECRET, "base64"),
       validate,
       verifyOptions: { algorithms: ["HS256"] }
     });
@@ -266,7 +266,6 @@ async function api() {
         }
       }
     });
-;
     let config = {
       appTitle: "lotr-api",
       enableTextSearch: true,
