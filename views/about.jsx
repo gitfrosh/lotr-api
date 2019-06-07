@@ -17,7 +17,7 @@ class AboutView extends React.Component {
                   <div className="panel-body">
                     {" "}
                     The <strong>one API to rule them all</strong> is a project
-                    by <a href="https://rike.dev">Rike</a> made during the
+                    by <a href="https://rike.dev">Rike</a> made during the{" "}
                     <a href="https://www.100daysofcode.com/">
                       #100DaysOfCode challenge
                     </a>{" "}
