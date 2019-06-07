@@ -263,27 +263,7 @@ async function api() {
         }
       }
     });
-
-    const uri =
-      process.env.APP_ENV === "dev"
-        ? "mongodb://" +
-          process.env.DB_HOST +
-          ":" +
-          process.env.DB_PORT +
-          "/" +
-          process.env.DB_NAME
-        : "mongodb://" +
-          process.env.DB_USER +
-          ":" +
-          process.env.DB_PASSWORD +
-          "@" +
-          process.env.DB_HOST +
-          ":" +
-          process.env.DB_PORT +
-          "/" +
-          process.env.DB_NAME;
-
-    // console.log(uri);
+;
     let config = {
       appTitle: "lotr-api",
       enableTextSearch: true,
@@ -291,7 +271,7 @@ async function api() {
       loglevel: "INTERNAL",
       docExpansion: "list",
       mongo: {
-        URI: uri
+        URI: process.env.MONGODB_URI
       },
       authStrategy: "simple"
     };
