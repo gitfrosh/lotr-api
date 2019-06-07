@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "webpack --config webpack.js && NODE_ENV=prod node server.js",
+    "start": "webpack --config webpack.js && node server.js",
     "dev": "webpack --config webpack.js && NODE_ENV=dev nodemon server.js"
   },
   "dependencies": {
@@ -33,12 +33,10 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "rest-hapi": "^1.6.0",
+    "webpack-cli": "^3.3.2",
     "webpack": "^4.31.0",
     "webpack-hot-middleware": "^2.25.0",
     "xhr2": "^0.1.4",
     "yup": "^0.27.0"
-  },
-  "devDependencies": {
-    "webpack-cli": "^3.3.2"
   }
 }
