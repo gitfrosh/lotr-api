@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "webpack --config webpack.js && nodemon server.js"
+    "start": "webpack --config webpack.js && NODE_ENV=prod node server.js",
+    "dev": "webpack --config webpack.js && NODE_ENV=dev nodemon server.js"
   },
   "dependencies": {
     "@hapi/inert": "^5.2.0",
@@ -16,6 +17,7 @@
     "babel-preset-env": "1.x.x",
     "babel-preset-react": "6.x.x",
     "bcryptjs": "^2.4.3",
+    "custom-env": "^1.0.2",
     "dotenv": "^8.0.0",
     "formik": "^1.5.7",
     "hapi": "^18.1.0",

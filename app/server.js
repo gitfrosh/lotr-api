@@ -9,10 +9,10 @@ const Vision = require("@hapi/vision");
 const HapiReactViews = require("hapi-react-views");
 const HapiRateLimit = require("hapi-rate-limit");
 require("babel-polyfill");
-require("dotenv").config();
 require("babel-core/register")({
   presets: ["react", "env"]
 });
+require("custom-env").env(true); // load env variables dynamically from current env
 
 async function api() {
   try {
@@ -263,6 +263,26 @@ async function api() {
       }
     });
 
+    const uri =
+      process.env.APP_ENV === "dev"
+        ? "mongodb://" +
+          process.env.DB_HOST +
+          ":" +
+          process.env.DB_PORT +
+          "/" +
+          process.env.DB_NAME
+        : "mongodb://" +
+          process.env.DB_USER +
+          ":" +
+          process.env.DB_PASSWORD +
+          "@" +
+          process.env.DB_HOST +
+          ":" +
+          process.env.DB_PORT +
+          "/" +
+          process.env.DB_NAME;
+
+    console.log(uri);
     let config = {
       appTitle: "lotr-api",
       enableTextSearch: true,
@@ -270,13 +290,7 @@ async function api() {
       loglevel: "INTERNAL",
       docExpansion: "list",
       mongo: {
-        URI:
-          "mongodb://" +
-          process.env.HOST +
-          ":" +
-          process.env.DB_PORT +
-          "/" +
-          process.env.DB_NAME
+        URI: uri
       },
       authStrategy: "simple"
     };
