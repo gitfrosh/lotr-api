@@ -17,7 +17,7 @@ class LoginView extends React.Component {
 
   login(values) {
     // e.preventDefault();
-    var url = "http://localhost:8088/v1/login";
+    var url = process.env.APP_URL + "/v1/login";
     let status = undefined;
     const data = values.values;
     fetch(url, {
@@ -41,7 +41,7 @@ class LoginView extends React.Component {
           // console.log("logged in!");
           // console.log(response);
           // window.localStorage.setItem("JWT_KEY", response.token);
-          window.location.href = "http://localhost:8088/account";
+          window.location.href = process.env.APP_URL +"/account";
         } else {
           // console.log(response);
           this.setState({

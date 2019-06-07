@@ -153,18 +153,10 @@ module.exports = function(server, mongoose, logger) {
 
       token = server.methods.createToken(user);
 
-      // response = {
-      //   user,
-      //   token
-      // };
-
       return h
         .response({ response: "Hello Cookie, njam." })
         .header("Authorization", token)
         .state("token", token, cookie_options);
-      // .redirect('http://localhost:8088/account');
-
-      // return response;
     };
 
     server.route({
