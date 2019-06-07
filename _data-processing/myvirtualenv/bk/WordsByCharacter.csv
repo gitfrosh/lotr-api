@@ -1,0 +1,732 @@
+Film,Chapter,Character,Race,Words
+The Fellowship Of The Ring,01: Prologue,Bilbo,Hobbit,4
+The Fellowship Of The Ring,01: Prologue,Elrond,Elf,5
+The Fellowship Of The Ring,01: Prologue,Galadriel,Elf,460
+The Fellowship Of The Ring,01: Prologue,Gollum,Gollum,20
+The Fellowship Of The Ring,02: Concerning Hobbits,Bilbo,Hobbit,214
+The Fellowship Of The Ring,03: The Shire,Bilbo,Hobbit,70
+The Fellowship Of The Ring,03: The Shire,Frodo,Hobbit,128
+The Fellowship Of The Ring,03: The Shire,Gandalf,Ainur,197
+The Fellowship Of The Ring,03: The Shire,Hobbit Kids,Hobbit,10
+The Fellowship Of The Ring,03: The Shire,Hobbits,Hobbit,12
+The Fellowship Of The Ring,04: Very Old Friends,Bilbo,Hobbit,339
+The Fellowship Of The Ring,04: Very Old Friends,Gandalf,Ainur,64
+The Fellowship Of The Ring,04: Very Old Friends,Lobelia Sackville-Baggins,Hobbit,8
+The Fellowship Of The Ring,05: A Long Expected Party,Bilbo,Hobbit,326
+The Fellowship Of The Ring,05: A Long Expected Party,Frodo,Hobbit,32
+The Fellowship Of The Ring,05: A Long Expected Party,Gandalf,Ainur,12
+The Fellowship Of The Ring,05: A Long Expected Party,Hobbits,Hobbit,8
+The Fellowship Of The Ring,05: A Long Expected Party,Lobelia Sackville-Baggins,Hobbit,1
+The Fellowship Of The Ring,05: A Long Expected Party,Merry,Hobbit,19
+The Fellowship Of The Ring,05: A Long Expected Party,Mrs. Bracegirdle,Hobbit,2
+The Fellowship Of The Ring,05: A Long Expected Party,Pippin,Hobbit,15
+The Fellowship Of The Ring,05: A Long Expected Party,Proudfoot,Hobbit,1
+The Fellowship Of The Ring,05: A Long Expected Party,Sam,Hobbit,7
+The Fellowship Of The Ring,06: Farewell Dear Bilbo,Bilbo,Hobbit,182
+The Fellowship Of The Ring,06: Farewell Dear Bilbo,Gandalf,Ainur,148
+The Fellowship Of The Ring,07: Keep It Secret Keep It Safe,Bilbo,Hobbit,6
+The Fellowship Of The Ring,07: Keep It Secret Keep It Safe,Frodo,Hobbit,33
+The Fellowship Of The Ring,07: Keep It Secret Keep It Safe,Gandalf,Ainur,60
+The Fellowship Of The Ring,08: The Account of Isildur,Gandalf,Ainur,107
+The Fellowship Of The Ring,08: The Account of Isildur,Gollum,Gollum,3
+The Fellowship Of The Ring,08: The Account of Isildur,Hobbits,Hobbit,12
+The Fellowship Of The Ring,08: The Account of Isildur,Nazgul,Nazgul,2
+The Fellowship Of The Ring,09: At The Green Dragon,Frodo,Hobbit,17
+The Fellowship Of The Ring,09: At The Green Dragon,Gaffer,Hobbit,21
+The Fellowship Of The Ring,09: At The Green Dragon,Hobbits,Hobbit,53
+The Fellowship Of The Ring,09: At The Green Dragon,Merry,Hobbit,53
+The Fellowship Of The Ring,09: At The Green Dragon,Pippin,Hobbit,61
+The Fellowship Of The Ring,09: At The Green Dragon,Rosie,Hobbit,3
+The Fellowship Of The Ring,09: At The Green Dragon,Sam,Hobbit,10
+The Fellowship Of The Ring,09: At The Green Dragon,Sandyman,Hobbit,17
+The Fellowship Of The Ring,09: At The Green Dragon,Ted,Hobbit,55
+The Fellowship Of The Ring,10: The Shadow Of The Past,Bilbo,Hobbit,28
+The Fellowship Of The Ring,10: The Shadow Of The Past,Frodo,Hobbit,139
+The Fellowship Of The Ring,10: The Shadow Of The Past,Gandalf,Ainur,541
+The Fellowship Of The Ring,10: The Shadow Of The Past,Gollum,Gollum,2
+The Fellowship Of The Ring,10: The Shadow Of The Past,Hobbits,Hobbit,3
+The Fellowship Of The Ring,10: The Shadow Of The Past,Sam,Hobbit,84
+The Fellowship Of The Ring,11: The Passing Of The Elves,Frodo,Hobbit,43
+The Fellowship Of The Ring,11: The Passing Of The Elves,Sam,Hobbit,40
+The Fellowship Of The Ring,12: Saruman The White,Gandalf,Ainur,85
+The Fellowship Of The Ring,12: Saruman The White,Saruman,Ainur,274
+The Fellowship Of The Ring,13: A Shortcut To Mushrooms,Farmer Maggot,Hobbit,21
+The Fellowship Of The Ring,13: A Shortcut To Mushrooms,Frodo,Hobbit,37
+The Fellowship Of The Ring,13: A Shortcut To Mushrooms,Merry,Hobbit,58
+The Fellowship Of The Ring,13: A Shortcut To Mushrooms,Pippin,Hobbit,32
+The Fellowship Of The Ring,13: A Shortcut To Mushrooms,Sam,Hobbit,48
+The Fellowship Of The Ring,14: Buckleberry Ferry,Frodo,Hobbit,20
+The Fellowship Of The Ring,14: Buckleberry Ferry,Merry,Hobbit,43
+The Fellowship Of The Ring,14: Buckleberry Ferry,Pippin,Hobbit,14
+The Fellowship Of The Ring,14: Buckleberry Ferry,Sam,Hobbit,9
+The Fellowship Of The Ring,15: At The Sign of the Prancing Pony,Aragorn,Men,76
+The Fellowship Of The Ring,15: At The Sign of the Prancing Pony,Frodo,Hobbit,68
+The Fellowship Of The Ring,15: At The Sign of the Prancing Pony,Gatekeeper,Men,38
+The Fellowship Of The Ring,15: At The Sign of the Prancing Pony,Innkeeper,Men,76
+The Fellowship Of The Ring,15: At The Sign of the Prancing Pony,Man,Men,13
+The Fellowship Of The Ring,15: At The Sign of the Prancing Pony,Merry,Hobbit,6
+The Fellowship Of The Ring,15: At The Sign of the Prancing Pony,Pippin,Hobbit,39
+The Fellowship Of The Ring,15: At The Sign of the Prancing Pony,Sam,Hobbit,30
+The Fellowship Of The Ring,15: At The Sign of the Prancing Pony,Voice Of The Ring,Ainur,19
+The Fellowship Of The Ring,16: The Nazgul,Aragorn,Men,96
+The Fellowship Of The Ring,16: The Nazgul,Frodo,Hobbit,29
+The Fellowship Of The Ring,16: The Nazgul,Merry,Hobbit,28
+The Fellowship Of The Ring,16: The Nazgul,Pippin,Hobbit,25
+The Fellowship Of The Ring,16: The Nazgul,Sam,Hobbit,17
+The Fellowship Of The Ring,17: The Midgewater Marshes,Aragorn,Men,33
+The Fellowship Of The Ring,17: The Midgewater Marshes,Frodo,Hobbit,12
+The Fellowship Of The Ring,17: The Midgewater Marshes,Merry,Hobbit,9
+The Fellowship Of The Ring,18: The Spoiling Of Isengard,Orc,Orc,20
+The Fellowship Of The Ring,18: The Spoiling Of Isengard,Saruman,Ainur,22
+The Fellowship Of The Ring,18: The Spoiling Of Isengard,Voice Of Sauron,Ainur,7
+The Fellowship Of The Ring,19: A Knife In The Dark,Aragorn,Men,53
+The Fellowship Of The Ring,19: A Knife In The Dark,Frodo,Hobbit,16
+The Fellowship Of The Ring,19: A Knife In The Dark,Merry,Hobbit,13
+The Fellowship Of The Ring,19: A Knife In The Dark,Pippin,Hobbit,12
+The Fellowship Of The Ring,19: A Knife In The Dark,Sam,Hobbit,24
+The Fellowship Of The Ring,20: The Caverns Of Isengard,Gandalf,Ainur,5
+The Fellowship Of The Ring,21: Flight To The Ford,Aragorn,Men,48
+The Fellowship Of The Ring,21: Flight To The Ford,Arwen,Elf,131
+The Fellowship Of The Ring,21: Flight To The Ford,Merry,Hobbit,5
+The Fellowship Of The Ring,21: Flight To The Ford,Nazgul,Nazgul,6
+The Fellowship Of The Ring,21: Flight To The Ford,Pippin,Hobbit,9
+The Fellowship Of The Ring,21: Flight To The Ford,Sam,Hobbit,34
+The Fellowship Of The Ring,22: Rivendell,Elrond,Elf,7
+The Fellowship Of The Ring,23: Many Meetings,Bilbo,Hobbit,36
+The Fellowship Of The Ring,23: Many Meetings,Elrond,Elf,5
+The Fellowship Of The Ring,23: Many Meetings,Frodo,Hobbit,107
+The Fellowship Of The Ring,23: Many Meetings,Gandalf,Ainur,104
+The Fellowship Of The Ring,23: Many Meetings,Sam,Hobbit,63
+The Fellowship Of The Ring,23: Many Meetings,Saruman,Ainur,33
+The Fellowship Of The Ring,24: The Fate Of The Ring,Elrond,Elf,260
+The Fellowship Of The Ring,24: The Fate Of The Ring,Gandalf,Ainur,102
+The Fellowship Of The Ring,24: The Fate Of The Ring,Isildur,Men,1
+The Fellowship Of The Ring,25: The Sword That Was Broken,Aragorn,Men,25
+The Fellowship Of The Ring,25: The Sword That Was Broken,Arwen,Elf,47
+The Fellowship Of The Ring,25: The Sword That Was Broken,Boromir,Men,39
+The Fellowship Of The Ring,26: The Evenstar,Aragorn,Men,24
+The Fellowship Of The Ring,26: The Evenstar,Arwen,Elf,57
+The Fellowship Of The Ring,27: The Council Of Elrond,Aragorn,Men,40
+The Fellowship Of The Ring,27: The Council Of Elrond,Boromir,Men,220
+The Fellowship Of The Ring,27: The Council Of Elrond,Elrond,Elf,167
+The Fellowship Of The Ring,27: The Council Of Elrond,Frodo,Hobbit,24
+The Fellowship Of The Ring,27: The Council Of Elrond,Gandalf,Ainur,85
+The Fellowship Of The Ring,27: The Council Of Elrond,Gimli,Dwarf,38
+The Fellowship Of The Ring,27: The Council Of Elrond,Legolas,Elf,34
+The Fellowship Of The Ring,27: The Council Of Elrond,Man,Men,4
+The Fellowship Of The Ring,27: The Council Of Elrond,Merry,Hobbit,24
+The Fellowship Of The Ring,27: The Council Of Elrond,Pippin,Hobbit,18
+The Fellowship Of The Ring,27: The Council Of Elrond,Sam,Hobbit,8
+The Fellowship Of The Ring,27: The Council Of Elrond,Voice Of The Ring,Ainur,12
+The Fellowship Of The Ring,28: Gilraen's Memorial,Aragorn,Men,11
+The Fellowship Of The Ring,28: Gilraen's Memorial,Elrond,Elf,65
+The Fellowship Of The Ring,29: Bilbo's Gifts,Bilbo,Hobbit,105
+The Fellowship Of The Ring,29: Bilbo's Gifts,Frodo,Hobbit,3
+The Fellowship Of The Ring,30: The Departure Of The Fellowship,Elrond,Elf,48
+The Fellowship Of The Ring,30: The Departure Of The Fellowship,Frodo,Hobbit,7
+The Fellowship Of The Ring,30: The Departure Of The Fellowship,Gandalf,Ainur,7
+The Fellowship Of The Ring,31: The Ring Goes South,Aragorn,Men,12
+The Fellowship Of The Ring,31: The Ring Goes South,Boromir,Men,15
+The Fellowship Of The Ring,31: The Ring Goes South,Gandalf,Ainur,68
+The Fellowship Of The Ring,31: The Ring Goes South,Gimli,Dwarf,47
+The Fellowship Of The Ring,31: The Ring Goes South,Legolas,Elf,3
+The Fellowship Of The Ring,31: The Ring Goes South,Merry,Hobbit,17
+The Fellowship Of The Ring,31: The Ring Goes South,Pippin,Hobbit,10
+The Fellowship Of The Ring,31: The Ring Goes South,Sam,Hobbit,3
+The Fellowship Of The Ring,32: The Pass Of Caradhras,Aragorn,Men,30
+The Fellowship Of The Ring,32: The Pass Of Caradhras,Boromir,Men,61
+The Fellowship Of The Ring,32: The Pass Of Caradhras,Frodo,Hobbit,6
+The Fellowship Of The Ring,32: The Pass Of Caradhras,Gandalf,Ainur,18
+The Fellowship Of The Ring,32: The Pass Of Caradhras,Gimli,Dwarf,19
+The Fellowship Of The Ring,32: The Pass Of Caradhras,Legolas,Elf,8
+The Fellowship Of The Ring,32: The Pass Of Caradhras,Saruman,Ainur,68
+The Fellowship Of The Ring,33: Moria,Aragorn,Men,31
+The Fellowship Of The Ring,33: Moria,Boromir,Men,31
+The Fellowship Of The Ring,33: Moria,Frodo,Hobbit,30
+The Fellowship Of The Ring,33: Moria,Gandalf,Ainur,202
+The Fellowship Of The Ring,33: Moria,Gimli,Dwarf,52
+The Fellowship Of The Ring,33: Moria,Legolas,Elf,7
+The Fellowship Of The Ring,33: Moria,Merry,Hobbit,9
+The Fellowship Of The Ring,33: Moria,Pippin,Hobbit,11
+The Fellowship Of The Ring,33: Moria,Sam,Hobbit,7
+The Fellowship Of The Ring,34: A Journey In The Dark,Frodo,Hobbit,39
+The Fellowship Of The Ring,34: A Journey In The Dark,Gandalf,Ainur,349
+The Fellowship Of The Ring,34: A Journey In The Dark,Gimli,Dwarf,6
+The Fellowship Of The Ring,34: A Journey In The Dark,Merry,Hobbit,8
+The Fellowship Of The Ring,34: A Journey In The Dark,Pippin,Hobbit,10
+The Fellowship Of The Ring,34: A Journey In The Dark,Sam,Hobbit,7
+The Fellowship Of The Ring,35: Balin's Tomb,Aragorn,Men,22
+The Fellowship Of The Ring,35: Balin's Tomb,Boromir,Men,5
+The Fellowship Of The Ring,35: Balin's Tomb,Frodo,Hobbit,8
+The Fellowship Of The Ring,35: Balin's Tomb,Gandalf,Ainur,89
+The Fellowship Of The Ring,35: Balin's Tomb,Gimli,Dwarf,37
+The Fellowship Of The Ring,35: Balin's Tomb,Legolas,Elf,8
+The Fellowship Of The Ring,35: Balin's Tomb,Sam,Hobbit,13
+The Fellowship Of The Ring,36: The Bridge Of Khazad-dûm,Aragorn,Men,45
+The Fellowship Of The Ring,36: The Bridge Of Khazad-dûm,Boromir,Men,17
+The Fellowship Of The Ring,36: The Bridge Of Khazad-dûm,Frodo,Hobbit,4
+The Fellowship Of The Ring,36: The Bridge Of Khazad-dûm,Gandalf,Ainur,83
+The Fellowship Of The Ring,36: The Bridge Of Khazad-dûm,Gimli,Dwarf,7
+The Fellowship Of The Ring,36: The Bridge Of Khazad-dûm,Legolas,Elf,4
+The Fellowship Of The Ring,37: Lothlorien,Aragorn,Men,26
+The Fellowship Of The Ring,37: Lothlorien,Boromir,Men,27
+The Fellowship Of The Ring,37: Lothlorien,Galadriel,Elf,19
+The Fellowship Of The Ring,37: Lothlorien,Gimli,Dwarf,84
+The Fellowship Of The Ring,37: Lothlorien,Haldir,Elf,51
+The Fellowship Of The Ring,37: Lothlorien,Legolas,Elf,7
+The Fellowship Of The Ring,37: Lothlorien,Sam,Hobbit,2
+The Fellowship Of The Ring,38: Caras Galadhon,Aragorn,Men,16
+The Fellowship Of The Ring,38: Caras Galadhon,Boromir,Men,149
+The Fellowship Of The Ring,38: Caras Galadhon,Celeborn,Elf,61
+The Fellowship Of The Ring,38: Caras Galadhon,Galadriel,Elf,135
+The Fellowship Of The Ring,38: Caras Galadhon,Haldir,Elf,19
+The Fellowship Of The Ring,38: Caras Galadhon,Legolas,Elf,41
+The Fellowship Of The Ring,38: Caras Galadhon,Merry,Hobbit,6
+The Fellowship Of The Ring,38: Caras Galadhon,Sam,Hobbit,49
+The Fellowship Of The Ring,39: The Mirror Of Galadriel,Frodo,Hobbit,36
+The Fellowship Of The Ring,39: The Mirror Of Galadriel,Galadriel,Elf,214
+The Fellowship Of The Ring,40: The Fighting Uruk-hai,Lurtz,Orc,1
+The Fellowship Of The Ring,40: The Fighting Uruk-hai,Saruman,Ainur,83
+The Fellowship Of The Ring,41: Farewell To Lorien,Aragorn,Men,13
+The Fellowship Of The Ring,41: Farewell To Lorien,Celeborn,Elf,99
+The Fellowship Of The Ring,41: Farewell To Lorien,Galadriel,Elf,166
+The Fellowship Of The Ring,41: Farewell To Lorien,Gimli,Dwarf,81
+The Fellowship Of The Ring,41: Farewell To Lorien,Legolas,Elf,20
+The Fellowship Of The Ring,41: Farewell To Lorien,Merry,Hobbit,5
+The Fellowship Of The Ring,41: Farewell To Lorien,Pippin,Hobbit,1
+The Fellowship Of The Ring,41: Farewell To Lorien,Sam,Hobbit,13
+The Fellowship Of The Ring,42: The Great River,Aragorn,Men,64
+The Fellowship Of The Ring,42: The Great River,Boromir,Men,103
+The Fellowship Of The Ring,42: The Great River,Frodo,Hobbit,16
+The Fellowship Of The Ring,42: The Great River,Sam,Hobbit,37
+The Fellowship Of The Ring,43: Parth Galen,Aragorn,Men,79
+The Fellowship Of The Ring,43: Parth Galen,Boromir,Men,202
+The Fellowship Of The Ring,43: Parth Galen,Frodo,Hobbit,54
+The Fellowship Of The Ring,43: Parth Galen,Gimli,Dwarf,48
+The Fellowship Of The Ring,43: Parth Galen,Legolas,Elf,31
+The Fellowship Of The Ring,43: Parth Galen,Merry,Hobbit,2
+The Fellowship Of The Ring,43: Parth Galen,Voice Of The Ring,Ainur,3
+The Fellowship Of The Ring,44: The Breaking Of The Fellowship,Aragorn,Men,2
+The Fellowship Of The Ring,44: The Breaking Of The Fellowship,Boromir,Men,2
+The Fellowship Of The Ring,44: The Breaking Of The Fellowship,Legolas,Elf,6
+The Fellowship Of The Ring,44: The Breaking Of The Fellowship,Lurtz,Orc,6
+The Fellowship Of The Ring,44: The Breaking Of The Fellowship,Merry,Hobbit,18
+The Fellowship Of The Ring,44: The Breaking Of The Fellowship,Pippin,Hobbit,17
+The Fellowship Of The Ring,44: The Breaking Of The Fellowship,Sam,Hobbit,2
+The Fellowship Of The Ring,45: The Departure Of Boromir,Aragorn,Men,72
+The Fellowship Of The Ring,45: The Departure Of Boromir,Boromir,Men,72
+The Fellowship Of The Ring,46: The Road Goes Ever On…,Aragorn,Men,102
+The Fellowship Of The Ring,46: The Road Goes Ever On…,Frodo,Hobbit,59
+The Fellowship Of The Ring,46: The Road Goes Ever On…,Gandalf,Ainur,34
+The Fellowship Of The Ring,46: The Road Goes Ever On…,Gimli,Dwarf,12
+The Fellowship Of The Ring,46: The Road Goes Ever On…,Legolas,Elf,15
+The Fellowship Of The Ring,46: The Road Goes Ever On…,Sam,Hobbit,50
+The Two Towers,01: The Foundations Of Stone,Boromir,Men,2
+The Two Towers,01: The Foundations Of Stone,Frodo,Hobbit,9
+The Two Towers,01: The Foundations Of Stone,Gandalf,Ainur,39
+The Two Towers,01: The Foundations Of Stone,Sam,Hobbit,5
+The Two Towers,02: Elven Rope,Frodo,Hobbit,46
+The Two Towers,02: Elven Rope,Sam,Hobbit,97
+The Two Towers,03: The Taming of Sméagol,Frodo,Hobbit,123
+The Two Towers,03: The Taming of Sméagol,Gollum,Gollum,147
+The Two Towers,03: The Taming of Sméagol,Sam,Hobbit,181
+The Two Towers,03: The Taming of Sméagol,Smeagol,Gollum,28
+The Two Towers,04: The Uruk-Hai,Grishnakh,Orc,10
+The Two Towers,04: The Uruk-Hai,Mauhur,Orc,2
+The Two Towers,04: The Uruk-Hai,Merry,Hobbit,19
+The Two Towers,04: The Uruk-Hai,Pippin,Hobbit,26
+The Two Towers,04: The Uruk-Hai,Ugluk,Orc,51
+The Two Towers,05: The Three Hunters,Aragorn,Men,59
+The Two Towers,05: The Three Hunters,Gimli,Dwarf,35
+The Two Towers,05: The Three Hunters,Legolas,Elf,25
+The Two Towers,06: The Burning of the Westfold,Eothain,Men,2
+The Two Towers,06: The Burning of the Westfold,Freda,Men,24
+The Two Towers,06: The Burning of the Westfold,Morwen,Men,37
+The Two Towers,06: The Burning of the Westfold,Orc,Orc,29
+The Two Towers,06: The Burning of the Westfold,Saruman,Ainur,187
+The Two Towers,06: The Burning of the Westfold,Wild Man,Men,11
+The Two Towers,07: Massacre at the Fords of Isen,Eomer,Men,13
+The Two Towers,07: Massacre at the Fords of Isen,Rohan Warrior,Men,10
+The Two Towers,08: The Banishment of Éomer,Eomer,Men,88
+The Two Towers,08: The Banishment of Éomer,Eowyn,Men,8
+The Two Towers,08: The Banishment of Éomer,Grima Wormtongue,Men,81
+The Two Towers,08: The Banishment of Éomer,Theoden,Men,3
+The Two Towers,09: On The Trail Of The Uruk-Hai,Gimli,Dwarf,6
+The Two Towers,09: On The Trail Of The Uruk-Hai,Legolas,Elf,13
+The Two Towers,10: Night Camp At Fangorn,Grishnakh,Orc,44
+The Two Towers,10: Night Camp At Fangorn,Legolas,Elf,10
+The Two Towers,10: Night Camp At Fangorn,Merry,Hobbit,68
+The Two Towers,10: Night Camp At Fangorn,Orc,Orc,20
+The Two Towers,10: Night Camp At Fangorn,Pippin,Hobbit,14
+The Two Towers,10: Night Camp At Fangorn,Ugluk,Orc,33
+The Two Towers,10: Night Camp At Fangorn,Uruk-hai,Orc,13
+The Two Towers,11: The Riders Of Rohan,Aragorn,Men,68
+The Two Towers,11: The Riders Of Rohan,Eomer,Men,156
+The Two Towers,11: The Riders Of Rohan,Gimli,Dwarf,24
+The Two Towers,11: The Riders Of Rohan,Legolas,Elf,7
+The Two Towers,12: The Fate Of Merry And Pippin,Aragorn,Men,33
+The Two Towers,12: The Fate Of Merry And Pippin,Gimli,Dwarf,16
+The Two Towers,12: The Fate Of Merry And Pippin,Merry,Hobbit,3
+The Two Towers,13: Treebeard,Grishnakh,Orc,18
+The Two Towers,13: Treebeard,Merry,Hobbit,28
+The Two Towers,13: Treebeard,Pippin,Hobbit,36
+The Two Towers,13: Treebeard,Treebeard,Ent,77
+The Two Towers,14: The Passage Of The Marshes,Frodo,Hobbit,54
+The Two Towers,14: The Passage Of The Marshes,Gollum,Gollum,304
+The Two Towers,14: The Passage Of The Marshes,Sam,Hobbit,69
+The Two Towers,15: The White Rider,Aragorn,Men,68
+The Two Towers,15: The White Rider,Gandalf,Ainur,298
+The Two Towers,15: The White Rider,Gimli,Dwarf,73
+The Two Towers,15: The White Rider,Legolas,Elf,63
+The Two Towers,16: The Song Of The Entwives,Merry,Hobbit,4
+The Two Towers,16: The Song Of The Entwives,Treebeard,Ent,204
+The Two Towers,17: The Heir Of Númenor,Aragorn,Men,7
+The Two Towers,17: The Heir Of Númenor,Gandalf,Ainur,226
+The Two Towers,18: The Black Gate Is Closed,Frodo,Hobbit,39
+The Two Towers,18: The Black Gate Is Closed,Gollum,Gollum,93
+The Two Towers,18: The Black Gate Is Closed,Sam,Hobbit,68
+The Two Towers,19: Ent Draft,Merry,Hobbit,63
+The Two Towers,19: Ent Draft,Pippin,Hobbit,122
+The Two Towers,19: Ent Draft,Treebeard,Ent,113
+The Two Towers,20: The King Of The Golden Hall,Aragorn,Men,18
+The Two Towers,20: The King Of The Golden Hall,Eowyn,Men,28
+The Two Towers,20: The King Of The Golden Hall,Gandalf,Ainur,151
+The Two Towers,20: The King Of The Golden Hall,Gimli,Dwarf,15
+The Two Towers,20: The King Of The Golden Hall,Grima Wormtongue,Men,166
+The Two Towers,20: The King Of The Golden Hall,Hama,Men,21
+The Two Towers,20: The King Of The Golden Hall,Theoden,Men,56
+The Two Towers,21: The Funeral Of Théodred,Eowyn,Men,24
+The Two Towers,22: Simbelmynë on the Burial Mounds,Gandalf,Ainur,28
+The Two Towers,22: Simbelmynë on the Burial Mounds,Theoden,Men,55
+The Two Towers,23: The King's Decision,Aragorn,Men,59
+The Two Towers,23: The King's Decision,Eowyn,Men,24
+The Two Towers,23: The King's Decision,Freda,Men,3
+The Two Towers,23: The King's Decision,Gandalf,Ainur,165
+The Two Towers,23: The King's Decision,Gimli,Dwarf,21
+The Two Towers,23: The King's Decision,Hama,Men,29
+The Two Towers,23: The King's Decision,Theoden,Men,49
+The Two Towers,24: Brego,Aragorn,Men,22
+The Two Towers,24: Brego,Eowyn,Men,36
+The Two Towers,24: Brego,Rohan Warrior,Men,13
+The Two Towers,25: The Ring Of Barahir,Grima Wormtongue,Men,51
+The Two Towers,25: The Ring Of Barahir,Saruman,Ainur,68
+The Two Towers,25: The Ring Of Barahir,Theoden,Men,18
+The Two Towers,26: A Daughter Of Kings,Aragorn,Men,31
+The Two Towers,26: A Daughter Of Kings,Eowyn,Men,45
+The Two Towers,27: Exodus From Edoras,Grima Wormtongue,Men,52
+The Two Towers,27: Exodus From Edoras,Saruman,Ainur,4
+The Two Towers,28: The Forests Of Ithilien,Frodo,Hobbit,81
+The Two Towers,28: The Forests Of Ithilien,Sam,Hobbit,87
+The Two Towers,29: Gollum and Sméagol ,Gollum,Gollum,73
+The Two Towers,29: Gollum and Sméagol ,Smeagol,Gollum,66
+The Two Towers,30: Of Herbs And Stewed Rabbit,Faramir,Men,76
+The Two Towers,30: Of Herbs And Stewed Rabbit,Frodo,Hobbit,39
+The Two Towers,30: Of Herbs And Stewed Rabbit,Sam,Hobbit,91
+The Two Towers,30: Of Herbs And Stewed Rabbit,Smeagol,Gollum,99
+The Two Towers,31: Dwarf Women,Aragorn,Men,3
+The Two Towers,31: Dwarf Women,Gimli,Dwarf,68
+The Two Towers,32: One of the Dúnedain,Aragorn,Men,33
+The Two Towers,32: One of the Dúnedain,Eowyn,Men,76
+The Two Towers,32: One of the Dúnedain,Gimli,Dwarf,6
+The Two Towers,32: One of the Dúnedain,Theoden,Men,59
+The Two Towers,33: The Evenstar,Aragorn,Men,97
+The Two Towers,33: The Evenstar,Arwen,Elf,119
+The Two Towers,33: The Evenstar,Elrond,Elf,55
+The Two Towers,33: The Evenstar,Eowyn,Men,11
+The Two Towers,34: The Wolves Of Isengard,Aragorn,Men,9
+The Two Towers,34: The Wolves Of Isengard,Eowyn,Men,10
+The Two Towers,34: The Wolves Of Isengard,Gamling,Men,5
+The Two Towers,34: The Wolves Of Isengard,Gimli,Dwarf,45
+The Two Towers,34: The Wolves Of Isengard,Hama,Men,3
+The Two Towers,34: The Wolves Of Isengard,Legolas,Elf,5
+The Two Towers,34: The Wolves Of Isengard,Snaga,Orc,10
+The Two Towers,34: The Wolves Of Isengard,Theoden,Men,50
+The Two Towers,35: Helm's Deep,Eowyn,Men,22
+The Two Towers,35: Helm's Deep,Freda,Men,1
+The Two Towers,35: Helm's Deep,Gamling,Men,14
+The Two Towers,35: Helm's Deep,Gimli,Dwarf,4
+The Two Towers,35: Helm's Deep,Morwen,Men,2
+The Two Towers,35: Helm's Deep,Rohan Maiden,Men,15
+The Two Towers,35: Helm's Deep,Rohan Warrior,Men,22
+The Two Towers,35: Helm's Deep,Theoden,Men,49
+The Two Towers,36: Isengard Unleashed,Grima Wormtongue,Men,66
+The Two Towers,36: Isengard Unleashed,Merry,Hobbit,8
+The Two Towers,36: Isengard Unleashed,Pippin,Hobbit,9
+The Two Towers,36: Isengard Unleashed,Saruman,Ainur,50
+The Two Towers,36: Isengard Unleashed,Treebeard,Ent,37
+The Two Towers,37: The Grace Of The Valar,Arwen,Elf,8
+The Two Towers,38: Arwen's Fate,Arwen,Elf,14
+The Two Towers,38: Arwen's Fate,Elrond,Elf,188
+The Two Towers,39: The Story Foreseen From Lórien,Galadriel,Elf,190
+The Two Towers,40: The Windows On The West,Faramir,Men,143
+The Two Towers,40: The Windows On The West,Frodo,Hobbit,75
+The Two Towers,40: The Windows On The West,Gondor Man,Men,63
+The Two Towers,40: The Windows On The West,Sam,Hobbit,8
+The Two Towers,41: Sons Of The Steward,Boromir,Men,132
+The Two Towers,41: Sons Of The Steward,Crowd,Men,6
+The Two Towers,41: Sons Of The Steward,Denethor,Men,250
+The Two Towers,41: Sons Of The Steward,Faramir,Men,35
+The Two Towers,42: The Forbidden Pool,Faramir,Men,92
+The Two Towers,42: The Forbidden Pool,Frodo,Hobbit,89
+The Two Towers,42: The Forbidden Pool,Gollum,Gollum,35
+The Two Towers,42: The Forbidden Pool,Gondor Man,Men,16
+The Two Towers,42: The Forbidden Pool,Sam,Hobbit,64
+The Two Towers,42: The Forbidden Pool,Smeagol,Gollum,55
+The Two Towers,43: Aragorn's Return,Aragorn,Men,69
+The Two Towers,43: Aragorn's Return,Gamling,Men,9
+The Two Towers,43: Aragorn's Return,Gimli,Dwarf,51
+The Two Towers,43: Aragorn's Return,Legolas,Elf,5
+The Two Towers,43: Aragorn's Return,Rohan Maiden,Men,2
+The Two Towers,43: Aragorn's Return,Theoden,Men,206
+The Two Towers,44: Entmoot,Merry,Hobbit,6
+The Two Towers,44: Entmoot,Treebeard,Ent,55
+The Two Towers,45: The Glittering Caves,Aragorn,Men,78
+The Two Towers,45: The Glittering Caves,Eowyn,Men,65
+The Two Towers,45: The Glittering Caves,Gimli,Dwarf,13
+The Two Towers,45: The Glittering Caves,Legolas,Elf,36
+The Two Towers,45: The Glittering Caves,Rohan Warrior,Men,12
+The Two Towers,46: Where Is The Horse And The Rider,Gamling,Men,30
+The Two Towers,46: Where Is The Horse And The Rider,Theoden,Men,64
+The Two Towers,47: Don't Be Hasty Master Meriadoc!,Merry,Hobbit,18
+The Two Towers,47: Don't Be Hasty Master Meriadoc!,Pippin,Hobbit,7
+The Two Towers,47: Don't Be Hasty Master Meriadoc!,Treebeard,Ent,12
+The Two Towers,48: The Host Of The Eldar,Aragorn,Men,34
+The Two Towers,48: The Host Of The Eldar,Gimli,Dwarf,14
+The Two Towers,48: The Host Of The Eldar,Haldir,Elf,37
+The Two Towers,48: The Host Of The Eldar,Haleth,Men,23
+The Two Towers,48: The Host Of The Eldar,Legolas,Elf,24
+The Two Towers,48: The Host Of The Eldar,Rohan Warrior,Men,17
+The Two Towers,48: The Host Of The Eldar,Theoden,Men,4
+The Two Towers,49: The Battle Of The Hornburg,Aragorn,Men,18
+The Two Towers,49: The Battle Of The Hornburg,Gamling,Men,1
+The Two Towers,49: The Battle Of The Hornburg,Gimli,Dwarf,50
+The Two Towers,49: The Battle Of The Hornburg,Legolas,Elf,37
+The Two Towers,49: The Battle Of The Hornburg,Rohan Warrior,Men,1
+The Two Towers,49: The Battle Of The Hornburg,Theoden,Men,7
+The Two Towers,50: Old Entish,Merry,Hobbit,30
+The Two Towers,50: Old Entish,Pippin,Hobbit,5
+The Two Towers,50: Old Entish,Treebeard,Ent,64
+The Two Towers,51: The Breach Of The Deeping Wall,Aragorn,Men,12
+The Two Towers,51: The Breach Of The Deeping Wall,Gimli,Dwarf,6
+The Two Towers,51: The Breach Of The Deeping Wall,Theoden,Men,17
+The Two Towers,52: The Entmoot Decides,Merry,Hobbit,58
+The Two Towers,52: The Entmoot Decides,Pippin,Hobbit,29
+The Two Towers,52: The Entmoot Decides,Treebeard,Ent,42
+The Two Towers,53: The Retreat To The Hornburg,Aragorn,Men,31
+The Two Towers,53: The Retreat To The Hornburg,Gamling,Men,6
+The Two Towers,53: The Retreat To The Hornburg,Gimli,Dwarf,34
+The Two Towers,53: The Retreat To The Hornburg,Legolas,Elf,1
+The Two Towers,53: The Retreat To The Hornburg,Rohan Warrior,Men,22
+The Two Towers,53: The Retreat To The Hornburg,Theoden,Men,58
+The Two Towers,54: Master Peregrin's Plan,Merry,Hobbit,6
+The Two Towers,54: Master Peregrin's Plan,Pippin,Hobbit,46
+The Two Towers,54: Master Peregrin's Plan,Treebeard,Ent,64
+The Two Towers,55: Osgiliath,Faramir,Men,1
+The Two Towers,55: Osgiliath,Frodo,Hobbit,23
+The Two Towers,55: Osgiliath,Gondor Man,Men,6
+The Two Towers,56: The Last March Of The Ents,Merry,Hobbit,5
+The Two Towers,56: The Last March Of The Ents,Pippin,Hobbit,8
+The Two Towers,56: The Last March Of The Ents,Treebeard,Ent,105
+The Two Towers,57: The Nazgûl Attack,Faramir,Men,31
+The Two Towers,57: The Nazgûl Attack,Frodo,Hobbit,15
+The Two Towers,57: The Nazgûl Attack,Gondor Man,Men,20
+The Two Towers,57: The Nazgûl Attack,Sam,Hobbit,53
+The Two Towers,58: Forth Eorlingas,Aragorn,Men,73
+The Two Towers,58: Forth Eorlingas,Eomer,Men,6
+The Two Towers,58: Forth Eorlingas,Gamling,Men,20
+The Two Towers,58: Forth Eorlingas,Gandalf,Ainur,21
+The Two Towers,58: Forth Eorlingas,Gimli,Dwarf,5
+The Two Towers,58: Forth Eorlingas,Rohan Maiden,Men,7
+The Two Towers,58: Forth Eorlingas,Theoden,Men,63
+The Two Towers,59: The Flooding Of Isengard,Merry,Hobbit,3
+The Two Towers,59: The Flooding Of Isengard,Pippin,Hobbit,1
+The Two Towers,59: The Flooding Of Isengard,Treebeard,Ent,15
+The Two Towers,60: The Tales That Really Mattered…,Faramir,Men,16
+The Two Towers,60: The Tales That Really Mattered…,Frodo,Hobbit,12
+The Two Towers,60: The Tales That Really Mattered…,Gondor Man,Men,22
+The Two Towers,60: The Tales That Really Mattered…,Sam,Hobbit,186
+The Two Towers,60: The Tales That Really Mattered…,Theoden,Men,4
+The Two Towers,61: Fangorn Comes To Helm's Deep,Eomer,Men,10
+The Two Towers,62: The Final Tally,Gimli,Dwarf,35
+The Two Towers,62: The Final Tally,Legolas,Elf,7
+The Two Towers,63: Flotsam And Jetsam,Merry,Hobbit,77
+The Two Towers,63: Flotsam And Jetsam,Pippin,Hobbit,56
+The Two Towers,64: Farewell To Faramir,Faramir,Men,95
+The Two Towers,64: Farewell To Faramir,Frodo,Hobbit,18
+The Two Towers,64: Farewell To Faramir,Gollum,Gollum,32
+The Two Towers,64: Farewell To Faramir,Sam,Hobbit,54
+The Two Towers,65: The Battle For Middle Earth Is About To Begin,Frodo,Hobbit,30
+The Two Towers,65: The Battle For Middle Earth Is About To Begin,Gandalf,Ainur,36
+The Two Towers,65: The Battle For Middle Earth Is About To Begin,Sam,Hobbit,69
+The Two Towers,66: Gollum's Plan,Frodo,Hobbit,11
+The Two Towers,66: Gollum's Plan,Gollum,Gollum,75
+The Two Towers,66: Gollum's Plan,Sam,Hobbit,12
+The Two Towers,66: Gollum's Plan,Smeagol,Gollum,53
+The Return Of The King,01: The Finding Of The Ring,Deagol,Hobbit,13
+The Return Of The King,01: The Finding Of The Ring,Gollum,Gollum,3
+The Return Of The King,01: The Finding Of The Ring,Smeagol,Gollum,98
+The Return Of The King,02: Journey To The Cross-roads,Frodo,Hobbit,18
+The Return Of The King,02: Journey To The Cross-roads,Gollum,Gollum,41
+The Return Of The King,02: Journey To The Cross-roads,Sam,Hobbit,77
+The Return Of The King,03: The Road To Isengard,Gandalf,Ainur,1
+The Return Of The King,03: The Road To Isengard,Gimli,Dwarf,22
+The Return Of The King,03: The Road To Isengard,Merry,Hobbit,36
+The Return Of The King,03: The Road To Isengard,Pippin,Hobbit,51
+The Return Of The King,04: The Voice Of Saruman,Aragorn,Men,3
+The Return Of The King,04: The Voice Of Saruman,Gandalf,Ainur,111
+The Return Of The King,04: The Voice Of Saruman,Gimli,Dwarf,23
+The Return Of The King,04: The Voice Of Saruman,Grima Wormtongue,Men,2
+The Return Of The King,04: The Voice Of Saruman,Saruman,Ainur,301
+The Return Of The King,04: The Voice Of Saruman,Theoden,Men,98
+The Return Of The King,04: The Voice Of Saruman,Treebeard,Ent,50
+The Return Of The King,05: Return To Edoras,Aragorn,Men,20
+The Return Of The King,05: Return To Edoras,Eomer,Men,4
+The Return Of The King,05: Return To Edoras,Eowyn,Men,8
+The Return Of The King,05: Return To Edoras,Gandalf,Ainur,15
+The Return Of The King,05: Return To Edoras,Gimli,Dwarf,40
+The Return Of The King,05: Return To Edoras,Legolas,Elf,21
+The Return Of The King,05: Return To Edoras,Merry,Hobbit,78
+The Return Of The King,05: Return To Edoras,Pippin,Hobbit,73
+The Return Of The King,05: Return To Edoras,Rohan Warrior,Men,1
+The Return Of The King,05: Return To Edoras,Theoden,Men,52
+The Return Of The King,06: Gollum's Villany,Frodo,Hobbit,46
+The Return Of The King,06: Gollum's Villany,Gollum,Gollum,149
+The Return Of The King,06: Gollum's Villany,Sam,Hobbit,65
+The Return Of The King,06: Gollum's Villany,Smeagol,Gollum,83
+The Return Of The King,07: Eowyn's Dream,Aragorn,Men,13
+The Return Of The King,07: Eowyn's Dream,Eowyn,Men,50
+The Return Of The King,08: The Palantir,Aragorn,Men,20
+The Return Of The King,08: The Palantir,Gandalf,Ainur,255
+The Return Of The King,08: The Palantir,Legolas,Elf,22
+The Return Of The King,08: The Palantir,Merry,Hobbit,135
+The Return Of The King,08: The Palantir,Pippin,Hobbit,104
+The Return Of The King,08: The Palantir,Theoden,Men,22
+The Return Of The King,09: Arwen's Vision,Elrond,Elf,36
+The Return Of The King,09: Arwen's Vision,Figwit,Elf,7
+The Return Of The King,10: The Reforging Of Narsil,Arwen,Elf,100
+The Return Of The King,10: The Reforging Of Narsil,Elrond,Elf,30
+The Return Of The King,11: Minas Tirith,Denethor,Men,151
+The Return Of The King,11: Minas Tirith,Gandalf,Ainur,202
+The Return Of The King,11: Minas Tirith,Pippin,Hobbit,36
+The Return Of The King,12: The Decline Of Gondor,Gandalf,Ainur,268
+The Return Of The King,12: The Decline Of Gondor,Pippin,Hobbit,22
+The Return Of The King,13: Cross-roads Of The Fallen King,Frodo,Hobbit,30
+The Return Of The King,13: Cross-roads Of The Fallen King,Gollum,Gollum,13
+The Return Of The King,13: Cross-roads Of The Fallen King,Sam,Hobbit,56
+The Return Of The King,14: The Deep Breath Before The Plunge,Gandalf,Ainur,163
+The Return Of The King,14: The Deep Breath Before The Plunge,Gondor Man,Men,2
+The Return Of The King,14: The Deep Breath Before The Plunge,Pippin,Hobbit,75
+The Return Of The King,15: Minas Morgul,Frodo,Hobbit,8
+The Return Of The King,15: Minas Morgul,Gandalf,Ainur,20
+The Return Of The King,15: Minas Morgul,Gollum,Gollum,50
+The Return Of The King,15: Minas Morgul,Sam,Hobbit,5
+The Return Of The King,16: Sam's Warning,Frodo,Hobbit,4
+The Return Of The King,16: Sam's Warning,Gollum,Gollum,13
+The Return Of The King,16: Sam's Warning,Sam,Hobbit,61
+The Return Of The King,17: Pippin's Task,Gandalf,Ainur,30
+The Return Of The King,18: Osgiliath Invaded,Damrod,Men,3
+The Return Of The King,18: Osgiliath Invaded,Faramir,Men,18
+The Return Of The King,18: Osgiliath Invaded,Gondor Man,Men,7
+The Return Of The King,18: Osgiliath Invaded,Gothmog,Orc,6
+The Return Of The King,18: Osgiliath Invaded,Madril,Men,28
+The Return Of The King,19: The Lighting Of The Beacons,Gandalf,Ainur,5
+The Return Of The King,19: The Lighting Of The Beacons,Gondor Man,Men,10
+The Return Of The King,20: Theoren's Decision,Aragorn,Men,18
+The Return Of The King,20: Theoren's Decision,Eomer,Men,21
+The Return Of The King,20: Theoren's Decision,Eowyn,Men,36
+The Return Of The King,20: Theoren's Decision,Gamling,Men,4
+The Return Of The King,20: Theoren's Decision,Gimli,Dwarf,15
+The Return Of The King,20: Theoren's Decision,Legolas,Elf,19
+The Return Of The King,20: Theoren's Decision,Merry,Hobbit,16
+The Return Of The King,20: Theoren's Decision,Rohan Warrior,Men,3
+The Return Of The King,20: Theoren's Decision,Theoden,Men,73
+The Return Of The King,21: The Fall of Osgiliath,Damrod,Men,1
+The Return Of The King,21: The Fall of Osgiliath,Faramir,Men,66
+The Return Of The King,21: The Fall of Osgiliath,Gandalf,Ainur,34
+The Return Of The King,21: The Fall of Osgiliath,Gondor Man,Men,17
+The Return Of The King,21: The Fall of Osgiliath,Gothmog,Orc,13
+The Return Of The King,21: The Fall of Osgiliath,Irolas,Men,13
+The Return Of The King,21: The Fall of Osgiliath,Madril,Men,8
+The Return Of The King,21: The Fall of Osgiliath,Pippin,Hobbit,15
+The Return Of The King,22: The Wizard's Pupil,Denethor,Men,114
+The Return Of The King,22: The Wizard's Pupil,Faramir,Men,72
+The Return Of The King,23: The Stairs Of Cirith Ungol,Gollum,Gollum,76
+The Return Of The King,23: The Stairs Of Cirith Ungol,Sam,Hobbit,8
+The Return Of The King,24: Courage Is The Best Defense,Gandalf,Ainur,9
+The Return Of The King,24: Courage Is The Best Defense,Gondor Man,Men,9
+The Return Of The King,24: Courage Is The Best Defense,Gothmog,Orc,4
+The Return Of The King,24: Courage Is The Best Defense,Witch King,Nazgul,21
+The Return Of The King,25: Peregrin Of The Tower Guard,Faramir,Men,80
+The Return Of The King,25: Peregrin Of The Tower Guard,Pippin,Hobbit,66
+The Return Of The King,26: Allegiance To Denethor,Denethor,Men,89
+The Return Of The King,26: Allegiance To Denethor,Faramir,Men,53
+The Return Of The King,26: Allegiance To Denethor,Pippin,Hobbit,32
+The Return Of The King,27: The Parting Of Sam & Frodo,Frodo,Hobbit,43
+The Return Of The King,27: The Parting Of Sam & Frodo,Gollum,Gollum,79
+The Return Of The King,27: The Parting Of Sam & Frodo,Sam,Hobbit,184
+The Return Of The King,28: The Sacrifice Of Faramir,Denethor,Men,20
+The Return Of The King,28: The Sacrifice Of Faramir,Faramir,Men,31
+The Return Of The King,28: The Sacrifice Of Faramir,Gandalf,Ainur,29
+The Return Of The King,28: The Sacrifice Of Faramir,Orc,Orc,5
+The Return Of The King,28: The Sacrifice Of Faramir,Pippin,Hobbit,59
+The Return Of The King,29: Marshalling At Dunharrow,Aragorn,Men,26
+The Return Of The King,29: Marshalling At Dunharrow,Eomer,Men,89
+The Return Of The King,29: Marshalling At Dunharrow,Eowyn,Men,56
+The Return Of The King,29: Marshalling At Dunharrow,Gimli,Dwarf,12
+The Return Of The King,29: Marshalling At Dunharrow,Grimhold,Men,9
+The Return Of The King,29: Marshalling At Dunharrow,Legolas,Elf,21
+The Return Of The King,29: Marshalling At Dunharrow,Merry,Hobbit,12
+The Return Of The King,29: Marshalling At Dunharrow,Rohan Warrior,Men,30
+The Return Of The King,29: Marshalling At Dunharrow,Theoden,Men,24
+The Return Of The King,30: Anduril - Flame Of The West,Aragorn,Men,54
+The Return Of The King,30: Anduril - Flame Of The West,Arwen,Elf,15
+The Return Of The King,30: Anduril - Flame Of The West,Elrond,Elf,168
+The Return Of The King,30: Anduril - Flame Of The West,Rohan Warrior,Men,7
+The Return Of The King,30: Anduril - Flame Of The West,Theoden,Men,4
+The Return Of The King,31: Aragorn Takes The Paths Of The Dead,Aragorn,Men,42
+The Return Of The King,31: Aragorn Takes The Paths Of The Dead,Eowyn,Men,32
+The Return Of The King,31: Aragorn Takes The Paths Of The Dead,Gamling,Men,18
+The Return Of The King,31: Aragorn Takes The Paths Of The Dead,Gimli,Dwarf,20
+The Return Of The King,31: Aragorn Takes The Paths Of The Dead,Legolas,Elf,9
+The Return Of The King,31: Aragorn Takes The Paths Of The Dead,Rohan Warrior,Men,20
+The Return Of The King,31: Aragorn Takes The Paths Of The Dead,Theoden,Men,16
+The Return Of The King,32: No More Despair,Eowyn,Men,10
+The Return Of The King,32: No More Despair,Theoden,Men,60
+The Return Of The King,33: Dwimoberg ~ The Haunted Mountain,Aragorn,Men,6
+The Return Of The King,33: Dwimoberg ~ The Haunted Mountain,Gimli,Dwarf,45
+The Return Of The King,33: Dwimoberg ~ The Haunted Mountain,Legolas,Elf,123
+The Return Of The King,34: The Muster Of Rohan,Eomer,Men,8
+The Return Of The King,34: The Muster Of Rohan,Eowyn,Men,3
+The Return Of The King,34: The Muster Of Rohan,Merry,Hobbit,21
+The Return Of The King,34: The Muster Of Rohan,Theoden,Men,63
+The Return Of The King,35: The Paths Of The Dead,Aragorn,Men,75
+The Return Of The King,35: The Paths Of The Dead,Gimli,Dwarf,43
+The Return Of The King,35: The Paths Of The Dead,King Of The Dead,Dead,53
+The Return Of The King,35: The Paths Of The Dead,Legolas,Elf,32
+The Return Of The King,36: The Siege Of Gondor,Denethor,Men,40
+The Return Of The King,36: The Siege Of Gondor,Gandalf,Ainur,81
+The Return Of The King,36: The Siege Of Gondor,Gondor Man,Men,19
+The Return Of The King,36: The Siege Of Gondor,Gothmog,Orc,46
+The Return Of The King,36: The Siege Of Gondor,Irolas,Men,7
+The Return Of The King,36: The Siege Of Gondor,Orc,Orc,25
+The Return Of The King,36: The Siege Of Gondor,Pippin,Hobbit,15
+The Return Of The King,37: The Corsairs Of Umbar,Aragorn,Men,21
+The Return Of The King,37: The Corsairs Of Umbar,Boson,Men,7
+The Return Of The King,37: The Corsairs Of Umbar,Gimli,Dwarf,14
+The Return Of The King,37: The Corsairs Of Umbar,Mercenary,Men,6
+The Return Of The King,38: Shelob's Lair,Frodo,Hobbit,60
+The Return Of The King,38: Shelob's Lair,Galadriel,Elf,51
+The Return Of The King,38: Shelob's Lair,Gollum,Gollum,64
+The Return Of The King,38: Shelob's Lair,Sam,Hobbit,1
+The Return Of The King,38: Shelob's Lair,Smeagol,Gollum,26
+The Return Of The King,39: Merry's Simple Courage,Eomer,Men,22
+The Return Of The King,39: Merry's Simple Courage,Eowyn,Men,10
+The Return Of The King,39: Merry's Simple Courage,Merry,Hobbit,83
+The Return Of The King,39: Merry's Simple Courage,Theoden,Men,13
+The Return Of The King,40: Grond ~ The Hammer Of The Underworld,Gandalf,Ainur,5
+The Return Of The King,41: The Tomb Of The Stewards,Denethor,Men,68
+The Return Of The King,42: Breaking The Gate Of Gondor,Gandalf,Ainur,21
+The Return Of The King,43: The Choices Of Master Samwise Gamgee,Orc,Orc,15
+The Return Of The King,43: The Choices Of Master Samwise Gamgee,Sam,Hobbit,48
+The Return Of The King,43: The Choices Of Master Samwise Gamgee,Shagrat,Orc,55
+The Return Of The King,44: Denethor's Madness,Denethor,Men,36
+The Return Of The King,44: Denethor's Madness,Gondor Man,Men,10
+The Return Of The King,44: Denethor's Madness,Pippin,Hobbit,17
+The Return Of The King,45: The Witch King's Hour,Gandalf,Ainur,48
+The Return Of The King,45: The Witch King's Hour,Gondor Man,Men,7
+The Return Of The King,45: The Witch King's Hour,Gothmog,Orc,9
+The Return Of The King,45: The Witch King's Hour,Pippin,Hobbit,13
+The Return Of The King,45: The Witch King's Hour,Witch King,Nazgul,24
+The Return Of The King,46: The Ride Of The Rohirrim,Eomer,Men,2
+The Return Of The King,46: The Ride Of The Rohirrim,Eowyn,Men,17
+The Return Of The King,46: The Ride Of The Rohirrim,Gothmog,Orc,15
+The Return Of The King,46: The Ride Of The Rohirrim,Merry,Hobbit,2
+The Return Of The King,46: The Ride Of The Rohirrim,Theoden,Men,71
+The Return Of The King,47: The Pyre Of Denethor,Denethor,Men,42
+The Return Of The King,47: The Pyre Of Denethor,Gandalf,Ainur,9
+The Return Of The King,47: The Pyre Of Denethor,Pippin,Hobbit,2
+The Return Of The King,48: The Battle Of The Pelennor Fields,Eomer,Men,9
+The Return Of The King,48: The Battle Of The Pelennor Fields,Eowyn,Men,8
+The Return Of The King,48: The Battle Of The Pelennor Fields,Rohan Warrior,Men,3
+The Return Of The King,48: The Battle Of The Pelennor Fields,Theoden,Men,26
+The Return Of The King,49: A Far Green Country,Gandalf,Ainur,54
+The Return Of The King,49: A Far Green Country,Pippin,Hobbit,17
+The Return Of The King,50: The Nazgul And His Prey,Eowyn,Men,8
+The Return Of The King,50: The Nazgul And His Prey,Theoden,Men,5
+The Return Of The King,50: The Nazgul And His Prey,Witch King,Nazgul,13
+The Return Of The King,51: The Black Ships,Gimli,Dwarf,12
+The Return Of The King,51: The Black Ships,Orc,Orc,19
+The Return Of The King,52: Shieldmaiden Of Rohan,Eowyn,Men,4
+The Return Of The King,52: Shieldmaiden Of Rohan,Witch King,Nazgul,9
+The Return Of The King,53: Victory At Minar Tirith,Aragorn,Men,1
+The Return Of The King,53: Victory At Minar Tirith,Eowyn,Men,1
+The Return Of The King,53: Victory At Minar Tirith,Gimli,Dwarf,6
+The Return Of The King,53: Victory At Minar Tirith,Legolas,Elf,6
+The Return Of The King,53: Victory At Minar Tirith,Orc,Orc,5
+The Return Of The King,54: The Passing Of Theoden,Eowyn,Men,8
+The Return Of The King,54: The Passing Of Theoden,Theoden,Men,38
+The Return Of The King,55: Oaths Fulfilled,Aragorn,Men,9
+The Return Of The King,55: Oaths Fulfilled,Gimli,Dwarf,15
+The Return Of The King,55: Oaths Fulfilled,King Of The Dead,Dead,7
+The Return Of The King,56: The Houses Of Healing,Eomer,Men,3
+The Return Of The King,56: The Houses Of Healing,Pippin,Hobbit,1
+The Return Of The King,57: Pippin Looks After Merry,Merry,Hobbit,11
+The Return Of The King,57: Pippin Looks After Merry,Pippin,Hobbit,16
+The Return Of The King,58: The Tower Of Cirith Ungol,Frodo,Hobbit,64
+The Return Of The King,58: The Tower Of Cirith Ungol,Grobag,Orc,23
+The Return Of The King,58: The Tower Of Cirith Ungol,Sam,Hobbit,96
+The Return Of The King,58: The Tower Of Cirith Ungol,Shagrat,Orc,35
+The Return Of The King,59: The Last Debate,Aragorn,Men,82
+The Return Of The King,59: The Last Debate,Eomer,Men,8
+The Return Of The King,59: The Last Debate,Gandalf,Ainur,59
+The Return Of The King,59: The Last Debate,Gimli,Dwarf,24
+The Return Of The King,59: The Last Debate,Legolas,Elf,2
+The Return Of The King,60: Aragorn Masters The Palantir,Aragorn,Men,17
+The Return Of The King,61: The Captain And The White Lady,Eowyn,Men,17
+The Return Of The King,61: The Captain And The White Lady,Faramir,Men,17
+The Return Of The King,62: In The Company Of Orcs,Frodo,Hobbit,16
+The Return Of The King,62: In The Company Of Orcs,Orc,Orc,104
+The Return Of The King,62: In The Company Of Orcs,Sam,Hobbit,46
+The Return Of The King,63: The Land Of Shadow,Frodo,Hobbit,30
+The Return Of The King,63: The Land Of Shadow,Sam,Hobbit,56
+The Return Of The King,64: The Mouth Of Sauron,Aragorn,Men,23
+The Return Of The King,64: The Mouth Of Sauron,Gandalf,Ainur,32
+The Return Of The King,64: The Mouth Of Sauron,Gimli,Dwarf,5
+The Return Of The King,64: The Mouth Of Sauron,Merry,Hobbit,1
+The Return Of The King,64: The Mouth Of Sauron,Mouth Of Sauron,Orc,87
+The Return Of The King,64: The Mouth Of Sauron,Pippin,Hobbit,5
+The Return Of The King,65: The Black Gate Opens,Aragorn,Men,103
+The Return Of The King,65: The Black Gate Opens,Gimli,Dwarf,16
+The Return Of The King,65: The Black Gate Opens,Legolas,Elf,8
+The Return Of The King,65: The Black Gate Opens,Sam,Hobbit,16
+The Return Of The King,66: I Can't Carry It For You… But I Can Carry You,Frodo,Hobbit,44
+The Return Of The King,66: I Can't Carry It For You… But I Can Carry You,Sam,Hobbit,85
+The Return Of The King,67: The Last Move,Aragorn,Men,2
+The Return Of The King,67: The Last Move,Voice Of Sauron,Ainur,2
+The Return Of The King,68: Mount Doom,Frodo,Hobbit,9
+The Return Of The King,68: Mount Doom,Gollum,Gollum,17
+The Return Of The King,68: Mount Doom,Sam,Hobbit,10
+The Return Of The King,69: The Eagles Are Coming,Pippin,Hobbit,6
+The Return Of The King,70: The Crack Of Doom,Frodo,Hobbit,7
+The Return Of The King,70: The Crack Of Doom,Gollum,Gollum,5
+The Return Of The King,70: The Crack Of Doom,Sam,Hobbit,38
+The Return Of The King,71: Sauron Defeated,Merry,Hobbit,2
+The Return Of The King,71: Sauron Defeated,Pippin,Hobbit,1
+The Return Of The King,72: The End Of All Things,Frodo,Hobbit,37
+The Return Of The King,72: The End Of All Things,Sam,Hobbit,31
+The Return Of The King,73: The Fellowship Reunited,Frodo,Hobbit,4
+The Return Of The King,73: The Fellowship Reunited,Gimli,Dwarf,1
+The Return Of The King,73: The Fellowship Reunited,Merry,Hobbit,1
+The Return Of The King,74: The Return Of The King,Aragorn,Men,45
+The Return Of The King,74: The Return Of The King,Gandalf,Ainur,11
+The Return Of The King,75: Homeward Bound,Frodo,Hobbit,98
+The Return Of The King,75: Homeward Bound,Hobbits,Hobbit,4
+The Return Of The King,75: Homeward Bound,Pippin,Hobbit,2
+The Return Of The King,75: Homeward Bound,Rosie,Hobbit,2
+The Return Of The King,75: Homeward Bound,Sam,Hobbit,27
+The Return Of The King,76: The Grey Havens,Bilbo,Hobbit,56
+The Return Of The King,76: The Grey Havens,Elrond,Elf,6
+The Return Of The King,76: The Grey Havens,Frodo,Hobbit,132
+The Return Of The King,76: The Grey Havens,Galadriel,Elf,17
+The Return Of The King,76: The Grey Havens,Gandalf,Ainur,42
+The Return Of The King,76: The Grey Havens,Sam,Hobbit,14

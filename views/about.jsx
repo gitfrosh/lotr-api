@@ -36,6 +36,7 @@ class AboutView extends React.Component {
                     <a href="https://www.mongodb.com/de">MongoDB</a> -{" "}
                     <a href="https://mongoosejs.com/">Mongoose</a> -{" "}
                     <a href="https://fontawesome.com/">Fontawesome</a> -{" "}
+                    <a href="https://github.com/caramelcss/caramel">Caramel</a> -{" "}
                     <a href="https://www.toptal.com/designers/subtlepatterns/">
                       Subtle Patterns
                     </a>{" "}
