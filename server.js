@@ -270,6 +270,7 @@ async function api() {
       enableTextSearch: true,
       // logRoutes: true,
       loglevel: "INTERNAL",
+      enableSwaggerUI: process.env.APP_ENV === "dev" ? true : false,
       docExpansion: "list",
       mongo: {
         URI: process.env.MONGODB_URI
