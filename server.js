@@ -120,7 +120,7 @@ async function api() {
         // console.log(decodedToken, request, h)
         // console.log("authorising jwt...");
         let { user } = decodedToken;
-        console.log(decodedToken);
+        // console.log(decodedToken);
         if (!user) {
           return { isValid: false, credentials: {} };
         }
