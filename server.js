@@ -102,7 +102,7 @@ async function api() {
     function createToken(user) {
       const Jwt = require("jsonwebtoken");
       const jwtSecret = process.env.SECRET;
-
+      console.log("create", jwtSecret);
       const { email, _id, access_token } = user;
 
       token = Jwt.sign({ user: { email, _id, access_token } }, jwtSecret, {
