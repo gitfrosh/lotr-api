@@ -101,8 +101,8 @@ async function api() {
 
     function createToken(user) {
       const Jwt = require("jsonwebtoken");
-      const jwtSecret = "blubb";
-      // console.log("create", jwtSecret);
+      const jwtSecret = process.env.SECRET;
+
       const { email, _id, access_token } = user;
 
       token = Jwt.sign({ user: { email, _id, access_token } }, jwtSecret, {
@@ -115,12 +115,12 @@ async function api() {
 
     // auth strategy #2 (JWT) for user registration, login, logout
     server.auth.strategy("jwt", "jwt", {
-      key: "blubb",
+      key: process.env.SECRET,
       validate: async (decodedToken, request, h) => {
         // console.log(decodedToken, request, h)
         // console.log("authorising jwt...");
         let { user } = decodedToken;
-        // console.log(decodedToken);
+        console.log(decodedToken);
         if (!user) {
           return { isValid: false, credentials: {} };
         }
