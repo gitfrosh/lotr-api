@@ -31,7 +31,7 @@ module.exports = function(mongoose) {
     collectionName: modelName,
     routeOptions: {
       allowRead: false,
-      allowCreate: true,
+      allowCreate: false,
       allowUpdate: false,
       allowDelete: false,
       create: {
