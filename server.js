@@ -99,37 +99,36 @@ async function api() {
       }
     });
 
-    // auth strategy #2 (JWT) for user registration, login, logout
-    const validate = (decodedToken, request, h) => {
-      // console.log(decodedToken, request, h)
-      // console.log("authorising jwt...");
-      let { user } = decodedToken;
-      if (!user) {
-        return { isValid: false, credentials: {} };
-      }
-      return {
-        isValid: true,
-        credentials: { user }
-      };
-    };
-
     function createToken(user) {
       const Jwt = require("jsonwebtoken");
-      const jwtSecret = new Buffer(process.env.SECRET, "base64");
+      const jwtSecret = process.env.SECRET;
 
       const { email, _id, access_token } = user;
 
       token = Jwt.sign({ user: { email, _id, access_token } }, jwtSecret, {
-        algorithm: "HS256",
-        expiresIn: "1m"
+        algorithm: "HS256"
+        // expiresIn: "1m"
       });
 
       return token;
     }
 
+    // auth strategy #2 (JWT) for user registration, login, logout
     server.auth.strategy("jwt", "jwt", {
-      key: new Buffer(process.env.SECRET, "base64"),
-      validate,
+      key: process.env.SECRET,
+      validate: async (decodedToken, request, h) => {
+        // console.log(decodedToken, request, h)
+        // console.log("authorising jwt...");
+        let { user } = decodedToken;
+        // console.log(decodedToken);
+        if (!user) {
+          return { isValid: false, credentials: {} };
+        }
+        return {
+          isValid: true,
+          credentials: { user }
+        };
+      },
       verifyOptions: { algorithms: ["HS256"] }
     });
 
