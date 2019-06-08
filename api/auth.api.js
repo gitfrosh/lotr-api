@@ -95,7 +95,7 @@ module.exports = function(server, mongoose, logger) {
       config: {
         handler: async function(request, h) {
           const Jwt = require("jsonwebtoken");
-          const jwtSecret = "NeverShareYourSecret";
+          const jwtSecret = process.env.SECRET;
           let token = request.headers.cookie;
           if (token) {
             const requToken = token.split("=")[1];
