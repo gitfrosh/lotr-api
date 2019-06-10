@@ -13,7 +13,8 @@ class LayoutView extends React.Component {
   }
 
   logout() {
-    const url = process.env.APP_ENV === "prod" ? process.env.APP_URL : "" + "/v1/logout";
+    const url =
+      process.env.APP_ENV === "prod" ? process.env.APP_URL : "" + "/v1/logout";
     fetch(url, {
       method: "GET"
     })
@@ -22,7 +23,8 @@ class LayoutView extends React.Component {
       })
       .then(response => {
         //console.log("Response:", JSON.stringify(response));
-        window.location.href = process.env.APP_ENV === "prod" ? process.env.APP_URL : "/";
+        window.location.href =
+          process.env.APP_ENV === "prod" ? process.env.APP_URL : "/";
       })
       .catch(error => {
         console.log(error);
@@ -36,7 +38,12 @@ class LayoutView extends React.Component {
           <nav className="nav bar thick dark">
             <ul>
               <li className="collapse">
-                <a href="#" className="menu">
+                <a
+                  alt="This is the navigation"
+                  aria-label="This is the navigation"
+                  href="#"
+                  className="menu"
+                >
                   <i className="fa fa-bars" />
                 </a>
               </li>
@@ -49,7 +56,7 @@ class LayoutView extends React.Component {
               </li>
 
               <ul className="right">
-              <li>
+                <li>
                   <a href="/">home</a>
                 </li>
                 <li>
