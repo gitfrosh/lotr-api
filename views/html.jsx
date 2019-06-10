@@ -5,14 +5,26 @@ const React = require("react");
 class Html extends React.Component {
   render() {
     return (
-      <html>
+      <html lang="en">
         <head>
           <title>The LOTR API</title>
-          <link rel="icon" type="image/gif" href="assets/images/icon_gandalf.gif"></link>
+          <link
+            rel="icon"
+            type="image/gif"
+            href="assets/images/icon_gandalf.gif"
+          />
+          <link rel="manifest" href="assets/js/manifest.json" />
           <meta charSet="utf-8" />
           <meta
+            name="Description"
+            content="This is the API that serves your needs
+                    regarding data about The Lord of the Rings,
+                    the epic books by J. R. R. Tolkien and the official movie
+                    adaptions by Peter Jackson."
+          />
+          <meta
             name="viewport"
-            content="width=device-width, initial-scale=1, user-scalable=no"
+            content="width=device-width, initial-scale=1, user-scalable=yes"
           />
           <link
             rel="stylesheet"
