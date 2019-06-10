@@ -1,0 +1,14 @@
+{
+  "name": "The one API - the Lord of the Rings API"
+  "short_name": "The one API",
+  "description": "Get Lord of the Rings related data.",
+  "start_url": "/?homescreen=1",
+  "display": "fullscreen",
+  "background_color": "#000000",
+  "theme_color": "#0f4a73",
+  "icons": [{
+    "src": "images/icon_gandalf.gif",
+    "sizes": "256x256",
+    "type": "image/png"
+  }]
+}

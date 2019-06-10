@@ -22,7 +22,11 @@ class View extends React.Component {
 
   fetchBook() {
     const that = this;
-    fetch(process.env.APP_ENV === "prod" ? process.env.APP_URL : "" + "/v1" + this.state.url)
+    fetch(
+      process.env.APP_ENV === "prod"
+        ? process.env.APP_URL
+        : "" + "/v1" + this.state.url
+    )
       .then(function(response) {
         return response.json();
       })
@@ -35,7 +39,11 @@ class View extends React.Component {
 
   fetchQuote() {
     const that = this;
-    fetch(process.env.APP_ENV === "prod" ? process.env.APP_URL : "" + "/quote/5cd96e05de30eff6ebcce7e9")
+    fetch(
+      process.env.APP_ENV === "prod"
+        ? process.env.APP_URL
+        : "" + "/quote/5cd96e05de30eff6ebcce7e9"
+    )
       .then(function(response) {
         return response.json();
       })
@@ -99,8 +107,9 @@ class View extends React.Component {
                   <div className="panel-head">Try it now!</div>
                   <div className="panel-body">
                     <div>
-                      <span>GET</span>
+                      <label htmlFor="try-api">Get</label>
                       <input
+                        id="try-api"
                         type="text"
                         onChange={this.changeApi.bind(this)}
                         value={this.state.url}
