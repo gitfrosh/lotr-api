@@ -8,6 +8,7 @@ let AuthJwt = require("hapi-auth-jwt2");
 const Vision = require("@hapi/vision");
 const HapiReactViews = require("hapi-react-views");
 const HapiRateLimit = require("hapi-rate-limit");
+const HapiRequireHttps = require('hapi-require-https');
 require("babel-polyfill");
 require("babel-core/register")({
   presets: ["react", "env"]
@@ -39,6 +40,7 @@ async function api() {
     await server.register(AuthBearer);
     await server.register(AuthJwt);
     await server.register(Vision);
+    await server.register(HapiRequireHttps);
 
     // set static view files and view engine hapi react views
     server.views({
