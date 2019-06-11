@@ -2457,6 +2457,11 @@ hapi-react-views@^10.0.1:
   dependencies:
     "@hapi/hoek" "6.x.x"
 
+hapi-require-https@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/hapi-require-https/-/hapi-require-https-3.0.1.tgz#b844e7919e36325db5de6728d1131f567c9f5336"
+  integrity sha512-yDyfVy2QAWgISjh2UwaspAj/V4zz9vBlSDjWh8kcBFz9ZLkvXZLQRhDLryTyEx58cBZpNQYK+7ExvvtzEa+8GQ==
+
 hapi-swagger@9.1.2:
   version "9.1.2"
   resolved "https://registry.yarnpkg.com/hapi-swagger/-/hapi-swagger-9.1.2.tgz#e9fd2d9e3096d397376052b956620a845ab1c32b"
