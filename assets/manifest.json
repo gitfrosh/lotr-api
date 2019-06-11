@@ -1,0 +1,26 @@
+{
+  "name": "The one API - the Lord of the Rings API",
+  "short_name": "The one API",
+  "description": "Get Lord of the Rings related data.",
+  "start_url": "/",
+  "display": "fullscreen",
+  "background_color": "#000000",
+  "theme_color": "#0f4a73",
+  "icons": [
+    {
+      "src": "/assets/images/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/images/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/images/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
