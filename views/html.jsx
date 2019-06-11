@@ -13,7 +13,7 @@ class Html extends React.Component {
             type="image/gif"
             href="assets/images/icon_gandalf.gif"
           />
-          <link rel="manifest" href="assets/js/manifest.json" />
+          <link rel="manifest" href="assets/manifest.json" />
           <meta charSet="utf-8" />
           <meta
             name="Description"
