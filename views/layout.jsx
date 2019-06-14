@@ -98,7 +98,9 @@ class LayoutView extends React.Component {
         </header>
         {this.props.children}
         <footer>
-          <center>Made with &hearts; and #Hapi.js in 2019.</center>
+          <center>
+            Made with &hearts; and #Hapi.js in 2019.
+          </center>
         </footer>
       </div>
     );

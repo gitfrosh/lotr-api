@@ -22,7 +22,7 @@ body {
 }
 
 body::after {
-  content: '';
+  content: "";
   display: block;
   height: 50px; /* Set same as footer's height */
 }
