@@ -22,8 +22,8 @@ class AboutView extends React.Component {
                       #100DaysOfCode challenge
                     </a>{" "}
                     and is brought to you via{" "}
-                    <a href="https://www.heroku.com/">Heroku</a>.
-                    You have some questions or suggestions? Find me on Twitter (
+                    <a href="https://www.heroku.com/">Heroku</a>. You have some
+                    questions or suggestions? Find me on Twitter (
                     <a href="https://twitter.com/frankanka">@frankanka</a>)!
                     <br />
                     <br />
@@ -36,7 +36,8 @@ class AboutView extends React.Component {
                     <a href="https://www.mongodb.com/de">MongoDB</a> -{" "}
                     <a href="https://mongoosejs.com/">Mongoose</a> -{" "}
                     <a href="https://fontawesome.com/">Fontawesome</a> -{" "}
-                    <a href="https://github.com/caramelcss/caramel">Caramel</a> -{" "}
+                    <a href="https://github.com/caramelcss/caramel">Caramel</a>{" "}
+                    -{" "}
                     <a href="https://www.toptal.com/designers/subtlepatterns/">
                       Subtle Patterns
                     </a>{" "}
@@ -54,7 +55,18 @@ class AboutView extends React.Component {
                     ) .
                     <br />
                     <br />
-                    <img src="../assets/images/icon_gandalf.gif" />{" "}
+                    {/* <img src="../assets/images/icon_gandalf.gif" />{" "} */}
+                    You would like to support this api? You can do so by
+                    donating a coffee :) <br />
+                    <a
+                      href="https://www.buymeacoffee.com/SqYKLmJ7Z"
+                      target="_blank"
+                    >
+                      <img
+                        src="https://www.buymeacoffee.com/assets/img/custom_images/white_img.png"
+                        alt="Buy Me A Coffee"
+                      />
+                    </a>
                   </div>
                 </div>
               </div>
