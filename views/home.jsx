@@ -88,8 +88,8 @@ class View extends React.Component {
                 <div className="panel dark">
                   <div className="panel-head">What is this?</div>
                   <div className="panel-body">
-                    <em>Mellon</em>, this is the API (What the hell is an
-                    Application Programming Interface?) that serves your needs
+                    <em>Mellon</em>, this is the API (<a href="/documentation#1">What the hell is an
+                    Application Programming Interface?</a>) that serves your needs
                     regarding data about <strong>The Lord of the Rings</strong>,
                     the epic books by J. R. R. Tolkien and the official movie
                     adaptions by Peter Jackson.
