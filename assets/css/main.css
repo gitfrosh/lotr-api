@@ -49,6 +49,13 @@ footer center {
   margin-top: 1.5rem;
 }
 
+@media (min-width: 800px) {
+  .nav {
+    padding-right: 4rem;
+  }
+}
+
+
 .container,
 main {
   width: inherit;
