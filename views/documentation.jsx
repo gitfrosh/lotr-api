@@ -79,7 +79,7 @@ class AboutView extends React.Component {
                       Rings", the epic masterpiece epos by J.R.R. Tolkien then
                       this API is most likely not for you. But if you do, this
                       massive database will provide you with information about
-                      the ss, the movie trilogy, many characters and quotes. You
+                      the books, the movie trilogy, many characters and quotes. You
                       are welcome to use the data in your own apps, mixups and
                       (fun) projects — like I did with creating this API.
                     </p>
