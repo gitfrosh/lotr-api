@@ -56,6 +56,10 @@ module.exports = function(server, mongoose, logger) {
           const { email, password } = request.payload;
           // create bearer token!!
           const access_token = nanoid(20);
+          // send notification email via aws lambda
+          await fetch(
+            process.env.AWS_LAMBDA_NEWUSER_URL
+          );
           return await RestHapi.create(
             User,
             { email, password, access_token },
