@@ -23,7 +23,7 @@ process.on("unhandledRejection", err => {
   console.log("******************");
 });
 
-// Make Request every 40 minutes to keep it from sleeping
+// Make Request every 25 minutes to keep it from sleeping
 setInterval(() => {
  https.get("https://the-one-api.herokuapp.com/", res => {
   res.setEncoding("utf8")
@@ -31,7 +31,7 @@ setInterval(() => {
   res.on("data", data => (body += data))
   res.on("end", () => console.log(body))
  })
-}, 1000 * 60 * 40)
+}, 1000 * 60 * 25)
 
 var server_port = process.env.PORT || 80;
 var server_host = process.env.HOST || "0.0.0.0";
