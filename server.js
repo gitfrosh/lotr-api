@@ -9,12 +9,29 @@ const Vision = require("@hapi/vision");
 const HapiReactViews = require("hapi-react-views");
 const HapiRateLimit = require("hapi-rate-limit");
 const HapiRequireHttps = require('hapi-require-https');
+const https = require('https');
 require("babel-polyfill");
 require("babel-core/register")({
   presets: ["react", "env"]
 });
 require("custom-env").env(true); // load env variables dynamically from current env
 // require('dotenv').config()
+
+process.on("unhandledRejection", err => {
+  console.log("******************");
+  console.log(err);
+  console.log("******************");
+});
+
+// Make Request every 40 minutes to keep it from sleeping
+setInterval(() => {
+ https.get("https://the-one-api.herokuapp.com/", res => {
+  res.setEncoding("utf8")
+  let body = ""
+  res.on("data", data => (body += data))
+  res.on("end", () => console.log(body))
+ })
+}, 1000 * 60 * 40)
 
 var server_port = process.env.PORT || 80;
 var server_host = process.env.HOST || "0.0.0.0";
