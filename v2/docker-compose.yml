@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  mongodb:
+    image: mongo
+    ports:
+        - 27017:27017
+    expose: [27017]
+
+  restore:
+    image: mongo
+    volumes:
+      - ./db:/var/dump
+    links:
+      - mongodb:mongodb
+      
+    command: mongorestore --host mongodb:27017 -d lotr --verbose /var/dump
