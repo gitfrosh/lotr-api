@@ -17,16 +17,16 @@ router.route("/book/:id/chapter").get(bookController.getChaptersByBook);
 router.route("/chapter").get([passportHelpers.authenticate, chapterController.getChapters]);
 router.route("/chapter/:id").get([passportHelpers.authenticate, chapterController.getChapter]);
 
-// router.route("/movie").get([passportHelpers.authenticate, movieController.getMovies]);
-// router.route("/movie/:id").get([passportHelpers.authenticate, movieController.getMovie]);
-// router.route("/movie/:id/quote").get([passportHelpers.authenticate, movieController.getQuoteByMovie]);
+router.route("/movie").get([passportHelpers.authenticate, movieController.getMovies]);
+router.route("/movie/:id").get([passportHelpers.authenticate, movieController.getMovie]);
+router.route("/movie/:id/quote").get([passportHelpers.authenticate, movieController.getQuoteByMovie]);
 
-// router.route("/character").get([passportHelpers.authenticate, characterController.getCharacters]);
-// router.route("/character/:id").get([passportHelpers.authenticate, characterController.getCharacter]);
-// router.route("/character/:id/quote").get([passportHelpers.authenticate, characterController.getQuoteByCharacter]);
+router.route("/character").get([passportHelpers.authenticate, characterController.getCharacters]);
+router.route("/character/:id").get([passportHelpers.authenticate, characterController.getCharacter]);
+router.route("/character/:id/quote").get([passportHelpers.authenticate, characterController.getQuoteByCharacter]);
 
-// router.route("/quote").get([passportHelpers.authenticate, quoteController.getQuotes]);
-// router.route("/quote/:id").get([passportHelpers.authenticate, quoteController.getQuote]);
+router.route("/quote").get([passportHelpers.authenticate, quoteController.getQuotes]);
+router.route("/quote/:id").get([passportHelpers.authenticate, quoteController.getQuote]);
 
 
 module.exports = router;
