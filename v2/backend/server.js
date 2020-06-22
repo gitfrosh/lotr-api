@@ -1,4 +1,4 @@
-const models = require("./models");
+const db = require("./helpers/db");
 const express = require("express");
 const bcrypt = require("bcrypt");
 
@@ -78,7 +78,7 @@ app.get("/", function (req, res) {
   res.send("Hello World!");
 });
 
-models.connectDb().then(async () => {
+db.connectDb().then(async () => {
   app.listen(server_port, () =>
     console.log(`Example app listening on port ${server_port}!`)
   );
