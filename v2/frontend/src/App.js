@@ -44,7 +44,7 @@ function App() {
           <Route path="" component={NotFoundPage} />
         </Switch>
         <footer>
-          <center>Made with &hearts; and #Hapi.js in 2019.</center>
+          <center>Made with &hearts; in 2020</center>
         </footer>
     </div>
     </Router>

@@ -1,32 +1,74 @@
-import React from 'react';
-import {
-    Link
-  } from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
 
-function Header({isLoggedIn}) {
+function Header({ isLoggedIn }) {
+  const logout = () => {
+    // const url =
+    //   process.env.APP_ENV === "prod" ? process.env.APP_URL : "" + "/v1/logout";
+    // fetch(url, {
+    //   method: "GET"
+    // })
+    //   .then(res => {
+    //     return res.json();
+    //   })
+    //   .then(response => {
+    //     //console.log("Response:", JSON.stringify(response));
+    //     window.location.href =
+    //       process.env.APP_ENV === "prod" ? process.env.APP_URL : "/";
+    //   })
+    //   .catch(error => {
+    //     console.log(error);
+    //   });
+  };
 
-    const logout = () => {
-        // const url =
-        //   process.env.APP_ENV === "prod" ? process.env.APP_URL : "" + "/v1/logout";
-        // fetch(url, {
-        //   method: "GET"
-        // })
-        //   .then(res => {
-        //     return res.json();
-        //   })
-        //   .then(response => {
-        //     //console.log("Response:", JSON.stringify(response));
-        //     window.location.href =
-        //       process.env.APP_ENV === "prod" ? process.env.APP_URL : "/";
-        //   })
-        //   .catch(error => {
-        //     console.log(error);
-        //   });
-      }
+  return (
+    <header>
+      <div id="header-e1">
+      The <em>The Lord of the Rings</em> API
+</div>
+<div id="header-e3">
+<label for="drawer-control" class="drawer-toggle persistent" />
+</div>
 
-    return (
-        <header>
-        <nav className="nav bar thick dark">
+      <input type="checkbox" id="drawer-control" class="drawer persistent" />
+      <div>
+        <label for="drawer-control" class="drawer-close" />
+        <navigation>
+          <Link to="/">home</Link>
+          <br />
+          <Link to="/about">about</Link>
+          <br />
+
+          <Link to="/documentation">documentation</Link>  <br />
+          {isLoggedIn && (
+            <>
+              <a href="#">
+                <strong>welcome!</strong> <i class="fas fa-caret-down" />
+              </a>
+              <br />
+
+              <Link to href="/account">
+                account
+              </Link>
+              <br />
+
+              <a onClick={logout()} href="#">
+                logout
+              </a> <br />
+            </>
+          )}
+          {!isLoggedIn && (
+            <>
+              <Link to="/login">login</Link>
+              <br />
+              <Link to="/sign-up">sign up</Link>
+            </>
+          )}
+        </navigation>
+      </div>
+    </header>
+
+    /* <nav className="nav bar thick dark">
           <ul>
             <li className="collapse">
               <a
@@ -46,48 +88,10 @@ function Header({isLoggedIn}) {
               </a>
             </li>
 
-            <ul className="right">
-              <li>
-              <Link to="/">home</Link>
-              </li>
-              <li>
-              <Link to="/about">about</Link>
-              </li>
-              <li>
-              <Link to="/documentation">documentation</Link>
-              </li>
-              {isLoggedIn && (
-                <li className="dropdown">
-                  <a href="#" className="dropdownitem">
-                    <strong>welcome!</strong> <i class="fas fa-caret-down" />
-                  </a>
-                  <ul>
-                    <li>
-                      <Link to href="/account">account</Link>
-                    </li>
-                    <li>
-                      <a onClick={logout()} href="#">
-                        logout
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-              )}
-              {!isLoggedIn && (
-                <span>
-                  <li>
-                    <Link to="/login">login</Link>
-                  </li>
-                  <li>
-                    <Link to="/sign-up">sign up</Link>
-                  </li>
-                </span>
-              )}
-            </ul>
+           
           </ul>
-        </nav>
-      </header>
-    )
+        </nav> */
+  );
 }
 
 export default Header;
