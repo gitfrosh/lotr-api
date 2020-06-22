@@ -30,7 +30,7 @@ module.exports = {
   getQuoteByCharacter: async (req, res, next) => {
     const id = req.params.id;
     await Quote.find(
-      { character: mongoose.Types.ObjectId(id) },
+      { character: mongoose.Types.ObjectId(id) }, "dialog movie character",
       async function (err, quotes) {
         if (err) {
           return res.sendStatus(500).send({

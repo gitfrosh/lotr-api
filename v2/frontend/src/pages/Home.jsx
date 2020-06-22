@@ -12,9 +12,10 @@ function Home() {
             <h2>
               Welcome to <br />
               <i className="fa fa-ring" />
-              <strong> the one API </strong>
+              <span className="mark"> the one </span> API
               <br />
-              to rule them all.
+              <br />
+
             </h2>
           </center>
         </div>
@@ -28,11 +29,11 @@ function Home() {
           <div className="panel dark">
             <div className="panel-head">What is this?</div>
             <div className="panel-body">
-              <em>Mellon</em>, this is the API (
+              <em>Mellon</em>, this is the one API (
               <a href="/documentation#1">
                 What the hell is an Application Programming Interface?
               </a>
-              ) that serves your needs regarding data about{" "}
+              ) <em>to rule them all</em>. No really, it serves your needs regarding data about{" "}
               <strong>The Lord of the Rings</strong>, the epic books by J.
               R. R. Tolkien and the official movie adaptions by Peter
               Jackson.
