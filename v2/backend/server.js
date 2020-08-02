@@ -1,7 +1,7 @@
 const db = require("./helpers/db");
 const express = require("express");
 const bcrypt = require("bcrypt");
-
+const rateLimit = require("express-rate-limit");
 const app = express();
 const passport = require("passport");
 const JWTstrategy = require("passport-jwt").Strategy;
@@ -18,13 +18,17 @@ const authRoutes = require("./routes/auth");
 
 const server_port = process.env.PORT || 3001;
 
+const apiLimiter = rateLimit({
+  windowMs: 10 * 60 * 1000, // 15 minutes
+  max: 100
+});
+
 passport.use(
   "bearer",
   new BearerStrategy(async (token, done) => {
     console.log(token)
     try {
       await User.findOne({ access_token: token }, async function (err, user) {
-        console.log(user)
         console.log(err)
         if (err) {
           return done(err, false, { message: "Invalid token." });
@@ -35,7 +39,6 @@ passport.use(
         return done(null, token, { message: "Token valid." });
       });
     } catch (error) {
-      console.log("eawsfafs")
       done(error);
     }
   })
@@ -71,7 +74,8 @@ passport.use(
   )
 );
 
-app.use("/api", apiRoutes);
+app.use("/v2/", apiLimiter);
+app.use("/v2", apiRoutes);
 app.use("/auth", authRoutes);
 
 app.get("/", function (req, res) {
