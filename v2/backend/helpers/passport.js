@@ -8,8 +8,6 @@ module.exports = {
       token,
       info
     ) {
-      console.log("here");
-      console.log(err, token, info);
       try {
         if (err || !token) {
           return res.send({
