@@ -11,7 +11,7 @@ module.exports = {
     const id = req.params.id;
     await Movie.paginate({ _id: id }, options, async function (err, movie) {
       if (err) {
-        return res.sendStatus(500).send({
+        return res.status(500).send({
           success: false,
           message: "Something went wrong.",
         });
@@ -23,7 +23,7 @@ module.exports = {
     const options = await config.getOptions(req);
     await Movie.paginate({}, options, async function (err, movies) {
       if (err) {
-        return res.sendStatus(500).send({
+        return res.status(500).send({
           success: false,
           message: "Something went wrong.",
         });
@@ -46,7 +46,7 @@ module.exports = {
       },
       async function (err, quotes) {
         if (err) {
-          return res.sendStatus(500).send({
+          return res.status(500).send({
             success: false,
             message: "Something went wrong.",
           });
@@ -62,7 +62,7 @@ module.exports = {
       "dialog movie character",
       async function (err, quotes) {
         if (err) {
-          return res.sendStatus(500).send({
+          return res.status(500).send({
             success: false,
             message: "Something went wrong.",
           });

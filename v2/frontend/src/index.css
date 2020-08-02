@@ -1,25 +1,72 @@
 @charset "UTF-8";
-/*!
-// Caramel (http://caramel.ga/)
-// Copyright 2015, All Rights Reserved
-// @version 1.5.1
-// @license SEE <LICENSE>
-*/
-html {
-  font-family: 'Roboto', sans-serif !important;
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: 'Raleway', sans-serif !important;
 
 }
 
-#header-e1 {float: left;}
-#header-e3 {float: right;}
+.card {
+  margin-bottom: 3rem;
+  border: 1rem solid var(--card-border-color)
+}
+
+.logo {
+  font-size: 2rem !important;
+  padding: 15px !important;
+  font-family: 'Just Another Hand', cursive;
+
+}
+
+table {
+  display: unset;
+}
+
+
+header {
+  height: unset;
+}
+
+.react-toast-notifications__container {
+  z-index: 10000 !important;
+}
+
+.react-toast-notifications__container button {
+  z-index: 10000 !important;
+}
+
 
 .drawer-toggle:before {
   font-size: 3rem;
+  cursor: pointer;
+}
+
+
+p, li {
+  line-height: 2rem;
+  color: #4c4c4c;
+}
+
+h1 {
+  font-size: 10rem !important;
+  border-bottom: 10px solid #ccc;
+  margin-top: 5rem;
 }
 
 h2 {
+  font-size: 6rem !important;
+  border-bottom: 10px solid #ccc;
+  margin-top: 5rem;
+}
+
+h3 {
   font-size: 3rem !important;
 }
+
+h4 {
+  font-size: 2rem !important;
+}
+
 
 h2 > smaller {
   top: -1rem;
@@ -27,171 +74,44 @@ h2 > smaller {
 
 }
 
-body {
-  min-height: 100%;
-  padding: 0;
-  margin: 0;
+h1, h2, h3, h4 {
+  font-family: 'Just Another Hand', cursive;
+}
+
+.container {
   position: relative;
-  font-family: 'Roboto', sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.4;
-  /* background: url("../images/curls.png"); */
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 3rem;   
 }
 
 footer {
-  margin: -50px 0;
-  padding: 5px 0;
   position: absolute;
+  text-align: center;
   bottom: 0;
   width: 100%;
-  height: 50px;
-  background-color: #e0e0ec;
-  color: #1d2323;
-  display: table;
+  height: 3rem;          
 }
 
-footer center {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
+footer p {
+  font-size: 0.8rem !important;
+  line-height: 1.5rem;
+
 }
 
-#intro {
-  margin-top: 1.5rem;
-}
-
-@media (min-width: 800px) {
-  .nav {
-    padding-right: 4rem;
-  }
-}
-
-
-.container,
-main {
-  height: 100%;
-  width: inherit;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 35px;
-}
-
-@media (max-width: 800px) {
-  .container,
-  main {
-    padding: 0 10px;
-  }
-}
-
-.box {
-  float: left;
-  margin-left: 1.25%;
-  margin-right: 1.25%;
-  margin-bottom: 10px;
-}
-
-@media (max-width: 800px) {
-  .box {
-    width: 100% !important;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    float: none;
-  }
+#drawer {
+  border: 1rem solid var(--card-border-color)
 }
 
 navigation {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   position: absolute;
   left: 50%;
   top: 30%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-}
-
-
-.box.col-1 {
-  width: 5.83333%;
-}
-
-.box.col-2 {
-  width: 14.16667%;
-}
-
-.box.col-3 {
-  width: 22.5%;
-}
-
-.box.col-4 {
-  width: 30.83333%;
-}
-
-.box.col-5 {
-  width: 39.16667%;
-}
-
-.box.col-6 {
-  width: 47.5%;
-}
-
-.box.col-7 {
-  width: 55.83333%;
-}
-
-.box.col-8 {
-  width: 64.16667%;
-}
-
-.box.col-9 {
-  width: 72.5%;
-}
-
-.box.col-10 {
-  width: 80.83333%;
-}
-
-.box.col-11 {
-  width: 89.16667%;
-}
-
-.box.col-12 {
-  width: 97.5%;
-}
-
-
-
-
-
-
-.panel {
-  border: 1px solid #f7f7f7;
-  overflow: hidden;
-  margin-bottom: 10px;
-}
-
-.panel .panel-head {
-  padding: 10px 20px 9px;
-  font-weight: bold;
-}
-
-.panel .panel-body {
-  line-height: 2.4;
-  padding: 15px 20px 14px;
-}
-
-.panel-head {
-  font-size: 2rem;
-  font-family: 'Sacramento', cursive;
-}
-
-.panel p {
-  margin: 0;
-}
-
-.mark, navigation > a {
-  font-family: 'Sacramento', cursive;
-
 }
 

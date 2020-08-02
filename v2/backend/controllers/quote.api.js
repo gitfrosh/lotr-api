@@ -16,7 +16,7 @@ module.exports = {
       },
       async function (err, quote) {
         if (err) {
-          return res.sendStatus(500).send({
+          return res.status(500).send({
             success: false,
             message: "Something went wrong.",
           });
@@ -40,7 +40,7 @@ module.exports = {
       },
       async function (err, quote) {
         if (err) {
-          return res.sendStatus(500).send({
+          return res.status(500).send({
             success: false,
             message: "Something went wrong.",
           });
