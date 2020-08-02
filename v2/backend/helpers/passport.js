@@ -10,7 +10,7 @@ module.exports = {
     ) {
       try {
         if (err || !token) {
-          return res.send({
+          return res.status(401).send({
             success: false,
             message: "Unauthorized.",
           });
@@ -26,15 +26,17 @@ module.exports = {
   login: async (req, res, next) => {
     passport.authenticate("login", async function (err, user, info) {
       try {
+        console.log(info)
         if (err || !user) {
-          return res.send({
+          return res.status(401).send({
             success: false,
             message: info || "Unauthorized",
           });
         } else {
+          req.user = user;
+          next();
         }
-        req.user = user;
-        next();
+     
       } catch (err) {
         console.log(err);
       }

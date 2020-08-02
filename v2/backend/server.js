@@ -9,9 +9,11 @@ const ExtractJWT = require("passport-jwt").ExtractJwt;
 const localStrategy = require("passport-local").Strategy;
 const User = require("./models/user.model");
 const BearerStrategy = require('passport-http-bearer');
+const cors = require('cors');
 
 app.use(require("body-parser").json());
 app.use(require("body-parser").urlencoded({ extended: false }));
+app.use(cors());
 
 const apiRoutes = require("./routes/api");
 const authRoutes = require("./routes/auth");

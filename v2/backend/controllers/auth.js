@@ -8,7 +8,7 @@ module.exports = {
     const user = req.user;
       try {
         req.login(user, { session: false }, async (error) => {
-          if (error) return res.send(error);
+          if (error) return res.status(500).send(error);
           const body = { id:user.id, email: user.email };
           const token = jwt.sign({ user: body }, secret);
           return res.json({
@@ -19,7 +19,7 @@ module.exports = {
         });
       } catch (e) {
         console.log(e);
-        return res.sendStatus(500).send({
+        return res.status(500).send({
           success: false,
           message: "Login failed",
         });

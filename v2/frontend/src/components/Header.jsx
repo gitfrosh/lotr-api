@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from "../assets/logo.png"; // Tell webpack this JS file uses this image
 
 function Header({ isLoggedIn }) {
   const logout = () => {
@@ -22,39 +23,35 @@ function Header({ isLoggedIn }) {
   };
 
   return (
-    <header>
-      <div id="header-e1">
-      The <em>The Lord of the Rings</em> API
-</div>
-<div id="header-e3">
-<label for="drawer-control" class="drawer-toggle persistent" />
-</div>
+    <header className="sticky row">
+      <div className="col-sm-6 logo">The One API</div>
+      <div style={{ textAlign: "right" }} class="col-sm-6">
+        <label for="drawer-control" class="drawer-toggle persistent" />
+      </div>
 
       <input type="checkbox" id="drawer-control" class="drawer persistent" />
-      <div>
+      <div width="100%" id="drawer">
         <label for="drawer-control" class="drawer-close" />
         <navigation>
           <Link to="/">home</Link>
           <br />
           <Link to="/about">about</Link>
           <br />
-
-          <Link to="/documentation">documentation</Link>  <br />
+          <Link to="/documentation">documentation</Link> <br />
           {isLoggedIn && (
             <>
               <a href="#">
                 <strong>welcome!</strong> <i class="fas fa-caret-down" />
               </a>
               <br />
-
               <Link to href="/account">
                 account
               </Link>
               <br />
-
               <a onClick={logout()} href="#">
                 logout
-              </a> <br />
+              </a>{" "}
+              <br />
             </>
           )}
           {!isLoggedIn && (

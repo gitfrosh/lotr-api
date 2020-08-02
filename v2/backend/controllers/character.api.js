@@ -10,7 +10,7 @@ module.exports = {
     console.log(options);
     await Character.paginate({}, options, async function (err, characters) {
       if (err) {
-        return res.sendStatus(500).send({
+        return res.status(500).send({
           success: false,
           message: "Something went wrong.",
         });
@@ -27,7 +27,7 @@ module.exports = {
       character
     ) {
       if (err) {
-        return res.sendStatus(500).send({
+        return res.status(500).send({
           success: false,
           message: "Something went wrong.",
         });
@@ -46,7 +46,7 @@ module.exports = {
       },
       async function (err, quotes) {
         if (err) {
-          return res.sendStatus(500).send({
+          return res.status(500).send({
             success: false,
             message: "Something went wrong.",
           });
