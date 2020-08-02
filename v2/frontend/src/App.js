@@ -13,9 +13,7 @@ import { ToastProvider } from "react-toast-notifications";
 
 function App() {
   return (
-    <ToastProvider
-      autoDismiss
-    >
+    <ToastProvider autoDismiss>
       <Router>
         <div className="App">
           <div class="container">
