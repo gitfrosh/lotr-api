@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { getUserInfo } from "../helpers/api";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.png"; // Tell webpack this JS file uses this image
 
 function Header({ isLoggedIn }) {
+  const [userInfo, setUserInfo] = useState({});
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    getUserInfo().then((user) => setUserInfo(user));
+    setLoading(false);
+  }, []);
+
   const logout = () => {
     // const url =
     //   process.env.APP_ENV === "prod" ? process.env.APP_URL : "" + "/v1/logout";
@@ -22,6 +30,8 @@ function Header({ isLoggedIn }) {
     //   });
   };
 
+  if (loading) return <span>Loading..</span>;
+
   return (
     <header className="sticky row">
       <div className="col-sm-6 logo">The One API</div>
@@ -32,21 +42,15 @@ function Header({ isLoggedIn }) {
       <input type="checkbox" id="drawer-control" class="drawer persistent" />
       <div width="100%" id="drawer">
         <label for="drawer-control" class="drawer-close" />
-        <navigation>
+        <nav>
           <Link to="/">home</Link>
           <br />
           <Link to="/about">about</Link>
           <br />
           <Link to="/documentation">documentation</Link> <br />
-          {isLoggedIn && (
+          {userInfo && (
             <>
-              <a href="#">
-                <strong>welcome!</strong> <i class="fas fa-caret-down" />
-              </a>
-              <br />
-              <Link to href="/account">
-                account
-              </Link>
+              <br /> <Link to="/account">account</Link>
               <br />
               <a onClick={logout()} href="#">
                 logout
@@ -54,40 +58,16 @@ function Header({ isLoggedIn }) {
               <br />
             </>
           )}
-          {!isLoggedIn && (
+          {!userInfo && (
             <>
               <Link to="/login">login</Link>
               <br />
               <Link to="/sign-up">sign up</Link>
             </>
           )}
-        </navigation>
+        </nav>
       </div>
     </header>
-
-    /* <nav className="nav bar thick dark">
-          <ul>
-            <li className="collapse">
-              <a
-                alt="This is the navigation"
-                aria-label="This is the navigation"
-                href="#"
-                className="menu"
-              >
-                <i className="fa fa-bars" />
-              </a>
-            </li>
-
-            <li className="brand">
-              <a href="/">
-                <i className="fa fa-ring" /> The
-                <strong>The Lord of the Rings</strong> API
-              </a>
-            </li>
-
-           
-          </ul>
-        </nav> */
   );
 }
 

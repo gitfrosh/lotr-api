@@ -43,6 +43,7 @@ header {
 
 
 p, li {
+  
   line-height: 2rem;
   color: #4c4c4c;
 }
@@ -105,9 +106,11 @@ footer p {
   border: 1rem solid var(--card-border-color)
 }
 
-navigation {
+nav {
+  line-height: 0.2rem;
+  border: unset;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   position: absolute;
   left: 50%;
   top: 30%;
