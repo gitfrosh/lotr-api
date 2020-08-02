@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+var mongoosePaginate = require('mongoose-paginate');
 
 const characterSchema = new mongoose.Schema(
   {
@@ -49,6 +50,8 @@ const characterSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
+
+characterSchema.plugin(mongoosePaginate);
 
 const Character = mongoose.model("characters", characterSchema);
 

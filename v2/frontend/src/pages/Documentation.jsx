@@ -235,6 +235,64 @@ function Documentation() {
         </div>
         <div className="box col-2" />
       </div>
+      <div className="row" id="4">
+        <div className="box col-2" />
+        <div className="box col-8">
+          <div className="panel dark">
+            <div className="panel-body">
+              <h3>May I use pagination, sorting and filtering?</h3>
+              Yes, you can add pagination and sorting options to your API requests. Filtering is not available though.
+
+              <br />
+                  <b>Pagination</b>
+                  <table className="table">
+                <thead>
+                  <tr>
+                    <th width="20%">Option</th>
+                    <th width="60%">Example</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong>limit</strong>
+                    </td>
+                    <td>/v2/characters?limit=100</td>
+                  </tr>
+                  <tr>
+                    <td>
+                    <strong>page</strong>
+                    </td>
+                    <td>/v2/character?page=2 (limit default is 10)</td>
+                  </tr>
+                </tbody>
+              </table>
+              <b>Sorting</b>
+
+              <table className="table">
+                <thead>
+                  <tr>
+                    <th width="60%">Example</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                   /v2/character?sort=name:asc
+                    </td>
+                  </tr>
+              
+                </tbody>
+              </table>
+
+              <br />
+            
+
+            </div>
+          </div>
+        </div>
+        <div className="box col-2" />
+      </div>
     </section>
   </main>
   );

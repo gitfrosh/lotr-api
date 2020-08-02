@@ -1,12 +1,19 @@
 const Chapter = require("./../models/chapter.model");
 const mongoose = require("mongoose");
+const config = require("./../helpers/config");
 
 module.exports = {
     getChaptersByBook: async function (req, res) {
+    const options = await config.getOptions(req);
     const id = req.params.id;
-    await Chapter.find(
+    await Chapter.paginate(
       { book: mongoose.Types.ObjectId(id) },
-      "chapterName",
+      {
+        ...options, 
+        select: {
+          chapterName: 1
+        }
+      },
       async function (err, book) {
         if (err) {
           return res.json({
@@ -18,8 +25,16 @@ module.exports = {
       }
     );
   },
-  getChapters: async (req, res, next) => {
-    await Chapter.find({}, "chapterName bookName", async function (
+  getChapters: async (req, res) => {
+    const options = await config.getOptions(req);
+
+    await Chapter.paginate({}, {
+      ...options,
+      select: {
+        chapterName: 1,
+        bookName: 1
+      }
+    }, async function (
       err,
       chapter
     ) {
@@ -32,9 +47,16 @@ module.exports = {
       return res.json(chapter);
     });
   },
-  getChapter: async (req, res, next) => {
+  getChapter: async (req, res) => {
+    const options = await config.getOptions(req);
     const id = req.params.id;
-    await Chapter.find({ _id: id }, "chapterName bookName", async function (
+    await Chapter.paginate({ _id: id }, {
+      ...options,
+      select: {
+        chapterName: 1,
+        bookName: 1
+      }
+    }, async function (
       err,
       chapter
     ) {
