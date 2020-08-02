@@ -1,49 +1,52 @@
 const Quote = require("./../models/quote.model");
-const mongoose = require("mongoose");
+const config = require("./../helpers/config");
 
 module.exports = {
-//     getChaptersByBook: async function (req, res) {
-//     const id = req.params.id;
-//     await Chapter.find(
-//       { book: mongoose.Types.ObjectId(id) },
-//       "chapterName",
-//       async function (err, book) {
-//         if (err) {
-//           return res.json({
-//             success: false,
-//             message: "Something went wrong.",
-//           });
-//         }
-//         return res.json(book);
-//       }
-//     );
-//   },
-  getQuotes: async (req, res, next) => {
-    await Quote.find({}, "dialog movie character", async function (
-      err,
-      quote
-    ) {
-      if (err) {
-        return res.sendStatus(500).send({
-          success: false,
-          message: "Something went wrong.",
-        });
+  getQuotes: async (req, res) => {
+    const options = await config.getOptions(req);
+    await Quote.paginate(
+      {},
+      {
+        ...options,
+        select: {
+          dialog: 1,
+          movie: 1,
+          character: 1,
+        },
+      },
+      async function (err, quote) {
+        if (err) {
+          return res.sendStatus(500).send({
+            success: false,
+            message: "Something went wrong.",
+          });
+        }
+        return res.json(quote);
       }
-      return res.json(quote);
-    });
+    );
   },
   getQuote: async (req, res, next) => {
+    const options = await config.getOptions(req);
     const id = req.params.id;
-    await Quote.find({ _id: id }, "dialog movie character", async function (
-      err,
-      quote
-    ) {
-      if (err) {
-        return res.sendStatus(500).send({
-          success: false,
-          message: "Something went wrong.",
-        });
+    await Quote.paginate(
+      { _id: id },
+      {
+        ...options,
+        select: {
+          dialog: 1,
+          movie: 1,
+          character: 1,
+        },
+      },
+      async function (err, quote) {
+        if (err) {
+          return res.sendStatus(500).send({
+            success: false,
+            message: "Something went wrong.",
+          });
+        }
+        return res.json(quote);
       }
-      return res.json(quote);
-    });
-  }}
+    );
+  },
+};

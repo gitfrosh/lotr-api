@@ -1,9 +1,12 @@
 const Book = require("./../models/book.model");
+const Chapter = require("./../models/chapter.model");
 const mongoose = require("mongoose");
+const config = require("./../helpers/config");
 
 module.exports = {
   getBooks: async function (req, res) {
-    await Book.find({}, async function (err, books) {
+    const options = await config.getOptions(req);
+    await Book.paginate({}, options, async function (err, books) {
       if (err) {
         return res.json({
           success: false,
@@ -14,8 +17,10 @@ module.exports = {
     });
   },
   getBook: async function (req, res) {
+    const options = await config.getOptions(req);
+
     const id = req.params.id;
-    await Book.find({ _id: id }, async function (err, book) {
+    await Book.paginate({ _id: id }, options, async function (err, book) {
       if (err) {
         return res.json({
           success: false,
@@ -26,8 +31,13 @@ module.exports = {
     });
   },
   getChaptersByBook: async function (req, res) {
+    const options = await config.getOptions(req);
+
     const id = req.params.id;
-    await Chapter.find({book: mongoose.Types.ObjectId(id)}, "chapterName", async function (err, book) {
+    await Chapter.paginate({book: mongoose.Types.ObjectId(id)}, {
+      select: {chapterName: 1, bookName: 1},
+      ...options
+    }, async function (err, book) {
       if (err) {
         return res.json({
           success: false,

@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+var mongoosePaginate = require('mongoose-paginate');
 
 const quoteSchema = new mongoose.Schema(
   {
@@ -22,6 +23,8 @@ const quoteSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
+
+quoteSchema.plugin(mongoosePaginate);
 
 const Quote = mongoose.model("quotes", quoteSchema);
 
