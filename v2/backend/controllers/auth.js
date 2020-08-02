@@ -9,7 +9,7 @@ module.exports = {
       try {
         req.login(user, { session: false }, async (error) => {
           if (error) return res.status(500).send(error);
-          const body = { id:user.id, email: user.email };
+          const body = { id:user.id, email: user.email, access_token: user.access_token };
           const token = jwt.sign({ user: body }, secret);
           return res.json({
             token: token,

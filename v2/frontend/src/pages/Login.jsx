@@ -40,7 +40,7 @@ function PasswordField() {
   );
 }
 
-function Login({ props }) {
+function Login() {
   const { addToast } = useToasts();
   const history = useHistory();
 
@@ -53,6 +53,8 @@ function Login({ props }) {
     },
     debugForm: false,
   });
+
+
 
   async function setCookie(name, value, days) {
     var expires = "";
@@ -71,7 +73,7 @@ function Login({ props }) {
       addToast(response.message, { appearance: "error" });
     } else {
       addToast("Login successful", { appearance: "success" });
-      setCookie("minako", response.token, 7);
+      setCookie("lotr-api", response.token, 7);
       history.push('/account')
 
     }

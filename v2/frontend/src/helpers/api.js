@@ -31,3 +31,15 @@ export async function login(values) {
     };
   }
 }
+
+export async function getUserInfo() {
+        var match = document.cookie.match(
+          new RegExp("(^| )" + "lotr-api" + "=([^;]+)")
+        );
+        if (match) {
+          const jwt = match[2];
+          const parsedJwt = JSON.parse(atob(jwt.split(".")[1]));
+          const { user } = parsedJwt;
+         return user
+        }
+}
