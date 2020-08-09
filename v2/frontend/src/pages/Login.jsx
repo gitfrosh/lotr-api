@@ -4,11 +4,21 @@ import { login } from "../helpers/api";
 import { useToasts } from "react-toast-notifications";
 import { useHistory } from "react-router-dom";
 
+async function validateRequired(field) {
+  if (!field) {
+    return "Required";
+  }
+}
+
+
+
 function EmailField() {
   const {
     meta: { error, isTouched, isValidating },
     getInputProps,
-  } = useField("email", {});
+  } = useField("email", {
+    validate: validateRequired
+  });
 
   return (
     <>
@@ -26,7 +36,9 @@ function PasswordField() {
   const {
     meta: { error, isTouched, isValidating },
     getInputProps,
-  } = useField("password", {});
+  } = useField("password", {
+    validate: validateRequired
+  });
 
   return (
     <>

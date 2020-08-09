@@ -16,9 +16,10 @@ export async function login(values) {
     );
     if (response.status > 399) {
       const body = await response.json();
+      console.log(body)
       return {
         success: false,
-        message: body.message.message,
+        message: body.message,
       };
     } else {
       const json = await response.json();
@@ -50,9 +51,10 @@ export async function register(values) {
     );
     if (response.status > 399) {
       const body = await response.json();
+      console.log(body)
       return {
         success: false,
-        message: body.message.message,
+        message: body.message,
       };
     } else {
       const json = await response.json();
@@ -84,7 +86,7 @@ export async function logout() {
       const body = await response.json();
       return {
         success: false,
-        message: body.message.message,
+        message: body.message,
       };
     } else {
       const json = await response.json();

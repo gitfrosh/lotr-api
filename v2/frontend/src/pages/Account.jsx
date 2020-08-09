@@ -29,7 +29,7 @@ function Account() {
 
         <div class="section dark">
           <p>
-            <b>Access token:</b> {userInfo && userInfo.access_token}
+            <b>Access token:</b> <span style={{ whiteSpace: "nowrap" }}>{userInfo && userInfo.access_token}</span>
             <em> (Include this in your API calls!)</em>
           </p>
         </div>
