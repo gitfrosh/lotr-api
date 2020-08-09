@@ -4,11 +4,33 @@ import { useHistory } from "react-router-dom";
 import { useForm, useField } from "react-form";
 import { register } from "../helpers/api";
 
+async function validateEmail(field) {
+  if (!field) {
+    return "Required";
+  }
+}
+
+async function validatePassword(field) {
+  if (!field) {
+    return "Required";
+  }
+}
+
+async function validatePasswordValidate(field) {
+  if (!field) {
+    return "Required";
+  }
+}
+
+
+
 function EmailField() {
   const {
     meta: { error, isTouched, isValidating },
     getInputProps,
-  } = useField("email", {});
+  } = useField("email", {
+    validate: validateEmail
+  });
 
   return (
     <>
@@ -26,7 +48,29 @@ function PasswordField() {
   const {
     meta: { error, isTouched, isValidating },
     getInputProps,
-  } = useField("password", {});
+  } = useField("password", {
+    validate: validatePassword
+  });
+
+  return (
+    <>
+      <input type="password" {...getInputProps()} />{" "}
+      {isValidating ? (
+        <em>Validating...</em>
+      ) : isTouched && error ? (
+        <em>{error}</em>
+      ) : null}
+    </>
+  );
+}
+
+function PasswordValidateField() {
+  const {
+    meta: { error, isTouched, isValidating },
+    getInputProps,
+  } = useField("passwordValidate", {
+    validate: validatePasswordValidate
+  });
 
   return (
     <>
@@ -46,8 +90,16 @@ function SignUp() {
 
   const {
     Form,
-    meta: { isSubmitting, canSubmit },
+    meta: { isSubmitting, isSubmitted, canSubmit, error }
   } = useForm({
+    debugForm: true,
+
+    validate: values => {
+      if (values.password !== values.passwordValidate) {
+        return "The passwords don't match.";
+      }
+      return false;
+    },
     onSubmit: async (values, instance) => {
       await sendToServer(values);
     },
@@ -82,11 +134,15 @@ function SignUp() {
           </label>
         </div>
         <div class="input-group fluid">
+          <label>
+            Repeat Password: <PasswordValidateField />
+          </label>
+        </div>
+        <div class="input-group fluid">
           <button class="primary" type="submit" disabled={!canSubmit}>
             Submit
           </button>
         </div>
-
         <div>
           <em>{isSubmitting ? "Submitting..." : null}</em>
         </div>

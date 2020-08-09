@@ -2,7 +2,6 @@ const passport = require("passport");
 
 module.exports = {
   authenticate: async (req, res, next) => {
-    console.log("lgd");
     passport.authenticate("bearer", { session: false }, async function (
       err,
       token,
@@ -26,11 +25,13 @@ module.exports = {
   login: async (req, res, next) => {
     passport.authenticate("login", async function (err, user, info) {
       try {
+        console.log("1234")
         console.log(info)
+        
         if (err || !user) {
           return res.status(401).send({
             success: false,
-            message: info || "Unauthorized",
+            message: (info && info.message) || "Unauthorized",
           });
         } else {
           req.user = user;
