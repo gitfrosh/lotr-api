@@ -1,34 +1,32 @@
 import React, { useState, useEffect } from "react";
 import { getUserInfo } from "../helpers/api";
 import { Link } from "react-router-dom";
+import { useToasts } from "react-toast-notifications";
+import { useHistory } from "react-router-dom";
+import { useLocation } from 'react-router-dom';
 
-function Header({ isLoggedIn }) {
+const Header = () => {
   const [userInfo, setUserInfo] = useState({});
   const [loading, setLoading] = useState(true);
+  const { addToast } = useToasts();
+  const history = useHistory();
+  const location = useLocation();
 
   useEffect(() => {
     getUserInfo().then((user) => setUserInfo(user));
     setLoading(false);
-  }, []);
+  }, [location.pathname]);
 
-  const logout = () => {
-    // const url =
-    //   process.env.APP_ENV === "prod" ? process.env.APP_URL : "" + "/v1/logout";
-    // fetch(url, {
-    //   method: "GET"
-    // })
-    //   .then(res => {
-    //     return res.json();
-    //   })
-    //   .then(response => {
-    //     //console.log("Response:", JSON.stringify(response));
-    //     window.location.href =
-    //       process.env.APP_ENV === "prod" ? process.env.APP_URL : "/";
-    //   })
-    //   .catch(error => {
-    //     console.log(error);
-    //   });
-  };
+  async function logout(e) {
+    e.preventDefault();
+    try {
+      document.cookie = "lotr-api" + "=;expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+      addToast("Logout successful", { appearance: "success" });
+      history.push("/login");
+    } catch(e) {
+      addToast(e, { appearance: "error" });
+    }
+  }
 
   if (loading) return <span>Loading..</span>;
 
@@ -52,7 +50,7 @@ function Header({ isLoggedIn }) {
             <>
               <br /> <Link to="/account">account</Link>
               <br />
-              <a onClick={logout()} href="#">
+              <a onClick={(e) => logout(e)} href="#">
                 logout
               </a>{" "}
               <br />
@@ -69,6 +67,6 @@ function Header({ isLoggedIn }) {
       </div>
     </header>
   );
-}
+};
 
 export default Header;

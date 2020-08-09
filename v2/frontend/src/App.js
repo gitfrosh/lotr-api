@@ -8,7 +8,6 @@ import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import Header from "./components/Header";
 import NotFoundPage from "./pages/NotFoundPage";
-import PrivateRoute from "./helpers/PrivateRoute";
 import { ToastProvider } from "react-toast-notifications";
 
 function App() {
@@ -29,9 +28,9 @@ function App() {
                     <Route path="/sign-up">
                       <SignUp />
                     </Route>
-                    <PrivateRoute path="/account">
+                    <Route path="/account">
                       <Account />
-                    </PrivateRoute>
+                    </Route>
                     <Route path="/about">
                       <About />
                     </Route>

@@ -25,24 +25,9 @@ module.exports = {
         });
       }
   },
-  logout: function (req, res) {
-    //   try {
-    //     req.logout();
-    //     return res.json({
-    //       success: true,
-    //     });
-    //   } catch (e) {
-    //     console.log(e);
-    //     return res.json({
-    //       success: false,
-    //       message: "Logout failed",
-    //     });
-    //   }
-    return res.json({
-      success: true,
-    });
-  },
   register: function (req, res) {
+    console.log(req.body)
+    const {email, password} = req.body; 
     return res.json({
       success: true,
     });

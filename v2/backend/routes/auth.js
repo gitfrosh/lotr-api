@@ -6,7 +6,6 @@ var router = express.Router();
 
 
 router.route('/login').post([passportHelpers.login, authController.login]);
-// router.route('/logout').get(apiController.login);
-// router.route('/register').get(apiController.login);
+router.route('/register').post(authController.register);
 
 module.exports = router;

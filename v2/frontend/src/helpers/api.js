@@ -32,6 +32,73 @@ export async function login(values) {
   }
 }
 
+export async function register(values) {
+  const requestOptions = {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+  };
+  if (values) {
+    requestOptions.body = JSON.stringify(values);
+  }
+  try {
+    const response = await fetch(
+      `${"http://localhost:3001/auth/register"}`,
+      requestOptions
+    );
+    if (response.status > 399) {
+      const body = await response.json();
+      return {
+        success: false,
+        message: body.message.message,
+      };
+    } else {
+      const json = await response.json();
+      return json;
+    }
+  } catch (e) {
+    return {
+      success: false,
+      message: "Something went wrong.",
+    };
+  }
+}
+
+
+export async function logout() {
+  const requestOptions = {
+    method: "GET",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+  };
+  try {
+    const response = await fetch(
+      `${"http://localhost:3001/auth/logout"}`,
+      requestOptions
+    );
+    if (response.status > 399) {
+      const body = await response.json();
+      return {
+        success: false,
+        message: body.message.message,
+      };
+    } else {
+      const json = await response.json();
+      return json;
+    }
+  } catch (e) {
+    return {
+      success: false,
+      message: "Something went wrong.",
+    };
+  }
+}
+
+
 export async function getUserInfo() {
         var match = document.cookie.match(
           new RegExp("(^| )" + "lotr-api" + "=([^;]+)")
@@ -43,3 +110,4 @@ export async function getUserInfo() {
          return user
         }
 }
+
