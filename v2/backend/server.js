@@ -2,18 +2,22 @@ const db = require("./helpers/db");
 const express = require("express");
 const bcrypt = require("bcrypt");
 const rateLimit = require("express-rate-limit");
-const app = express();
 const passport = require("passport");
-const JWTstrategy = require("passport-jwt").Strategy;
-const ExtractJWT = require("passport-jwt").ExtractJwt;
 const localStrategy = require("passport-local").Strategy;
 const User = require("./models/user.model");
 const BearerStrategy = require('passport-http-bearer');
 const cors = require('cors');
+const helmet = require("helmet");
+const path = require('path');
 
+const app = express();
+
+app.use(helmet());
 app.use(require("body-parser").json());
 app.use(require("body-parser").urlencoded({ extended: false }));
 app.use(cors());
+
+app.use(express.static(path.join(__dirname, '__BUILD'))); // React build
 
 const apiRoutes = require("./routes/api");
 const authRoutes = require("./routes/auth");
@@ -80,12 +84,13 @@ app.use("/v2/", apiLimiter);
 app.use("/v2", apiRoutes);
 app.use("/auth", authRoutes);
 
-app.get("/", function (req, res) {
-  res.send("Hello World!");
+// Handles React frontend requests
+app.get('*', (req,res) =>{
+  res.sendFile(path.join(__dirname+'__BUILD/index.html'));
 });
 
 db.connectDb().then(async () => {
   app.listen(server_port, () =>
-    console.log(`Example app listening on port ${server_port}!`)
+    console.log(`LotR backend listening on port ${server_port}!`)
   );
 });

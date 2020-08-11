@@ -7,7 +7,6 @@ const mongoose = require("mongoose");
 module.exports = {
   getCharacters: async (req, res, next) => {
     const options = await config.getOptions(req);
-    console.log(options);
     await Character.paginate({}, options, async function (err, characters) {
       if (err) {
         return res.status(500).send({
@@ -20,7 +19,6 @@ module.exports = {
   },
   getCharacter: async (req, res, next) => {
     const options = await config.getOptions(req);
-
     const id = req.params.id;
     await Character.paginate({ _id: id }, options, async function (
       err,
