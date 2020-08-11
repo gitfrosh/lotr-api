@@ -62,27 +62,5 @@ module.exports = {
       });
     }
   },
-  //   getChapters: async function (req, res) {
-  //     console.log(req, res);
-  //     await Chapter.find({}, "chapterName bookName", async function (
-  //       err,
-  //       chapter
-  //     ) {
-  //       if (err) {
-  //         return res.json({
-  //           success: false,
-  //         });
-  //       }
-  //       return res.json(chapter);
-  //     });
-  //   },
 };
-// await Book.find({}.populate('chapters', async function (err, book) {
-//     if (err) {
-//       return res.json({
-//         success: false,
-//       });
-//     }
-//     return res.json(book);
-//   }));
-// },
+

@@ -5,7 +5,6 @@ module.exports = {
     passport.authenticate("bearer", { session: false }, async function (
       err,
       token,
-      info
     ) {
       try {
         if (err || !token) {

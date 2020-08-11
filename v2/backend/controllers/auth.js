@@ -35,8 +35,6 @@ module.exports = {
         });
       });
     } catch (e) {
-      console.log("fghfd")
-      console.log(e);
       return res.status(500).send({
         success: false,
         message: "Login failed",
@@ -44,12 +42,9 @@ module.exports = {
     }
   },
   register: async (req, res) => {
-    console.log(req.body);
     const { email, password } = req.body;
     const doesUserExit = await User.exists({ email: email });
-    console.log(doesUserExit);
     if (doesUserExit) {
-      console.log("dfdgd")
       return res.status(500).send({
         success: false,
         message: "User already exists",
@@ -78,22 +73,3 @@ module.exports = {
     }
   },
 };
-
-// server.get("/auth/logout", function (req, res) {
-
-// });
-
-// server.get("/auth/register", function (req, res) {
-//   try {
-//     req.logout();
-//     return res.json({
-//       success: true,
-//     });
-//   } catch (e) {
-//     console.log(e);
-//     return res.json({
-//       success: false,
-//       message: "Logout failed",
-//     });
-//   }
-// });

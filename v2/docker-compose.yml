@@ -15,3 +15,21 @@ services:
       - mongodb:mongodb
       
     command: mongorestore --host mongodb:27017 -d lotr --verbose /var/dump
+
+  app:
+    image: node
+    environment:
+        - PORT=3000
+        - DB_PORT=27017
+        - NODE_ENV=production
+    ports:
+        - 3000:3000
+  
+    volumes:
+         - ./backend/:/var/www/public_html/lotr-api/
+  
+    working_dir: /var/www/public_html/lotr-api/
+  
+    command: bash -c "npm install && npm run prod" 
+  
+    
