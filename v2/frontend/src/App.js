@@ -18,9 +18,9 @@ function App() {
           <div class="container">
             <div id="content-wrap">
               <Header />
-              <div class="row">
-                <div class="col-sm-12 col-md-2 col-lg-3"></div>
-                <div class="col-sm-12 col-md-8 col-lg-6">
+              <div style={{ padding:"20px", display: "flex", justifyContent: "center" }} class="row">
+                {/* <div class="col-sm-0 col-md-2 col-lg-3"></div> */}
+                <div  class="col-sm-12 col-md-8 col-lg-6">
                   <Switch>
                     <Route path="/login">
                       <Login />
@@ -43,17 +43,16 @@ function App() {
                     <Route path="" component={NotFoundPage} />
                   </Switch>
                 </div>
-                <div class="col-sm-12 col-md-2 col-lg-3"></div>
+                {/* <div class="col-sm-0 col-md-2 col-lg-3"></div> */}
               </div>
             </div>
             <footer>
               <p>
-                <em>
-                  {" "}
+                  
                   All we have to decide is what to do with the time that is
-                  given to us.
-                </em>{" "}
-                Built with &hearts; in 2020 <br />
+                  given to us. <b>
+              
+                Built with &hearts; in 2020</b> <br />
               </p>
             </footer>
           </div>

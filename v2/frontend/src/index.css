@@ -2,19 +2,19 @@
 html, body {
   max-width: 100%;
   overflow-x: hidden;
-  font-family: 'Raleway', sans-serif !important;
 
 }
 
 .card {
-  margin-bottom: 3rem;
+  /* margin-bottom: 3rem; */
   border: 1rem solid var(--card-border-color)
 }
 
 .logo {
-  font-size: 2rem !important;
-  padding: 15px !important;
-  font-family: 'Just Another Hand', cursive;
+  font-size: 1.0rem !important;
+  padding: 25px !important;
+  /* font-family: 'Just Another Hand', cursive; */
+  color: var(--a-visited-color) !important;
 
 }
 
@@ -22,10 +22,23 @@ table {
   display: unset;
 }
 
+.logo a:hover {
+  text-decoration: none;
+  color: var(--card-border-color)
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--header-fore-color)
+}
+
 
 header {
+  color: var(--card-border-color);
+  background-color: var(--fore-color) !important;
   height: unset;
 }
+
 
 .react-toast-notifications__container {
   z-index: 10000 !important;
@@ -42,30 +55,33 @@ header {
 }
 
 
-p, li {
-  
+p, li, ul, td, tr, em, a, b {
+  font-family: 'Work Sans', sans-serif !important;
+  font-size: 1rem;
+
   line-height: 2rem;
   color: #4c4c4c;
 }
 
 h1 {
-  font-size: 10rem !important;
-  border-bottom: 10px solid #ccc;
+  color: var(--card-border-color);
+  font-size: 4.5rem !important;
+  /* border-bottom: 1rem solid var(--card-border-color); */
   margin-top: 5rem;
 }
 
 h2 {
-  font-size: 6rem !important;
-  border-bottom: 10px solid #ccc;
+  font-size: 2rem !important;
+  border-bottom: 1rem solid var(--card-border-color);
   margin-top: 5rem;
 }
 
 h3 {
-  font-size: 3rem !important;
+  font-size: 1.2rem !important;
 }
 
 h4 {
-  font-size: 2rem !important;
+  font-size: 1rem !important;
 }
 
 
@@ -76,16 +92,19 @@ h2 > smaller {
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Just Another Hand', cursive;
+  font-family: 'Martel', serif;
 }
 
 .container {
   position: relative;
   min-height: 100vh;
+  padding: 0;
 }
 
 #content-wrap {
-  padding-bottom: 5rem;   
+  padding-bottom: 3rem;  
+    /* margin-bottom: 100px; */
+ 
 }
 
 footer {
@@ -93,13 +112,7 @@ footer {
   text-align: center;
   bottom: 0;
   width: 100%;
-  height: 5rem;          
-}
-
-footer p {
-  font-size: 0.8rem !important;
-  line-height: 1.5rem;
-
+  height: 3rem;          
 }
 
 #drawer {
