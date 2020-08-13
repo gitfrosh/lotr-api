@@ -3,14 +3,13 @@ import { useForm, useField } from "react-form";
 import { login } from "../helpers/api";
 import { useToasts } from "react-toast-notifications";
 import { useHistory } from "react-router-dom";
+import Helmet from "react-helmet";
 
 async function validateRequired(field) {
   if (!field) {
     return "Required";
   }
 }
-
-
 
 function EmailField() {
   const {
@@ -94,7 +93,9 @@ function Login() {
   return (
     <>
       <div>
-        <h2>Login</h2>
+      <Helmet>
+        <title>The Lord of the Rings API - The one API | Login</title>
+      </Helmet>
         <Form>
           <form>
             <div class="input-group fluid">

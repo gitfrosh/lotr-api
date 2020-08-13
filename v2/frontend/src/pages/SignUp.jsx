@@ -1,8 +1,9 @@
-import React from 'react';
+import React from "react";
 import { useToasts } from "react-toast-notifications";
 import { useHistory } from "react-router-dom";
 import { useForm, useField } from "react-form";
 import { register } from "../helpers/api";
+import Helmet from "react-helmet";
 
 async function validateEmail(field) {
   if (!field) {
@@ -22,14 +23,12 @@ async function validatePasswordValidate(field) {
   }
 }
 
-
-
 function EmailField() {
   const {
     meta: { error, isTouched, isValidating },
     getInputProps,
   } = useField("email", {
-    validate: validateEmail
+    validate: validateEmail,
   });
 
   return (
@@ -49,7 +48,7 @@ function PasswordField() {
     meta: { error, isTouched, isValidating },
     getInputProps,
   } = useField("password", {
-    validate: validatePassword
+    validate: validatePassword,
   });
 
   return (
@@ -69,7 +68,7 @@ function PasswordValidateField() {
     meta: { error, isTouched, isValidating },
     getInputProps,
   } = useField("passwordValidate", {
-    validate: validatePasswordValidate
+    validate: validatePasswordValidate,
   });
 
   return (
@@ -90,11 +89,11 @@ function SignUp() {
 
   const {
     Form,
-    meta: { isSubmitting, isSubmitted, canSubmit, error }
+    meta: { isSubmitting, isSubmitted, canSubmit, error },
   } = useForm({
     debugForm: true,
 
-    validate: values => {
+    validate: (values) => {
       if (values.password !== values.passwordValidate) {
         return "The passwords don't match.";
       }
@@ -113,42 +112,43 @@ function SignUp() {
       addToast(response.message, { appearance: "error" });
     } else {
       addToast("Registered successfully", { appearance: "success" });
-      history.push('/login')
-
+      history.push("/login");
     }
   }
 
   return (
     <div>
-    <h2>Register</h2>
-    <Form>
-      <form>
-        <div class="input-group fluid">
-          <label>
-            E-Mail: <EmailField />
-          </label>
-        </div>
-        <div class="input-group fluid">
-          <label>
-            Password: <PasswordField />
-          </label>
-        </div>
-        <div class="input-group fluid">
-          <label>
-            Repeat Password: <PasswordValidateField />
-          </label>
-        </div>
-        <div class="input-group fluid">
-          <button class="primary" type="submit" disabled={!canSubmit}>
-            Submit
-          </button>
-        </div>
-        <div>
-          <em>{isSubmitting ? "Submitting..." : null}</em>
-        </div>
-      </form>
-    </Form>
-  </div>
+      <Helmet>
+        <title>The Lord of the Rings API - The one API | Sign up </title>
+      </Helmet>
+      <Form>
+        <form>
+          <div class="input-group fluid">
+            <label>
+              E-Mail: <EmailField />
+            </label>
+          </div>
+          <div class="input-group fluid">
+            <label>
+              Password: <PasswordField />
+            </label>
+          </div>
+          <div class="input-group fluid">
+            <label>
+              Repeat Password: <PasswordValidateField />
+            </label>
+          </div>
+          <div class="input-group fluid">
+            <button class="primary" type="submit" disabled={!canSubmit}>
+              Submit
+            </button>
+          </div>
+          <div>
+            <em>{isSubmitting ? "Submitting..." : null}</em>
+          </div>
+        </form>
+      </Form>
+    </div>
   );
 }
 

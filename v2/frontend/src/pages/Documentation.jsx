@@ -1,12 +1,14 @@
 import React from "react";
-import logo from "../assets/logo.png"; // Tell webpack this JS file uses this image
+import Helmet from "react-helmet";
 
 function Documentation() {
   return (
     <>
-      <h2>Documentation</h2>
+      <Helmet>
+        <title>The Lord of the Rings API - The one API | Documentation</title>
+      </Helmet>
       <p>
-        {" "}
+        <br />
         <ul>
           <li>
             <a href="#1">What is an API?</a>
@@ -25,7 +27,7 @@ function Documentation() {
         </ul>
       </p>
       <br />
-      <div class="card fluid">
+      <div id="1" class="card fluid">
         <div class="section">
           <h3>What is an API?</h3>
           <p>
@@ -44,24 +46,22 @@ function Documentation() {
           </p>
         </div>
       </div>
-      <div class="card fluid">
+      <div id="1" class="card fluid">
         <div class="section">
           <h3>Which data does the "one API to rule them all" provide?</h3>
           <p>
             Well, if you don't know or neither like "The Lord of the Rings", the
-            epic masterpiece epos by J.R.R. Tolkien, then this API is most likely
-            not for you. But if you do, this massive database will provide you
-            with information about the books, the movie trilogy, many characters
-            and quotes. You are welcome to use the data in your own apps, mixups
-            and (fun) projects — like I did with creating this API. 
-    
+            epic masterpiece epos by J.R.R. Tolkien, then this API is most
+            likely not for you. But if you do, this massive database will
+            provide you with information about the books, the movie trilogy,
+            many characters and quotes. You are welcome to use the data in your
+            own apps, mixups and (fun) projects — like I did with creating this
+            API.
           </p>
-          <p>
-              This project is totally non-profit and fan-made!
-            </p>
+          <p>This project is totally non-profit and fan-made!</p>
         </div>
       </div>
-      <div class="card fluid">
+      <div id="3" class="card fluid">
         <div class="section">
           <h3>What about response formats and authentication?</h3>
           <p>
@@ -92,13 +92,13 @@ function Documentation() {
           </p>
         </div>
       </div>
-      <div class="card fluid">
+      <div id="4" class="card fluid">
         <div class="section">
           <h3>Which routes are available?</h3>
           <p>
             All routes must be prefixed with{" "}
-            <em>https://the-one-api.herokuapp.com/v1</em>. Only the{" "}
-            <strong>/book</strong> endpoint is available without authentication.
+            <b>https://the-one-api.dev/v2</b>. Only the{" "}
+            /book endpoint is available without authentication.
           </p>
 
           <table>
@@ -111,89 +111,88 @@ function Documentation() {
             </thead>
             <tbody>
               <tr>
-                <td>
+                <td data-label="Endpoint">
                   <strong>/book</strong>
                 </td>
-                <td>List of all "The Lord of the Rings" books</td>
-                <td>no</td>
+                <td  data-label="Response">List of all "The Lord of the Rings" books</td>
+                <td  data-label="Token required">no</td>
               </tr>
               <tr>
-                <td>/book/&#123;id&#125;</td>
-                <td>Request one specific book</td>
-                <td>no</td>
+                <td data-label="Endpoint">/book/&#123;id&#125;</td>
+                <td data-label="Response">Request one specific book</td>
+                <td data-label="Token required">no</td>
               </tr>
               <tr>
-                <td>/book/&#123;id&#125;/chapter</td>
-                <td>Request all chapters of one specific book</td>
-                <td>no</td>
+                <td data-label="Endpoint">/book/&#123;id&#125;/chapter</td>
+                <td data-label="Response">Request all chapters of one specific book</td>
+                <td data-label="Token required"></td>
               </tr>
               <tr>
-                <td>
+                <td data-label="Endpoint">
                   <strong>/movie</strong>
                 </td>
-                <td>
+                <td data-label="Response">
                   List of all movies, including the "The Lord of the Rings" and
                   the "The Hobbit" trilogies
                 </td>
-                <td>yes</td>
+                <td data-label="Token required">yes</td>
               </tr>
               <tr>
-                <td>/movie/&#123;id&#125;</td>
-                <td>Request one specific movie</td>
-                <td>yes</td>
+                <td data-label="Endpoint">/movie/&#123;id&#125;</td>
+                <td data-label="Response">Request one specific movie</td>
+                <td data-label="Token required">yes</td>
               </tr>
               <tr>
-                <td>/movie/&#123;id&#125;/quote</td>
-                <td>
+                <td data-label="Endpoint">/movie/&#123;id&#125;/quote</td>
+                <td data-label="Response">
                   Request all movie quotes for one specific movie (only working
                   for the LotR trilogy)
                 </td>
-                <td>yes</td>
+                <td data-label="Token required">yes</td>
               </tr>
               <tr>
                 <td>
                   <strong>/character</strong>
                 </td>
-                <td>
+                <td data-label="Response">
                   List of characters including metadata like name, gender,
                   realm, race and more
                 </td>
-                <td>yes</td>
+                <td data-label="Token required">yes</td>
               </tr>
               <tr>
-                <td>/character/&#123;id&#125;</td>
-                <td>Request one specific character</td>
-                <td>yes</td>
+                <td data-label="Endpoint">/character/&#123;id&#125;</td>
+                <td data-label="Response">Request one specific character</td>
+                <td data-label="Token required">yes</td>
               </tr>
               <tr>
-                <td>/character/&#123;id&#125;/quote</td>
-                <td>Request all movie quotes of one specific character</td>
-                <td>yes</td>
+                <td data-label="Endpoint">/character/&#123;id&#125;/quote</td>
+                <td data-label="Response">Request all movie quotes of one specific character</td>
+                <td data-label="Token required">yes</td>
               </tr>
               <tr>
-                <td>
+                <td data-label="Endpoint">
                   <strong>/quote</strong>
                 </td>
-                <td>List of all movie quotes</td>
-                <td>yes</td>
+                <td data-label="Response">List of all movie quotes</td>
+                <td data-label="Token required">yes</td>
               </tr>
               <tr>
-                <td>/quote/&#123;id&#125;</td>
-                <td>Request one specific movie quote</td>
-                <td>yes</td>
+                <td data-label="Endpoint">/quote/&#123;id&#125;</td>
+                <td data-label="Response">Request one specific movie quote</td>
+                <td data-label="Token required">yes</td>
               </tr>
               <tr>
-                <td>
+                <td data-label="Endpoint">
                   <strong>/chapter</strong>
                 </td>
-                <td>List of all book chapters</td>
-                <td>yes</td>
+                <td data-label="Response">List of all book chapters</td>
+                <td data-label="Token required">yes</td>
               </tr>
               <tr>
-                <td>/chapter/&#123;id&#125;</td>
-
-                <td>Request one specific book chapter</td>
-                <td>yes</td>
+                <td data-label="Endpoint">/chapter/&#123;id&#125;</td>
+                <td data-label="Response">Request one specific book chapter</td>
+                <td data-label="Token required">yes</td>
               </tr>
             </tbody>
           </table>
@@ -220,19 +219,19 @@ function Documentation() {
                 <td>
                   <strong>limit</strong>
                 </td>
-                <td>/v2/characters?limit=100</td>
+                <td>/characters?limit=100</td>
               </tr>
               <tr>
                 <td>
                   <strong>page</strong>
                 </td>
-                <td>/v2/character?page=2 (limit default is 10)</td>
+                <td>/character?page=2 (limit default is 10)</td>
               </tr>
               <tr>
                 <td>
                   <strong>offset</strong>
                 </td>
-                <td>/v2/character?offset=3 (limit default is 10)</td>
+                <td>/character?offset=3 (limit default is 10)</td>
               </tr>
             </tbody>
           </table>
@@ -245,10 +244,10 @@ function Documentation() {
             </thead>
             <tbody>
               <tr>
-                <td>/v2/character?sort=name:asc</td>
+                <td>/character?sort=name:asc</td>
               </tr>
               <tr>
-                <td>/v2/quote?sort=character:desc</td>
+                <td>/quote?sort=character:desc</td>
               </tr>
             </tbody>
           </table>
