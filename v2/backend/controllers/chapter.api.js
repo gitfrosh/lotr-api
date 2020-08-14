@@ -32,7 +32,7 @@ module.exports = {
       ...options,
       select: {
         chapterName: 1,
-        bookName: 1
+        book: 1
       }
     }, async function (
       err,
@@ -54,7 +54,7 @@ module.exports = {
       ...options,
       select: {
         chapterName: 1,
-        bookName: 1
+        book: 1
       }
     }, async function (
       err,

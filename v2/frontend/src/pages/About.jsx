@@ -32,7 +32,7 @@ function About() {
             <br /> <br />
             It could not have been made without the scraping work of Moko Sharma
             (
-            <a href="(https://www.kaggle.com/mokosan/lord-of-the-rings-character-data">
+            <a href="https://www.kaggle.com/mokosan/lord-of-the-rings-character-data">
               Kaggle
             </a>
             ) and Paul Mooney (

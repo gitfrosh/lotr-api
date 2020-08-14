@@ -28,7 +28,7 @@ const movieSchema = new mongoose.Schema(
         type: Number,
         required: true
       },
-      rottenTomatoesScore: {
+      rottenTomatesScore: {
         type: Number,
         required: true
       }

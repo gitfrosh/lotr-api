@@ -10,7 +10,7 @@ services:
   restore:
     image: mongo
     volumes:
-      - ./db:/var/dump
+      - ./db/bson:/var/dump
     links:
       - mongodb:mongodb
       
