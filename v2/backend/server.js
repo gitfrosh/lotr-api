@@ -1,3 +1,4 @@
+require('dotenv').config()
 const db = require("./helpers/db");
 const express = require("express");
 const bcrypt = require("bcrypt");
@@ -9,7 +10,6 @@ const BearerStrategy = require('passport-http-bearer');
 const cors = require('cors');
 const helmet = require("helmet");
 const path = require('path');
-
 const app = express();
 
 app.use(helmet());
@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname, '__BUILD'))); // React build
 const apiRoutes = require("./routes/api");
 const authRoutes = require("./routes/auth");
 
-const server_port = process.env.PORT || 3001;
+const server_port = process.env.PORT;
 
 const apiLimiter = rateLimit({
   windowMs: 10 * 60 * 1000, // 15 minutes
@@ -40,7 +40,7 @@ passport.use(
           return done(err, false, { message: "Invalid token." });
         }
         if (!user) {
-          return done(true, false, { message: "Invalid token." });
+          return done(err, false, { message: "Wrong token." });
         }
         return done(null, token, { message: "Token valid." });
       });

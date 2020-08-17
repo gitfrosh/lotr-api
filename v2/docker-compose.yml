@@ -4,7 +4,7 @@ services:
   mongodb:
     image: mongo
     ports:
-        - 27017:27017
+        - 27020:27017
     expose: [27017]
 
   restore:
@@ -20,7 +20,7 @@ services:
     image: node
     environment:
         - PORT=3000
-        - DB_PORT=27017
+        - DATABASE_URL=mongodb://mongodb:27017/lotr
         - NODE_ENV=production
     ports:
         - 3000:3000

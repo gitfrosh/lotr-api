@@ -1,16 +1,15 @@
 {
-  "name": "lotr-api",
+  "name": "lotr-api-backend",
   "version": "2.0.0",
-  "description": "the Lord of the Rings API",
+  "description": "the Lord of the Rings API backend",
   "scripts": {
     "dev": "node server.js",
     "prod": "NODE_ENV=production node server.js",
     "prod_win": "set NODE_ENV=production&&node server.js"
   },
   "keywords": [
-    "cms",
-    "flat-file",
-    "api-first"
+    "the lord of the rings",
+    "api"
   ],
   "author": "Rike Exner",
   "license": "MIT",
@@ -18,6 +17,7 @@
     "bcrypt": "^5.0.0",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-rate-limit": "^5.1.3",
     "helmet": "^4.0.0",
