@@ -2,10 +2,17 @@ version: '2'
 
 services:
   mongodb:
-    image: mongo
+    image: mongo:latest
     ports:
         - 27020:27017
     expose: [27017]
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin-user
+      - MONGO_INITDB_ROOT_PASSWORD=admin-password
+      - MONGO_INITDB_DATABASE=admin
+    
+    volumes:
+      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
 
   restore:
     image: mongo
@@ -20,7 +27,7 @@ services:
     image: node
     environment:
         - PORT=3000
-        - DATABASE_URL=mongodb://mongodb:27017/lotr
+        - DATABASE_URL=mongodb://admin:password@mongodb:27017/lotr
         - NODE_ENV=production
     ports:
         - 3000:3000
