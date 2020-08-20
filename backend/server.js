@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname, '__BUILD'))); // React build
 const apiRoutes = require("./routes/api");
 const authRoutes = require("./routes/auth");
 
-const server_port = process.env.PORT;
+const server_port = process.env.PORT || 3001;
 
 const apiLimiter = rateLimit({
   windowMs: 10 * 60 * 1000, // 15 minutes

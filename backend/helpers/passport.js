@@ -24,9 +24,6 @@ module.exports = {
   login: async (req, res, next) => {
     passport.authenticate("login", async function (err, user, info) {
       try {
-        console.log("1234")
-        console.log(info)
-        
         if (err || !user) {
           return res.status(401).send({
             success: false,

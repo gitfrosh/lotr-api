@@ -5,6 +5,7 @@ const jwt = require("jsonwebtoken");
 const validator = require("validator");
 const bcrypt = require("bcryptjs");
 const { nanoid } = require("nanoid");
+const lambda_func = process.env.AWS_LAMBDA_NEWUSER_URL || null;
 
 function generatePasswordHash(password) {
   let hash = password;
@@ -18,10 +19,11 @@ module.exports = {
     const user = req.user;
     try {
       req.login(user, { session: false }, async (error) => {
-        if (error) return res.status(500).send({
-          success: false,
-          message: "Login failed",
-        });
+        if (error)
+          return res.status(500).send({
+            success: false,
+            message: "Login failed",
+          });
         const body = {
           id: user.id,
           email: user.email,
@@ -59,8 +61,8 @@ module.exports = {
       });
       newUser.save(function (err) {
         if (err) return res.status(500).send(err);
-        // send notification email via aws lambda
-        // fetch(process.env.AWS_LAMBDA_NEWUSER_URL);
+        // send notification email via aws lambda in prod
+        if (lambda_func) fetch(process.env.AWS_LAMBDA_NEWUSER_URL);
         return res.json({
           success: true,
         });
