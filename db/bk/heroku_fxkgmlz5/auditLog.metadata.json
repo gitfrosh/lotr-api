@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_","ns":"heroku_fxkgmlz5.auditLog"},{"v":2,"key":{"date":1},"name":"date_1","ns":"heroku_fxkgmlz5.auditLog","expireAfterSeconds":null,"background":true}],"uuid":"19bd533680514a5992b5d3fa196ec5ec"}

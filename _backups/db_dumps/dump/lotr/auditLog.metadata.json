@@ -1,1 +1,0 @@
-{"options":{},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_","ns":"lotr.auditLog"},{"v":2,"key":{"date":1},"name":"date_1","ns":"lotr.auditLog","expireAfterSeconds":null,"background":true}],"uuid":"e88717c65bc04776a6be4f6c470cf0be"}

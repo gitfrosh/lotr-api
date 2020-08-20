@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+  mongodb:
+    image: mongo:latest
+    ports:
+        - 27020:27017
+    expose: [27017]
+    environment:
+      MONGO_INITDB_DATABASE: lotr
+      MONGO_INITDB_ROOT_PASSWORD: cbpbr38rcd5sf247vfir3qis23
+      MONGO_INITDB_ROOT_USERNAME: admin
+    
+    volumes:
+      - ./db/init-prod.js:/docker-entrypoint-initdb.d/init-prod.js:ro
+
+  restore:
+    image: mongo
+    volumes:
+      - ./db/bson:/var/dump
+    links:
+      - mongodb:mongodb
+      
+    command: mongorestore --host mongodb:27017 -d lotr --verbose /var/dump
+
+  frackend:
+    image: node
+    environment:
+        - PORT=3000
+        - DATABASE_URL=mongodb://admin:cbpbr38rcd5sf247vfir3qis23@mongodb:27017/lotr
+        - NODE_ENV=production
+    ports:
+        - 3000:3000
+  
+    volumes:
+         - ./backend/:/var/www/public_html/lotr-api/
+  
+    working_dir: /var/www/public_html/lotr-api/
+  
+    command: bash -c "npm install && npm run prod" 
+  
+    
