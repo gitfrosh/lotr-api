@@ -14,20 +14,20 @@ With Version 2, this Open Source project is now open for contribution! You can h
 
 ### Start Mongo DB service
 
-- you'll need docker & docker-compose installed on your machine
-- start the service with `docker-compose up mongodb`
-- fill your MongoDB container with existing API data with `docker-compose up restore`
+- you'll need MongoDB Community Edition running on your machine, listening on default port 27017
+- start a shell and restore LotR data with `mongorestore -d lotr --verbose ./db/bson`
 
 ### Start Node / Express backend
 
 - move into the backend folder `cd backend`
-- install packages with `npm install` is required
+- install packages with `npm install`
 - get your express server started with `node server.js` on localhost:3001
 
 ### Start React frontend
 
 - move into the frontend folder `cd frontend`
 - get your development server started with `npm run dev` on localhost:3000
+
 - **HACK AWAY!** 🔨🔨🔨
 
 - 🔃 Create a new pull request using <a href="https://github.com/gitfrosh/lotr-api/compare" target="_blank">`https://github.com/gitfrosh/lotr-api/compare`</a>.
@@ -43,6 +43,6 @@ The API data is far from perfect: There might be spelling mistakes, duplicates, 
 - **Option 2**
     - 👯 Clone this repo to your local machine using `https://github.com/gitfrosh/lotr-api.git`
 
-- move into the database folder `cd db`
+- move into the database folder `cd db/csv`
 - make your improvements in one of the data CSV files
 - 🔃 Create a new pull request using <a href="https://github.com/gitfrosh/lotr-api/compare" target="_blank">`https://github.com/gitfrosh/lotr-api/compare`</a>.

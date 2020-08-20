@@ -1,2 +1,5 @@
 db/bk
-db/bson
+db/bson/user.bson
+db/bson/user.metadata.json
+db/init-prod.js
+docker-compose.yml
