@@ -5,21 +5,11 @@ import { useForm, useField } from "react-form";
 import { register } from "../helpers/api";
 import Helmet from "react-helmet";
 
-async function validateEmail(field) {
+async function validateRequired(field) {
   if (!field) {
     return "Required";
-  }
-}
-
-async function validatePassword(field) {
-  if (!field) {
-    return "Required";
-  }
-}
-
-async function validatePasswordValidate(field) {
-  if (!field) {
-    return "Required";
+  } else {
+    return false
   }
 }
 
@@ -28,12 +18,12 @@ function EmailField() {
     meta: { error, isTouched, isValidating },
     getInputProps,
   } = useField("email", {
-    validate: validateEmail,
+    validate: validateRequired,
   });
 
   return (
     <>
-      <input type="email" {...getInputProps()} />{" "}
+      <input type="email" {...getInputProps()}/>{" "}
       {isValidating ? (
         <em>Validating...</em>
       ) : isTouched && error ? (
@@ -48,7 +38,7 @@ function PasswordField() {
     meta: { error, isTouched, isValidating },
     getInputProps,
   } = useField("password", {
-    validate: validatePassword,
+    validate: validateRequired
   });
 
   return (
@@ -68,7 +58,7 @@ function PasswordValidateField() {
     meta: { error, isTouched, isValidating },
     getInputProps,
   } = useField("passwordValidate", {
-    validate: validatePasswordValidate,
+    validate: validateRequired
   });
 
   return (
@@ -89,10 +79,8 @@ function SignUp() {
 
   const {
     Form,
-    meta: { isSubmitting, isSubmitted, canSubmit, error },
+    meta: { error, isSubmitting, canSubmit },
   } = useForm({
-    debugForm: true,
-
     validate: (values) => {
       if (values.password !== values.passwordValidate) {
         return "The passwords don't match.";
@@ -122,31 +110,30 @@ function SignUp() {
         <title>The Lord of the Rings API - The one API | Sign up </title>
       </Helmet>
       <Form>
-        <form>
-          <div class="input-group fluid">
+          <div className="input-group fluid">
             <label>
               E-Mail: <EmailField />
             </label>
           </div>
-          <div class="input-group fluid">
+          <div className="input-group fluid">
             <label>
               Password: <PasswordField />
             </label>
           </div>
-          <div class="input-group fluid">
+          <div className="input-group fluid">
             <label>
               Repeat Password: <PasswordValidateField />
             </label>
           </div>
-          <div class="input-group fluid">
-            <button class="primary" type="submit" disabled={!canSubmit}>
+          <div className="input-group fluid">
+            <button className="primary" type="submit" disabled={!canSubmit}>
               Submit
             </button>
           </div>
           <div>
-            <em>{isSubmitting ? "Submitting..." : null}</em>
+            <center><em>{error ? error : null}</em></center>
+            <center><em>{isSubmitting ? "Submitting..." : null}</em></center>
           </div>
-        </form>
       </Form>
     </div>
   );

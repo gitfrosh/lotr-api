@@ -14,7 +14,7 @@ function Account() {
       if (!user) history.push("/login");
     });
     setLoading(false);
-  }, []);
+  }, [history]);
   if (loading) return <span>Loading..</span>;
   return (
     <div>
@@ -22,9 +22,9 @@ function Account() {
         <title>The Lord of the Rings API - The one API | Account</title>
       </Helmet>
       <br />
-      <div class="card fluid">
-        <div class="section">
-          <h3>Welcome to your user account!</h3>
+      <div className="card fluid">
+        <div className="section">
+          <h2>Welcome to your user account!</h2>
 
           <p>
             <b>Registered email address</b>: {userInfo && userInfo.email}

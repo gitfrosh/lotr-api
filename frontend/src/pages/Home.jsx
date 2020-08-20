@@ -8,9 +8,9 @@ function Home() {
         <title>The Lord of the Rings API - The one API </title>
       </Helmet>
       <br />
-      <div class="card fluid">
-        <div class="section">
-          <h3>What is this?</h3>
+      <div className="card fluid">
+        <div className="section">
+          <h2>What is this?</h2>
           <p>
             <em>Mellon</em>, this is the one API (
             <a href="/documentation#1">
@@ -28,24 +28,23 @@ function Home() {
           </p>
         </div>
       </div>
-      <div class="card fluid">
-        <div class="section">
-          <h3>What's new?</h3>
+      <div className="card fluid">
+        <div className="section">
+          <h2>What's new?</h2>
           <p>
             <b>Version 2.0 is out!</b> (August 2020) Please update your API
             calls from{" "}
-            <p>
+            <br/>
               {" "}
-              https://the-one-api.herokuapp.com/v1/
-            </p>
-            <p>to </p>
-            <p>
-              https://the-one-api.dev/v2/.
-            </p>
+              &raquo; https://the-one-api.herokuapp.com/v1/
+            <br/>
+            to 
+            <br />
+            &raquo; https://the-one-api.dev/v2/.
+            <br/><br />
             We moved from Heroku to DigitalOcean, added some features and
             reimplemented a lot of backend code. You can now contribute to this
-            Open Source Project on Github!{" "}
-            <a href="/">Have a look into the Change Log!</a>
+            Open Source Project on <a href="https://github.com/gitfrosh/lotr-api" rel="noopener noreferrer" target="_blank">Github</a>!{" "}
           </p>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Documentation from "./pages/Documentation";
 import About from "./pages/About";
@@ -16,7 +16,7 @@ function App() {
     <ToastProvider autoDismiss>
       <Router>
         <div className="App">
-          <div class="container">
+          <div className="container">
             <div id="content-wrap">
               <Header />
               <div
@@ -25,9 +25,9 @@ function App() {
                   display: "flex",
                   justifyContent: "center",
                 }}
-                class="row"
+                className="row"
               >
-                <div class="col-sm-12 col-md-8 col-lg-6">
+                <div className="col-sm-12 col-md-8 col-lg-6">
                   <Switch>
                     <Route path="/login">
                       <Login />

@@ -27,9 +27,9 @@ function Documentation() {
         </ul>
       </p>
       <br />
-      <div id="1" class="card fluid">
-        <div class="section">
-          <h3>What is an API?</h3>
+      <div id="1" className="card fluid">
+        <div className="section">
+          <h2>What is an API?</h2>
           <p>
             An API is — in short — a set of dedicated URLs that return pure data
             responses, in most cases in JSON format — meaning the responses
@@ -46,9 +46,9 @@ function Documentation() {
           </p>
         </div>
       </div>
-      <div id="1" class="card fluid">
-        <div class="section">
-          <h3>Which data does the "one API to rule them all" provide?</h3>
+      <div id="1" className="card fluid">
+        <div className="section">
+          <h2>Which data does the "one API to rule them all" provide?</h2>
           <p>
             Well, if you don't know or neither like "The Lord of the Rings", the
             epic masterpiece epos by J.R.R. Tolkien, then this API is most
@@ -61,9 +61,9 @@ function Documentation() {
           <p>This project is totally non-profit and fan-made!</p>
         </div>
       </div>
-      <div id="3" class="card fluid">
-        <div class="section">
-          <h3>What about response formats and authentication?</h3>
+      <div id="3" className="card fluid">
+        <div className="section">
+          <h2>What about response formats and authentication?</h2>
           <p>
             The response format for all datasets is JSON. The API requires an
             access key for most routes. You can obtain an access token by
@@ -79,8 +79,8 @@ function Documentation() {
             </a>
             ) in the following format:
           </p>
-          <div class="card large">
-            <div class="section dark">
+          <div className="card large">
+            <div className="section dark">
               <p>
                 <em>Authorization: Bearer your-api-key-123</em> <br />
               </p>
@@ -92,9 +92,9 @@ function Documentation() {
           </p>
         </div>
       </div>
-      <div id="4" class="card fluid">
-        <div class="section">
-          <h3>Which routes are available?</h3>
+      <div id="4" className="card fluid">
+        <div className="section">
+          <h2>Which routes are available?</h2>
           <p>
             All routes must be prefixed with{" "}
             <b>https://the-one-api.dev/v2</b>. Only the{" "}
@@ -198,15 +198,15 @@ function Documentation() {
           </table>
         </div>
       </div>
-      <div class="card fluid">
-        <div class="section">
-          <h3>May I use pagination, sorting and filtering?</h3>
+      <div className="card fluid">
+        <div className="section">
+          <h2>May I use pagination, sorting and filtering?</h2>
           <p>
             Yes, you can add pagination and sorting options to your API
             requests. Filtering is not available though.
           </p>
           <br />
-          <h4>Pagination</h4>
+          <h3>Pagination</h3>
           <table className="table">
             <thead>
               <tr>
@@ -235,7 +235,7 @@ function Documentation() {
               </tr>
             </tbody>
           </table>
-          <h4>Sorting</h4>{" "}
+          <h3>Sorting</h3>{" "}
           <table className="table">
             <thead>
               <tr>

@@ -70,17 +70,17 @@ h1 {
   margin-top: 5rem;
 }
 
-h2 {
-  font-size: 2rem !important;
-  border-bottom: 1rem solid var(--card-border-color);
-  margin-top: 5rem;
+.subtitle {
+  margin-top: -1.7rem;
+  margin-left: 1rem;
+  font-size: 1.2rem;
 }
 
-h3 {
+h2 {
   font-size: 1.2rem !important;
 }
 
-h4 {
+h3 {
   font-size: 1rem !important;
 }
 
@@ -91,7 +91,7 @@ h2 > smaller {
 
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, .subtitle {
   font-family: 'Martel', serif;
 }
 
@@ -131,3 +131,6 @@ nav {
   transform: translate(-50%, -50%);
 }
 
+.card.fluid {
+  margin-bottom: 3rem;
+}

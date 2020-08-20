@@ -8,6 +8,8 @@ import Helmet from "react-helmet";
 async function validateRequired(field) {
   if (!field) {
     return "Required";
+  } else {
+    return false
   }
 }
 
@@ -18,7 +20,6 @@ function EmailField() {
   } = useField("email", {
     validate: validateRequired
   });
-
   return (
     <>
       <input type="email" {...getInputProps()} />{" "}
@@ -97,19 +98,18 @@ function Login() {
         <title>The Lord of the Rings API - The one API | Login</title>
       </Helmet>
         <Form>
-          <form>
-            <div class="input-group fluid">
+            <div className="input-group fluid">
               <label>
                 E-Mail: <EmailField />
               </label>
             </div>
-            <div class="input-group fluid">
+            <div className="input-group fluid">
               <label>
                 Password: <PasswordField />
               </label>
             </div>
-            <div class="input-group fluid">
-              <button class="primary" type="submit" disabled={!canSubmit}>
+            <div className="input-group fluid">
+              <button className="primary" type="submit" disabled={!canSubmit}>
                 Submit
               </button>
             </div>
@@ -117,7 +117,6 @@ function Login() {
             <div>
               <em>{isSubmitting ? "Submitting..." : null}</em>
             </div>
-          </form>
         </Form>
       </div>
     </>

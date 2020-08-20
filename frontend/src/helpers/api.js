@@ -103,7 +103,7 @@ export async function logout() {
 
 export async function getUserInfo() {
         var match = document.cookie.match(
-          new RegExp("(^| )" + "lotr-api" + "=([^;]+)")
+          new RegExp("(^| )lotr-api=([^;]+)")
         );
         if (match) {
           const jwt = match[2];
