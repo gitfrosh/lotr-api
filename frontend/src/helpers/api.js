@@ -1,3 +1,10 @@
+let port;
+if (process.env.NODE_ENV === "development") {
+  port = 3001;
+} else {
+  port = 3000;
+}
+
 export async function login(values) {
   const requestOptions = {
     method: "POST",
@@ -11,12 +18,11 @@ export async function login(values) {
   }
   try {
     const response = await fetch(
-      `${"http://localhost:3001/auth/login"}`,
+      `${`http://localhost:${port}/auth/login`}`,
       requestOptions
     );
     if (response.status > 399) {
       const body = await response.json();
-      console.log(body)
       return {
         success: false,
         message: body.message,
@@ -46,12 +52,11 @@ export async function register(values) {
   }
   try {
     const response = await fetch(
-      `${"http://localhost:3001/auth/register"}`,
+      `${`http://localhost:${port}/auth/register`}`,
       requestOptions
     );
     if (response.status > 399) {
       const body = await response.json();
-      console.log(body)
       return {
         success: false,
         message: body.message,
@@ -67,7 +72,6 @@ export async function register(values) {
     };
   }
 }
-
 
 export async function logout() {
   const requestOptions = {
@@ -79,7 +83,7 @@ export async function logout() {
   };
   try {
     const response = await fetch(
-      `${"http://localhost:3001/auth/logout"}`,
+      `${`http://localhost:${port}/auth/logout`}`,
       requestOptions
     );
     if (response.status > 399) {
@@ -100,16 +104,12 @@ export async function logout() {
   }
 }
 
-
 export async function getUserInfo() {
-        var match = document.cookie.match(
-          new RegExp("(^| )lotr-api=([^;]+)")
-        );
-        if (match) {
-          const jwt = match[2];
-          const parsedJwt = JSON.parse(atob(jwt.split(".")[1]));
-          const { user } = parsedJwt;
-         return user
-        }
+  var match = document.cookie.match(new RegExp("(^| )lotr-api=([^;]+)"));
+  if (match) {
+    const jwt = match[2];
+    const parsedJwt = JSON.parse(atob(jwt.split(".")[1]));
+    const { user } = parsedJwt;
+    return user;
+  }
 }
-

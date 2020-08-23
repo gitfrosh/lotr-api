@@ -1,4 +1,4 @@
-require('dotenv').config()
+require("dotenv").config();
 const db = require("./helpers/db");
 const express = require("express");
 const bcrypt = require("bcrypt");
@@ -6,10 +6,10 @@ const rateLimit = require("express-rate-limit");
 const passport = require("passport");
 const localStrategy = require("passport-local").Strategy;
 const User = require("./models/user.model");
-const BearerStrategy = require('passport-http-bearer');
-const cors = require('cors');
+const BearerStrategy = require("passport-http-bearer");
+const cors = require("cors");
 const helmet = require("helmet");
-const path = require('path');
+const path = require("path");
 const app = express();
 
 app.use(helmet());
@@ -17,7 +17,7 @@ app.use(require("body-parser").json());
 app.use(require("body-parser").urlencoded({ extended: false }));
 app.use(cors());
 
-app.use(express.static(path.join(__dirname, '__BUILD'))); // React build
+app.use(express.static(path.join(__dirname, "__BUILD"))); // React build
 
 const apiRoutes = require("./routes/api");
 const authRoutes = require("./routes/auth");
@@ -26,16 +26,16 @@ const server_port = process.env.PORT || 3001;
 
 const apiLimiter = rateLimit({
   windowMs: 10 * 60 * 1000, // 15 minutes
-  max: 100
+  max: 100,
 });
 
 passport.use(
   "bearer",
   new BearerStrategy(async (token, done) => {
-    console.log(token)
+    console.log(token);
     try {
       await User.findOne({ access_token: token }, async function (err, user) {
-        console.log(err)
+        console.log(err);
         if (err) {
           return done(err, false, { message: "Invalid token." });
         }
@@ -85,12 +85,17 @@ app.use("/v2", apiRoutes);
 app.use("/auth", authRoutes);
 
 // Handles React frontend requests
-app.get('*', (req,res) =>{
-  res.sendFile(path.join(__dirname+'__BUILD/index.html'));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname + "/__BUILD/index.html"));
 });
 
-db.connectDb().then(async () => {
-  app.listen(server_port, () =>
-    console.log(`LotR backend listening on port ${server_port}!`)
-  );
-});
+async function start() {
+  const connected = await db.connectDb();
+  if (connected) {
+    app.listen(server_port, () =>
+      console.log(`LotR backend listening on port ${server_port}!`)
+    );
+  }
+}
+
+start();

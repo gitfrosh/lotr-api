@@ -1,6 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
-import logo from '../assets/github.png'; // Tell webpack this JS file uses this image
+import logo from '../assets/github.png';
+import coffee from '../assets/buymeacoffee.jpg';
 
 function About() {
   return (
@@ -56,7 +57,7 @@ function About() {
               target="_blank"
             >
               <img
-                src="https://www.buymeacoffee.com/assets/img/custom_images/white_img.png"
+                src={coffee}
                 alt="Buy Me A Coffee"
               />
             </a>
