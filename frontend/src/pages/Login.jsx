@@ -80,7 +80,6 @@ function Login() {
 
   async function sendToServer(values) {
     const response = await login(values);
-    console.log(response);
     if (response.message) {
       addToast(response.message, { appearance: "error" });
     } else {

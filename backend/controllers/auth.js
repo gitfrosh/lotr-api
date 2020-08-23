@@ -1,4 +1,3 @@
-const passport = require("passport");
 const User = require("./../models/user.model");
 const secret = process.env.SECRET || "top_secret";
 const jwt = require("jsonwebtoken");
@@ -6,6 +5,7 @@ const validator = require("validator");
 const bcrypt = require("bcryptjs");
 const { nanoid } = require("nanoid");
 const lambda_func = process.env.AWS_LAMBDA_NEWUSER_URL || null;
+const fetch = require('node-fetch');
 
 function generatePasswordHash(password) {
   let hash = password;

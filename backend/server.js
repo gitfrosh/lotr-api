@@ -11,6 +11,7 @@ const cors = require("cors");
 const helmet = require("helmet");
 const path = require("path");
 const app = express();
+const mongoose = require("mongoose");
 
 app.use(helmet());
 app.use(require("body-parser").json());
@@ -80,6 +81,26 @@ passport.use(
   )
 );
 
+app.use((req, res, next) => {
+  console.log(req.path);
+  const path = req.path;
+  if (path.startsWith("/v2") || path.startsWith("/auth")) {
+    const connected = mongoose.connection.readyState === 1 ? true : false;
+    console.log(connected)
+    if (connected) {
+      next();
+    } else {
+      return res.status(500).send({
+        success: false,
+        message: "Service currently not available.",
+      });
+    }
+  } else {
+    next();
+
+  }
+});
+
 app.use("/v2/", apiLimiter);
 app.use("/v2", apiRoutes);
 app.use("/auth", authRoutes);
@@ -90,12 +111,10 @@ app.get("*", (req, res) => {
 });
 
 async function start() {
-  const connected = await db.connectDb();
-  if (connected) {
-    app.listen(server_port, () =>
-      console.log(`LotR backend listening on port ${server_port}!`)
-    );
-  }
+  await db.connectDb();
+  app.listen(server_port, () =>
+    console.log(`LotR backend listening on port ${server_port}!`)
+  );
 }
 
 start();

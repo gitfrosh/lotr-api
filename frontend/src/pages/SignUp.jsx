@@ -95,7 +95,6 @@ function SignUp() {
 
   async function sendToServer(values) {
     const response = await register(values);
-    console.log(response);
     if (response.message) {
       addToast(response.message, { appearance: "error" });
     } else {
