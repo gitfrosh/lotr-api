@@ -1,7 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
-import logo from '../assets/github.png';
-import coffee from '../assets/buymeacoffee.jpg';
+import logo from "../assets/github.png";
+import coffee from "../assets/buymeacoffee.jpg";
 
 function About() {
   return (
@@ -48,18 +48,17 @@ function About() {
           <p>
             You would like to support this API and its infrastructure? You can
             do so by contributing to its code base or by donating a coffee :){" "}
-            <br /><br />
-            <a href="https://github.com/gitfrosh/lotr-api"><img src={logo} alt="Github Repo" /></a>
-            {" "}
+            <br />
+            <br />
+            <a href="https://github.com/gitfrosh/lotr-api">
+              <img src={logo} alt="Github Repo" />
+            </a>{" "}
             <a
               href="https://www.buymeacoffee.com/SqYKLmJ7Z"
               rel="noopener noreferrer"
               target="_blank"
             >
-              <img
-                src={coffee}
-                alt="Buy Me A Coffee"
-              />
+              <img src={coffee} alt="Buy Me A Coffee" />
             </a>
           </p>
         </div>
@@ -153,46 +152,53 @@ function About() {
           <p>
             Have a look into some great projects based on this API. You would
             like to get listed?{" "}
-            
             <a href="mailto:hello@rike.dev">Drop me a line.</a>
-            </p>
+          </p>
 
-            <ul>
-              <li>
-                Aline made some very interesting statistics based on the API's
-                data |{" "}
-                <a
-                  href="https://alinedebenath.github.io/API_project.html"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Link
-                </a>
-              </li>
-              <li>
-                Get a random LotR movie trilogy quote from this npm package |{" "}
-                <a
-                  href="https://www.npmjs.com/package/random-lotr-movie-quote"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Link
-                </a>
-              </li>
-              <li>
-                Matthew built a CFML wrapper for the API |{" "}
-                <a
-                  href="https://github.com/mjclemente/lotrcfc"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Link
-                </a>
-              </li>
-            </ul>
+          <ul>
+            <li>
+              Aline made some very interesting statistics based on the API's
+              data |{" "}
+              <a
+                href="https://alinedebenath.github.io/API_project.html"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Link
+              </a>
+            </li>
+            <li>
+              Get a random LotR movie trilogy quote from this npm package |{" "}
+              <a
+                href="https://www.npmjs.com/package/random-lotr-movie-quote"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Link
+              </a>
+            </li>
+            <li>
+              Matthew built a CFML wrapper for the API |{" "}
+              <a
+                href="https://github.com/mjclemente/lotrcfc"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Link
+              </a>
+            </li>
+            <li>
+              Sam gathered the API movie quotes data for some sentiment analysis
+              |{" "}
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://community.storytellingwithdata.com/challenges/52e943ac-9468-4b4e-a8d8-14eadd6a3394/7abe32ad-ad9a-422f-8c9b-3167298c794c"
+              ></a>
+            </li>
+          </ul>
         </div>
       </div>
-
     </div>
   );
 }
