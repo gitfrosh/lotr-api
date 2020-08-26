@@ -194,7 +194,7 @@ function About() {
                 rel="noopener noreferrer"
                 target="_blank"
                 href="https://community.storytellingwithdata.com/challenges/52e943ac-9468-4b4e-a8d8-14eadd6a3394/7abe32ad-ad9a-422f-8c9b-3167298c794c"
-              ></a>
+              >Link</a>
             </li>
           </ul>
         </div>

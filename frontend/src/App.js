@@ -27,7 +27,7 @@ function App() {
                 }}
                 className="row"
               >
-                <div className="col-sm-12 col-md-8 col-lg-6">
+                <div className="col-sm-12 col-lg-6">
                   <Switch>
                     <Route path="/login">
                       <Login />
