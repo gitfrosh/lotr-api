@@ -8,4 +8,4 @@ The API was updated to Version 2 in August 2020. *Version 1 is deprecated!* Plea
 
 ## Contribution
 
-This Open Source project is now open for contribution! See our guidelines [here](https://github.com/gitfrosh/lotr-api/CONTRIBUTING.md).
+This Open Source project is now open for contribution! See our guidelines [here](https://github.com/gitfrosh/lotr-api/blob/release/CONTRIBUTING.md).
