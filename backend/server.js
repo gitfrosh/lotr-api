@@ -18,7 +18,7 @@ app.use(require("body-parser").json());
 app.use(require("body-parser").urlencoded({ extended: false }));
 app.use(cors());
 
-app.use(express.static(path.join(__dirname, "__BUILD"))); // React build
+app.use(express.static(path.join(__dirname, "/__BUILD"))); // React build
 
 const apiRoutes = require("./routes/api");
 const authRoutes = require("./routes/auth");

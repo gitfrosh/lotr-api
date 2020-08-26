@@ -1,8 +1,8 @@
-let port;
+let host;
 if (process.env.NODE_ENV === "development") {
-  port = 3001;
+  host = "http://localhost:3001"
 } else {
-  port = 3000;
+  host = "https://the-one-api.dev"
 }
 
 export async function login(values) {
@@ -18,7 +18,7 @@ export async function login(values) {
   }
   try {
     const response = await fetch(
-      `${`http://localhost:${port}/auth/login`}`,
+      `${`${host}/auth/login`}`,
       requestOptions
     );
     if (response.status > 399) {
@@ -52,7 +52,7 @@ export async function register(values) {
   }
   try {
     const response = await fetch(
-      `${`http://localhost:${port}/auth/register`}`,
+      `${`${host}/auth/register`}`,
       requestOptions
     );
     if (response.status > 399) {
@@ -83,7 +83,7 @@ export async function logout() {
   };
   try {
     const response = await fetch(
-      `${`http://localhost:${port}/auth/logout`}`,
+      `${`${host}/auth/logout`}`,
       requestOptions
     );
     if (response.status > 399) {
