@@ -55,7 +55,7 @@ const Header = () => {
         <label htmlFor="drawer-control" className="drawer-toggle persistent" />
       </div>
 
-      <div className="col-sm-12 col-md-2 col-lg-3"></div>
+      <div id="flexy" className="col-sm-12 col-md-2 col-lg-3"></div>
       <div style={{ padding:"20px"}} className="col-sm-12 col-md-8 col-lg-6">
         <h1>{getH1()}</h1>
         {isHomepage() &&<div className="subtitle">to rule them all</div>}

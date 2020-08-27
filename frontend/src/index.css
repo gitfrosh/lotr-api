@@ -146,6 +146,16 @@ h1, h2, h3, .subtitle {
  
 }
 
+#flexy {
+  display: none;
+}
+
+@media screen and (min-width: 1279px) {
+  #flexy {
+    display: block;
+  }
+}
+
 footer {
   position: absolute;
   text-align: center;
