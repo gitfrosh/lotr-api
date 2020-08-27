@@ -5,6 +5,8 @@ html, body {
 
 }
 
+
+
 .card {
   /* margin-bottom: 3rem; */
   border: 1rem solid var(--card-border-color)
@@ -50,38 +52,75 @@ header {
 
 
 .drawer-toggle:before {
-  font-size: 3rem;
+  color: var(--card-border-color);
+  font-size: 80px;
   cursor: pointer;
+  padding: 20px;
 }
 
+@media screen and (min-width: 1000px) {
+  .drawer-toggle:before {
+    font-size: 3rem;
+  }
+}
 
-p, li, ul, td, tr, em, a, b {
+p, li, ul, th, td, tr, em, a, b, label, button {
   font-family: 'Work Sans', sans-serif !important;
-  font-size: 1rem;
-
-  line-height: 2rem;
+  font-size: 36px;
+  line-height: 4.4rem;
   color: #4c4c4c;
+}
+
+@media screen and (min-width: 1000px) {
+  p, li, ul, th, td, tr, em, a, b, label, button {
+    font-size: 20px;
+    line-height: 2.8rem;
+
+  }
 }
 
 h1 {
   color: var(--card-border-color);
-  font-size: 4.5rem !important;
+  font-size: 50px !important;
   /* border-bottom: 1rem solid var(--card-border-color); */
   margin-top: 5rem;
 }
 
+@media screen and (min-width: 576px) {
+  h1 {
+    font-size: 70px !important;
+  }
+}
+
+
 .subtitle {
   margin-top: -1.7rem;
   margin-left: 1rem;
-  font-size: 1.2rem;
+  font-size: 25px;
+}
+
+@media screen and (min-width: 576px) {
+  .subtitle {
+    font-size: 35px;
+
+  }
 }
 
 h2 {
-  font-size: 1.2rem !important;
+  font-size: 38px !important;
+  line-height: 4rem;
+}
+
+@media screen and (min-width: 1000px) {
+  h2 {
+    font-size: 28px;
+    line-height: 3.5rem;
+
+  }
 }
 
 h3 {
-  font-size: 1rem !important;
+  font-size: 36px !important;
 }
 
 
@@ -103,7 +142,7 @@ h1, h2, h3, .subtitle {
 
 #content-wrap {
   padding-bottom: 4rem;  
-    /* margin-bottom: 100px; */
+  margin-bottom: 100px;
  
 }
 
@@ -113,6 +152,20 @@ footer {
   bottom: 0;
   width: 100%;
   height: 3rem;          
+}
+
+footer > p, footer b {
+  font-size: 20px;
+  line-height: 35px;
+  color: var(--a-visited-color);
+}
+
+
+@media screen and (min-width: 1000px) {
+  footer > p, footer b {
+    font-size: small;
+    line-height: 25px;
+  }
 }
 
 #drawer {
