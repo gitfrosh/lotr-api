@@ -108,6 +108,10 @@ function SignUp() {
       <Helmet>
         <title>The Lord of the Rings API - The one API | Sign up </title>
       </Helmet>
+      <p>
+        <br />
+        Get your access token now by registering a free API account.
+        </p>
       <Form>
           <div className="input-group fluid">
             <label>
