@@ -26,7 +26,7 @@ With Version 2, this Open Source project is now open for contribution! You can h
 ### Start React frontend
 
 - move into the frontend folder `cd frontend`
-- get your development server started with `npm run dev` on localhost:3000
+- get your development server started with `npm start` on localhost:3000
 
 - **HACK AWAY!** 🔨🔨🔨
 
