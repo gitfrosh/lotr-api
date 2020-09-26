@@ -28,7 +28,7 @@ module.exports = {
   getChapters: async (req, res) => {
     const options = await config.getOptions(req);
 
-    await Chapter.paginate({}, {
+    await Chapter.paginate(options.filter, {
       ...options,
       select: {
         chapterName: 1,
