@@ -26,7 +26,12 @@ With Version 2, this Open Source project is now open for contribution! You can h
 ### Start React frontend
 
 - move into the frontend folder `cd frontend`
+- install packages with `npm install`
 - get your development server started with `npm start` on localhost:3000
+
+### Create a user
+- navigate to localhost:3000 and signup
+- using your favorite mongo tool get to the user documents and get your new access_token for using the secured APIs.
 
 - **HACK AWAY!** 🔨🔨🔨
 
