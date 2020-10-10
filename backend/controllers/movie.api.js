@@ -21,7 +21,7 @@ module.exports = {
   },
   getMovies: async (req, res, next) => {
     const options = await config.getOptions(req);
-    await Movie.paginate({}, options, async function (err, movies) {
+    await Movie.paginate(options.filter, options, async function (err, movies) {
       if (err) {
         return res.status(500).send({
           success: false,

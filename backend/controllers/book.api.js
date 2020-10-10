@@ -6,7 +6,7 @@ const config = require("./../helpers/config");
 module.exports = {
   getBooks: async function (req, res) {
     const options = await config.getOptions(req);
-    await Book.paginate({}, options, async function (err, books) {
+    await Book.paginate(options.filter, options, async function (err, books) {
       if (err) {
         return res.json({
           success: false,

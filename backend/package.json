@@ -24,6 +24,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.19",
     "mongoose-paginate": "^5.0.3",
+    "mongoose-query-parser": "^1.1.7",
     "nanoid": "^3.1.12",
     "node-fetch": "^2.6.1",
     "passport": "^0.4.1",

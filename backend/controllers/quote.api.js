@@ -5,7 +5,7 @@ module.exports = {
   getQuotes: async (req, res) => {
     const options = await config.getOptions(req);
     await Quote.paginate(
-      {},
+      options.filter,
       {
         ...options,
         select: {
