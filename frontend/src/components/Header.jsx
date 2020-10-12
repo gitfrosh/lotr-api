@@ -50,7 +50,7 @@ const Header = () => {
 
   return (
     <header className="sticky row">
-      <div className="col-sm-6 logo">{isHomepage() ? "" : <a href="/">The One API</a>}</div>
+      <div className="col-sm-6 logo">{isHomepage() ? "" : <Link to="/">The One API</Link>}</div>
       <div style={{ textAlign: "right" }} className="col-sm-6">
         <label htmlFor="drawer-control" className="drawer-toggle persistent" />
       </div>
