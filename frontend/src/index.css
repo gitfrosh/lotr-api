@@ -196,3 +196,11 @@ nav {
 .card.fluid {
   margin-bottom: 3rem;
 }
+
+nav a, nav a:visited {
+  color: unset;
+}
+
+a {
+  color: var(--a-visited-color) !important;
+}
