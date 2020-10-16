@@ -1,20 +1,34 @@
 import React, { useState, useEffect } from "react";
 import { getUserInfo } from "../helpers/api";
-import { Link } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
 import { useToasts } from "react-toast-notifications";
-import { useHistory } from "react-router-dom";
-import { useLocation } from "react-router-dom";
+
+const Headers = {
+  '/'             : 'The One API',
+  "/sign-up"      : "Sign up",
+  "/about"        : "About",
+  "/documentation": "Documentation",
+  "/login"        : "Login",
+  "/account"      : "Account"
+}
 
 const Header = () => {
-  const [userInfo, setUserInfo] = useState({});
-  const [loading, setLoading] = useState(true);
   const { addToast } = useToasts();
   const history = useHistory();
   const location = useLocation();
 
+  const [userInfo, setUserInfo] = useState({});
+  const [loading, setLoading] = useState(true);
+  const [headerText, setHeaderText] = useState();
+  const [isHomePage, setIsHomePage] = useState(location.pathname === "/" ? true : false);
+
+
+
   useEffect(() => {
-    getUserInfo().then((user) => setUserInfo(user));
+    setHeaderText(Headers[location.pathname])
+    getUserInfo().then(setUserInfo)
     setLoading(false);
+    setIsHomePage(location.pathname === "/" ? true : false)
   }, [location.pathname]);
 
   async function logout(e) {
@@ -28,37 +42,21 @@ const Header = () => {
     }
   }
 
-  const getH1 = () => {
-    let h1 = "The One API";
-    if (location.pathname === "/about") h1 = "About";
-    if (location.pathname === "/documentation") h1 = "Documentation"
-    if (location.pathname === "/login") h1 = "Login"
-    if (location.pathname === "/sign-up") h1 = "Sign up"
-    if (location.pathname === "/account") h1 = "Account"
-
-    return h1;
-  }
-
-  const isHomepage = () => {
-    if (location.pathname === "/") return true
-    return false
-  }
-
   if (loading) return <span>Loading..</span>;
 
 
 
   return (
     <header className="sticky row">
-      <div className="col-sm-6 logo">{isHomepage() ? "" : <Link to="/">The One API</Link>}</div>
+      <div className="col-sm-6 logo">{!isHomePage && <Link to="/">The One API</Link>}</div>
       <div style={{ textAlign: "right" }} className="col-sm-6">
         <label htmlFor="drawer-control" className="drawer-toggle persistent" />
       </div>
 
       <div id="flexy" className="col-sm-12 col-md-2 col-lg-3"></div>
       <div style={{ padding:"20px"}} className="col-sm-12 col-md-8 col-lg-6">
-        <h1>{getH1()}</h1>
-        {isHomepage() &&<div className="subtitle">to rule them all</div>}
+        <h1>{ headerText }</h1>
+        {isHomePage &&<div className="subtitle">to rule them all</div>}
       </div>
       <div className="col-sm-12 col-md-2 col-lg-3"></div>
 
