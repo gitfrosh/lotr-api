@@ -18,7 +18,6 @@ router
 router
   .route("/chapter/:id")
   .get([passportHelpers.authenticate, chapterController.getChapter]);
-
 router
   .route("/movie")
   .get([passportHelpers.authenticate, movieController.getMovies]);
@@ -30,14 +29,21 @@ router
   .get([passportHelpers.authenticate, movieController.getQuoteByMovie]);
 
 router
+  .route("/character/find")
+  .get([passportHelpers.authenticate, characterController.findCharactersByName]);
+
+router
   .route("/character")
   .get([passportHelpers.authenticate, characterController.getCharacters]);
+
 router
   .route("/character/:id")
   .get([passportHelpers.authenticate, characterController.getCharacter]);
-router
+
+  router
   .route("/character/:id/quote")
   .get([passportHelpers.authenticate, characterController.getQuoteByCharacter]);
+  
 
 router
   .route("/quote")
@@ -49,5 +55,6 @@ router
 router.route("*").get(async function (req, res) {
     return res.status(404).send("Endpoint does not exist.");
 });
+
 
 module.exports = router;
