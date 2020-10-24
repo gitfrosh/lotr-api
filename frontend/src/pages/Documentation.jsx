@@ -202,8 +202,8 @@ function Documentation() {
         <div className="section">
           <h2>May I use pagination, sorting and filtering?</h2>
           <p>
-            Yes, you can add pagination and sorting options to your API
-            requests. Filtering is not available though.
+            Yes, you can add pagination, sorting and filtering options to your API
+            requests.
           </p>
           <br />
           <h3>Pagination</h3>
@@ -248,6 +248,57 @@ function Documentation() {
               </tr>
               <tr>
                 <td>/quote?sort=character:desc</td>
+              </tr>
+            </tbody>
+          </table>
+          <h3>Filtering</h3>{" "}
+            <p>
+              The filtering works by casting simple url parameter expressions to mongodb lookup
+              expressions and can be applied to any available key on the data models.
+            </p>
+          <table className="table">
+            <thead>
+              <tr>
+                <th width="20%">Option</th>
+                <th width="60%">Example</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <strong>match, negate match</strong>
+                </td>
+                <td>/character?name=Gandalf</td>
+                <td>/character?name!=Frodo</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>include, exclude</strong>
+                </td>
+                <td>/character?race=Hobbit,Human</td>
+                <td>/character?race!=Orc,Goblin</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>exists, doesn't exists</strong>
+                </td>
+                <td>/character?name</td>
+                <td>/character?!name</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>regex</strong>
+                </td>
+                <td>/character?name=/foot/i</td>
+                <td>/character?name!=/foot/i</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>less than, greater than or equal to</strong>
+                </td>
+                <td>/movie?budgetInMillions{'<'}100</td>
+                <td>/movie?academyAwardWins{'>'}0</td>
+                <td>/movie?runtimeInMinutes{'>='}160</td>
               </tr>
             </tbody>
           </table>
