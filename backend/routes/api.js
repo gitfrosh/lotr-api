@@ -29,13 +29,8 @@ router
   .get([passportHelpers.authenticate, movieController.getQuoteByMovie]);
 
 router
-  .route("/character/find")
-  .get([passportHelpers.authenticate, characterController.findCharactersByName]);
-
-router
   .route("/character")
   .get([passportHelpers.authenticate, characterController.getCharacters]);
-
 router
   .route("/character/:id")
   .get([passportHelpers.authenticate, characterController.getCharacter]);

@@ -53,24 +53,4 @@ module.exports = {
       }
     );
   },
-  findCharactersByName: async (req, res, next) => {
-    const options = await config.getOptions(req);
-    // let char_name = new RegExp('/' + req.query.name.trim + '/i');
-    await Character.paginate(
-      { 
-        name: new RegExp(req.query.name ,'i')
-      },
-      options,
-      async function (err, found_characters) {
-        if (err) {
-          console.log('error --- ' +  err)
-          return res.status(500).send({
-            success: false,
-            message: "Something went wrong. " + err,
-          });
-        }
-        return res.json(found_characters);
-      }
-    );
-  },
 };

@@ -30,8 +30,9 @@ With Version 2, this Open Source project is now open for contribution! You can h
 - get your development server started with `npm start` on localhost:3000
 
 ### Create a user
-- navigate to localhost:3000 and signup
-- using your favorite mongo tool get to the user documents and get your new access_token for using the secured APIs.
+- navigate to http://localhost:3000 and sign up
+- use your favorite Mongo client to access user documents and get your new access_token for using the secured APIs
+- OR login with your credentials in the Frontend to get your token
 
 - **HACK AWAY!** 🔨🔨🔨
 
