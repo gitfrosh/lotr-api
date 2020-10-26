@@ -34,9 +34,10 @@ With Version 2, this Open Source project is now open for contribution! You can h
 - use your favorite Mongo client to access user documents and get your new access_token for using the secured APIs
 - OR login with your credentials in the Frontend to get your token
 
-- **HACK AWAY!** 🔨🔨🔨
+### **HACK AWAY!** 🔨🔨🔨
 
-- 🔃 Create a new pull request using <a href="https://github.com/gitfrosh/lotr-api/compare" target="_blank">`https://github.com/gitfrosh/lotr-api/compare`</a>.
+### 🔃 Create a new pull request 
+- using <a href="https://github.com/gitfrosh/lotr-api/compare" target="_blank">`https://github.com/gitfrosh/lotr-api/compare`</a>.
 
 
 ## Getting started with Data Improvement / Enhancement
