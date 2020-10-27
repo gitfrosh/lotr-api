@@ -131,7 +131,7 @@ function Documentation() {
                 <td data-label="Response">
                   Request all chapters of one specific book
                 </td>
-                <td data-label="Token required"></td>
+                <td data-label="Token required"/>
               </tr>
               <tr>
                 <td data-label="Endpoint">

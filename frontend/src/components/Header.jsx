@@ -20,7 +20,7 @@ const Header = () => {
   const [userInfo, setUserInfo] = useState({});
   const [loading, setLoading] = useState(true);
   const [headerText, setHeaderText] = useState();
-  const [isHomePage, setIsHomePage] = useState(location.pathname === "/" ? true : false);
+  const [isHomePage, setIsHomePage] = useState(location.pathname === "/");
 
 
 
@@ -28,7 +28,7 @@ const Header = () => {
     setHeaderText(Headers[location.pathname])
     getUserInfo().then(setUserInfo)
     setLoading(false);
-    setIsHomePage(location.pathname === "/" ? true : false)
+    setIsHomePage(location.pathname === "/")
   }, [location.pathname]);
 
   async function logout(e) {
@@ -53,15 +53,15 @@ const Header = () => {
         <label htmlFor="drawer-control" className="drawer-toggle persistent" />
       </div>
 
-      <div id="flexy" className="col-sm-12 col-md-2 col-lg-3"></div>
+      <div id="flexy" className="col-sm-12 col-md-2 col-lg-3"/>
       <div style={{ padding:"20px"}} className="col-sm-12 col-md-8 col-lg-6">
         <h1>{ headerText }</h1>
         {isHomePage &&<div className="subtitle">to rule them all</div>}
       </div>
-      <div className="col-sm-12 col-md-2 col-lg-3"></div>
+      <div className="col-sm-12 col-md-2 col-lg-3"/>
 
       <input type="checkbox" id="drawer-control" className="drawer persistent" />
-      <div width="100%" id="drawer">
+      <div id="drawer">
         <label htmlFor="drawer-control" className="drawer-close" />
         <nav>
           <Link to="/">home</Link>
