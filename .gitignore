@@ -4,3 +4,4 @@ db/bson/user.metadata.json
 db/init-prod.js
 docker-compose.yml
 .idea
+dump

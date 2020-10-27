@@ -1,7 +1,13 @@
 {
   "name": "frontend",
-  "version": "0.1.0",
-  "private": true,
+  "version": "2.1.0",
+  "description": "the Lord of the Rings API frontend",
+  "keywords": [
+    "the lord of the rings",
+    "api"
+  ],
+  "author": "Rike Exner",
+  "license": "MIT",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
