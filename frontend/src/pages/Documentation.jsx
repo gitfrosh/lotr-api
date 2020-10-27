@@ -24,6 +24,9 @@ function Documentation() {
           <li>
             <a href="#4">Which routes are available?</a>
           </li>
+          <li>
+            <a href="#5">May I use pagination, sorting and filtering?</a>
+          </li>
         </ul>
       </p>
       <br />
@@ -96,9 +99,8 @@ function Documentation() {
         <div className="section">
           <h2>Which routes are available?</h2>
           <p>
-            All routes must be prefixed with{" "}
-            <b>https://the-one-api.dev/v2</b>. Only the{" "}
-            /book endpoint is available without authentication.
+            All routes must be prefixed with <b>https://the-one-api.dev/v2</b>.
+            Only the /book endpoint is available without authentication.
           </p>
 
           <table>
@@ -114,8 +116,10 @@ function Documentation() {
                 <td data-label="Endpoint">
                   <strong>/book</strong>
                 </td>
-                <td  data-label="Response">List of all "The Lord of the Rings" books</td>
-                <td  data-label="Token required">no</td>
+                <td data-label="Response">
+                  List of all "The Lord of the Rings" books
+                </td>
+                <td data-label="Token required">no</td>
               </tr>
               <tr>
                 <td data-label="Endpoint">/book/&#123;id&#125;</td>
@@ -124,7 +128,9 @@ function Documentation() {
               </tr>
               <tr>
                 <td data-label="Endpoint">/book/&#123;id&#125;/chapter</td>
-                <td data-label="Response">Request all chapters of one specific book</td>
+                <td data-label="Response">
+                  Request all chapters of one specific book
+                </td>
                 <td data-label="Token required"></td>
               </tr>
               <tr>
@@ -167,7 +173,9 @@ function Documentation() {
               </tr>
               <tr>
                 <td data-label="Endpoint">/character/&#123;id&#125;/quote</td>
-                <td data-label="Response">Request all movie quotes of one specific character</td>
+                <td data-label="Response">
+                  Request all movie quotes of one specific character
+                </td>
                 <td data-label="Token required">yes</td>
               </tr>
               <tr>
@@ -198,12 +206,12 @@ function Documentation() {
           </table>
         </div>
       </div>
-      <div className="card fluid">
+      <div id="5" className="card fluid">
         <div className="section">
           <h2>May I use pagination, sorting and filtering?</h2>
           <p>
-            Yes, you can add pagination and sorting options to your API
-            requests. Filtering is not available though.
+            Yes, you can add pagination, sorting and filtering options to your
+            API requests.
           </p>
           <br />
           <h3>Pagination</h3>
@@ -248,6 +256,60 @@ function Documentation() {
               </tr>
               <tr>
                 <td>/quote?sort=character:desc</td>
+              </tr>
+            </tbody>
+          </table>
+          <h3>Filtering</h3>{" "}
+          <p>
+            The filtering works by casting simple url parameter expressions to
+            mongodb lookup expressions and can be applied to any available key
+            on the data models.
+          </p>
+          <table className="table">
+            <thead>
+              <tr>
+                <th width="20%">Option</th>
+                <th width="60%">Example</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <strong>match, negate match</strong>
+                </td>
+                <td>/character?name=Gandalf</td>
+                <td>/character?name!=Frodo</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>include, exclude</strong>
+                </td>
+                <td>/character?race=Hobbit,Human</td>
+                <td>/character?race!=Orc,Goblin</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>exists, doesn't exists</strong>
+                </td>
+                <td>/character?name</td>
+                <td>/character?!name</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>regex</strong>
+                </td>
+                <td>/character?name=/foot/i</td>
+                <td>/character?name!=/foot/i</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>less than, greater than or equal to</strong>
+                </td>
+                <td>
+                  <p>/movie?budgetInMillions{"<"}100</p>
+                  <p>/movie?academyAwardWins{">"}0</p>
+                  <p>/movie?runtimeInMinutes{">="}160</p>
+                </td>
               </tr>
             </tbody>
           </table>
