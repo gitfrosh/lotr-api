@@ -58,26 +58,19 @@ header {
   padding: 20px;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (max-width: 1000px) {
   .drawer-toggle:before {
     font-size: 3rem;
   }
 }
 
-p, li, ul, th, td, tr, em, a, b, input, label, button {
-  font-family: 'Work Sans', sans-serif !important;
-  font-size: 36px;
-  line-height: 4.4rem;
-  color: #4c4c4c;
-}
-
-@media screen and (min-width: 1000px) {
   p, li, ul, th, td, tr, em, a, b, input, label, button {
     font-size: 20px;
     line-height: 2.8rem;
+    font-family: 'Work Sans', sans-serif !important;
 
+    color: #4c4c4c;
   }
-}
 
 h1 {
   color: var(--card-border-color);
@@ -99,7 +92,7 @@ h1 {
   font-size: 25px;
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (max-width: 576px) {
   .subtitle {
     font-size: 35px;
 
@@ -107,11 +100,11 @@ h1 {
 }
 
 h2 {
-  font-size: 38px !important;
+  font-size: 38px;
   line-height: 4rem;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (max-width: 1000px) {
   h2 {
     font-size: 28px;
     line-height: 3.5rem;
@@ -170,7 +163,7 @@ footer > p, footer b {
 }
 
 
-@media screen and (min-width: 1000px) {
+@media screen and (max-width: 1000px) {
   footer > p, footer b {
     font-size: small;
     line-height: 25px;
