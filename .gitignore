@@ -5,3 +5,4 @@ db/init-prod.js
 docker-compose.yml
 .idea
 dump
+bk
