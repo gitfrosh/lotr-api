@@ -5,8 +5,6 @@ html, body {
 
 }
 
-
-
 .card {
   /* margin-bottom: 3rem; */
   border: 1rem solid var(--card-border-color)
@@ -39,6 +37,7 @@ header {
   color: var(--card-border-color);
   background-color: var(--fore-color) !important;
   height: unset;
+  overflow-x: hidden;
 }
 
 
@@ -55,6 +54,7 @@ header {
   color: var(--card-border-color);
   font-size: 80px;
   cursor: pointer;
+  margin-right: -20px;
   padding: 20px;
 }
 
@@ -64,17 +64,24 @@ header {
   }
 }
 
+p, li, ul, th, td, tr, em, a, b, input, label, button {
+  font-family: 'Work Sans', sans-serif !important;
+  color: #4c4c4c;
+  font-size: 16px;
+  line-height: 2.1rem;
+}
+
+@media screen and (min-width: 1000px) {
   p, li, ul, th, td, tr, em, a, b, input, label, button {
     font-size: 20px;
     line-height: 2.8rem;
-    font-family: 'Work Sans', sans-serif !important;
 
-    color: #4c4c4c;
   }
+}
 
 h1 {
   color: var(--card-border-color);
-  font-size: 50px !important;
+  font-size: 40px !important;
   /* border-bottom: 1rem solid var(--card-border-color); */
   margin-top: 5rem;
 }
@@ -171,8 +178,15 @@ footer > p, footer b {
 }
 
 #drawer {
-  border: 1rem solid var(--card-border-color)
+  border: 1rem solid var(--card-border-color);
+
 }
+
+#drawer a {
+  font-size: 20px !important;
+
+}
+
 
 nav {
   line-height: 0.2rem;
