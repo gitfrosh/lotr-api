@@ -1,4 +1,4 @@
-![A random quote generator](/sample-app.png)
+![A random quote generator](https://github.com/gitfrosh/lotr-api/blob/release/sample-app/sample-app.png)
 
 
 # Sample App
