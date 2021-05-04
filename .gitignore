@@ -6,3 +6,4 @@ docker-compose.yml
 .idea
 dump
 .DS_Store
+sample-app/node_modules
