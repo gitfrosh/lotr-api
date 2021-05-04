@@ -5,6 +5,10 @@ import { useForm, useField } from "react-form";
 import { register } from "../helpers/api";
 import Helmet from "react-helmet";
 
+const textCenter = {
+  'textAlign': 'center'
+};
+
 async function validateRequired(field) {
   if (!field) {
     return "Required";
@@ -133,9 +137,9 @@ function SignUp() {
               Submit
             </button>
           </div>
-          <div>
-            <center><em>{error ? error : null}</em></center>
-            <center><em>{isSubmitting ? "Submitting..." : null}</em></center>
+          <div style={textCenter}>
+            <em>{error ? error : null}</em>
+            <em>{isSubmitting ? "Submitting..." : null}</em>
           </div>
       </Form>
     </div>

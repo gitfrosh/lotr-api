@@ -24,7 +24,7 @@ function Home() {
             There are many endpoints available, but you need to{" "}
             <a href="/sign-up">sign up</a> to obtain an access key. Get a
             glimpse into the <a href="/documentation">documentation</a> to check
-            out all accessable datasets.
+            out all accessible datasets.
           </p>
         </div>
       </div>
