@@ -6,4 +6,5 @@ sample-app/node_modules
 docker-compose.yml
 .idea
 dump
+.DS_Store
 bk
