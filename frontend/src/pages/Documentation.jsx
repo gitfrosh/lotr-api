@@ -14,6 +14,9 @@ function Documentation() {
             <a href="#1">What is an API?</a>
           </li>
           <li>
+            <a href="#6">I'm a total newbie to REST APIs. Is there a beginner-friendly introduction?</a>
+          </li>
+          <li>
             <a href="#2">
               Which data does the "one API to rule them all" provide?
             </a>
@@ -27,6 +30,7 @@ function Documentation() {
           <li>
             <a href="#5">May I use pagination, sorting and filtering?</a>
           </li>
+
         </ul>
       </p>
       <br />
@@ -46,6 +50,21 @@ function Documentation() {
               very understandable article. Please refer to it for more
               information!
             </em>
+          </p>
+        </div>
+      </div>
+      <div id="6" className="card fluid">
+        <div className="section">
+          <h2>I'm a total newbie to REST APIs. Is there a beginner-friendly introduction?</h2>
+          <p>
+            Yes, I wrote a blog post that explains in detail how REST APIs work and why you would use 
+            them at all. It also covers authentication, JSON handling and a sample React app. {' '}
+            <a href="https://rike.dev/2021/05/04/rest-apis-for-absolute-beginners/">
+            This is the link to the blog post
+              </a> and  <a href="https://github.com/gitfrosh/lotr-api/tree/release/sample-app">
+              here you will find the according code base
+              </a> for the 
+            sample React app.
           </p>
         </div>
       </div>
