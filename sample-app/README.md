@@ -5,7 +5,7 @@
 
 This is a small showcase that shows how the LotR API can be used. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Find the tutorial here: https://rike.dev/rest-apis-for-absolute-beginners/
+Find the tutorial here: https://rike.dev/2021/05/04/rest-apis-for-absolute-beginners/
 
 ## Paste your API key
 
