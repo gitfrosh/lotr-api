@@ -79,6 +79,10 @@ p, li, ul, th, td, tr, em, a, b, input, label, button {
   }
 }
 
+td {
+  overflow-wrap: break-word !important;
+}
+
 h1 {
   color: var(--card-border-color);
   font-size: 40px !important;
