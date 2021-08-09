@@ -12,6 +12,7 @@ const helmet = require("helmet");
 const path = require("path");
 const app = express();
 const mongoose = require("mongoose");
+const dpwcToken = process.env.DPWC_TOKEN || "";
 
 app.use(helmet());
 app.use(require("body-parser").json());
@@ -28,13 +29,22 @@ const server_port = process.env.PORT || 3001;
 const apiLimiter = rateLimit({
   windowMs: 10 * 60 * 1000, // 15 minutes
   max: 100,
+  skip: function (req, res) {
+    const token = req.header('authorization').split(' ')[1];
+    if (dpwcToken === token) {
+      return true
+    }
+    return false;
+  },
 });
 
 passport.use(
   "bearer",
   new BearerStrategy(async (token, done) => {
-    console.log(token);
     try {
+      if (dpwcToken === token) {
+        return done(null, token, { message: "Token valid." });
+      }
       await User.findOne({ access_token: token }, async function (err, user) {
         console.log(err);
         if (err) {
@@ -82,11 +92,9 @@ passport.use(
 );
 
 app.use((req, res, next) => {
-  console.log(req.path);
   const path = req.path;
   if (path.startsWith("/v2") || path.startsWith("/auth")) {
     const connected = mongoose.connection.readyState === 1 ? true : false;
-    console.log(connected)
     if (connected) {
       next();
     } else {
