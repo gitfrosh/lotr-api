@@ -246,7 +246,7 @@ function Documentation() {
                 <td>
                   <strong>limit</strong>
                 </td>
-                <td>/characters?limit=100</td>
+                <td>/character?limit=100</td>
               </tr>
               <tr>
                 <td>
