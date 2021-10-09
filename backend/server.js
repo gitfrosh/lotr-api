@@ -29,13 +29,14 @@ const server_port = process.env.PORT || 3001;
 const apiLimiter = rateLimit({
   windowMs: 10 * 60 * 1000, // 15 minutes
   max: 100,
-  skip: function (req, res) {
-    const token = req.header('authorization').split(' ')[1];
-    if (dpwcToken === token) {
-      return true
-    }
-    return false;
-  },
+  // skip limiter for special tokens (e.g. hackathons)
+  // skip: function (req, res) {
+  //   const token = req.header('authorization')?.split(' ')[1];
+  //   if (dpwcToken === token) {
+  //     return true
+  //   }
+  //   return false;
+  // },
 });
 
 passport.use(
