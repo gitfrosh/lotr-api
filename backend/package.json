@@ -3,7 +3,7 @@
   "version": "2.1.0",
   "description": "the Lord of the Rings API backend",
   "scripts": {
-    "dev": "node server.js",
+    "dev": "nodemon server.js",
     "prod": "NODE_ENV=production node server.js",
     "prod_win": "set NODE_ENV=production&&node server.js"
   },
@@ -32,5 +32,8 @@
     "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0",
     "validator": "^13.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.9"
   }
 }
