@@ -2,7 +2,8 @@ const mongoose = require("mongoose");
 var mongoosePaginate = require('mongoose-paginate');
 
 function removeBlanks(value) {
-  return value?.replace(/\s\s+/g, ' ')?.trim();
+  const temp = value && value.replace(/\s\s+/g, ' ')
+  return temp && temp.trim();
 };
 
 const quoteSchema = new mongoose.Schema(
