@@ -156,6 +156,22 @@ function About() {
           </p>
 
           <ul>
+          <li>
+              Victor created a virtual catalogue from all the available LotR characters. |{" "}
+              <a
+                href="https://lotr-characters.vercel.app/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Link
+              </a>,  <a
+                href="https://github.com/VictorLira-DEV/lotr-characters"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Github
+              </a>
+            </li>
             <li>
               Aline made some very interesting statistics based on the API's
               data |{" "}
