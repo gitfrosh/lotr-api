@@ -2,8 +2,8 @@ require("dotenv").config();
 const db = require("./helpers/db");
 const express = require("express");
 const bcrypt = require("bcrypt");
-const rateLimit = require("express-rate-limit");
 const passport = require("passport");
+const apiRateLimiter = require("../backend/middleware/api.limiter");
 const localStrategy = require("passport-local").Strategy;
 const User = require("./models/user.model");
 const BearerStrategy = require("passport-http-bearer");
@@ -25,19 +25,6 @@ const apiRoutes = require("./routes/api");
 const authRoutes = require("./routes/auth");
 
 const server_port = process.env.PORT || 3001;
-
-const apiLimiter = rateLimit({
-  windowMs: 10 * 60 * 1000, // 15 minutes
-  max: 100,
-  // skip limiter for special tokens (e.g. hackathons)
-  // skip: function (req, res) {
-  //   const token = req.header('authorization')?.split(' ')[1];
-  //   if (dpwcToken === token) {
-  //     return true
-  //   }
-  //   return false;
-  // },
-});
 
 passport.use(
   "bearer",
@@ -106,11 +93,10 @@ app.use((req, res, next) => {
     }
   } else {
     next();
-
   }
 });
 
-app.use("/v2/", apiLimiter);
+app.use("/v2/", apiRateLimiter);
 app.use("/v2", apiRoutes);
 app.use("/auth", authRoutes);
 
