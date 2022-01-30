@@ -4,6 +4,7 @@
   "description": "the Lord of the Rings API backend",
   "scripts": {
     "dev": "nodemon server.js",
+    "test": "jest",
     "prod": "NODE_ENV=production node server.js",
     "prod_win": "set NODE_ENV=production&&node server.js"
   },
@@ -34,6 +35,8 @@
     "validator": "^13.1.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.9"
+    "jest": "^27.4.7",
+    "nodemon": "^2.0.9",
+    "supertest": "^6.2.2"
   }
 }
