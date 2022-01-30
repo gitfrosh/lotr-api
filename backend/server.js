@@ -3,7 +3,7 @@ const db = require("./helpers/db");
 const express = require("express");
 const bcrypt = require("bcrypt");
 const passport = require("passport");
-const apiRateLimiter = require("../backend/middleware/api.limiter");
+const apiLimiter = require("../backend/middleware/api.limiter");
 const localStrategy = require("passport-local").Strategy;
 const User = require("./models/user.model");
 const BearerStrategy = require("passport-http-bearer");
@@ -96,7 +96,7 @@ app.use((req, res, next) => {
   }
 });
 
-app.use("/v2/", apiRateLimiter);
+app.use("/v2/", apiLimiter);
 app.use("/v2", apiRoutes);
 app.use("/auth", authRoutes);
 
