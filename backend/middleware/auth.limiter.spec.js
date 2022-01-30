@@ -13,9 +13,9 @@ router.route('/register').post([authLimiter({ windowMs: hourWindow, max: rateLim
 app.use(express.json());
 app.use('/auth', router);
 
-describe('auth limiter', () => {
+const requestBody = { email: 'fake@email.com', password: 'P@$$1' };
 
-    const requestBody = { email: 'fake@email.com', password: 'P@$$1' };
+describe('auth limiter', () => {
 
     it('should return 200 OK when rate limit not exceeded', async () => {
         const response = await request(app).post('/auth/register/').send(requestBody);
