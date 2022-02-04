@@ -9,7 +9,7 @@
   "author": "Rike Exner",
   "license": "MIT",
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "mini.css": "^3.0.1",
@@ -18,7 +18,7 @@
     "react-form": "^4.0.1",
     "react-helmet": "^6.1.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^4.0.3",
+    "react-scripts": "^5.0.0",
     "react-toast-notifications": "^2.4.0"
   },
   "scripts": {
