@@ -26,13 +26,13 @@
     "mongoose": "^5.9.19",
     "mongoose-paginate": "^5.0.3",
     "mongoose-query-parser": "^1.1.7",
-    "nanoid": "^3.1.12",
-    "node-fetch": "^2.6.1",
+    "nanoid": "^3.1.31",
+    "node-fetch": "^2.6.7",
     "passport": "^0.4.1",
     "passport-http-bearer": "^1.0.1",
     "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0",
-    "validator": "^13.1.1"
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "jest": "^27.4.7",
