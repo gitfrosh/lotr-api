@@ -23,4 +23,16 @@ describe('get options ', () => {
         const result = await getOptions(request);
         expect(result.filter).toEqual({ something: 'blah', hello: 'world' });
     });
+
+    it('should correctly parse ascending parameter', async () => {
+        const request = { query: { sort: 'name:asc' } };
+        const result = await getOptions(request);
+        expect(result.sort).toEqual({ name: 1 });
+    });
+
+    it('should correctly parse descending parameter', async () => {
+        const request = { query: { sort: 'name:desc' } };
+        const result = await getOptions(request);
+        expect(result.sort).toEqual({ name: -1 });
+    });
 });
