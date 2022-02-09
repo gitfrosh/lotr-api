@@ -35,4 +35,16 @@ describe('get options ', () => {
         const result = await getOptions(request);
         expect(result.sort).toEqual({ name: -1 });
     });
+
+    it('should correctly parse page parameter', async () => {
+        const request = { query: { page: '1' } };
+        const result = await getOptions(request);
+        expect(result.page).toEqual(1);
+    });
+
+    it('should correctly parse offset parameter', async () => {
+        const request = { query: { offset: '1' } };
+        const result = await getOptions(request);
+        expect(result.offset).toEqual(1);
+    });
 });
