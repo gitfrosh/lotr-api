@@ -59,4 +59,13 @@ describe('get options ', () => {
         const result = await getOptions(request);
         expect(result.limit).toEqual(1000);
     });
+
+    it('should correctly parse base query parameters (page, limit, sort)', async () => {
+        const request = { query: { page: '1', limit: '1', sort: 'name:asc' } };
+        const options = await getOptions(request);
+        expect(options.filter).toEqual({});
+        expect(options.sort).toEqual({ name: 1 });
+        expect(options.limit).toEqual(1);
+        expect(options.page).toEqual(1);
+    });
 });
