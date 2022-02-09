@@ -7,13 +7,14 @@ module.exports = {
   getOptions: async (req) => {
     let options = { filter: {} };
 
-    const sort = req.query.sort;
-    let { page, limit, offset } = req.query;
+    const sort = req?.query?.sort;
+    let { page, limit, offset } = req?.query || {};
 
     // Express does not offer a handy way to get the raw query strings
     // so lets parse it and drop the leading `?` for the parser
     const url = new URL(req.protocol + '://' + req.hostname + req.originalUrl);
     const rawQueryParams = url.search.slice(1);
+    console.log('raw params ---> ', rawQueryParams);
 
     const parser = new mongooseQueryParser.MongooseQueryParser({
       blacklist: ['offset', 'page', 'limit', 'sort']
