@@ -3,11 +3,6 @@ const Chapter = require("./../models/chapter.model");
 const mongoose = require("mongoose");
 
 module.exports = {
-  getTest: function (req, res) {
-    return res.json({
-      success: true,
-    });
-  },
   getBooks: async function (req, res) {
     await Book.find({}, async function (err, books) {
       if (err) {
@@ -20,7 +15,7 @@ module.exports = {
   },
   getBook: async function (req, res) {
     const id = req.params.id;
-    await Book.find({_id: id}, async function (err, book) {
+    await Book.find({ _id: id }, async function (err, book) {
       if (err) {
         return res.json({
           success: false,
@@ -31,7 +26,7 @@ module.exports = {
   },
   getChaptersByBook: async function (req, res) {
     const id = req.params.id;
-    await Chapter.find({book: mongoose.Types.ObjectId(id)}, "chapterName", async function (err, book) {
+    await Chapter.find({ book: mongoose.Types.ObjectId(id) }, "chapterName", async function (err, book) {
       if (err) {
         return res.json({
           success: false,
