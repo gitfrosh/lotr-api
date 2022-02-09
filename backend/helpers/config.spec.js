@@ -2,25 +2,25 @@ const { getOptions } = require('../helpers/config');
 
 describe('get options ', () => {
 
-    it('should correctly parse ascending parameter', async () => {
-        const request = { query: { sort: 'asc' } };
+    it('should return filter as an empty object if no additional params provided', async () => {
+        const request = {};
         const result = await getOptions(request);
-        expect(result.sort).toEqual({ asc: -1 });
+        expect(result.filter).toEqual({});
     });
 
-    it('should correctly parse descending parameter', async () => {
-        const request = { query: { sort: 'desc' } };
+    it('should append non-standard params (offset, page, limit, sort) to filter', async () => {
+        const request = {
+            protocol: 'http',
+            hostname: 'localhost:8080',
+            originalUrl: '?something=blah&hello=world',
+            query: {
+                page: '1',
+                offset: '1',
+                limit: '1',
+                sort: 'name:asc'
+            }
+        };
         const result = await getOptions(request);
-        expect(result.sort).toEqual({ desc: -1 });
+        expect(result.filter).toEqual({ something: 'blah', hello: 'world' });
     });
-
-    // it.only('should correctly parse base query parameters (sort, page, limit, offset)', async () => {
-
-    //     const request = { query: { page: '1', limit: '1', sort: 'asc' } };
-    //     const options = await getOptions(request);
-    //     expect(options.filter).toEqual({});
-    //     expect(options.sort).toEqual({ asc: -1 });
-    //     expect(options.limit).toEqual(1);
-    //     expect(options.page).toEqual(1);
-    // });
 });
