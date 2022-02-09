@@ -47,4 +47,16 @@ describe('get options ', () => {
         const result = await getOptions(request);
         expect(result.offset).toEqual(1);
     });
+
+    it('should correctly parse limit parameter', async () => {
+        const request = { query: { limit: '1' } };
+        const result = await getOptions(request);
+        expect(result.limit).toEqual(1);
+    });
+
+    it('should set limit to 1000 if not specified', async () => {
+        const request = {};
+        const result = await getOptions(request);
+        expect(result.limit).toEqual(1000);
+    });
 });
