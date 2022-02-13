@@ -14,7 +14,6 @@ module.exports = {
     // so lets parse it and drop the leading `?` for the parser
     const url = new URL(req.protocol + '://' + req.hostname + req.originalUrl);
     const rawQueryParams = url.search.slice(1);
-    console.log('raw params ---> ', rawQueryParams);
 
     const parser = new mongooseQueryParser.MongooseQueryParser({
       blacklist: ['offset', 'page', 'limit', 'sort']
