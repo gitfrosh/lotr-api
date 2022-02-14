@@ -1,7 +1,7 @@
 const Quote = require("./../models/quote.model");
 const config = require("./../helpers/config");
 
-const { errorResponse } = require('../helpers/constants');
+const { errorResponse, HttpCode } = require('../helpers/constants');
 
 module.exports = {
   getQuotes: async (req, res) => {
@@ -20,7 +20,7 @@ module.exports = {
       );
       return res.json(quote);
     } catch (err) {
-      return res.status(500).send(errorResponse);
+      return res.status(HttpCode.SERVER_ERROR).send(errorResponse);
     }
   },
   getQuote: async (req, res, next) => {
@@ -39,7 +39,7 @@ module.exports = {
         });
       return res.json(quote);
     } catch (err) {
-      return res.status(500).send(errorResponse);
+      return res.status(HttpCode.SERVER_ERROR).send(errorResponse);
     }
   }
 };

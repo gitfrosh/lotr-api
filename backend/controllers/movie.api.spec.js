@@ -6,6 +6,8 @@ const quoteModel = require('../models/quote.model');
 const movieModel = require('../models/movie.model');
 const movieController = require('./movie.api');
 
+const { HttpCode } = require('../helpers/constants');
+
 const app = express();
 const router = express.Router();
 
@@ -57,14 +59,14 @@ describe('movie controller', () => {
         ];
         mockingoose(movieModel).toReturn(fakeMovies);
         const response = await request(app).get('/v2/movie/');
-        expect(response.statusCode).toEqual(200);
+        expect(response.statusCode).toEqual(HttpCode.OK);
         expect(response.body.docs).toEqual(fakeMovies);
     });
 
     it('/movie/ should handle error correctly when getting all movies', async () => {
         mockingoose(movieModel).toReturn(new Error('error'));
         const response = await request(app).get('/v2/movie/');
-        expect(response.statusCode).toEqual(500);
+        expect(response.statusCode).toEqual(HttpCode.SERVER_ERROR);
         expect(response.body.success).toEqual(false);
         expect(response.body.message).toEqual('Something went wrong.');
     });
@@ -82,14 +84,14 @@ describe('movie controller', () => {
         };
         mockingoose(movieModel).toReturn(fakeMovie);
         const response = await request(app).get('/v2/movie/5cd95395de30eff6ebccde5c');
-        expect(response.statusCode).toEqual(200);
+        expect(response.statusCode).toEqual(HttpCode.OK);
         expect(response.body.docs).toEqual(fakeMovie);
     });
 
     it('/movie/:id should handle error correctly when getting a single movie', async () => {
         mockingoose(movieModel).toReturn(new Error('error'));
         const response = await request(app).get('/v2/movie/5cd95395de30eff6ebccde5c');
-        expect(response.statusCode).toEqual(500);
+        expect(response.statusCode).toEqual(HttpCode.SERVER_ERROR);
         expect(response.body.success).toEqual(false);
         expect(response.body.message).toEqual('Something went wrong.');
     });
@@ -120,14 +122,14 @@ describe('movie controller', () => {
         ];
         mockingoose(quoteModel).toReturn(fakeQuotes);
         const response = await request(app).get('/v2/movie/5cd95395de30eff6ebccde5c/quote');
-        expect(response.statusCode).toEqual(200);
+        expect(response.statusCode).toEqual(HttpCode.OK);
         expect(response.body.docs).toEqual(fakeQuotes);
     });
 
     it('/movie/:id/quote should handle error correctly when getting quotes of one specific movie', async () => {
         mockingoose(quoteModel).toReturn(new Error('error'));
         const response = await request(app).get('/v2/movie/5cd95395de30eff6ebccde5c/quote');
-        expect(response.statusCode).toEqual(500);
+        expect(response.statusCode).toEqual(HttpCode.SERVER_ERROR);
         expect(response.body.success).toEqual(false);
         expect(response.body.message).toEqual('Something went wrong.');
     });

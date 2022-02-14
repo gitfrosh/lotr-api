@@ -2,6 +2,8 @@ const express = require('express');
 const request = require('supertest');
 const mockingoose = require('mockingoose');
 
+const { HttpCode } = require('../helpers/constants');
+
 const quoteModel = require('../models/quote.model');
 const quoteController = require('./quote.api');
 
@@ -39,14 +41,14 @@ describe('quote controller', () => {
         ];
         mockingoose(quoteModel).toReturn(fakeQuotes);
         const response = await request(app).get('/v2/quote/');
-        expect(response.statusCode).toEqual(200);
+        expect(response.statusCode).toEqual(HttpCode.OK);
         expect(response.body.docs).toEqual(fakeQuotes);
     });
 
     it('/quote/ should handle error correctly when getting all quotes', async () => {
         mockingoose(quoteModel).toReturn(new Error('error'));
         const response = await request(app).get('/v2/quote/');
-        expect(response.statusCode).toEqual(500);
+        expect(response.statusCode).toEqual(HttpCode.SERVER_ERROR);
         expect(response.body.success).toEqual(false);
         expect(response.body.message).toEqual('Something went wrong.');
     });
@@ -61,14 +63,14 @@ describe('quote controller', () => {
         };
         mockingoose(quoteModel).toReturn(fakeQuote);
         const response = await request(app).get('/v2/quote/5cd96e05de30eff6ebccedfc');
-        expect(response.statusCode).toEqual(200);
+        expect(response.statusCode).toEqual(HttpCode.OK);
         expect(response.body.docs).toEqual(fakeQuote);
     });
 
     it('/quote/:id should handle error correctly when getting a single quote', async () => {
         mockingoose(quoteModel).toReturn(new Error('error'));
         const response = await request(app).get('/v2/quote/5cd96e05de30eff6ebccedfc');
-        expect(response.statusCode).toEqual(500);
+        expect(response.statusCode).toEqual(HttpCode.SERVER_ERROR);
         expect(response.body.success).toEqual(false);
         expect(response.body.message).toEqual('Something went wrong.');
     });

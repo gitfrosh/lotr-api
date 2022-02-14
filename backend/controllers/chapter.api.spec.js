@@ -2,6 +2,8 @@ const express = require('express');
 const request = require('supertest');
 const mockingoose = require('mockingoose');
 
+const { HttpCode } = require('../helpers/constants');
+
 const chapterModel = require('../models/chapter.model');
 const chapterController = require('./chapter.api');
 
@@ -35,7 +37,7 @@ describe('chapter controller', () => {
         ];
         mockingoose(chapterModel).toReturn(fakeChapters);
         const response = await request(app).get('/v2/chapter/');
-        expect(response.statusCode).toEqual(200);
+        expect(response.statusCode).toEqual(HttpCode.OK);
         expect(response.body.docs).toEqual(fakeChapters);
     });
 
@@ -43,7 +45,7 @@ describe('chapter controller', () => {
     it('/chapter/ should handle error correctly when getting all chapters', async () => {
         mockingoose(chapterModel).toReturn(new Error('error'));
         const response = await request(app).get('/v2/chapter/');
-        expect(response.statusCode).toEqual(500);
+        expect(response.statusCode).toEqual(HttpCode.SERVER_ERROR);
         expect(response.body.success).toEqual(false);
         expect(response.body.message).toEqual('Something went wrong.');
     });
@@ -56,7 +58,7 @@ describe('chapter controller', () => {
         };
         mockingoose(chapterModel).toReturn(fakeChapter);
         const response = await request(app).get('/v2/chapter/6091b6d6d58360f988133ba4');
-        expect(response.statusCode).toEqual(200);
+        expect(response.statusCode).toEqual(HttpCode.OK);
         expect(response.body.docs).toEqual(fakeChapter);
     });
 
@@ -64,7 +66,7 @@ describe('chapter controller', () => {
     it('/chapter/:id should handle error correctly when getting a single chapter', async () => {
         mockingoose(chapterModel).toReturn(new Error('error'));
         const response = await request(app).get('/v2/chapter/6091b6d6d58360f988133ba4');
-        expect(response.statusCode).toEqual(500);
+        expect(response.statusCode).toEqual(HttpCode.SERVER_ERROR);
         expect(response.body.success).toEqual(false);
         expect(response.body.message).toEqual('Something went wrong.');
     });

@@ -3,4 +3,9 @@ const errorResponse = {
     message: "Something went wrong."
 };
 
-module.exports = { errorResponse };
+const HttpCode = Object.freeze({
+    OK: 200,
+    SERVER_ERROR: 500
+});
+
+module.exports = { errorResponse, HttpCode };

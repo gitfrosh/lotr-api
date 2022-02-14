@@ -2,6 +2,8 @@ const express = require('express');
 const request = require('supertest');
 const mockingoose = require('mockingoose');
 
+const { HttpCode } = require('../helpers/constants');
+
 const quoteModel = require('../models/quote.model');
 const characterModel = require('../models/character.model');
 const characterController = require('./character.api');
@@ -53,14 +55,14 @@ describe('character controller', () => {
         ];
         mockingoose(characterModel).toReturn(fakeCharacters);
         const response = await request(app).get('/v2/character/');
-        expect(response.statusCode).toEqual(200);
+        expect(response.statusCode).toEqual(HttpCode.OK);
         expect(response.body.docs).toEqual(fakeCharacters);
     });
 
     it('/character/ should handle error correctly when getting all characers', async () => {
         mockingoose(characterModel).toReturn(new Error('error'));
         const response = await request(app).get('/v2/character/');
-        expect(response.statusCode).toEqual(500);
+        expect(response.statusCode).toEqual(HttpCode.SERVER_ERROR);
         expect(response.body.success).toEqual(false);
         expect(response.body.message).toEqual('Something went wrong.');
     });
@@ -81,14 +83,14 @@ describe('character controller', () => {
         };
         mockingoose(characterModel).toReturn(fakeCharacter);
         const response = await request(app).get('/v2/character/5cd99d4bde30eff6ebccfea5');
-        expect(response.statusCode).toEqual(200);
+        expect(response.statusCode).toEqual(HttpCode.OK);
         expect(response.body.docs).toEqual(fakeCharacter);
     });
 
     it('/character/:id should handle error correctly when getting a single character', async () => {
         mockingoose(characterModel).toReturn(new Error('error'));
         const response = await request(app).get('/v2/character/5cd99d4bde30eff6ebccfea5');
-        expect(response.statusCode).toEqual(500);
+        expect(response.statusCode).toEqual(HttpCode.SERVER_ERROR);
         expect(response.body.success).toEqual(false);
         expect(response.body.message).toEqual('Something went wrong.');
     });
@@ -119,7 +121,7 @@ describe('character controller', () => {
     it('/character/:id/quote should handle error correctly when getting quotes of one specific character', async () => {
         mockingoose(quoteModel).toReturn(new Error('error'));
         const response = await request(app).get('/v2/character/5cf58080b53e011a64671584/quote');
-        expect(response.statusCode).toEqual(500);
+        expect(response.statusCode).toEqual(HttpCode.SERVER_ERROR);
         expect(response.body.success).toEqual(false);
         expect(response.body.message).toEqual('Something went wrong.');
     });

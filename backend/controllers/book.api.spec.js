@@ -2,6 +2,8 @@ const express = require('express');
 const request = require('supertest');
 const mockingoose = require('mockingoose');
 
+const { HttpCode } = require('../helpers/constants');
+
 const chapterModel = require('../models/chapter.model');
 
 const bookController = require('./book.api');
@@ -40,7 +42,7 @@ describe('book controller', () => {
         ];
         mockingoose(bookModel).toReturn(fakeBooks);
         const response = await request(app).get('/v2/book/');
-        expect(response.statusCode).toEqual(200);
+        expect(response.statusCode).toEqual(HttpCode.OK);
         expect(response.body.docs).toEqual(fakeBooks);
     });
 
@@ -59,7 +61,7 @@ describe('book controller', () => {
         };
         mockingoose(bookModel).toReturn(fakeBook);
         const response = await request(app).get('/v2/book/5cf5805fb53e011a64671582');
-        expect(response.statusCode).toEqual(200);
+        expect(response.statusCode).toEqual(HttpCode.OK);
         expect(response.body.docs).toEqual(fakeBook);
     });
 
@@ -84,7 +86,7 @@ describe('book controller', () => {
         ];
         mockingoose(chapterModel).toReturn(fakeChapters);
         const response = await request(app).get('/v2/book/5cf58080b53e011a64671584/chapter');
-        expect(response.statusCode).toEqual(200);
+        expect(response.statusCode).toEqual(HttpCode.OK);
         expect(response.body.docs).toEqual(fakeChapters);
     });
 

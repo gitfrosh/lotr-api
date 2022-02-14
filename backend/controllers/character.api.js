@@ -4,7 +4,7 @@ const config = require("./../helpers/config");
 
 const mongoose = require("mongoose");
 
-const { errorResponse } = require('../helpers/constants');
+const { errorResponse, HttpCode } = require('../helpers/constants');
 
 module.exports = {
   getCharacters: async (req, res, next) => {
@@ -13,7 +13,7 @@ module.exports = {
       const characters = await Character.paginate(options.filter, options);
       return res.json(characters);
     } catch (err) {
-      return res.status(500).send(errorResponse);
+      return res.status(HttpCode.SERVER_ERROR).send(errorResponse);
     }
   },
   getCharacter: async (req, res, next) => {
@@ -23,7 +23,7 @@ module.exports = {
       const character = await Character.paginate({ _id: id }, options);
       return res.json(character);
     } catch (err) {
-      return res.status(500).send(errorResponse);
+      return res.status(HttpCode.SERVER_ERROR).send(errorResponse);
     }
   },
   getQuoteByCharacter: async (req, res, next) => {
@@ -38,7 +38,7 @@ module.exports = {
         });
       return res.json(quotes);
     } catch (err) {
-      return res.status(500).send(errorResponse);
+      return res.status(HttpCode.SERVER_ERROR).send(errorResponse);
     }
   }
 };
