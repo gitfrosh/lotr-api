@@ -3,10 +3,7 @@ const Chapter = require('./../models/chapter.model');
 const mongoose = require('mongoose');
 const config = require('./../helpers/config');
 
-const errorResponse = {
-  success: false,
-  message: 'Something went wrong.',
-};
+const { errorResponse } = require('../helpers/constants');
 
 module.exports = {
   getBooks: async (req, res) => {

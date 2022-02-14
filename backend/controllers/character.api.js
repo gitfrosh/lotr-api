@@ -4,10 +4,7 @@ const config = require("./../helpers/config");
 
 const mongoose = require("mongoose");
 
-const errorResponse = {
-  success: false,
-  message: "Something went wrong."
-};
+const { errorResponse } = require('../helpers/constants');
 
 module.exports = {
   getCharacters: async (req, res, next) => {

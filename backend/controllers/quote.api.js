@@ -1,10 +1,7 @@
 const Quote = require("./../models/quote.model");
 const config = require("./../helpers/config");
 
-const errorResponse = {
-  success: false,
-  message: "Something went wrong."
-};
+const { errorResponse } = require('../helpers/constants');
 
 module.exports = {
   getQuotes: async (req, res) => {

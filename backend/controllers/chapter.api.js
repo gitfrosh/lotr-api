@@ -1,10 +1,7 @@
 const Chapter = require("./../models/chapter.model");
 const config = require("./../helpers/config");
 
-const errorResponse = {
-  success: false,
-  message: 'Something went wrong.',
-};
+const { errorResponse } = require('../helpers/constants');
 
 module.exports = {
   getChapters: async (req, res) => {
