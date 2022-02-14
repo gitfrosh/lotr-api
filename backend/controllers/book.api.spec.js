@@ -18,7 +18,7 @@ app.use(express.json());
 app.use('/v2', router);
 
 
-describe('api controller', () => {
+describe('book controller', () => {
 
     beforeEach(() => {
         mockingoose.resetAll();
