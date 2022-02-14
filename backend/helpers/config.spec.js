@@ -1,6 +1,6 @@
 const { getOptions } = require('../helpers/config');
 
-describe.skip('get options ', () => {
+describe('get options ', () => {
 
     it('should return filter as an empty object if no additional params provided', async () => {
         const request = {};

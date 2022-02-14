@@ -10,7 +10,7 @@ router.route('/book/').get((req, res) => res.sendStatus(200));
 app.use("/v2/", apiLimiter);
 app.use("/v2", router);
 
-describe.skip('api  limiter', () => {
+describe('api  limiter', () => {
 
     it('should return 200 OK when rate limit not exceeded', async () => {
         const response = await request(app).get('/v2/book/');
