@@ -58,7 +58,6 @@ describe('character controller', () => {
         expect(response.body.docs).toEqual(fakeCharacters);
     });
 
-
     it('/character/ should handle error correctly when getting all characers', async () => {
         mockingoose(characterModel).toReturn(new Error('error'));
         const response = await request(app).get('/v2/character/');
@@ -86,7 +85,6 @@ describe('character controller', () => {
         expect(response.statusCode).toEqual(200);
         expect(response.body.docs).toEqual(fakeCharacter);
     });
-
 
     it('/character/:id should handle error correctly when getting a single character', async () => {
         mockingoose(characterModel).toReturn(new Error('error'));
@@ -118,7 +116,6 @@ describe('character controller', () => {
         expect(response.statusCode).toEqual(200);
         expect(response.body.docs).toEqual(fakeQuotes);
     });
-
 
     it('/character/:id/quote should handle error correctly when getting quotes of one specific character', async () => {
         mockingoose(quoteModel).toReturn(new Error('error'));
