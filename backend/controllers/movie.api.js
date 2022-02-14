@@ -1,6 +1,5 @@
 const Movie = require("./../models/movie.model");
 const Quote = require("./../models/quote.model");
-const Character = require("./../models/character.model");
 const config = require("./../helpers/config");
 
 const mongoose = require("mongoose");
