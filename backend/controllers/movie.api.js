@@ -6,7 +6,7 @@ const config = require("./../helpers/config");
 const mongoose = require("mongoose");
 
 module.exports = {
-  getMovie: async (req, res, ) => {
+  getMovie: async (req, res,) => {
     const options = await config.getOptions(req);
     const id = req.params.id;
     await Movie.paginate({ _id: id }, options, async function (err, movie) {
@@ -54,21 +54,5 @@ module.exports = {
         return res.json(quotes);
       }
     );
-  },
-  getQuoteByCharacter: async (req, res, next) => {
-    const id = req.params.id;
-    await Character.find(
-      { character: mongoose.Types.ObjectId(id) },
-      "dialog movie character",
-      async function (err, quotes) {
-        if (err) {
-          return res.status(500).send({
-            success: false,
-            message: "Something went wrong.",
-          });
-        }
-        return res.json(quotes);
-      }
-    );
-  },
+  }
 };
