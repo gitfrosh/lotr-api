@@ -4,7 +4,7 @@ const mockingoose = require('mockingoose');
 
 const chapterModel = require('../models/chapter.model');
 
-const bookController = require('../controllers/book.api');
+const bookController = require('./book.api');
 const bookModel = require('../models/book.model');
 
 const app = express();
