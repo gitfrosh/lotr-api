@@ -16,7 +16,6 @@ router.route("/character/:id/quote").get(characterController.getQuoteByCharacter
 app.use(express.json());
 app.use('/v2', router);
 
-
 describe('character controller', () => {
 
     beforeEach(() => {

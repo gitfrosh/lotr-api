@@ -17,7 +17,6 @@ router.route("/book/:id/chapter").get(bookController.getChaptersByBook);
 app.use(express.json());
 app.use('/v2', router);
 
-
 describe('book controller', () => {
 
     beforeEach(() => {

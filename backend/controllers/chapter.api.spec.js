@@ -14,7 +14,6 @@ router.route("/chapter/:id").get(chapterController.getChapter);
 app.use(express.json());
 app.use('/v2', router);
 
-
 describe('chapter controller', () => {
 
     beforeEach(() => {
