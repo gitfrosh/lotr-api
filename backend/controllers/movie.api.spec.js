@@ -16,7 +16,7 @@ router.route("/movie/:id/quote").get(movieController.getQuoteByMovie);
 app.use(express.json());
 app.use('/v2', router);
 
-describe('character controller', () => {
+describe('movie controller', () => {
 
     beforeEach(() => {
         mockingoose.resetAll();
