@@ -7,6 +7,8 @@ const { nanoid } = require("nanoid");
 const lambda_func = process.env.AWS_LAMBDA_NEWUSER_URL || null;
 const fetch = require('node-fetch');
 
+const { errorResponse, HttpCode } = require('../helpers/constants');
+
 function generatePasswordHash(password) {
   let hash = password;
   let salt = bcrypt.genSaltSync(10);
@@ -20,7 +22,7 @@ module.exports = {
     try {
       req.login(user, { session: false }, async (error) => {
         if (error)
-          return res.status(500).send({
+          return res.status(HttpCode.SERVER_ERROR).send({
             success: false,
             message: "Login failed",
           });
@@ -37,7 +39,7 @@ module.exports = {
         });
       });
     } catch (e) {
-      return res.status(500).send({
+      return res.status(HttpCode.SERVER_ERROR).send({
         success: false,
         message: "Login failed",
       });
@@ -47,31 +49,29 @@ module.exports = {
     const { email, password } = req.body;
     const doesUserExit = await User.exists({ email: email });
     if (doesUserExit) {
-      return res.status(500).send({
+      return res.status(HttpCode.SERVER_ERROR).send({
         success: false,
         message: "User already exists",
       });
     } else if (validator.isEmail(email) && !validator.isEmpty(password)) {
       const hash = generatePasswordHash(password);
       const access_token = nanoid(20);
-      var newUser = new User({
-        email: email,
-        password: hash,
-        access_token: access_token,
-      });
-      newUser.save(function (err) {
-        if (err) return res.status(500).send(err);
+      try {
+        await User.create({
+          email: email,
+          password: hash,
+          access_token: access_token,
+        });
         // send notification email via aws lambda in prod
         if (lambda_func) fetch(process.env.AWS_LAMBDA_NEWUSER_URL);
         return res.json({
           success: true,
         });
-      });
+      } catch (err) {
+        return res.status(HttpCode.SERVER_ERROR).send(err);
+      }
     } else {
-      return res.status(500).send({
-        success: false,
-        message: "Something went wrong.",
-      });
+      return res.status(HttpCode.SERVER_ERROR).send(errorResponse);
     }
-  },
+  }
 };
