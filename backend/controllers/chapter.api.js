@@ -1,71 +1,39 @@
 const Chapter = require("./../models/chapter.model");
-const mongoose = require("mongoose");
 const config = require("./../helpers/config");
 
+const { errorResponse, HttpCode } = require('../helpers/constants');
+
 module.exports = {
-    getChaptersByBook: async function (req, res) {
-    const options = await config.getOptions(req);
-    const id = req.params.id;
-    await Chapter.paginate(
-      { book: mongoose.Types.ObjectId(id) },
-      {
-        ...options, 
-        select: {
-          chapterName: 1
-        }
-      },
-      async function (err, book) {
-        if (err) {
-          return res.json({
-            success: false,
-            message: "Something went wrong.",
-          });
-        }
-        return res.json(book);
-      }
-    );
-  },
   getChapters: async (req, res) => {
     const options = await config.getOptions(req);
 
-    await Chapter.paginate(options.filter, {
-      ...options,
-      select: {
-        chapterName: 1,
-        book: 1
-      }
-    }, async function (
-      err,
-      chapter
-    ) {
-      if (err) {
-        return res.status(500).send({
-          success: false,
-          message: "Something went wrong.",
-        });
-      }
+    try {
+      const chapter = await Chapter.paginate(options.filter, {
+        ...options,
+        select: {
+          chapterName: 1,
+          book: 1
+        }
+      });
       return res.json(chapter);
-    });
+    } catch (err) {
+      return res.status(HttpCode.SERVER_ERROR).send(errorResponse);
+    }
   },
   getChapter: async (req, res) => {
     const options = await config.getOptions(req);
-    const id = req.params.id;
-    await Chapter.paginate({ _id: id }, {
-      ...options,
-      select: {
-        chapterName: 1,
-        book: 1
-      }
-    }, async function (
-      err,
-      chapter
-    ) {
-      if (err) {
-        return res.status(500).send({
-          success: false,
-          message: "Something went wrong.",
-        });
-      }
+    try {
+      const id = req.params.id;
+      const chapter = await Chapter.paginate({ _id: id }, {
+        ...options,
+        select: {
+          chapterName: 1,
+          book: 1
+        }
+      });
       return res.json(chapter);
-    });
-  }}
+    } catch (err) {
+      return res.status(HttpCode.SERVER_ERROR).send(errorResponse);
+    }
+  }
+}

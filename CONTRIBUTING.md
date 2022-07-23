@@ -34,6 +34,10 @@ With Version 2, this Open Source project is now open for contribution! You can h
 - use your favorite Mongo client to access user documents and get your new access_token for using the secured APIs
 - OR login with your credentials in the Frontend to get your token
 
+### Running tests
+
+- navigate to the specific project (*backend* or *frontend*) and execute `npm test`.
+
 ### **HACK AWAY!** 🔨🔨🔨
 
 ### 🔃 Create a new pull request 

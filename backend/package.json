@@ -36,6 +36,7 @@
   },
   "devDependencies": {
     "jest": "^27.4.7",
+    "mockingoose": "^2.15.2",
     "nodemon": "^2.0.9",
     "supertest": "^6.2.2"
   }
