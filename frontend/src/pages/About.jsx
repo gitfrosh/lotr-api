@@ -156,15 +156,48 @@ function About() {
           </p>
 
           <ul>
-          <li>
-              Victor created a virtual catalogue from all the available LotR characters. |{" "}
+            <li>
+              Gaetano wrote a comprehensive documentation for Postman REST
+              client. |{" "}
+              <a
+                href="https://documenter.getpostman.com/view/8886024/2s7ZLhpXAw"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Link
+              </a>
+            </li>
+            <li>
+              Alex built a Twitter bot that retweets random LotR quotes. |{" "}
+              <a
+                href="https://twitter.com/lotr_daily"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Link
+              </a>
+              ,{" "}
+              <a
+                href="https://github.com/alexneocoding/dailyquote"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Github
+              </a>
+            </li>
+
+            <li>
+              Victor created a virtual catalogue from all the available LotR
+              characters. |{" "}
               <a
                 href="https://lotr-characters.vercel.app/"
                 rel="noopener noreferrer"
                 target="_blank"
               >
                 Link
-              </a>,  <a
+              </a>
+              ,{" "}
+              <a
                 href="https://github.com/VictorLira-DEV/lotr-characters"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -210,7 +243,9 @@ function About() {
                 rel="noopener noreferrer"
                 target="_blank"
                 href="https://community.storytellingwithdata.com/challenges/52e943ac-9468-4b4e-a8d8-14eadd6a3394/7abe32ad-ad9a-422f-8c9b-3167298c794c"
-              >Link</a>
+              >
+                Link
+              </a>
             </li>
           </ul>
         </div>
