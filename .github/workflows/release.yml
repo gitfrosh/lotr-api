@@ -1,0 +1,29 @@
+name: Release Lord of the Rings API
+
+# When Commits Are Pushed To the Release Branch
+# Do a deploy and update the deployed API
+on:
+  push:
+    branches:
+      - "release"
+
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+
+    # Define Node versions to run CI/CD on
+      strategy:
+        matrix:
+          node-version: [10.x, 12.x, 14.x, 15.x]
+
+     steps:
+      # Checkout project
+      - uses: actions/checkout@v3
+
+      # Setup Node
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      # Do Deploy Stuff Here
