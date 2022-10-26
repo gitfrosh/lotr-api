@@ -1,4 +1,3 @@
-
 <h1 align="center"> The One API To Rule Them All... <br />
 The Lord Of The Rings API</h1>
 
@@ -10,10 +9,11 @@ The Lord Of The Rings API</h1>
   [![Forks][forks-shield]][forks-url]
   [![Stargazers][stars-shield]][stars-url]
   [![Issues][issues-shield]][issues-url]
+  
 </div>
 
 <!-- MAIN BODY / DESCRIPTION -->
-  <p align="center">
+<p align="center">
     This repository holds the code base of <i>The one API to rule them all</i>, the Lord of the Rings API, which provides you with book; character; movie; and quotes JSON data.
     <br />
     <a href="https://the-one-api.dev"><strong>Explore the docs »</strong></a>
@@ -22,19 +22,19 @@ The Lord Of The Rings API</h1>
     <a href="https://github.com/gitfrosh/lotr-api/issues">Report Bug</a>
     ·
     <a href="https://github.com/gitfrosh/lotr-api/issues">Request Feature</a>
-  </p>
-</div>
+</p>
 
 <br />
 <br />
 
-**Built with** :heart: and some awesome technologies (amongst others!):
+<p align="center">
+  <b>Built with</b> :heart: and some awesome technologies (amongst others!)
+</p>
 
-<br />
 <div align="center">
-
-[![React][React.js]][React-url] [![Node][Node.js]][Node-url] [![Express][Express.js]][Express-url]  [![MongoDB][MongoDB.com]][MongoDB-url]
-
+  
+  [![React][React.js]][React-url] [![Node][Node.js]][Node-url] [![Express][Express.js]][Express-url]  [![MongoDB][MongoDB.com]][MongoDB-url]
+  
 </div>
 
 
