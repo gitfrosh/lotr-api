@@ -43,7 +43,6 @@ jobs:
       # Run react-scripts tests
       # Note: There are currently no tests
       # - name: Install Dependencies
-      #   working-directory: ./frontend
       #   run: npm run test
 
       # SAMPLE-APP #
