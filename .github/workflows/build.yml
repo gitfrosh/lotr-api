@@ -1,0 +1,58 @@
+name: Test and Build
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+
+    # Define Node versions to run CI/CD on
+    strategy:
+      matrix:
+        node-version: [14.x, 15.x]
+
+    steps:
+    # Checkout project
+    - uses: actions/checkout@v3
+
+    # Setup Node
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    # BACKEND #
+    # Install Packages
+    - name: Install Dependencies
+      working-directory: ./backend
+      run: npm ci
+
+    # Run Jest tests
+    - name: Run Tests
+      working-directory: ./backend
+      run: npm run test
+
+    # FRONTEND #
+    # Install Packages
+    - name: Install Dependencies
+      working-directory: ./frontend
+      run: npm ci
+
+    # Run react-scripts tests
+    # Note: There are currently no tests
+    # - name: Install Dependencies
+    #   working-directory: ./frontend
+    #   run: npm run test
+
+    # SAMPLE-APP #
+      # Install Packages
+    - name: Install Dependencies
+      working-directory: ./sample-app
+      run: npm ci
+
+    # Run Jest tests
+    - name: Run Build
+      working-directory: ./sample-app
+      run: npm run build
