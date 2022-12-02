@@ -25,7 +25,7 @@ jobs:
 
     # BACKEND #
     # Install Packages
-    - name: Install Dependencies
+    - name: Install Dependencies for Backend
       working-directory: ./backend
       run: npm ci
 
@@ -36,7 +36,7 @@ jobs:
 
     # FRONTEND #
     # Install Packages
-    - name: Install Dependencies
+    - name: Install Dependencies for Frontend
       working-directory: ./frontend
       run: npm ci
 
@@ -48,7 +48,7 @@ jobs:
 
     # SAMPLE-APP #
       # Install Packages
-    - name: Install Dependencies
+    - name: Install Dependencies for Sample App
       working-directory: ./sample-app
       run: npm ci
 
