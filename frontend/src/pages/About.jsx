@@ -33,11 +33,11 @@ function About() {
         </a>
         . You have some questions or suggestions? Find me on Twitter (
         <a
-          href="https://twitter.com/frankanka"
+          href="https://twitter.com/rikecodes"
           rel="noopener noreferrer"
           target="_blank"
         >
-          @frankanka
+          @rikecodes
         </a>
         )!
       </p>
