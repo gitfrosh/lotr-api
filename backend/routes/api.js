@@ -7,7 +7,8 @@ var quoteController = require("./../controllers/quote.api");
 
 var router = express.Router();
 var passportHelpers = require("./../helpers/passport");
-const { notFoundResponse, HttpCode } = require("../helpers/constants");
+const { errorResponse, notFoundResponse, HttpCode } = require("../helpers/constants");
+const errorHandler = require("../middleware/api.errors");
 
 router.route("/book").get(bookController.getBooks);
 router.route("/book/:id").get(bookController.getBook);
@@ -51,5 +52,9 @@ router
 router.route("*").get(async function (req, res) {
   return res.status(HttpCode.NOT_FOUND).send(notFoundResponse);
 });
+
+// global error handler. this should always be the last .use
+// and after all routes
+router.use(errorHandler)
 
 module.exports = router;

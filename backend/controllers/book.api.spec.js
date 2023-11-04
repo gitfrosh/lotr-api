@@ -8,6 +8,7 @@ const chapterModel = require('../models/chapter.model');
 
 const bookController = require('./book.api');
 const bookModel = require('../models/book.model');
+const errorHandler = require('../middleware/api.errors');
 
 const app = express();
 const router = express.Router();
@@ -18,6 +19,7 @@ router.route("/book/:id/chapter").get(bookController.getChaptersByBook);
 
 app.use(express.json());
 app.use('/v2', router);
+app.use(errorHandler)
 
 describe('book controller', () => {
 
