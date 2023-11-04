@@ -2,6 +2,10 @@ const rateLimit = require("express-rate-limit");
 const apiLimiter = rateLimit({
     windowMs: 10 * 60 * 1000, // 15 minutes
     max: 100,
+    message: {
+        success: false,
+        message: "Too many requests, please try again later."
+    }
     // skip limiter for special tokens (e.g. hackathons)
     // skip: function (req, res) {
     //   const token = req.header('authorization')?.split(' ')[1];
