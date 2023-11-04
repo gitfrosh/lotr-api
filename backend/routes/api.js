@@ -7,6 +7,7 @@ var quoteController = require("./../controllers/quote.api");
 
 var router = express.Router();
 var passportHelpers = require("./../helpers/passport");
+const { notFoundResponse, HttpCode } = require("../helpers/constants");
 
 router.route("/book").get(bookController.getBooks);
 router.route("/book/:id").get(bookController.getBook);
@@ -35,10 +36,10 @@ router
   .route("/character/:id")
   .get([passportHelpers.authenticate, characterController.getCharacter]);
 
-  router
+router
   .route("/character/:id/quote")
   .get([passportHelpers.authenticate, characterController.getQuoteByCharacter]);
-  
+
 
 router
   .route("/quote")
@@ -48,8 +49,7 @@ router
   .get([passportHelpers.authenticate, quoteController.getQuote]);
 
 router.route("*").get(async function (req, res) {
-    return res.status(404).send("Endpoint does not exist.");
+  return res.status(HttpCode.NOT_FOUND).send(notFoundResponse);
 });
-
 
 module.exports = router;
