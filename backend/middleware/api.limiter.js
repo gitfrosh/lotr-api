@@ -1,6 +1,6 @@
 const rateLimit = require("express-rate-limit");
 const apiLimiter = rateLimit({
-    windowMs: 10 * 60 * 1000, // 15 minutes
+    windowMs: 10 * 60 * 1000, // 10 minutes
     max: 100,
     message: {
         success: false,
