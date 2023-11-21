@@ -6,6 +6,7 @@ const { HttpCode } = require('../helpers/constants');
 
 const chapterModel = require('../models/chapter.model');
 const chapterController = require('./chapter.api');
+const errorHandler = require('../middleware/api.errors');
 
 const app = express();
 const router = express.Router();
@@ -15,6 +16,7 @@ router.route("/chapter/:id").get(chapterController.getChapter);
 
 app.use(express.json());
 app.use('/v2', router);
+app.use(errorHandler)
 
 describe('chapter controller', () => {
 

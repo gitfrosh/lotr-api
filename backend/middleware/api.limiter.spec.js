@@ -25,6 +25,9 @@ describe('api  limiter', () => {
             response = await request(app).get('/v2/book/');
         }
         expect(response.statusCode).toEqual(429);
-        expect(response.text).toEqual('Too many requests, please try again later.');
+        expect(response.body).toEqual({
+            success: false,
+            message: "Too many requests, please try again later."
+        });
     });
 });

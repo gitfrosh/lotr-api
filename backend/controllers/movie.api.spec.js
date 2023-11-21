@@ -7,6 +7,7 @@ const movieModel = require('../models/movie.model');
 const movieController = require('./movie.api');
 
 const { HttpCode } = require('../helpers/constants');
+const errorHandler = require('../middleware/api.errors');
 
 const app = express();
 const router = express.Router();
@@ -17,6 +18,7 @@ router.route("/movie/:id/quote").get(movieController.getQuoteByMovie);
 
 app.use(express.json());
 app.use('/v2', router);
+app.use(errorHandler)
 
 describe('movie controller', () => {
 

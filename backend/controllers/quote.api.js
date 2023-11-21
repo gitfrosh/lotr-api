@@ -1,10 +1,8 @@
 const Quote = require("./../models/quote.model");
 const config = require("./../helpers/config");
 
-const { errorResponse, HttpCode } = require('../helpers/constants');
-
 module.exports = {
-  getQuotes: async (req, res) => {
+  getQuotes: async (req, res, next) => {
     try {
       const options = await config.getOptions(req);
       const quote = await Quote.paginate(
@@ -20,7 +18,7 @@ module.exports = {
       );
       return res.json(quote);
     } catch (err) {
-      return res.status(HttpCode.SERVER_ERROR).send(errorResponse);
+      return next(err);
     }
   },
   getQuote: async (req, res, next) => {
@@ -39,7 +37,7 @@ module.exports = {
         });
       return res.json(quote);
     } catch (err) {
-      return res.status(HttpCode.SERVER_ERROR).send(errorResponse);
+      return next(err);
     }
   }
 };

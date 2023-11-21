@@ -6,6 +6,7 @@ const { HttpCode } = require('../helpers/constants');
 
 const userModel = require('../models/user.model');
 const authController = require('./auth');
+const errorHandler = require('../middleware/api.errors');
 
 const app = express();
 const router = express.Router();
@@ -14,6 +15,7 @@ router.route("/register").post(authController.register);
 
 app.use(express.json());
 app.use('/auth', router);
+app.use(errorHandler)
 
 const requestBody = { email: 'email@mail.com', password: 'P@$$1' };
 

@@ -3,19 +3,17 @@ const Chapter = require('./../models/chapter.model');
 const mongoose = require('mongoose');
 const config = require('./../helpers/config');
 
-const { errorResponse } = require('../helpers/constants');
-
 module.exports = {
-  getBooks: async (req, res) => {
+  getBooks: async (req, res, next) => {
     const options = await config.getOptions(req);
     try {
       const books = await Book.paginate(options.filter, options);
       return res.json(books);
     } catch (err) {
-      return res.json(errorResponse);
+      return next(err);
     }
   },
-  getBook: async (req, res) => {
+  getBook: async (req, res, next) => {
     const options = await config.getOptions(req);
 
     try {
@@ -23,10 +21,10 @@ module.exports = {
       const book = await Book.paginate({ _id: id }, options);
       return res.json(book);
     } catch (err) {
-      return res.json(errorResponse);
+      return next(err);
     }
   },
-  getChaptersByBook: async (req, res) => {
+  getChaptersByBook: async (req, res, next) => {
     const options = await config.getOptions(req);
 
     try {
@@ -37,7 +35,7 @@ module.exports = {
       });
       return res.json(book);
     } catch (err) {
-      return res.json(errorResponse);
+      return next(err);
     }
   },
 };
