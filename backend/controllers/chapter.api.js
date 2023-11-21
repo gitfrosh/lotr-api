@@ -1,10 +1,8 @@
 const Chapter = require("./../models/chapter.model");
 const config = require("./../helpers/config");
 
-const { errorResponse, HttpCode } = require('../helpers/constants');
-
 module.exports = {
-  getChapters: async (req, res) => {
+  getChapters: async (req, res, next) => {
     const options = await config.getOptions(req);
 
     try {
@@ -17,10 +15,10 @@ module.exports = {
       });
       return res.json(chapter);
     } catch (err) {
-      return res.status(HttpCode.SERVER_ERROR).send(errorResponse);
+      return next(err);
     }
   },
-  getChapter: async (req, res) => {
+  getChapter: async (req, res, next) => {
     const options = await config.getOptions(req);
     try {
       const id = req.params.id;
@@ -33,7 +31,7 @@ module.exports = {
       });
       return res.json(chapter);
     } catch (err) {
-      return res.status(HttpCode.SERVER_ERROR).send(errorResponse);
+      return next(err);
     }
   }
 }

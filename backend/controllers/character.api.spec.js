@@ -7,6 +7,7 @@ const { HttpCode } = require('../helpers/constants');
 const quoteModel = require('../models/quote.model');
 const characterModel = require('../models/character.model');
 const characterController = require('./character.api');
+const errorHandler = require('../middleware/api.errors');
 
 const app = express();
 const router = express.Router();
@@ -17,6 +18,7 @@ router.route("/character/:id/quote").get(characterController.getQuoteByCharacter
 
 app.use(express.json());
 app.use('/v2', router);
+app.use(errorHandler)
 
 describe('character controller', () => {
 
