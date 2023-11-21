@@ -33,7 +33,6 @@ module.exports = {
           req.user = user;
           next();
         }
-     
       } catch (err) {
         console.log(err);
       }

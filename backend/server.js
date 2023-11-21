@@ -19,7 +19,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 
-app.use(express.static(path.join(__dirname, "/__BUILD"))); // React build
+// unused in Azure
+// app.use(express.static(path.join(__dirname, "/__BUILD"))); // React build
 
 const apiRoutes = require("./routes/api");
 const authRoutes = require("./routes/auth");
@@ -101,9 +102,10 @@ app.use("/v2", apiRoutes);
 app.use("/auth", authRoutes);
 
 // Handles React frontend requests
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname + "/__BUILD/index.html"));
-});
+// unused in Azure
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname + "/__BUILD/index.html"));
+// });
 
 async function start() {
   await db.connectDb();

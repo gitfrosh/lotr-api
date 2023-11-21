@@ -8,6 +8,7 @@ async function connectDb() {
     .connect(database_url, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
+      retryWrites: false
     })
     .then(() => {
       console.log("Database Connected");
