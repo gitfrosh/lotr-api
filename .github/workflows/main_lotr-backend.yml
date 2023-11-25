@@ -23,9 +23,10 @@ jobs:
         run: npm install
         working-directory: frontend
 
-      - name: npm run test for frontend
-        run: npm run test --if-present
-        working-directory: frontend
+      # Include whenver tests are added
+      # - name: npm run test for frontend
+      #   run: npm run test --if-present
+      #   working-directory: frontend
 
       - name: npm run build for frontend
         run: npm run build
