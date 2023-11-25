@@ -46,7 +46,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18.x'
-        working-directory: ./backend
 
       - name: npm install, build, and test for backend
         run: |
