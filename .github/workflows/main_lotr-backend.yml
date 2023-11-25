@@ -18,22 +18,22 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18.x'
-          app_location: "/frontend"
 
       - name: npm install for frontend
         run: npm install
+        working-directory: frontend
         with:
           node-version: '18.x'
-          app_location: "/frontend"
 
       - name: npm run test for frontend
         run: npm run test --if-present
+        working-directory: frontend
         with:
           node-version: '18.x'
-          app_location: "/frontend"
 
       - name: npm run build for frontend
         run: npm run build
+        # working-directory: frontend
         with:
           node-version: '18.x'
           app_location: "/frontend"
