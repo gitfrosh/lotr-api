@@ -15,30 +15,30 @@
   "author": "Rike Exner",
   "license": "MIT",
   "dependencies": {
-    "bcrypt": "^5.0.0",
+    "bcrypt": "^5.1.1",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
+    "dotenv": "^8.6.0",
+    "express": "^4.18.2",
     "express-rate-limit": "^5.5.1",
-    "helmet": "^4.0.0",
+    "helmet": "^4.6.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.19",
+    "mongoose": "^5.13.21",
     "mongoose-paginate": "^5.0.3",
-    "mongoose-query-parser": "^1.1.7",
-    "nanoid": "^3.1.31",
-    "node-fetch": "^2.6.7",
-    "npm": "^9.1.3",
+    "mongoose-query-parser": "^1.3.1",
+    "nanoid": "^3.3.7",
+    "node-fetch": "^2.7.0",
+    "npm": "^9.9.2",
     "passport": "^0.6.0",
     "passport-http-bearer": "^1.0.1",
-    "passport-jwt": "^4.0.0",
+    "passport-jwt": "^4.0.1",
     "passport-local": "^1.0.0",
-    "validator": "^13.7.0"
+    "validator": "^13.11.0"
   },
   "devDependencies": {
-    "jest": "^27.4.7",
-    "mockingoose": "^2.15.2",
-    "nodemon": "^2.0.9",
-    "supertest": "^6.2.2"
+    "jest": "^27.5.1",
+    "mockingoose": "^2.16.2",
+    "nodemon": "^2.0.22",
+    "supertest": "^6.3.3"
   }
 }
