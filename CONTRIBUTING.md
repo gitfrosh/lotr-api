@@ -19,6 +19,17 @@ With Version 2, this Open Source project is now open for contribution! You can h
 ```
 make mongo-data
 ```
+- build and run the node command line image to install the backend packages:
+```
+make cli-build
+make cli
+user@abc123:/app$ npm install
+user@abc123:/app$ exit
+```
+- build the node server image
+```
+make server-build
+```
 
 ### Quick Start
 
@@ -51,9 +62,19 @@ make mongo-data
 
 ### Start Node / Express backend
 
-- move into the backend folder `cd backend`
-- install packages with `npm install`
-- get your express server started with `node server.js` on localhost:3001
+- run the node server:
+```
+make server
+```
+- to manage node packages, run the CLI:
+```
+make cli
+user@abc123:/app$ npm outdated
+```
+- if you want to watch the nodemon output as changes are made to application files, follow the container logs:
+```
+docker container logs -f lotr_server
+```
 
 ### Start React frontend
 
