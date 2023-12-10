@@ -12,10 +12,42 @@ With Version 2, this Open Source project is now open for contribution! You can h
 - **Option 2**
     - 👯 Clone this repo to your local machine using `https://github.com/gitfrosh/lotr-api.git`
 
+### Dependencies
+
+- install Docker - see [Rancher Desktop](https://rancherdesktop.io/)
+- populate the database files locally - from the command line in the project root directory, run:
+```
+make mongo-data
+```
+
+### Quick Start
+
+- start all services with The One Command:
+```
+make up
+```
+- stop all services with The (Other) One Command:
+```
+make down
+```
+- for managing and accessing services individually, continue reading below
+
 ### Start Mongo DB service
 
-- you'll need MongoDB Community Edition running on your machine, listening on default port 27017
-- start a shell and restore LotR data with `mongorestore -d lotr --verbose ./db/bson`
+- run a container of the [Mongo docker image](https://hub.docker.com/_/mongo) with the local database files mounted as a volume:
+```
+make mongo
+```
+- access the mongo command line on the running container:
+```
+make mongo-cli
+```
+- the database files are stored in `./docker/db/` - to restore from the original, stop any running mongo container, delete that directory, and rerun the data restore command:
+```
+make mongo-stop
+sudo rm -rf ./docker/db
+make mongo-data
+```
 
 ### Start Node / Express backend
 

@@ -8,3 +8,4 @@ docker-compose.yml
 dump
 .DS_Store
 bk
+docker/db
