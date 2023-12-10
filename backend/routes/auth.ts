@@ -2,12 +2,13 @@ import { Router } from 'express';
 import { authController } from '../controllers/auth';
 import { passportHelpers } from './../helpers/passport';
 //import authLimiter from '../middleware/auth.limiter';
-import { notFoundResponse } from '../helpers/constants';
+import { HttpCode, notFoundResponse } from '../helpers/constants';
 
 const router = Router();
 
 router.route('/login').post([passportHelpers.login, authController.login]);
 
+//TODO: fix me
 // Allow only 5 calls per hour to this endpoint
 router.route('/register').post([
 	// authLimiter({
@@ -22,7 +23,7 @@ router.route('/register').post([
 ]);
 
 router.route('*').get(async (req, res) => {
-	return res.status(404).send(notFoundResponse);
+	return res.status(HttpCode.NOT_FOUND).send(notFoundResponse);
 });
 
 export default router;

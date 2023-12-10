@@ -67,8 +67,7 @@ export const authController = {
 				// send notification email via aws lambda in prod
 				if (lambda_func) fetch(process.env.AWS_LAMBDA_NEWUSER_URL as string);
 				return res.json({
-					success: true,
-					access_token: access_token
+					success: true
 				});
 			} catch (err) {
 				return res.status(HttpCode.SERVER_ERROR).send(err);

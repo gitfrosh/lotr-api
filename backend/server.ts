@@ -14,6 +14,11 @@ import { UserModel } from './models/user.model';
 import { Strategy as LocalStrategy } from 'passport-local';
 import { Strategy as BearerStrategy } from 'passport-http-bearer';
 
+import { HttpCode } from './helpers/constants';
+import apiRoutes from './routes/api';
+import authRoutes from './routes/auth';
+import { User } from './helpers/interfaces';
+
 const app = express();
 const dpwcToken = process.env.DPWC_TOKEN || '';
 
@@ -24,15 +29,7 @@ app.use(cors());
 
 app.use(express.static(path.join(__dirname, '/__BUILD'))); // React build
 
-import apiRoutes from './routes/api';
-import authRoutes from './routes/auth';
-
 const server_port = process.env.PORT || 3001;
-
-interface User {
-	password: string;
-	email: string;
-}
 
 passport.use(
 	new BearerStrategy(async (token, done) => {
@@ -93,7 +90,7 @@ app.use((req, res, next) => {
 		if (connected) {
 			next();
 		} else {
-			return res.status(500).send({
+			return res.status(HttpCode.SERVER_ERROR).send({
 				success: false,
 				message: 'Service currently not available.'
 			});
