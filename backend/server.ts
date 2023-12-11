@@ -100,8 +100,7 @@ app.use((req, res, next) => {
 	}
 });
 
-//TODO: fix me 
-//app.use('/v2/', apiLimiter); 
+app.use('/v2/', apiLimiter); 
 app.use('/v2', apiRoutes);
 app.use('/auth', authRoutes);
 

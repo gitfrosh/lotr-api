@@ -28,11 +28,9 @@ router.route('/character/:id/quote').get([passportHelpers.authenticate, characte
 
 router.route('/quote').get([passportHelpers.authenticate, quoteController.getQuotes]);
 router.route('/quote/:id').get([passportHelpers.authenticate, quoteController.getQuote]);
-
 router.route('*').get(async (req, res) => {
 	return res.status(HttpCode.NOT_FOUND).send(notFoundResponse);
 });
-
 // global error handler. This should always be the last .use
 // and after all routes
 router.use(errorHandler);
