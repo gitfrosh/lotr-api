@@ -19,12 +19,15 @@ With Version 2, this Open Source project is now open for contribution! You can h
 ```
 make mongo-data
 ```
-- build and run the node command line image to install the backend packages:
+- build and run the node command line image to install the packages for both the backend and frontend apps:
 ```
 make cli-build
 make cli
-user@abc123:/app$ npm install
-user@abc123:/app$ exit
+user@abc123:/app$ cd backend
+user@abc123:/app/backend$ npm install
+user@abc123:/app/backend$ cd ../frontend
+user@abc123:/app/frontend$ npm install
+user@abc123:/app/frontend$ exit
 ```
 - build the node server image
 ```
@@ -69,7 +72,8 @@ make server
 - to manage node packages, run the CLI:
 ```
 make cli
-user@abc123:/app$ npm outdated
+user@abc123:/app$ cd backend
+user@abc123:/app/backend$ npm outdated
 ```
 - if you want to watch the nodemon output as changes are made to application files, follow the container logs:
 ```
@@ -78,9 +82,20 @@ docker container logs -f lotr_server
 
 ### Start React frontend
 
-- move into the frontend folder `cd frontend`
-- install packages with `npm install`
-- get your development server started with `npm start` on localhost:3000
+- run the app service:
+```
+make app
+```
+- to manage node packages, run the CLI:
+```
+make cli
+user@abc123:/app$ cd frontend
+user@abc123:/app/frontend$ npm outdated
+```
+- if you want to watch the webpack output as changes are made to application files, follow the container logs:
+```
+docker container logs -f lotr_app
+```
 
 ### Create a user
 - navigate to http://localhost:3000 and sign up
@@ -89,7 +104,12 @@ docker container logs -f lotr_server
 
 ### Running tests
 
-- navigate to the specific project (*backend* or *frontend*) and execute `npm test`.
+- run the CLI, navigate to the specific project (*backend* or *frontend*), and execute `npm test`:
+```
+make cli
+user@abc123:/app$ cd backend
+user@abc123:/app/backend$ npm test
+```
 
 ### **HACK AWAY!** 🔨🔨🔨
 
