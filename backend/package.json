@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "nodemon server.ts",
     "test": "jest",
+    "compile": "npx tsc",
     "format": "prettier --write \"**/*.ts\"",
     "prod": "NODE_ENV=production node server.js",
     "prod_win": "set NODE_ENV=production&&node server.js"
