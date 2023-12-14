@@ -15,23 +15,9 @@ With Version 2, this Open Source project is now open for contribution! You can h
 ### Dependencies
 
 - install Docker - see [Rancher Desktop](https://rancherdesktop.io/)
-- populate the database files locally - from the command line in the project root directory, run:
+- build and run the node command line image, which will automatically install the packages for both the backend and frontend apps:
 ```
-make mongo-data
-```
-- build and run the node command line image to install the packages for both the backend and frontend apps:
-```
-make cli-build
-make cli
-user@abc123:/app$ cd backend
-user@abc123:/app/backend$ npm install
-user@abc123:/app/backend$ cd ../frontend
-user@abc123:/app/frontend$ npm install
-user@abc123:/app/frontend$ exit
-```
-- build the node server image
-```
-make server-build
+make build
 ```
 
 ### Quick Start
@@ -46,29 +32,23 @@ make down
 ```
 - for managing and accessing services individually, continue reading below
 
-### Start Mongo DB service
+### Mongo DB service
 
-- run a container of the [Mongo docker image](https://hub.docker.com/_/mongo) with the local database files mounted as a volume:
-```
-make mongo
-```
 - access the mongo command line on the running container:
 ```
-make mongo-cli
+docker exec -it lotr-mongo-1 mongosh
+test> use lotr
+lotr>
 ```
-- the database files are stored in `./docker/db/` - to restore from the original, stop any running mongo container, delete that directory, and rerun the data restore command:
+- the database files are stored in `./docker/db/` - to restore from the original, stop the running containers, delete that directory, and bring the environment back up:
 ```
-make mongo-stop
+make down
 sudo rm -rf ./docker/db
-make mongo-data
+make up
 ```
 
-### Start Node / Express backend
+### Node / Express backend
 
-- run the node server:
-```
-make server
-```
 - to manage node packages, run the CLI:
 ```
 make cli
@@ -77,15 +57,11 @@ user@abc123:/app/backend$ npm outdated
 ```
 - if you want to watch the nodemon output as changes are made to application files, follow the container logs:
 ```
-docker container logs -f lotr_server
+docker container logs -f lotr-backend-1
 ```
 
-### Start React frontend
+### React frontend
 
-- run the app service:
-```
-make app
-```
 - to manage node packages, run the CLI:
 ```
 make cli
@@ -98,6 +74,7 @@ docker container logs -f lotr_app
 ```
 
 ### Create a user
+
 - navigate to http://localhost:3000 and sign up
 - use your favorite Mongo client to access user documents and get your new access_token for using the secured APIs
 - OR login with your credentials in the Frontend to get your token
@@ -114,8 +91,8 @@ user@abc123:/app/backend$ npm test
 ### **HACK AWAY!** 🔨🔨🔨
 
 ### 🔃 Create a new pull request 
-- using <a href="https://github.com/gitfrosh/lotr-api/compare" target="_blank">`https://github.com/gitfrosh/lotr-api/compare`</a>.
 
+- using <a href="https://github.com/gitfrosh/lotr-api/compare" target="_blank">`https://github.com/gitfrosh/lotr-api/compare`</a>.
 
 ## Getting started with Data Improvement / Enhancement
 
