@@ -70,7 +70,7 @@ user@abc123:/app/frontend$ npm outdated
 ```
 - if you want to watch the webpack output as changes are made to application files, follow the container logs:
 ```
-docker container logs -f lotr_app
+docker container logs -f lotr-frontend-1
 ```
 
 ### Create a user
