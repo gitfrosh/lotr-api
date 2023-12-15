@@ -14,7 +14,8 @@ services:
             - ./db:/data/db
 
     backend:
-        image: node:21.2-alpine
+        # Using the debian version rather than alpine to support binary execution e.g. bcrypt
+        image: node:21.2
         command: [ "npm", "run", "dev" ]
         depends_on:
             - mongo
