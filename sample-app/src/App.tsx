@@ -31,7 +31,7 @@ const App: React.FC = () => {
 
         setQuote(quoteData.dialog);
 
-        const rawCharacters = await fetch(`http://the-one-api.dev/v2/character?_id=${quoteData.character}`, {
+        const rawCharacters = await fetch(`https://the-one-api.dev/v2/character?_id=${quoteData.character}`, {
           headers: headers,
         });
 
