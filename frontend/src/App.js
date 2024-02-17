@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { ToastProvider } from "react-toast-notifications";
 
 import { Pages } from "./pages";
 
@@ -19,7 +18,6 @@ const Routes = [
 
 function App() {
   return (
-    <ToastProvider autoDismiss>
       <Router>
         <div className="App">
           <div className="container">
@@ -50,7 +48,6 @@ function App() {
           </div>
         </div>
       </Router>
-    </ToastProvider>
   );
 }
 
