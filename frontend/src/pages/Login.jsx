@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm, useField } from "react-form";
 import { login } from "../helpers/api";
-import { useToasts } from "react-toast-notifications";
+import toast from 'react-hot-toast';
 import { useHistory } from "react-router-dom";
 import Helmet from "react-helmet";
 
@@ -53,7 +53,6 @@ function PasswordField() {
 }
 
 function Login() {
-  const { addToast } = useToasts();
   const history = useHistory();
 
   const {
@@ -81,9 +80,9 @@ function Login() {
   async function sendToServer(values) {
     const response = await login(values);
     if (response.message) {
-      addToast(response.message, { appearance: "error" });
+      toast.error(response.message);
     } else {
-      addToast("Login successful", { appearance: "success" });
+      toast.success("Login successful");
       setCookie("lotr-api", response.token, 7);
       history.push('/account')
 

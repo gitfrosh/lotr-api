@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { getUserInfo } from "../helpers/api";
 import { Link, useHistory, useLocation } from "react-router-dom";
-import { useToasts } from "react-toast-notifications";
+import toast, { Toaster } from 'react-hot-toast';
 
 const Headers = {
   '/'             : 'The One API',
@@ -13,7 +13,6 @@ const Headers = {
 }
 
 const Header = () => {
-  const { addToast } = useToasts();
   const history = useHistory();
   const location = useLocation();
 
@@ -35,10 +34,10 @@ const Header = () => {
     e.preventDefault();
     try {
       document.cookie = "lotr-api=;expires=Thu, 01 Jan 1970 00:00:01 GMT;";
-      addToast("Logout successful", { appearance: "success" });
+      toast.success("Logout successful");
       history.push("/login");
     } catch (e) {
-      addToast(e, { appearance: "error" });
+      toast.error(e);
     }
   }
 
@@ -88,6 +87,7 @@ const Header = () => {
           )}
         </nav>
       </div>
+      <Toaster />
     </header>
   );
 };

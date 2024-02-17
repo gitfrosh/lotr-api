@@ -1,5 +1,5 @@
 import React from "react";
-import { useToasts } from "react-toast-notifications";
+import toast from 'react-hot-toast';
 import { useHistory } from "react-router-dom";
 import { useForm, useField } from "react-form";
 import { register } from "../helpers/api";
@@ -78,7 +78,6 @@ function PasswordValidateField() {
 }
 
 function SignUp() {
-  const { addToast } = useToasts();
   const history = useHistory();
 
   const {
@@ -100,9 +99,9 @@ function SignUp() {
   async function sendToServer(values) {
     const response = await register(values);
     if (response.message) {
-      addToast(response.message, { appearance: "error" });
+      toast.error(response.message);
     } else {
-      addToast("Registered successfully", { appearance: "success" });
+      toast.success("Registered successfully");
       history.push("/login");
     }
   }

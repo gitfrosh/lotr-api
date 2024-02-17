@@ -41,15 +41,6 @@ header {
 }
 
 
-.react-toast-notifications__container {
-  z-index: 10000 !important;
-}
-
-.react-toast-notifications__container button {
-  z-index: 10000 !important;
-}
-
-
 .drawer-toggle:before {
   color: var(--card-border-color);
   font-size: 80px;
