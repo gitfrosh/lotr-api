@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import toast from 'react-hot-toast';
 import { useHistory } from "react-router-dom";
-import { useForm, useField } from "react-form";
 import { register } from "../helpers/api";
 import Helmet from "react-helmet";
 
@@ -9,100 +8,53 @@ const textCenter = {
   'textAlign': 'center'
 };
 
-async function validateRequired(field) {
-  if (!field) {
-    return "Required";
-  } else {
-    return false
-  }
-}
-
-function EmailField() {
-  const {
-    meta: { error, isTouched, isValidating },
-    getInputProps,
-  } = useField("email", {
-    validate: validateRequired,
-  });
-
-  return (
-    <>
-      <input type="email" {...getInputProps()}/>{" "}
-      {isValidating ? (
-        <em>Validating...</em>
-      ) : isTouched && error ? (
-        <em>{error}</em>
-      ) : null}
-    </>
-  );
-}
-
-function PasswordField() {
-  const {
-    meta: { error, isTouched, isValidating },
-    getInputProps,
-  } = useField("password", {
-    validate: validateRequired
-  });
-
-  return (
-    <>
-      <input type="password" {...getInputProps()} />{" "}
-      {isValidating ? (
-        <em>Validating...</em>
-      ) : isTouched && error ? (
-        <em>{error}</em>
-      ) : null}
-    </>
-  );
-}
-
-function PasswordValidateField() {
-  const {
-    meta: { error, isTouched, isValidating },
-    getInputProps,
-  } = useField("passwordValidate", {
-    validate: validateRequired
-  });
-
-  return (
-    <>
-      <input type="password" {...getInputProps()} />{" "}
-      {isValidating ? (
-        <em>Validating...</em>
-      ) : isTouched && error ? (
-        <em>{error}</em>
-      ) : null}
-    </>
-  );
-}
-
 function SignUp() {
   const history = useHistory();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [passwordValidate, setPasswordValidate] = useState('');
+  const [error, setError] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const {
-    Form,
-    meta: { error, isSubmitting, canSubmit },
-  } = useForm({
-    validate: (values) => {
-      if (values.password !== values.passwordValidate) {
-        return "The passwords don't match.";
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  }
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  }
+
+  const handlePasswordValidateChange = (e) => {
+    setPasswordValidate(e.target.value);
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!email || !password || !passwordValidate) {
+      setError("All fields are required");
+      return;
+    }
+
+    if (password !== passwordValidate) {
+      setError("The passwords don't match");
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const response = await register({ email, password });
+      if (response.message) {
+        toast.error(response.message);
+      } else {
+        toast.success("Registered successfully");
+        history.push("/login");
       }
-      return false;
-    },
-    onSubmit: async (values, instance) => {
-      await sendToServer(values);
-    },
-    debugForm: false,
-  });
-
-  async function sendToServer(values) {
-    const response = await register(values);
-    if (response.message) {
-      toast.error(response.message);
-    } else {
-      toast.success("Registered successfully");
-      history.push("/login");
+    } catch (error) {
+      toast.error("An error occurred while registering");
+    } finally {
+      setIsSubmitting(false);
     }
   }
 
@@ -115,32 +67,32 @@ function SignUp() {
         <br />
         Get your access token now by registering a free API account.
         </p>
-      <Form>
+      <form onSubmit={handleSubmit}>
           <div className="input-group fluid">
             <label>
-              E-Mail: <EmailField />
+              E-Mail: <input type="email" value={email} onChange={handleEmailChange} />
             </label>
           </div>
           <div className="input-group fluid">
             <label>
-              Password: <PasswordField />
+              Password: <input type="password" value={password} onChange={handlePasswordChange} />
             </label>
           </div>
           <div className="input-group fluid">
             <label>
-              Repeat Password: <PasswordValidateField />
+              Repeat Password: <input type="password" value={passwordValidate} onChange={handlePasswordValidateChange} />
             </label>
           </div>
           <div className="input-group fluid">
-            <button className="primary" type="submit" disabled={!canSubmit}>
+            <button className="primary" type="submit" disabled={isSubmitting}>
               Submit
             </button>
           </div>
           <div style={textCenter}>
-            <em>{error ? error : null}</em>
+            <em>{error}</em>
             <em>{isSubmitting ? "Submitting..." : null}</em>
           </div>
-      </Form>
+      </form>
     </div>
   );
 }

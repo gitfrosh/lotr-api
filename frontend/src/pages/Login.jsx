@@ -1,121 +1,91 @@
-import React from "react";
-import { useForm, useField } from "react-form";
+import React, { useState } from "react";
 import { login } from "../helpers/api";
 import toast from 'react-hot-toast';
 import { useHistory } from "react-router-dom";
 import Helmet from "react-helmet";
 
-async function validateRequired(field) {
-  if (!field) {
-    return "Required";
-  } else {
-    return false
+async function setCookie(name, value, days) {
+  var expires = "";
+  if (days) {
+    var date = new Date();
+    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+    expires = "; expires=" + date.toUTCString();
   }
-}
-
-function EmailField() {
-  const {
-    meta: { error, isTouched, isValidating },
-    getInputProps,
-  } = useField("email", {
-    validate: validateRequired
-  });
-  return (
-    <>
-      <input type="email" {...getInputProps()} />{" "}
-      {isValidating ? (
-        <em>Validating...</em>
-      ) : isTouched && error ? (
-        <em>{error}</em>
-      ) : null}
-    </>
-  );
-}
-
-function PasswordField() {
-  const {
-    meta: { error, isTouched, isValidating },
-    getInputProps,
-  } = useField("password", {
-    validate: validateRequired
-  });
-
-  return (
-    <>
-      <input type="password" {...getInputProps()} />{" "}
-      {isValidating ? (
-        <em>Validating...</em>
-      ) : isTouched && error ? (
-        <em>{error}</em>
-      ) : null}
-    </>
-  );
+  document.cookie = name + "=" + (value || "") + expires + "; path=/";
 }
 
 function Login() {
   const history = useHistory();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const {
-    Form,
-    meta: { isSubmitting, canSubmit },
-  } = useForm({
-    onSubmit: async (values, instance) => {
-      await sendToServer(values);
-    },
-    debugForm: false,
-  });
-
-
-
-  async function setCookie(name, value, days) {
-    var expires = "";
-    if (days) {
-      var date = new Date();
-      date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-      expires = "; expires=" + date.toUTCString();
-    }
-    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
   }
 
-  async function sendToServer(values) {
-    const response = await login(values);
-    if (response.message) {
-      toast.error(response.message);
-    } else {
-      toast.success("Login successful");
-      setCookie("lotr-api", response.token, 7);
-      history.push('/account')
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  }
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    if (!email || !password) {
+      setErrors({
+        email: email ? null : "Required",
+        password: password ? null : "Required"
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const response = await login({ email, password });
+      if (response.message) {
+        toast.error(response.message);
+      } else {
+        toast.success("Login successful");
+        setCookie("lotr-api", response.token, 7);
+        history.push('/account');
+      }
+    } catch (error) {
+      toast.error("An error occurred while logging in");
+    } finally {
+      setIsSubmitting(false);
     }
   }
 
   return (
     <>
       <div>
-      <Helmet>
-        <title>The Lord of the Rings API - The one API | Login</title>
-      </Helmet>
-        <Form>
-            <div className="input-group fluid">
-              <label>
-                E-Mail: <EmailField />
-              </label>
-            </div>
-            <div className="input-group fluid">
-              <label>
-                Password: <PasswordField />
-              </label>
-            </div>
-            <div className="input-group fluid">
-              <button className="primary" type="submit" disabled={!canSubmit}>
-                Submit
-              </button>
-            </div>
-
-            <div>
-              <em>{isSubmitting ? "Submitting..." : null}</em>
-            </div>
-        </Form>
+        <Helmet>
+          <title>The Lord of the Rings API - The one API | Login</title>
+        </Helmet>
+        <form onSubmit={handleSubmit}>
+          <div className="input-group fluid">
+            <label>
+              E-Mail: <input type="email" value={email} onChange={handleEmailChange} />
+              {errors.email && <em>{errors.email}</em>}
+            </label>
+          </div>
+          <div className="input-group fluid">
+            <label>
+              Password: <input type="password" value={password} onChange={handlePasswordChange} />
+              {errors.password && <em>{errors.password}</em>}
+            </label>
+          </div>
+          <div className="input-group fluid">
+            <button className="primary" type="submit" disabled={isSubmitting}>
+              Submit
+            </button>
+          </div>
+          <div>
+            <em>{isSubmitting ? "Submitting..." : null}</em>
+          </div>
+        </form>
       </div>
     </>
   );
