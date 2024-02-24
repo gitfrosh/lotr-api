@@ -164,6 +164,13 @@ footer > p, footer b {
   color: var(--fore-color) !important;
 }
 
+.hr-like {
+    border: none;
+    border-top: 1px solid transparent;
+    background-image: linear-gradient(to right, transparent, var(--border-color) 20%, var(--border-color) 80%, transparent);
+    height: 1px;
+    margin: 1em 0;
+}
 
 @media screen and (max-width: 1000px) {
   footer > p, footer b {
