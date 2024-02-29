@@ -16,32 +16,26 @@ async function setCookie(name, value, days) {
 
 function Login() {
   const history = useHistory();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [formData, setFormData] = useState({ email: '', password: '' });
   const [errors, setErrors] = useState({ email: '', password: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (field, value) => {
-    if (field === 'email') {
-      setEmail(value);
-      setErrors({ ...errors, email: validateField(value) });
-    }
-    if (field === 'password') { 
-      setPassword(value);
-      setErrors({ ...errors, password: validateField(value) });
-    }
+    setFormData({ ...formData, [field]: value });
+    setErrors({ ...errors, [field]: validateField(value) });
   };
 
   const validateField = (field) => {
     if (!field.trim()) {
-      return 'Required'
-    };
+      return 'Required';
+    }
     return '';
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    const { email, password } = formData;
     const emailError = validateField(email);
     const passwordError = validateField(password);
 
@@ -81,11 +75,11 @@ function Login() {
               E-Mail:{' '}
               <input
                 type='email'
-                value={email}
+                value={formData.email}
                 onChange={(e) => handleInputChange('email', e.target.value)}
-                onBlur={() => setErrors({ ...errors, email: validateField(email) })}
+                onBlur={() => setErrors({ ...errors, email: validateField(formData.email) })}
               />
-              {(errors.email) && <em>Required</em>}
+              {errors.email && <em>Required</em>}
             </label>
           </div>
           <div className='input-group fluid'>
@@ -93,11 +87,11 @@ function Login() {
               Password:{' '}
               <input
                 type='password'
-                value={password}
+                value={formData.password}
                 onChange={(e) => handleInputChange('password', e.target.value)}
-                onBlur={() => setErrors({ ...errors, password: validateField(password) })}
+                onBlur={() => setErrors({ ...errors, password: validateField(formData.password) })}
               />
-              {(errors.password) && <em>Required</em>}
+              {errors.password && <em>Required</em>}
             </label>
           </div>
           <div className='input-group fluid'>
