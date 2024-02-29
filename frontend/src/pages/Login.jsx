@@ -20,16 +20,16 @@ function Login() {
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState({ email: '', password: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isTouched, setIsTouched] = useState(false);
 
   const handleInputChange = (field, value) => {
     if (field === 'email') {
       setEmail(value);
+      setErrors({ ...errors, email: validateField(value) });
     }
     if (field === 'password') { 
       setPassword(value);
+      setErrors({ ...errors, password: validateField(value) });
     }
-    setIsTouched(true);
   };
 
   const validateField = (field) => {
@@ -85,7 +85,7 @@ function Login() {
                 onChange={(e) => handleInputChange('email', e.target.value)}
                 onBlur={() => setErrors({ ...errors, email: validateField(email) })}
               />
-              {((isTouched && !email.trim()) || errors.email) && <em>Required</em>}
+              {(errors.email) && <em>Required</em>}
             </label>
           </div>
           <div className='input-group fluid'>
@@ -97,7 +97,7 @@ function Login() {
                 onChange={(e) => handleInputChange('password', e.target.value)}
                 onBlur={() => setErrors({ ...errors, password: validateField(password) })}
               />
-              {((isTouched && !password.trim()) || errors.password) && <em>Required</em>}
+              {(errors.password) && <em>Required</em>}
             </label>
           </div>
           <div className='input-group fluid'>
