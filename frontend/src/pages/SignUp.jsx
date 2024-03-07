@@ -10,34 +10,46 @@ const textCenter = {
 
 function SignUp() {
   const history = useHistory();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [passwordValidate, setPasswordValidate] = useState('');
-  const [error, setError] = useState('');
+  const [formData, setFormData] = useState({ email: '', password: '', passwordValidate: '' });
+  const [errors, setErrors] = useState({ email: '', password: '', passwordValidate: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  }
+  const handleInputChange = (field, value) => {
+    const validationResult = field === 'passwordValidate' 
+      ? validatePasswordValidate(value) 
+      : validateField(value);
+    setFormData({ ...formData, [field]: value });
+    setErrors({ ...errors, [field]: validationResult });
+  };
 
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  }
+  const validateField = (field) => {
+    if (!field.trim()) {
+      return 'Required';
+    }
+    return '';
+  };
 
-  const handlePasswordValidateChange = (e) => {
-    setPasswordValidate(e.target.value);
-  }
+  const validatePasswordValidate = (field) => {
+    const result = validateField(field);
+    if (result.length > 0) {
+      return result;
+    } else if (field !== formData.password) {
+      return 'Passwords do not match';
+    }
+    return '';
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!email || !password || !passwordValidate) {
-      setError("All fields are required");
-      return;
-    }
+    const { email, password, passwordValidate } = formData;
+    const emailError = validateField(email);
+    const passwordError = validateField(password);
+    const passwordValidateError = validatePasswordValidate(passwordValidate);
 
-    if (password !== passwordValidate) {
-      setError("The passwords don't match");
+    setErrors({ email: emailError, password: passwordError, passwordValidate: passwordValidateError });
+
+    if (emailError || passwordError || passwordValidateError) {
       return;
     }
 
@@ -56,7 +68,7 @@ function SignUp() {
     } finally {
       setIsSubmitting(false);
     }
-  }
+  };
 
   return (
     <div>
@@ -70,26 +82,37 @@ function SignUp() {
       <form onSubmit={handleSubmit}>
           <div className="input-group fluid">
             <label>
-              E-Mail: <input type="email" value={email} onChange={handleEmailChange} />
+              E-Mail: <input type="email"
+                value={formData.email}
+                onChange={(e) => handleInputChange('email', e.target.value)}
+                onBlur={() => setErrors({ ...errors, email: validateField(formData.email) })} />
+              {errors.email && <em>{errors.email}</em>}
             </label>
           </div>
           <div className="input-group fluid">
             <label>
-              Password: <input type="password" value={password} onChange={handlePasswordChange} />
+              Password: <input type="password" 
+                value={formData.password}
+                onChange={(e) => handleInputChange('password', e.target.value)}
+                onBlur={() => setErrors({ ...errors, password: validateField(formData.password) })} />
+              {errors.password && <em>{errors.password}</em>}
             </label>
           </div>
           <div className="input-group fluid">
             <label>
-              Repeat Password: <input type="password" value={passwordValidate} onChange={handlePasswordValidateChange} />
+              Repeat Password: <input type="password" 
+                value={formData.passwordValidate}
+                onChange={(e) => handleInputChange('passwordValidate', e.target.value)}
+                onBlur={() => setErrors({ ...errors, passwordValidate: validateField(formData.passwordValidate) })} />
+              {errors.passwordValidate && <em>{errors.passwordValidate}</em>}
             </label>
           </div>
           <div className="input-group fluid">
-            <button className="primary" type="submit" disabled={isSubmitting}>
+            <button className="primary" type="submit" disabled={isSubmitting || !!errors.email || !!errors.password || !!errors.passwordValidate}>
               Submit
             </button>
           </div>
           <div style={textCenter}>
-            <em>{error}</em>
             <em>{isSubmitting ? "Submitting..." : null}</em>
           </div>
       </form>
