@@ -8,24 +8,29 @@ const textCenter = {
   'textAlign': 'center'
 };
 
+const REQUIRED = 'Required';
+const PASSWORDS_DO_NOT_MATCH = 'Passwords do not match';
+
 function SignUp() {
   const history = useHistory();
   const [formData, setFormData] = useState({ email: '', password: '', passwordValidate: '' });
   const [errors, setErrors] = useState({ email: '', password: '', repeatPassword: '', passwordValidate: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const validateEmpty = (value) => value.trim() ? '' : REQUIRED;
+
   const validate = (field, value) => {
     setFormData({ ...formData, [field]: value });
   
     if (field === 'email') {
-      setErrors({ ...errors, [field]: value.trim() ? '' : 'Required' });
+      setErrors({ ...errors, [field]: validateEmpty(value) });
     } else {
       const isPasswordField = field === 'password';
       const passwordsMatch = isPasswordField ? value === formData.passwordValidate : value === formData.password;
       setErrors({ 
         ...errors, 
-        [field]: value.trim() ? '' : 'Required',
-        repeatPassword: passwordsMatch ? '' : 'Passwords do not match'
+        [field]: validateEmpty(value),
+        repeatPassword: passwordsMatch ? '' : PASSWORDS_DO_NOT_MATCH
       });
     }
   }
@@ -34,9 +39,9 @@ function SignUp() {
     e.preventDefault();
   
     const { email, password, passwordValidate } = formData;
-    const emailError = !email.trim() ? 'Required' : '';
-    const passwordError = !password.trim() ? 'Required' : '';
-    const passwordValidateError = !passwordValidate.trim() ? 'Required' : password !== passwordValidate ? 'Passwords do not match' : '';
+    const emailError = validateEmpty(email);
+    const passwordError = validateEmpty(password);
+    const passwordValidateError = !passwordValidate.trim() ? REQUIRED : password !== passwordValidate ? PASSWORDS_DO_NOT_MATCH : '';
   
     setErrors({ email: emailError, password: passwordError, passwordValidate: passwordValidateError });
   
