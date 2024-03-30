@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { getUserInfo } from "../helpers/api";
 import { Link, useHistory, useLocation } from "react-router-dom";
-import toast, { Toaster } from 'react-hot-toast';
+import toast, { Renderable, Toast, Toaster, ValueFunction } from 'react-hot-toast';
 
-const Headers = {
+type Message = Renderable | ValueFunction<Renderable, Toast>
+
+const Headers: Record<string, string> = {
   '/'             : 'The One API',
   "/sign-up"      : "Sign up",
   "/about"        : "About",
@@ -12,38 +14,34 @@ const Headers = {
   "/account"      : "Account"
 }
 
-const Header = () => {
+const Header: React.FC = () => {
   const history = useHistory();
   const location = useLocation();
 
   const [userInfo, setUserInfo] = useState({});
   const [loading, setLoading] = useState(true);
-  const [headerText, setHeaderText] = useState();
+  const [headerText, setHeaderText] = useState<string | undefined>();
   const [isHomePage, setIsHomePage] = useState(location.pathname === "/");
 
-
-
   useEffect(() => {
-    setHeaderText(Headers[location.pathname])
-    getUserInfo().then(setUserInfo)
+    setHeaderText(Headers[location.pathname]);
+    getUserInfo().then(setUserInfo);
     setLoading(false);
-    setIsHomePage(location.pathname === "/")
+    setIsHomePage(location.pathname === "/");
   }, [location.pathname]);
 
-  async function logout(e) {
+  async function logout(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
     e.preventDefault();
     try {
       document.cookie = "lotr-api=;expires=Thu, 01 Jan 1970 00:00:01 GMT;";
       toast.success("Logout successful");
       history.push("/login");
     } catch (e) {
-      toast.error(e);
+      toast.error(e as Message);
     }
   }
 
   if (loading) return <span>Loading..</span>;
-
-
 
   return (
     <header className="sticky row">

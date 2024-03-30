@@ -6,12 +6,12 @@ import SignUp from "./SignUp";
 import Login from "./Login";
 import NotFoundPage from "./NotFoundPage";
 
-export const Pages = {
-  Home         : Home,
+export const Pages: Record<string, React.FC> = {
+  Home: Home,
   Documentation: Documentation,
-  About        : About,
-  Account      : Account,
-  SignUp       : SignUp,
-  Login        : Login,
-  NotFoundPage : NotFoundPage
-}
+  About: About,
+  Account: Account,
+  SignUp: SignUp,
+  Login: Login,
+  NotFoundPage: NotFoundPage,
+};

@@ -1,12 +1,21 @@
-let host;
+let host: string;
 if (process.env.NODE_ENV === "development") {
-  host = "http://localhost:3001"
+  host = "http://localhost:3001";
 } else {
-  host = "https://the-one-api.dev"
+  host = "https://the-one-api.dev";
 }
 
-export async function login(values) {
-  const requestOptions = {
+interface RequestOptions {
+  method: string;
+  headers: {
+    Accept: string;
+    "Content-Type": string;
+  };
+  body?: string;
+}
+
+export async function login(values: any): Promise<any> {
+  const requestOptions: RequestOptions = {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -18,7 +27,7 @@ export async function login(values) {
   }
   try {
     const response = await fetch(
-      `${`${host}/auth/login`}`,
+      `${host}/auth/login`,
       requestOptions
     );
     if (response.status > 399) {
@@ -39,8 +48,8 @@ export async function login(values) {
   }
 }
 
-export async function register(values) {
-  const requestOptions = {
+export async function register(values: any): Promise<any> {
+  const requestOptions: RequestOptions = {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -52,7 +61,7 @@ export async function register(values) {
   }
   try {
     const response = await fetch(
-      `${`${host}/auth/register`}`,
+      `${host}/auth/register`,
       requestOptions
     );
     if (response.status > 399) {
@@ -73,8 +82,8 @@ export async function register(values) {
   }
 }
 
-export async function logout() {
-  const requestOptions = {
+export async function logout(): Promise<any> {
+  const requestOptions: RequestOptions = {
     method: "GET",
     headers: {
       Accept: "application/json",
@@ -83,7 +92,7 @@ export async function logout() {
   };
   try {
     const response = await fetch(
-      `${`${host}/auth/logout`}`,
+      `${host}/auth/logout`,
       requestOptions
     );
     if (response.status > 399) {
@@ -104,7 +113,7 @@ export async function logout() {
   }
 }
 
-export async function getUserInfo() {
+export async function getUserInfo(): Promise<any> {
   var match = document.cookie.match(new RegExp("(^| )lotr-api=([^;]+)"));
   if (match) {
     const jwt = match[2];

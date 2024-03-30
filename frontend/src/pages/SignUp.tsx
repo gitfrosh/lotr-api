@@ -4,24 +4,37 @@ import { useHistory } from "react-router-dom";
 import { register } from "../helpers/api";
 import Helmet from "react-helmet";
 
-const textCenter = {
-  'textAlign': 'center'
+interface FormData {
+  email: string;
+  password: string;
+  passwordValidate: string;
+}
+
+interface FormErrors {
+  email: string;
+  password: string;
+  repeatPassword?: string;
+  passwordValidate: string;
+}
+
+const textCenter: React.CSSProperties = {
+  textAlign: 'center'
 };
 
 const REQUIRED = 'Required';
 const PASSWORDS_DO_NOT_MATCH = 'Passwords do not match';
 
-function SignUp() {
+function SignUp(): JSX.Element {
   const history = useHistory();
-  const [formData, setFormData] = useState({ email: '', password: '', passwordValidate: '' });
-  const [errors, setErrors] = useState({ email: '', password: '', repeatPassword: '', passwordValidate: '' });
+  const [formData, setFormData] = useState<FormData>({ email: '', password: '', passwordValidate: '' });
+  const [errors, setErrors] = useState<FormErrors>({ email: '', password: '', repeatPassword: '', passwordValidate: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const validateEmpty = (value) => value.trim() ? '' : REQUIRED;
+  const validateEmpty = (value: string): string => value.trim() ? '' : REQUIRED;
 
-  const validate = (field, value) => {
+  const validate = (field: keyof FormData, value: string): void => {
     setFormData({ ...formData, [field]: value });
-  
+
     if (field === 'email') {
       setErrors({ ...errors, [field]: validateEmpty(value) });
     } else {
@@ -34,23 +47,23 @@ function SignUp() {
       });
     }
   }
-  
-  const handleSubmit = async (e) => {
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault();
-  
+
     const { email, password, passwordValidate } = formData;
     const emailError = validateEmpty(email);
     const passwordError = validateEmpty(password);
     const passwordValidateError = !passwordValidate.trim() ? REQUIRED : password !== passwordValidate ? PASSWORDS_DO_NOT_MATCH : '';
-  
+
     setErrors({ email: emailError, password: passwordError, passwordValidate: passwordValidateError });
-  
+
     if (emailError || passwordError || passwordValidateError) {
       return;
     }
-  
+
     setIsSubmitting(true);
-  
+
     try {
       const response = await register({ email, password });
       if (response.message) {

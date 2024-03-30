@@ -1,7 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 
-function Documentation() {
+const Documentation: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -30,7 +30,6 @@ function Documentation() {
           <li>
             <a href="#5">May I use pagination, sorting and filtering?</a>
           </li>
-
         </ul>
       </p>
       <br />
@@ -125,9 +124,9 @@ function Documentation() {
           <table>
             <thead>
               <tr>
-                <th width="20%">Endpoint</th>
-                <th width="60%">Response</th>
-                <th width="20%">Token required</th>
+                <th style={{ width: '20%' }}>Endpoint</th>
+                <th style={{ width: '60%' }}>Response</th>
+                <th style={{ width: '20%' }}>Token required</th>
               </tr>
             </thead>
             <tbody>
@@ -237,8 +236,8 @@ function Documentation() {
           <table className="table">
             <thead>
               <tr>
-                <th width="20%">Option</th>
-                <th width="60%">Example</th>
+                <th style={{ width: '20%' }}>Option</th>
+                <th style={{ width: '60%' }}>Example</th>
               </tr>
             </thead>
             <tbody>
@@ -266,7 +265,7 @@ function Documentation() {
           <table className="table">
             <thead>
               <tr>
-                <th width="60%">Examples</th>
+                <th style={{ width: '60%' }}>Examples</th>
               </tr>
             </thead>
             <tbody>
@@ -287,8 +286,8 @@ function Documentation() {
           <table className="table">
             <thead>
               <tr>
-                <th width="20%">Option</th>
-                <th width="60%">Example</th>
+                <th style={{ width: '20%' }}>Option</th>
+                <th style={{ width: '60%' }}>Example</th>
               </tr>
             </thead>
             <tbody>

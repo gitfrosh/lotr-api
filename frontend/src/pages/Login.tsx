@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { login } from '../helpers/api';
 import toast from 'react-hot-toast';
 import { useHistory } from 'react-router-dom';
 import Helmet from 'react-helmet';
 
-async function setCookie(name, value, days) {
+async function setCookie(name: string, value: string, days: number) {
   var expires = '';
   if (days) {
     var date = new Date();
@@ -14,25 +14,30 @@ async function setCookie(name, value, days) {
   document.cookie = name + '=' + (value || '') + expires + '; path=/';
 }
 
-function Login() {
-  const history = useHistory();
-  const [formData, setFormData] = useState({ email: '', password: '' });
-  const [errors, setErrors] = useState({ email: '', password: '' });
-  const [isSubmitting, setIsSubmitting] = useState(false);
+interface FormData {
+  email: string;
+  password: string;
+}
 
-  const handleInputChange = (field, value) => {
+function Login(): JSX.Element {
+  const history = useHistory();
+  const [formData, setFormData] = useState<FormData>({ email: '', password: '' });
+  const [errors, setErrors] = useState<{ email: string; password: string }>({ email: '', password: '' });
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+
+  const handleInputChange = (field: string, value: string) => {
     setFormData({ ...formData, [field]: value });
     setErrors({ ...errors, [field]: validateField(value) });
   };
 
-  const validateField = (field) => {
+  const validateField = (field: string): string => {
     if (!field.trim()) {
       return 'Required';
     }
     return '';
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const { email, password } = formData;
@@ -76,7 +81,7 @@ function Login() {
               <input
                 type='email'
                 value={formData.email}
-                onChange={(e) => handleInputChange('email', e.target.value)}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => handleInputChange('email', e.target.value)}
                 onBlur={() => setErrors({ ...errors, email: validateField(formData.email) })}
               />
               {errors.email && <em>Required</em>}
@@ -88,7 +93,7 @@ function Login() {
               <input
                 type='password'
                 value={formData.password}
-                onChange={(e) => handleInputChange('password', e.target.value)}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => handleInputChange('password', e.target.value)}
                 onBlur={() => setErrors({ ...errors, password: validateField(formData.password) })}
               />
               {errors.password && <em>Required</em>}
