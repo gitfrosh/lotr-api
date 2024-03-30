@@ -14,7 +14,11 @@ const Routes = [
   { path: '', component: Pages.NotFoundPage },
 ];
 
-const App: React.FC = () => {
+interface AppProps {
+  tab: string;
+}
+
+const App: React.FC<AppProps> = ({ tab }) => {
   return (
     <Router>
       <div className="App">
