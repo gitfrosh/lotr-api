@@ -10,17 +10,24 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x, 21.x]
+
     steps:
+      # Checkout project
       - uses: actions/checkout@v4
 
-      # Frontend build steps
-      - name: Set up Node.js version for frontend
-        uses: actions/setup-node@v3
+      # Setup Node
+      - name: Use Node.js ${{ matrix.node-version }} for frontend
+        uses: actions/setup-node@v4
         with:
-          node-version: '18.x'
+          node-version: ${{ matrix.node-version }}
 
-      - name: npm install for frontend
-        run: npm install
+    # FRONTEND #
+    # Install Packages
+    - name: Install Dependencies for Frontend
+        run: npm ci
         working-directory: frontend
 
       # Include whenver tests are added
@@ -42,17 +49,22 @@ jobs:
       - name: Copy frontend build to backend
         run: cp -R ./frontend/build/* ./backend/__BUILD/
 
-      # Backend build steps
-      - name: Set up Node.js version for backend
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18.x'
-
-      - name: npm install and test for backend
+      # BACKEND #
+      # Install Packages
+      - name: Install Dependencies for Backend
         run: |
-          npm install
-          npm run test --if-present
+          npm ci
         working-directory: ./backend
+
+      # Run Jest tests
+      - name: Run Tests
+        working-directory: ./backend
+        run: npm run test --if-present
+
+      # Compile TS
+      - name: Compile TS
+        working-directory: ./backend
+        run: npm run compile
 
       - name: Zip artifact for deployment
         run: zip release.zip ./* -r
