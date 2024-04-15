@@ -100,13 +100,13 @@ app.use((req, res, next) => {
 	}
 });
 
-app.use('/v2/', apiLimiter); 
+app.use('/v2/', apiLimiter);
 app.use('/v2', apiRoutes);
 app.use('/auth', authRoutes);
 
 // Handles React frontend requests
 app.get('*', (req, res) => {
-	res.sendFile(path.join(__dirname + '/__BUILD/index.html'));
+	res.sendFile(path.join(__dirname + '/../__BUILD/index.html'));
 });
 
 async function start() {
