@@ -1,11 +1,8 @@
-let host;
-if (process.env.NODE_ENV === "development") {
-  host = "http://localhost:3001"
-} else {
-  host = "/"
-}
+const host = `${window.location.protocol}//${window.location.hostname}${window.location.port ? ':' + window.location.port : ''}`;
 
 export async function login(values) {
+  console.log(host)
+
   const requestOptions = {
     method: "POST",
     headers: {
