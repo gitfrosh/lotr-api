@@ -1,38 +1,32 @@
 import React from "react";
 import Helmet from "react-helmet";
 
-function Documentation() {
+const Documentation: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>The Lord of the Rings API - The one API | Documentation</title>
       </Helmet>
-      <p>
-        <br />
-        <ul>
-          <li>
-            <a href="#1">What is an API?</a>
-          </li>
-          <li>
-            <a href="#6">I'm a total newbie to REST APIs. Is there a beginner-friendly introduction?</a>
-          </li>
-          <li>
-            <a href="#2">
-              Which data does the "one API to rule them all" provide?
-            </a>
-          </li>
-          <li>
-            <a href="#3">What about response formats and authentication?</a>
-          </li>
-          <li>
-            <a href="#4">Which routes are available?</a>
-          </li>
-          <li>
-            <a href="#5">May I use pagination, sorting and filtering?</a>
-          </li>
-
-        </ul>
-      </p>
+      <ul>
+        <li>
+          <a href="#1">What is an API?</a>
+        </li>
+        <li>
+          <a href="#6">I'm a total newbie to REST APIs. Is there a beginner-friendly introduction?</a>
+        </li>
+        <li>
+          <a href="#2">Which data does the "one API to rule them all" provide?</a>
+        </li>
+        <li>
+          <a href="#3">What about response formats and authentication?</a>
+        </li>
+        <li>
+          <a href="#4">Which routes are available?</a>
+        </li>
+        <li>
+          <a href="#5">May I use pagination, sorting and filtering?</a>
+        </li>
+      </ul>
       <br />
       <div id="1" className="card fluid">
         <div className="section">
@@ -60,10 +54,10 @@ function Documentation() {
             Yes, I wrote a blog post that explains in detail how REST APIs work and why you would use 
             them at all. It also covers authentication, JSON handling and a sample React app. {' '}
             <a href="https://rike.dev/2021/05/04/rest-apis-for-absolute-beginners/">
-            This is the link to the blog post
-              </a> and  <a href="https://github.com/gitfrosh/lotr-api/tree/release/sample-app">
+              This is the link to the blog post
+            </a> and  <a href="https://github.com/gitfrosh/lotr-api/tree/release/sample-app">
               here you will find the according code base
-              </a> for the 
+            </a> for the 
             sample React app.
           </p>
         </div>
@@ -125,9 +119,9 @@ function Documentation() {
           <table>
             <thead>
               <tr>
-                <th width="20%">Endpoint</th>
-                <th width="60%">Response</th>
-                <th width="20%">Token required</th>
+                <th style={{ width: '20%' }}>Endpoint</th>
+                <th style={{ width: '60%' }}>Response</th>
+                <th style={{ width: '20%' }}>Token required</th>
               </tr>
             </thead>
             <tbody>
@@ -237,8 +231,8 @@ function Documentation() {
           <table className="table">
             <thead>
               <tr>
-                <th width="20%">Option</th>
-                <th width="60%">Example</th>
+                <th style={{ width: '20%' }}>Option</th>
+                <th style={{ width: '60%' }}>Example</th>
               </tr>
             </thead>
             <tbody>
@@ -266,7 +260,7 @@ function Documentation() {
           <table className="table">
             <thead>
               <tr>
-                <th width="60%">Examples</th>
+                <th style={{ width: '60%' }}>Examples</th>
               </tr>
             </thead>
             <tbody>
@@ -287,8 +281,8 @@ function Documentation() {
           <table className="table">
             <thead>
               <tr>
-                <th width="20%">Option</th>
-                <th width="60%">Example</th>
+                <th style={{ width: '20%' }}>Option</th>
+                <th style={{ width: '60%' }}>Example</th>
               </tr>
             </thead>
             <tbody>

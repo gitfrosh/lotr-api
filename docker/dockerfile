@@ -1,0 +1,40 @@
+####################
+### COMMAND LINE ###
+####################
+
+# Using the debian version rather than alpine, cuz bash and stuff
+FROM node:21.2 as lotr_cli
+
+WORKDIR /app
+
+COPY ./docker/npm-build.sh .
+
+RUN chmod +x npm-build.sh
+
+# Configure the user's id and group id to match the host file system
+RUN userdel -r node
+
+ARG USER_ID
+
+ARG GROUP_ID
+
+RUN getent group $GROUP_ID || addgroup --gid $GROUP_ID user
+
+RUN getent passwd $USER_ID || adduser --disabled-password --gecos '' --uid $USER_ID --gid $GROUP_ID user
+
+# Set the active user and open the interactive terminal
+USER user
+
+ENTRYPOINT [ "bash" ]
+
+
+
+################
+### DATABASE ###
+################
+
+FROM mongo:7.0-jammy as lotr_mongo
+
+COPY ./db/bson /data/init
+
+RUN echo "mongorestore --archive='/data/init'" > /docker-entrypoint-initdb.d/init.sh

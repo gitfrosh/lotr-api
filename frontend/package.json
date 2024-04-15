@@ -13,13 +13,20 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "mini.css": "^3.0.1",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
-    "react-form": "^4.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
+    "react-hot-toast": "^2.4.1",
     "react-router-dom": "^5.3.4",
-    "react-scripts": "^5.0.1",
-    "react-toast-notifications": "^2.5.1"
+    "react-scripts": "^5.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.2",
+    "@types/react": "^18.2.73",
+    "@types/react-dom": "^18.2.23",
+    "@types/react-helmet": "^6.1.11",
+    "@types/react-router-dom": "^5.3.3",
+    "typescript": "^5.3.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -41,5 +48,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "overrides": {
+    "typescript": "^5.3.3"
   }
 }

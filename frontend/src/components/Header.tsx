@@ -1,66 +1,75 @@
 import React, { useState, useEffect } from "react";
 import { getUserInfo } from "../helpers/api";
 import { Link, useHistory, useLocation } from "react-router-dom";
-import { useToasts } from "react-toast-notifications";
+import toast, {
+  Renderable,
+  Toast,
+  Toaster,
+  ValueFunction,
+} from "react-hot-toast";
+import { UserInfo } from "../pages/Account";
 
-const Headers = {
-  '/'             : 'The One API',
-  "/sign-up"      : "Sign up",
-  "/about"        : "About",
+type Message = Renderable | ValueFunction<Renderable, Toast>;
+
+const Headers: Record<string, string> = {
+  "/": "The One API",
+  "/sign-up": "Sign up",
+  "/about": "About",
   "/documentation": "Documentation",
-  "/login"        : "Login",
-  "/account"      : "Account"
-}
+  "/login": "Login",
+  "/account": "Account",
+};
 
-const Header = () => {
-  const { addToast } = useToasts();
+const Header: React.FC = () => {
   const history = useHistory();
   const location = useLocation();
 
-  const [userInfo, setUserInfo] = useState({});
+  const [userInfo, setUserInfo] = useState<null | UserInfo>(null);
   const [loading, setLoading] = useState(true);
-  const [headerText, setHeaderText] = useState();
+  const [headerText, setHeaderText] = useState<string | undefined>();
   const [isHomePage, setIsHomePage] = useState(location.pathname === "/");
 
-
-
   useEffect(() => {
-    setHeaderText(Headers[location.pathname])
-    getUserInfo().then(setUserInfo)
+    setHeaderText(Headers[location.pathname]);
+    getUserInfo().then(setUserInfo);
     setLoading(false);
-    setIsHomePage(location.pathname === "/")
+    setIsHomePage(location.pathname === "/");
   }, [location.pathname]);
 
-  async function logout(e) {
+  async function logout(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
     e.preventDefault();
     try {
       document.cookie = "lotr-api=;expires=Thu, 01 Jan 1970 00:00:01 GMT;";
-      addToast("Logout successful", { appearance: "success" });
+      toast.success("Logout successful");
       history.push("/login");
     } catch (e) {
-      addToast(e, { appearance: "error" });
+      toast.error(e as Message);
     }
   }
 
   if (loading) return <span>Loading..</span>;
 
-
-
   return (
     <header className="sticky row">
-      <div className="col-sm-6 logo">{!isHomePage && <Link to="/">The One API</Link>}</div>
+      <div className="col-sm-6 logo">
+        {!isHomePage && <Link to="/">The One API</Link>}
+      </div>
       <div style={{ textAlign: "right" }} className="col-sm-6">
         <label htmlFor="drawer-control" className="drawer-toggle persistent" />
       </div>
 
-      <div id="flexy" className="col-sm-12 col-md-2 col-lg-3"/>
-      <div style={{ padding:"20px"}} className="col-sm-12 col-md-8 col-lg-6">
-        <h1>{ headerText }</h1>
-        {isHomePage &&<div className="subtitle">to rule them all</div>}
+      <div id="flexy" className="col-sm-12 col-md-2 col-lg-3" />
+      <div style={{ padding: "20px" }} className="col-sm-12 col-md-8 col-lg-6">
+        <h1>{headerText}</h1>
+        {isHomePage && <div className="subtitle">to rule them all</div>}
       </div>
-      <div className="col-sm-12 col-md-2 col-lg-3"/>
+      <div className="col-sm-12 col-md-2 col-lg-3" />
 
-      <input type="checkbox" id="drawer-control" className="drawer persistent" />
+      <input
+        type="checkbox"
+        id="drawer-control"
+        className="drawer persistent"
+      />
       <div id="drawer">
         <label htmlFor="drawer-control" className="drawer-close" />
         <nav>
@@ -88,6 +97,7 @@ const Header = () => {
           )}
         </nav>
       </div>
+      <Toaster />
     </header>
   );
 };
