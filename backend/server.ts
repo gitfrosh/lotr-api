@@ -27,7 +27,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 
-app.use(express.static(path.join(__dirname, '/__BUILD'))); // React build
+app.use(express.static(path.join(__dirname, '/../__BUILD'))); // React build
 
 const server_port = process.env.PORT || 3001;
 
