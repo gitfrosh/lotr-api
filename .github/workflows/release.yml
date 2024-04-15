@@ -16,65 +16,65 @@ jobs:
 
     steps:
       # Checkout project
-      - uses: actions/checkout@v4
+    - uses: actions/checkout@v4
 
-      # Setup Node
-      - name: Use Node.js ${{ matrix.node-version }} for frontend
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node-version }}
+    # Setup Node
+    - name: Use Node.js ${{ matrix.node-version }} for frontend
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
 
     # FRONTEND #
     # Install Packages
     - name: Install Dependencies for Frontend
-        run: npm ci
-        working-directory: frontend
+      run: npm ci
+      working-directory: frontend
 
-      # Include whenver tests are added
-      # - name: npm run test for frontend
-      #   run: npm run test --if-present
-      #   working-directory: frontend
+    # Include whenver tests are added
+    # - name: npm run test for frontend
+    #   run: npm run test --if-present
+    #   working-directory: frontend
 
-      - name: npm run build for frontend
-        run: npm run build
-        working-directory: frontend
+    - name: npm run build for frontend
+      run: npm run build
+      working-directory: frontend
 
-        # working-directory: frontend
-        # with:
-        #   node-version: '18.x'
-        #   app_location: "/frontend"
-        #   output_location: "build" 
+    # working-directory: frontend
+    # with:
+    #   node-version: '18.x'
+    #   app_location: "/frontend"
+    #   output_location: "build" 
 
-      # Copy build directory to backend
-      - name: Copy frontend build to backend
-        run: cp -R ./frontend/build/* ./backend/__BUILD/
+    # Copy build directory to backend
+    - name: Copy frontend build to backend
+      run: cp -R ./frontend/build/* ./backend/__BUILD/
 
-      # BACKEND #
-      # Install Packages
-      - name: Install Dependencies for Backend
-        run: |
-          npm ci
-        working-directory: ./backend
+    # BACKEND #
+    # Install Packages
+    - name: Install Dependencies for Backend
+      run: |
+        npm ci
+      working-directory: ./backend
 
-      # Run Jest tests
-      - name: Run Tests
-        working-directory: ./backend
-        run: npm run test --if-present
+    # Run Jest tests
+    - name: Run Tests
+      working-directory: ./backend
+      run: npm run test --if-present
 
-      # Compile TS
-      - name: Compile TS
-        working-directory: ./backend
-        run: npm run compile
+    # Compile TS
+    - name: Compile TS
+      working-directory: ./backend
+      run: npm run compile
 
-      - name: Zip artifact for deployment
-        run: zip release.zip ./* -r
-        working-directory: ./backend
+    - name: Zip artifact for deployment
+      run: zip release.zip ./* -r
+      working-directory: ./backend
 
-      - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v3
-        with:
-          name: node-app
-          path: backend/release.zip
+    - name: Upload artifact for deployment job
+      uses: actions/upload-artifact@v3
+      with:
+        name: node-app
+        path: backend/release.zip
 
   deploy:
     runs-on: ubuntu-latest
