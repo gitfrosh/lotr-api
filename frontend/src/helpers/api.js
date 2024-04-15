@@ -2,7 +2,7 @@ let host;
 if (process.env.NODE_ENV === "development") {
   host = "http://localhost:3001"
 } else {
-  host = "https://the-one-api.dev"
+  host = "/"
 }
 
 export async function login(values) {

@@ -1,4 +1,4 @@
-name: Build and deploy Node.js app to Azure Web App - lotr-backend
+name: Build and deploy Express.js backend and React frontend as Azure Web App
 
 on:
   push:
@@ -48,7 +48,7 @@ jobs:
         with:
           node-version: '18.x'
 
-      - name: npm install, build, and test for backend
+      - name: npm install and test for backend
         run: |
           npm install
           npm run test --if-present
