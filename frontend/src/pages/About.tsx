@@ -3,7 +3,7 @@ import Helmet from "react-helmet";
 import logo from "../assets/github.png";
 import coffee from "../assets/buymeacoffee.jpg";
 
-function About() {
+const About: React.FC = () => {
   return (
     <div>
       <Helmet>

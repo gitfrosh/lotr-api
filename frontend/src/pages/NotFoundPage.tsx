@@ -1,11 +1,11 @@
 import React from "react";
 import Helmet from "react-helmet";
 
-const textCenter = {
-    'textAlign': 'center'
+const textCenter: React.CSSProperties = {
+    textAlign: 'center'
 };
 
-function NotFoundPage() {
+function NotFoundPage(): JSX.Element {
   return (
     <main>
       <Helmet>
