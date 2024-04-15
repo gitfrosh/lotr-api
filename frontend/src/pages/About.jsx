@@ -247,6 +247,25 @@ function About() {
                 Link
               </a>
             </li>
+            <li>
+              Moritz implemented a Dart package which developers can use to
+              interact with The One Api in their Flutter apps |{" "}
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://pub.dev/packages/lotr_api"
+              >
+                pub.dev
+              </a>
+              ,{" "}
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://github.com/finkmoritz/lotr_api"
+              >
+                Github
+              </a>
+            </li>
           </ul>
         </div>
       </div>
