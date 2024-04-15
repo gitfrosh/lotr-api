@@ -3,7 +3,7 @@ import { getUserInfo } from "../helpers/api";
 import { useHistory } from "react-router-dom";
 import Helmet from "react-helmet";
 
-interface UserInfo {
+export interface UserInfo {
   email: string;
   access_token: string;
 }
@@ -48,6 +48,6 @@ const Account: React.FC = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Account;
