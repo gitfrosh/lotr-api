@@ -37,7 +37,13 @@ function Account() {
             </span>
             <em> (Include this in your API calls!)</em>
           </p>
-      </div>
+          <p>
+            <b>
+              Not sure how to do this? Please refer to the documentation's{" "}
+              <a href="/documentation#3">auth</a> part!
+            </b>
+          </p>
+        </div>
       </div>
     </div>
   );
