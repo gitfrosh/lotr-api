@@ -9,3 +9,4 @@ dump
 .DS_Store
 bk
 backend/dist
+docker/db
