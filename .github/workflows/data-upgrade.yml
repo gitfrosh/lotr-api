@@ -28,9 +28,6 @@ jobs:
     - name: Install regex
       run: pip install regex
 
-    - name: Install json
-      run: pip install json
-
     - name: Convert CSV to JSON
       run: python db/convert-csv-to-json.py
 
