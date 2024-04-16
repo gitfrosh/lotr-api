@@ -7,6 +7,8 @@ on:
     branches:
       - main
   pull_request:
+    branches:
+      - main
     paths:
       - 'db/**'
 
@@ -25,11 +27,11 @@ jobs:
         python-version: '3.x'
 
     - name: Install pandas
-        run: pip install pandas
+      run: pip install pandas
 
 
     - name: Convert CSV to JSON
-        run: |
+      run: |
           import os
           import pandas as pd
 

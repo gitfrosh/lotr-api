@@ -41,7 +41,7 @@ jobs:
           print("Conversion complete.")
 
     - name: Upload JSON files as artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: json-files
-          path: db/json/
+      uses: actions/upload-artifact@v4
+      with:
+        name: json-files
+        path: db/json/
