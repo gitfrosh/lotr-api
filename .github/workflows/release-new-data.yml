@@ -7,6 +7,8 @@ on:
     branches:
       - main
   pull_request:
+    branches:
+      - main
     paths:
       - 'db/**'
 
@@ -25,25 +27,45 @@ jobs:
         python-version: '3.x'
 
     - name: Install pandas
-        run: pip install pandas
+      run: pip install pandas
 
 
     - name: Convert CSV to JSON
-        run: |
-          import os
-          import pandas as pd
-
-          os.makedirs('db/json', exist_ok=True)
-          csv_files = [f for f in os.listdir('db/csv') if f.endswith('.csv')]
-
-          for file in csv_files:
-              df = pd.read_csv(f'db/csv/{file}')
-              json_path = f'db/json/{file.replace(".csv", ".json")}'
-              df.to_json(json_path, orient='records', lines=True)
-          print("Conversion complete.")
+      run: python db/convert-csv-to-json.py
 
     - name: Upload JSON files as artifacts
       uses: actions/upload-artifact@v4
       with:
         name: json-files
         path: db/json/
+
+  mongoimport:
+    needs: convert
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        mongodb-version: ['6.0']
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download JSON files as artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: json-files
+          path: db/json/
+
+      - name: Install MongoDB Tools
+        run: |
+          wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
+          echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu $(lsb_release -sc)/mongodb-org/5.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
+          sudo apt-get update
+          sudo apt-get install -y mongodb-database-tools
+
+      - name: Import to MongoDB
+        run: |
+          chmod +x ./db/import_json_to_mongo.sh
+          ./db/import_json_to_mongo.sh
+        shell: bash
+        env:
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}       
