@@ -2,7 +2,11 @@ name: Test and Build Merge Requests
 
 on:
   push:
+    paths-ignore:
+      - 'db/**'
   pull_request:
+    paths-ignore:
+      - 'db/**'
 
 jobs:
   test-and-build:
@@ -15,7 +19,8 @@ jobs:
 
     steps:
     # Checkout project
-    - uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v4
 
     # Setup Node
     - name: Use Node.js ${{ matrix.node-version }} for frontend

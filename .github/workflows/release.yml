@@ -2,6 +2,8 @@ name: Build and deploy Express.js backend and React frontend as Azure Web App
 
 on:
   push:
+    paths-ignore:
+      - 'db/**'
     branches:
       - main
   workflow_dispatch:
@@ -15,8 +17,9 @@ jobs:
         node-version: [21.x]
 
     steps:
-      # Checkout project
-    - uses: actions/checkout@v4
+    # Checkout project
+    - name: Checkout repository
+      uses: actions/checkout@v4
 
     # Setup Node
     - name: Use Node.js ${{ matrix.node-version }} for frontend
