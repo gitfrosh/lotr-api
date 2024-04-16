@@ -29,7 +29,7 @@ jobs:
       run: pip install regex
 
     - name: Convert CSV to JSON
-      run: python db/convert_csv_to_json.py
+      run: python db/convert-csv-to-json.py
 
     - name: Upload JSON files as artifacts
       uses: actions/upload-artifact@v4
