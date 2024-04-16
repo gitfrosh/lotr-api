@@ -27,7 +27,20 @@ jobs:
 
     - name: Convert CSV to JSON
       run: |
-        python -c "import os; import pandas as pd; os.makedirs('db/json', exist_ok=True); csv_files = [f for f in os.listdir('db/csv') if f.endswith('.csv')]; [pd.read_csv(f'db/csv/{file}').to_json(f'db/json/{file.replace('.csv', '.json')}', orient='records', lines=True) for file in csv_files]"
+        python -c "\
+        import os; \
+        import pandas as pd; \
+        import regex as re; \
+        def transform_objectid(text): \
+            return re.sub(r'ObjectId\\((.*?)\\)', r'{\"$oid\": \"\\1\"}', text); \
+        os.makedirs('db/json', exist_ok=True); \
+        csv_files = [f for f in os.listdir('db/csv') if f.endswith('.csv')]; \
+        for file in csv_files: \
+            df = pd.read_csv(f'db/csv/{file}'); \
+            for column in df.select_dtypes(include=['object']): \
+                df[column] = df[column].apply(lambda x: transform_objectid(str(x)) if x else x); \
+            json_path = f'db/json/{file.replace('.csv', '.json')}; \
+            df.to_json(json_path, orient='records', lines=True);"
 
 
     - name: Upload JSON files as artifacts
