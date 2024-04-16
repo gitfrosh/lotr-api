@@ -1,29 +1,29 @@
 import os
 import pandas as pd
 import regex as re
+import json  # Needed to write JSON files
 
 def transform_objectid(text):
     """Replace MongoDB ObjectId references to proper JSON format."""
-    # This pattern captures the contents inside ObjectId()
-    pattern = re.compile(r'ObjectId\((.*?)\)')
-    # Replace using a function to format as a dictionary object
-    return pattern.sub(lambda match: f'{{"$oid": "{match.group(1)}"}}', text)
+    return re.sub(r'ObjectId\((.*?)\)', r'{"$oid": "\1"}', text)
 
 def main():
-    csv_folder = 'db/csv/'
-    json_folder = 'db/json/'
-    os.makedirs(json_folder, exist_ok=True)
-    csv_files = [f for f in os.listdir(csv_folder) if f.endswith('.csv')]
+    os.makedirs('db/json', exist_ok=True)
+    csv_files = [f for f in os.listdir('db/csv') if f.endswith('.csv')]
     
+    all_data = []  # List to collect all data
+
     for file in csv_files:
-        file_path = os.path.join(csv_folder, file)
-        df = pd.read_csv(file_path)
-        # Apply transformation to each string column
+        df = pd.read_csv(f'db/csv/{file}')
         for column in df.select_dtypes(include=['object']):
-            df[column] = df[column].apply(transform_objectid)
-        json_path = os.path.join(json_folder, file.replace(".csv", ".json"))
-        # Use pandas to_json method to ensure proper JSON formatting
-        df.to_json(json_path, orient='records', lines=True)
+            df[column] = df[column].apply(lambda x: transform_objectid(str(x)) if x else x)
+        # Convert DataFrame to a list of dictionaries and extend all_data with these records
+        all_data.extend(df.to_dict(orient='records'))
+    
+    # Write all collected data to a single JSON file
+    json_path = 'db/json/all_data.json'
+    with open(json_path, 'w') as f:
+        json.dump(all_data, f, indent=4)
 
 if __name__ == "__main__":
     main()
