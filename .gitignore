@@ -10,3 +10,5 @@ dump
 bk
 backend/dist
 docker/db
+docker/backend
+docker/frontend

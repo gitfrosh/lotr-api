@@ -25,12 +25,10 @@ services:
             - "3001:3001"
 
     frontend:
-        image: node:21.2-alpine
-        command: [ "npm", "run", "start" ]
+        build: ../frontend
         depends_on:
-            - backend
-        ports:
-            - 3000:3000
+            - mongo
         volumes:
-            - ../frontend:/app
-        working_dir: /app
+            - ${PWD}/../frontend:/frontend
+        ports:
+            - "3000:3000"
