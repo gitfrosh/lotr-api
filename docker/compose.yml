@@ -14,18 +14,15 @@ services:
             - ./db:/data
 
     backend:
-        # Using the debian version rather than alpine to support binary execution e.g. bcrypt
-        image: node:21.2
-        command: [ "npm", "run", "dev" ]
+        build: ../backend
         depends_on:
             - mongo
         environment:
             DATABASE_URL: "mongodb://mongo:27017/lotr"
-        ports:
-            - 3001:3001
         volumes:
-            - ../backend:/app
-        working_dir: /app
+            - ${PWD}/../backend:/backend
+        ports:
+            - "3001:3001"
 
     frontend:
         image: node:21.2-alpine
