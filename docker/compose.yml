@@ -11,7 +11,7 @@ services:
             - 27017:27017
         restart: on-failure
         volumes:
-            - ./db:/data/db
+            - ./db:/data
 
     backend:
         # Using the debian version rather than alpine to support binary execution e.g. bcrypt
