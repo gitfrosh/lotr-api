@@ -55,13 +55,10 @@ jobs:
           name: json-files
           path: db/json/
 
-
-      - name: Start MongoDB
+      - name: Import to MongoDB
         uses: supercharge/mongodb-github-action@1.10.0
         with:
           mongodb-version: ${{ matrix.mongodb-version }}
-
-      - name: Import to MongoDB
         run: |
           for file in db/json/*.json; do
             collection=$(basename "$file" .json)
