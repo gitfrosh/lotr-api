@@ -51,6 +51,13 @@ jobs:
           name: json-files
           path: db/json/
 
+
+      - name: Install MongoDB Tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y mongodb-database-tools
+
+
       - name: Import to MongoDB
         run: |
           for file in db/json/*.json; do
