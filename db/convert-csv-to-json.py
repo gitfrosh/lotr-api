@@ -17,7 +17,7 @@ def main():
             df[column] = df[column].apply(lambda x: transform_objectid(str(x)) if x else x)
         # Save each dataframe as a JSON file with all objects in a single array
         json_path = f'db/json/{file.replace(".csv", ".json")}'
-        df.to_json(json_path, orient='records', indent=4)
+        df.to_json(json_path, orient='records', indent=4, ensure_ascii=False)
 
 if __name__ == "__main__":
     main()
