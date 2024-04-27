@@ -36,3 +36,27 @@ jobs:
       with:
         name: json-files
         path: db/json/
+
+ #remove after testing
+  mongoimport:
+    needs: convert
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download JSON files as artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: json-files
+          path: db/json/
+
+      - name: Import to MongoDB
+        run: |
+          for file in db/json/*.json; do
+            collection=$(basename "$file" .json)
+            echo "Importing $file to collection $collection"
+            mongoimport --type json --uri ${{ secrets.MONGODB_URI }} --collection $collection --file "$file" --drop --maintainInsertionOrder --jsonArray
+          done
+        env:
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}
