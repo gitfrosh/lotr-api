@@ -41,6 +41,10 @@ jobs:
   mongoimport:
     needs: convert
     runs-on: ubuntu-latest
+    # added for testing upload
+    strategy:
+      matrix:
+        mongodb-version: ['6.0']
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -52,14 +56,10 @@ jobs:
           path: db/json/
 
 
-      - name: Install MongoDB Tools
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y wget gnupg
-          wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | sudo apt-key add -
-          echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
-          sudo apt-get update
-          sudo apt-get install -y mongodb-mongosh
+      - name: Start MongoDB
+        uses: supercharge/mongodb-github-action@1.10.0
+        with:
+          mongodb-version: ${{ matrix.mongodb-version }}
 
       - name: Import to MongoDB
         run: |
