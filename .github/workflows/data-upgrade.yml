@@ -63,11 +63,6 @@ jobs:
           sudo apt-get install -y mongodb-database-tools
 
       - name: Import to MongoDB
-        run: |
-          for file in db/json/*.json; do
-            collection=$(basename "$file" .json)
-            echo "Importing $file to collection $collection"
-            mongoimport --type json --uri ${{ secrets.MONGODB_URI }} --collection "$collection" --file "$file" --drop --maintainInsertionOrder --jsonArray
-          done
+        run: ./import_json_to_mongo.sh
         env:
           MONGODB_URI: ${{ secrets.MONGODB_URI }}
