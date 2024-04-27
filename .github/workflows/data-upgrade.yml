@@ -63,6 +63,6 @@ jobs:
           sudo apt-get install -y mongodb-database-tools
 
       - name: Import to MongoDB
-        run: ./import_json_to_mongo.sh
+        run: db/import_json_to_mongo.sh
         env:
           MONGODB_URI: ${{ secrets.MONGODB_URI }}
