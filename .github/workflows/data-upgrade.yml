@@ -36,36 +36,3 @@ jobs:
       with:
         name: json-files
         path: db/json/
-
- #remove after testing
-  mongoimport:
-    needs: convert
-    runs-on: ubuntu-latest
-    # added for testing upload
-    strategy:
-      matrix:
-        mongodb-version: ['6.0']
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Download JSON files as artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: json-files
-          path: db/json/
-
-      - name: Install MongoDB Tools
-        run: |
-          wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
-          echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu $(lsb_release -sc)/mongodb-org/5.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
-          sudo apt-get update
-          sudo apt-get install -y mongodb-database-tools
-
-      - name: Import to MongoDB
-        run: |
-          chmod +x ./db/import_json_to_mongo.sh
-          ./db/import_json_to_mongo.sh
-        shell: bash
-        env:
-          MONGODB_URI: ${{ secrets.MONGODB_URI }}       
