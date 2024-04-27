@@ -67,7 +67,7 @@ jobs:
           for file in db/json/*.json; do
             collection=$(basename "$file" .json)
             echo "Importing $file to collection $collection"
-            mongoimport --type json --uri ${{ secrets.MONGODB_URI }} --collection $collection --file "$file" --drop --maintainInsertionOrder --jsonArray
+            mongoimport --type json --uri ${{ secrets.MONGODB_URI }} --collection "$collection" --file "$file" --drop --maintainInsertionOrder --jsonArray
           done
         env:
           MONGODB_URI: ${{ secrets.MONGODB_URI }}
