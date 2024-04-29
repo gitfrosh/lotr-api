@@ -29,6 +29,8 @@ jobs:
     - name: Install pandas
       run: pip install pandas
 
+    - name: Install regex
+      run: pip install regex
 
     - name: Convert CSV to JSON
       run: python db/convert-csv-to-json.py
