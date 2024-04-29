@@ -12,10 +12,15 @@ const Documentation: React.FC = () => {
           <a href="#1">What is an API?</a>
         </li>
         <li>
-          <a href="#6">I'm a total newbie to REST APIs. Is there a beginner-friendly introduction?</a>
+          <a href="#6">
+            I'm a total newbie to REST APIs. Is there a beginner-friendly
+            introduction?
+          </a>
         </li>
         <li>
-          <a href="#2">Which data does the "one API to rule them all" provide?</a>
+          <a href="#2">
+            Which data does the "one API to rule them all" provide?
+          </a>
         </li>
         <li>
           <a href="#3">What about response formats and authentication?</a>
@@ -38,7 +43,11 @@ const Documentation: React.FC = () => {
             expect in a graphical user interface like a website.{" "}
             <em>
               I took that great definition from{" "}
-              <a href="https://www.freecodecamp.org/news/what-is-an-api-in-english-please-b880a3214a82/">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.freecodecamp.org/news/what-is-an-api-in-english-please-b880a3214a82/"
+              >
                 this
               </a>{" "}
               very understandable article. Please refer to it for more
@@ -49,16 +58,30 @@ const Documentation: React.FC = () => {
       </div>
       <div id="6" className="card fluid">
         <div className="section">
-          <h2>I'm a total newbie to REST APIs. Is there a beginner-friendly introduction?</h2>
+          <h2>
+            I'm a total newbie to REST APIs. Is there a beginner-friendly
+            introduction?
+          </h2>
           <p>
-            Yes, I wrote a blog post that explains in detail how REST APIs work and why you would use 
-            them at all. It also covers authentication, JSON handling and a sample React app. {' '}
-            <a href="https://rike.dev/2021/05/04/rest-apis-for-absolute-beginners/">
+            Yes, I wrote a blog post that explains in detail how REST APIs work
+            and why you would use them at all. It also covers authentication,
+            JSON handling and a sample React app.{" "}
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://rike.dev/2021/05/04/rest-apis-for-absolute-beginners/"
+            >
               This is the link to the blog post
-            </a> and  <a href="https://github.com/gitfrosh/lotr-api/tree/release/sample-app">
+            </a>{" "}
+            and{" "}
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://github.com/gitfrosh/lotr-api/tree/main/sample-app"
+            >
               here you will find the according code base
-            </a> for the 
-            sample React app.
+            </a>{" "}
+            for the sample React app.
           </p>
         </div>
       </div>
@@ -90,7 +113,11 @@ const Documentation: React.FC = () => {
             You need to send the access key as a bearer token in every request
             you make to the api. Bearer tokens must be included in the
             authorization header (
-            <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication"
+            >
               More information on authorization headers?
             </a>
             ) in the following format:
@@ -119,9 +146,9 @@ const Documentation: React.FC = () => {
           <table>
             <thead>
               <tr>
-                <th style={{ width: '20%' }}>Endpoint</th>
-                <th style={{ width: '60%' }}>Response</th>
-                <th style={{ width: '20%' }}>Token required</th>
+                <th style={{ width: "20%" }}>Endpoint</th>
+                <th style={{ width: "60%" }}>Response</th>
+                <th style={{ width: "20%" }}>Token required</th>
               </tr>
             </thead>
             <tbody>
@@ -144,7 +171,7 @@ const Documentation: React.FC = () => {
                 <td data-label="Response">
                   Request all chapters of one specific book
                 </td>
-                <td data-label="Token required"/>
+                <td data-label="Token required" />
               </tr>
               <tr>
                 <td data-label="Endpoint">
@@ -231,8 +258,8 @@ const Documentation: React.FC = () => {
           <table className="table">
             <thead>
               <tr>
-                <th style={{ width: '20%' }}>Option</th>
-                <th style={{ width: '60%' }}>Example</th>
+                <th style={{ width: "20%" }}>Option</th>
+                <th style={{ width: "60%" }}>Example</th>
               </tr>
             </thead>
             <tbody>
@@ -260,7 +287,7 @@ const Documentation: React.FC = () => {
           <table className="table">
             <thead>
               <tr>
-                <th style={{ width: '60%' }}>Examples</th>
+                <th style={{ width: "60%" }}>Examples</th>
               </tr>
             </thead>
             <tbody>
@@ -281,8 +308,8 @@ const Documentation: React.FC = () => {
           <table className="table">
             <thead>
               <tr>
-                <th style={{ width: '20%' }}>Option</th>
-                <th style={{ width: '60%' }}>Example</th>
+                <th style={{ width: "20%" }}>Option</th>
+                <th style={{ width: "60%" }}>Example</th>
               </tr>
             </thead>
             <tbody>
@@ -330,6 +357,6 @@ const Documentation: React.FC = () => {
       </div>
     </>
   );
-}
+};
 
 export default Documentation;
