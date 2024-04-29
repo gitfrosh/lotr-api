@@ -25,23 +25,14 @@ jobs:
     - name: Install pandas
       run: pip install pandas
 
+    - name: Install regex
+      run: pip install regex
 
     - name: Convert CSV to JSON
-      run: |
-          import os
-          import pandas as pd
-
-          os.makedirs('db/json', exist_ok=True)
-          csv_files = [f for f in os.listdir('db/csv') if f.endswith('.csv')]
-
-          for file in csv_files:
-              df = pd.read_csv(f'db/csv/{file}')
-              json_path = f'db/json/{file.replace(".csv", ".json")}'
-              df.to_json(json_path, orient='records', lines=True)
-          print("Conversion complete.")
+      run: python db/convert-csv-to-json.py
 
     - name: Upload JSON files as artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: json-files
-          path: db/json/
+      uses: actions/upload-artifact@v4
+      with:
+        name: json-files
+        path: db/json/
