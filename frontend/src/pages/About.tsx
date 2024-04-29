@@ -11,27 +11,21 @@ const About: React.FC = () => {
       </Helmet>
       <p>
         <br />
-        The <strong>one API to rule them all</strong> is a project by{" "}
+        The <strong>one API to rule them all</strong> is a non-commercial,
+        open-source project maintained by{" "}
         <a href="https://rike.dev" rel="noopener noreferrer" target="_blank">
           Rike
         </a>{" "}
-        started during the{" "}
+        and{" "}
         <a
-          href="https://www.100daysofcode.com/"
+          href="https://github.com/MateuszKikmunter"
           rel="noopener noreferrer"
           target="_blank"
         >
-          #100DaysOfCode challenge
-        </a>{" "}
-        and is brought to you via{" "}
-        <a
-          href="https://www.digitalocean.com/"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          DigitalOcean
+          Mateusz
         </a>
-        . You have some questions or suggestions? Find me on Twitter (
+        , which has been around since 2019. If you have any quick questions or
+        suggestions, feel free to reach out to Rike on X (
         <a
           href="https://twitter.com/rikecodes"
           rel="noopener noreferrer"
@@ -93,6 +87,14 @@ const About: React.FC = () => {
             </a>{" "}
             -{" "}
             <a
+              href="https://azure.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Azure
+            </a>{" "}
+            -{" "}
+            <a
               href="https://www.mongodb.com/de"
               rel="noopener noreferrer"
               target="_blank"
@@ -125,8 +127,8 @@ const About: React.FC = () => {
             </a>{" "}
             and more.
             <br /> <br />
-            It could not have been made without the scraping work of Moko Sharma
-            (
+            This project would not have been possible without the invaluable
+            scraping contributions of Moko Sharma (
             <a
               href="https://www.kaggle.com/mokosan/lord-of-the-rings-character-data"
               rel="noopener noreferrer"
@@ -142,7 +144,7 @@ const About: React.FC = () => {
             >
               Kaggle
             </a>
-            ) .
+            ).
           </p>
         </div>
       </div>
@@ -152,7 +154,7 @@ const About: React.FC = () => {
           <p>
             Have a look into some great projects based on this API. You would
             like to get listed?{" "}
-            <a href="mailto:hello@rike.dev">Drop me a line.</a>
+            <a href="mailto:hello@rike.dev">Drop Rike a line.</a>
           </p>
 
           <ul>
@@ -271,6 +273,6 @@ const About: React.FC = () => {
       </div>
     </div>
   );
-}
+};
 
 export default About;

@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
       <p className="hr-like">
         <br />
         All we have to decide is what to do with the time that is given to us.{" "}
-        <b>Built with &hearts; in {new Date().getFullYear()}</b> <br />
+        <b>Built with &hearts; 2019-{new Date().getFullYear()}</b> <br />
       </p>
     </footer>
   );
