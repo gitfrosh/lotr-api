@@ -53,10 +53,10 @@ With Version 2, this Open Source project is now open for contribution! You can h
     test> use lotr
     lotr>
     ```
-- the database files are stored in `./docker/db/` - to restore from the original, stop the running containers, delete that directory, and bring the environment back up:
+- the database files are stored in `./db/db/` - to restore from the original, stop the running containers, delete that directory, and bring the environment back up:
     ```
     make down
-    sudo rm -rf ./docker/db
+    sudo rm -rf ./db/db
     make up
     ```
 
