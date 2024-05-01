@@ -2,6 +2,7 @@ db/bk
 db/bson/user.bson
 db/bson/user.metadata.json
 db/init-prod.js
+db/db
 sample-app/node_modules
 docker-compose.yml
 .idea

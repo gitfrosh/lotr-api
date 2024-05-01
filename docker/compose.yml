@@ -2,16 +2,14 @@ name: lotr
 services:
     mongo:
         build:
-            context: ..
-            dockerfile: docker/dockerfile
-            target: lotr_mongo
+            context: ../db
         environment:
             MONGO_INITDB_DATABASE: lotr
         ports:
             - 27017:27017
         restart: on-failure
         volumes:
-            - ./db:/data
+            - ${PWD}/../db:/data
 
     backend:
         build: ../backend
