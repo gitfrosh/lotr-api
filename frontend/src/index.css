@@ -1,21 +1,20 @@
 @charset "UTF-8";
-html, body {
+html,
+body {
   max-width: 100%;
   overflow-x: hidden;
-
 }
 
 .card {
   /* margin-bottom: 3rem; */
-  border: 1rem solid var(--card-border-color)
+  border: 1rem solid var(--card-border-color);
 }
 
 .logo {
-  font-size: 1.0rem !important;
+  font-size: 1rem !important;
   padding: 25px !important;
   /* font-family: 'Just Another Hand', cursive; */
   color: var(--a-visited-color) !important;
-
 }
 
 table {
@@ -24,14 +23,13 @@ table {
 
 .logo a:hover {
   text-decoration: none;
-  color: var(--card-border-color)
+  color: var(--card-border-color);
 }
 
 a:hover {
   text-decoration: none;
-  color: var(--header-fore-color)
+  color: var(--header-fore-color);
 }
-
 
 header {
   color: var(--card-border-color);
@@ -39,7 +37,6 @@ header {
   height: unset;
   overflow-x: hidden;
 }
-
 
 .drawer-toggle:before {
   color: var(--card-border-color);
@@ -55,18 +52,39 @@ header {
   }
 }
 
-p, li, ul, th, td, tr, em, a, b, input, label, button {
-  font-family: 'Work Sans', sans-serif !important;
+p,
+li,
+ul,
+th,
+td,
+tr,
+em,
+a,
+b,
+input,
+label,
+button {
+  font-family: "Work Sans", sans-serif !important;
   color: #4c4c4c;
   font-size: 16px;
   line-height: 2.1rem;
 }
 
 @media screen and (min-width: 1000px) {
-  p, li, ul, th, td, tr, em, a, b, input, label, button {
+  p,
+  li,
+  ul,
+  th,
+  td,
+  tr,
+  em,
+  a,
+  b,
+  input,
+  label,
+  button {
     font-size: 20px;
     line-height: 2.8rem;
-
   }
 }
 
@@ -87,7 +105,6 @@ h1 {
   }
 }
 
-
 .subtitle {
   margin-top: -1.7rem;
   margin-left: 1rem;
@@ -97,7 +114,6 @@ h1 {
 @media screen and (max-width: 576px) {
   .subtitle {
     font-size: 35px;
-
   }
 }
 
@@ -110,7 +126,6 @@ h2 {
   h2 {
     font-size: 28px;
     line-height: 3.5rem;
-
   }
 }
 
@@ -118,15 +133,16 @@ h3 {
   font-size: 36px !important;
 }
 
-
 h2 > smaller {
   top: -1rem;
   font-size: 1.5rem !important;
-
 }
 
-h1, h2, h3, .subtitle {
-  font-family: 'Martel', serif;
+h1,
+h2,
+h3,
+.subtitle {
+  font-family: "Martel", serif;
 }
 
 .container {
@@ -135,9 +151,8 @@ h1, h2, h3, .subtitle {
   padding: 0;
 }
 #content-wrap {
-  padding-bottom: 4rem;  
+  padding-bottom: 4rem;
   margin-bottom: 70px;
- 
 }
 
 #flexy {
@@ -155,25 +170,33 @@ footer {
   text-align: center;
   bottom: 0;
   width: 100%;
-  height: 3rem;          
+  height: 4rem;
 }
 
-footer > p, footer b {
+footer > p,
+footer b {
   font-size: 20px;
   line-height: 35px;
   color: var(--fore-color) !important;
 }
 
 .hr-like {
-    border: none;
-    border-top: 1px solid transparent;
-    background-image: linear-gradient(to right, transparent, var(--border-color) 20%, var(--border-color) 80%, transparent);
-    height: 1px;
-    margin: 1em 0;
+  border: none;
+  border-top: 1px solid transparent;
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    var(--border-color) 20%,
+    var(--border-color) 80%,
+    transparent
+  );
+  height: 1px;
+  margin: 1em 0;
 }
 
 @media screen and (max-width: 1000px) {
-  footer > p, footer b {
+  footer > p,
+  footer b {
     font-size: small;
     line-height: 25px;
   }
@@ -181,14 +204,11 @@ footer > p, footer b {
 
 #drawer {
   border: 1rem solid var(--card-border-color);
-
 }
 
 #drawer a {
   font-size: 20px !important;
-
 }
-
 
 nav {
   line-height: 0.2rem;
@@ -206,7 +226,8 @@ nav {
   margin-bottom: 3rem;
 }
 
-nav a, nav a:visited {
+nav a,
+nav a:visited {
   color: unset;
 }
 

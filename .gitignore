@@ -3,6 +3,7 @@ db/bson/user.bson
 db/bson/user.metadata.json
 db/init-prod.js
 db/db
+db/bson-for-azure
 sample-app/node_modules
 docker-compose.yml
 .idea

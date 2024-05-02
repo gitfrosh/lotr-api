@@ -4,7 +4,9 @@ let host: string;
 if (process.env.NODE_ENV === "development") {
   host = "http://localhost:3001";
 } else {
-  host = "https://the-one-api.dev";
+  host = `${window.location.protocol}//${window.location.hostname}${
+    window.location.port ? ":" + window.location.port : ""
+  }`;
 }
 interface RequestOptions {
   method: string;

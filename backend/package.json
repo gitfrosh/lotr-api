@@ -7,8 +7,9 @@
     "test": "jest",
     "compile": "npx tsc",
     "format": "prettier --write \"**/*.ts\"",
-    "prod": "NODE_ENV=production node server.js",
-    "prod_win": "set NODE_ENV=production&&node server.js"
+    "prod": "NODE_ENV=production node dist/server.js",
+    "prod_win": "set NODE_ENV=production&&node dist/server.js",
+    "start": "NODE_ENV=production node dist/server.js"
   },
   "keywords": [
     "the lord of the rings",

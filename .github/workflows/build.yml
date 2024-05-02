@@ -1,8 +1,12 @@
-name: Test and Build
+name: Test and Build Merge Requests
 
 on:
   push:
+    paths-ignore:
+      - 'db/**'
   pull_request:
+    paths-ignore:
+      - 'db/**'
 
 jobs:
   test-and-build:
@@ -11,15 +15,16 @@ jobs:
     # Define Node versions to run CI/CD on
     strategy:
       matrix:
-        node-version: [18.x, 20.x, 21.x]
+        node-version: [21.x]
 
     steps:
     # Checkout project
-    - uses: actions/checkout@v3
+    - name: Checkout repository
+      uses: actions/checkout@v4
 
     # Setup Node
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
+    - name: Use Node.js ${{ matrix.node-version }} for frontend
+      uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
 
