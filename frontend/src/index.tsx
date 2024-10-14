@@ -1,7 +1,6 @@
 import React from 'react';
 import 'mini.css/dist/mini-nord.css'
 import { createRoot } from 'react-dom/client';
-
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
