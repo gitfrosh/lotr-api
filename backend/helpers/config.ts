@@ -61,8 +61,7 @@ export const createRESTArgumentsFromGraphqlRequest = (context: IGraphQLContext, 
     const res = {
         ...context.requestInfo.context.res,
         json: (data: any) => {
-            console.log(data.docs[0].toObject())
-            const targetData = isPlural(dataName) ? {[dataName]:data.docs} : data.docs[0].toObject();
+            const targetData = isPlural(dataName) ? data.docs : data.docs[0].toObject();
             const {pages, page, offset, limit, total} = data
             const returnData = {
                 [dataName]: targetData,

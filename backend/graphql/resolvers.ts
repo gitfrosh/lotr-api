@@ -6,13 +6,18 @@ import {quoteController} from '../controllers/quote.api'
 import {IGraphQLContext, GraphQLBody} from "./schema";
 import {createRESTArgumentsFromGraphqlRequest} from '../helpers/config'
 const resolvers = {
-    // books: () => bookController.getBooks(),
     book: async (body:GraphQLBody<{id:string}>, context:IGraphQLContext) => {
         const {req,res,next} = createRESTArgumentsFromGraphqlRequest(context, body, 'book');
         const data = await bookController.getBook(req,res,next);
         console.log(data)
         return data
-    }
+    },
+    books: async (body:GraphQLBody<{}>, context:IGraphQLContext) => {
+        const {req,res,next} = createRESTArgumentsFromGraphqlRequest(context, body, 'books');
+        const data = await bookController.getBooks(req,res,next);
+        console.log(data)
+        return data
+    },
     // chaptersByBook: ({ bookId }: {bookId:number}) => bookController.getChaptersByBook({ params: { id: bookId } }),
     // chapters: () => chapterController.getChapters(),
     // chapter: ({ id }: {id:number}) => chapterController.getChapter({ params: { id } }),

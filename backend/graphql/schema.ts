@@ -3,7 +3,7 @@ import {buildSchema} from "graphql/utilities";
 const schema = buildSchema(`
    type Query {
     books: BooksResponse
-    book(id: ID!, pagination:PaginationInput): BooksResponse
+    book(id: ID!, pagination:PaginationInput): BookResponse
     chaptersByBook(bookId: ID!): ChaptersResponse
     chapters: ChaptersResponse
     chapter(id: ID!): ChaptersResponse
@@ -16,9 +16,22 @@ const schema = buildSchema(`
     quotes: QuotesResponse
     quote(id: ID!): QuotesResponse
   }
-  type BooksResponse {
-    _id: ID
-    name: String
+    type BooksResponse {
+    books: [Book]
+   total: Int
+    limit: Int
+    page: Int
+    pages: Int
+  }
+  type BookResponse {
+   book: Book
+   total: Int
+    limit: Int
+    page: Int
+    pages: Int
+  }
+  type ChapterResponse {
+    chapter: Chapter
    total: Int
     limit: Int
     page: Int
@@ -31,9 +44,23 @@ const schema = buildSchema(`
     page: Int
     pages: Int
   }
+  type MovieResponse {
+    movie: Movie
+    limit: Int
+    page: Int
+    pages: Int
+    }
+    
     type MoviesResponse {
    movies: [Movie]
    total: Int
+    limit: Int
+    page: Int
+    pages: Int
+    }
+    type CharacterResponse {
+    character: Character
+     total: Int
     limit: Int
     page: Int
     pages: Int
@@ -45,6 +72,15 @@ const schema = buildSchema(`
     page: Int
     pages: Int
     }
+    type QuoteResponse {
+    quote: Quote
+         total: Int
+    limit: Int
+    page: Int
+    pages: Int
+   }
+    
+    
     type QuotesResponse {
         quotes: [Quote]
        total: Int
@@ -113,4 +149,17 @@ export type GraphQLBody<T> = T & {
 }
 
 
-export type DataNames = 'books' | 'book' | 'chaptersByBook' | 'chapters' | 'chapter' | 'movies' | 'movie' | 'quoteByMovie' | 'characters' | 'character' | 'quoteByCharacter' | 'quotes' | 'quote'
+export type DataNames =
+    'books'
+    | 'book'
+    | 'chaptersByBook'
+    | 'chapters'
+    | 'chapter'
+    | 'movies'
+    | 'movie'
+    | 'quoteByMovie'
+    | 'characters'
+    | 'character'
+    | 'quoteByCharacter'
+    | 'quotes'
+    | 'quote'
