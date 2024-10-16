@@ -18,8 +18,6 @@ export const bookController = {
 
 	getBook: async (req: Request, res: Response, next: NextFunction) => {
 		const options = await getOptions(req);
-		console.log('options', options);
-		console.log(req, res, next);
 		try {
 			const id = req.params.id;
 			const book = await BookModel.paginate({ _id: id }, options);

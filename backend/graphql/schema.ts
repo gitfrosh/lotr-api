@@ -2,25 +2,60 @@ import {buildSchema} from "graphql/utilities";
 
 const schema = buildSchema(`
    type Query {
-    books: [Book]
-    book(id: ID!): Book
-    chaptersByBook(bookId: ID!): [Chapter]
-    chapters: [Chapter]
-    chapter(id: ID!): Chapter
-    movies: [Movie]
-    movie(id: ID!): Movie
-    quoteByMovie(movieId: ID!): [Quote]
-    characters: [Character]
-    character(id: ID!): Character
-    quoteByCharacter(characterId: ID!): [Quote]
-    quotes: [Quote]
-    quote(id: ID!): Quote
+    books: BooksResponse
+    book(id: ID!, pagination:PaginationInput): BooksResponse
+    chaptersByBook(bookId: ID!): ChaptersResponse
+    chapters: ChaptersResponse
+    chapter(id: ID!): ChaptersResponse
+    movies: MoviesResponse
+    movie(id: ID!): MoviesResponse
+    quoteByMovie(movieId: ID!): QuotesResponse
+    characters: CharactersResponse
+    character(id: ID!): CharactersResponse
+    quoteByCharacter(characterId: ID!): QuotesResponse
+    quotes: QuotesResponse
+    quote(id: ID!): QuotesResponse
   }
-
-  type Book {
-    id: ID
+  type BooksResponse {
+    _id: ID
     name: String
-    author: String
+   total: Int
+    limit: Int
+    page: Int
+    pages: Int
+  }
+  type ChaptersResponse {
+    chapters: [Chapter]
+   total: Int
+    limit: Int
+    page: Int
+    pages: Int
+  }
+    type MoviesResponse {
+   movies: [Movie]
+   total: Int
+    limit: Int
+    page: Int
+    pages: Int
+    }
+    type CharactersResponse {
+        characters: [Character]
+     total: Int
+    limit: Int
+    page: Int
+    pages: Int
+    }
+    type QuotesResponse {
+        quotes: [Quote]
+       total: Int
+    limit: Int
+    page: Int
+    pages: Int
+    }
+ 
+  type Book {
+    _id: ID
+    name: String
   }
 
   type Chapter {
@@ -44,6 +79,38 @@ const schema = buildSchema(`
     id: ID
     text: String
   }
+  type Pagination {
+    total: Int
+    limit: Int
+    page: Int
+    pages: Int
+    }
+  input PaginationInput {
+      sort: String
+      limit: Int
+      page: Int
+      offset: Int
+  }
 `);
 
+
 export default schema;
+
+export interface IGraphQLContext {
+    requestInfo: {
+        req: Express.Request;
+        context: {
+            res: Express.Response;
+        }
+    }
+}
+
+export type GraphQLBody<T> = T & {
+    sort?: string
+    limit?: string
+    page?: string
+    offset?: string
+}
+
+
+export type DataNames = 'books' | 'book' | 'chaptersByBook' | 'chapters' | 'chapter' | 'movies' | 'movie' | 'quoteByMovie' | 'characters' | 'character' | 'quoteByCharacter' | 'quotes' | 'quote'
