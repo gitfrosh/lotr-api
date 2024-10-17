@@ -19,7 +19,7 @@ import {User} from './helpers/interfaces';
 import {createHandler} from 'graphql-http/lib/use/express';
 import schema from './graphql/schema';
 import root from './graphql/resolvers';
-
+import jwt from 'jsonwebtoken';
 const app = express();
 const dpwcToken = process.env.DPWC_TOKEN || '';
 app.use(helmet());
