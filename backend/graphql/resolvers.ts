@@ -34,7 +34,7 @@ export async function getChaptersByBook(body: GraphQLBody<{ id: string }>, conte
         res: ChaptersRes,
         next: ChaptersNext
     } = createRESTArgumentsFromGraphqlRequest(context, body, 'chapters')
-    let chapters = await bookController.getChaptersByBook(ChaptersReq, ChaptersRes, ChaptersNext) as GraphQLResponse<{
+    const chapters = await bookController.getChaptersByBook(ChaptersReq, ChaptersRes, ChaptersNext) as GraphQLResponse<{
         chapters: Chapter[]
     }> | void
     if (!chapters) {
@@ -61,7 +61,7 @@ export async function getChapters(body: GraphQLBody<{}>, context: IGraphQLContex
         next: ChaptersNext
     } = createRESTArgumentsFromGraphqlRequest(context, body, 'chapters')
     const chapters = await chapterController.getChapters(ChaptersReq, ChaptersRes, ChaptersNext) as GraphQLResponse<{
-        chapters: Chapter[]
+        chapters: ChapterWithBookId[]
     }> | void
     if (!chapters) {
         return chapters
@@ -77,7 +77,7 @@ export async function getChapters(body: GraphQLBody<{}>, context: IGraphQLContex
 export async function getChapter(body: GraphQLBody<{ id: string }>, context: IGraphQLContext) {
     const {req, res, next} = createRESTArgumentsFromGraphqlRequest(context, body, 'chapter');
     const chapter = await chapterController.getChapter(req, res, next) as GraphQLResponse<{
-        chapter: Chapter
+        chapter: ChapterWithBookId
     }> | void
     if (!chapter) {
         return chapter

@@ -14,7 +14,7 @@ const schema = buildSchema(`
     character(id: ID!): CharacterResponse
     quoteByCharacter(id: ID!): QuotesResponse
     quotes: QuotesResponse
-    quote(id: ID!): QuotesResponse
+    quote(id: ID!): QuoteResponse
   }
     type BooksResponse {
     books: [Book]
@@ -49,6 +49,7 @@ const schema = buildSchema(`
     limit: Int
     page: Int
     pages: Int
+     total: Int
     }
     
     type MoviesResponse {
@@ -74,7 +75,7 @@ const schema = buildSchema(`
     }
     type QuoteResponse {
     quote: Quote
-         total: Int
+    total: Int
     limit: Int
     page: Int
     pages: Int
@@ -129,7 +130,7 @@ const schema = buildSchema(`
     _id: ID
     dialog: String
     movie: Movie
-    Character: Character
+    character: Character
   }
   type Pagination {
     total: Int
