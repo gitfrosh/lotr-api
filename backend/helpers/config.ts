@@ -50,7 +50,7 @@ export const getOptions = async (req: Request): Promise<PaginateOptions> => {
     return options;
 };
 
-export const createRESTArgumentsFromGraphqlRequest = (context: IGraphQLContext, bodyPayload: any, dataName: DataNames) => {
+export const createRESTArgumentsFromGraphqlRequest = (context: IGraphQLContext, bodyPayload: any, dataName: DataNames, addPaginationData:boolean = true) => {
     const req = {
         ...context.requestInfo.req,
         params: bodyPayload
@@ -62,22 +62,26 @@ export const createRESTArgumentsFromGraphqlRequest = (context: IGraphQLContext, 
         ...context.requestInfo.context.res,
         json: (data: any):{
             [dataName: string]: any,
-            pages: number,
-            page: number,
-            offset: number,
-            limit: number,
-            total: number
+            pages?: number,
+            page?: number,
+            offset?: number,
+            limit?: number,
+            total?: number
         } => {
-            const targetData = isPlural(dataName) ? data.docs : data.docs[0].toObject();
-            const {pages, page, offset, limit, total} = data
-            const returnData = {
+            const targetData = isPlural(dataName) ? data.docs.map((el:any)=>el.toObject()) : data.docs[0] ? data.docs[0].toObject() : []
+            let returnData = {
                 [dataName]: targetData,
-                pages,
-                page,
-                offset,
-                limit,
-                total
             };
+            if(addPaginationData) {
+                returnData = {
+                    ...returnData,
+                    pages: data.pages,
+                    page: data.page,
+                    offset: data.offset,
+                    limit: data.limit,
+                    total: data.total
+                }
+            }
             return returnData
         }
     } as any;

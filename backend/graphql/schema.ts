@@ -4,15 +4,15 @@ const schema = buildSchema(`
    type Query {
     books: BooksResponse
     book(id: ID!, pagination:PaginationInput): BookResponse
-    chaptersByBook(bookId: ID!): ChaptersResponse
+    chaptersByBook(id: ID!): ChaptersResponse
     chapters: ChaptersResponse
-    chapter(id: ID!): ChaptersResponse
+    chapter(id: ID!): ChapterResponse
     movies: MoviesResponse
-    movie(id: ID!): MoviesResponse
-    quoteByMovie(movieId: ID!): QuotesResponse
+    movie(id: ID!): MovieResponse
+    quoteByMovie(id: ID!): QuotesResponse
     characters: CharactersResponse
-    character(id: ID!): CharactersResponse
-    quoteByCharacter(characterId: ID!): QuotesResponse
+    character(id: ID!): CharacterResponse
+    quoteByCharacter(id: ID!): QuotesResponse
     quotes: QuotesResponse
     quote(id: ID!): QuotesResponse
   }
@@ -96,20 +96,19 @@ const schema = buildSchema(`
 
   type Chapter {
     _id: ID
-    title: String
-    content: String
-    Book: Book
+    chapterName: String
+    book: Book
   }
 
   type Movie {
     _id: ID
     name: String
-    runtimeInMinutes: Int
-    budgetInMillions: Int
-    boxOfficeRevenueInMillions: Int
+    runtimeInMinutes: Float
+    budgetInMillions: Float
+    boxOfficeRevenueInMillions: Float
     academyAwardNominations: Int
     academyAwardWins: Int
-    rottenTomatoesScore: Int
+    rottenTomatoesScore: Float
   }
 
   type Character {
@@ -176,9 +175,10 @@ export type Book = {
 }
 export type Chapter = {
     _id: string
-    title: string
-    content: string
-    book: Book | undefined
+    chapterName: string
+}
+export type ChapterWithBookId = Chapter & {
+    book:string
 }
 export type Movie = {
     _id: string
@@ -207,8 +207,8 @@ export type Character = {
 export type Quote = {
     _id: string
     dialog: string
-    movie: Movie
-    Character: Character
+    movie?: Movie
+    character?: Character
 }
 
 

@@ -18,7 +18,7 @@ import authRoutes from './routes/auth';
 import {User} from './helpers/interfaces';
 import {createHandler} from 'graphql-http/lib/use/express';
 import schema from './graphql/schema';
-import root from './graphql/resolvers';
+import root from './graphql/root';
 import jwt from 'jsonwebtoken';
 const app = express();
 const dpwcToken = process.env.DPWC_TOKEN || '';
