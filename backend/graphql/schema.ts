@@ -179,7 +179,7 @@ export type Chapter = {
     chapterName: string
 }
 export type ChapterWithBookId = Chapter & {
-    book:string
+    book: string
 }
 export type Movie = {
     _id: string
@@ -211,10 +211,6 @@ export type Quote = {
     movie?: Movie
     character?: Character
 }
-
-
-
-
 
 export type DataNames =
     'books'

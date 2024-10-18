@@ -19,6 +19,7 @@ import {User} from './helpers/interfaces';
 import {createHandler} from 'graphql-http/lib/use/express';
 import schema from './graphql/schema';
 import root from './graphql/root';
+
 const app = express();
 const dpwcToken = process.env.DPWC_TOKEN || '';
 app.use(helmet());
@@ -101,7 +102,7 @@ app.use((req, res, next) => {
 app.all("/graphql", createHandler({
     schema: schema,
     rootValue: root,
-    context: (req) => ({ requestInfo:req })
+    context: (req) => ({requestInfo: req})
 }))
 app.use('/v2/', apiLimiter);
 app.use('/v2', apiRoutes);

@@ -193,19 +193,23 @@ async function addBooksToChapters(chapters: ChapterWithBookId[] | ChapterWithBoo
     if (!Array.isArray(chapters)) {
         if (chapters.book) {
             const {req, res, next} = createRESTArgumentsFromGraphqlRequest(context, {id: chapters.book}, 'book', false);
-            const book = await bookController.getBook(req, res, next) as {book:Book}  | void;
+            const book = await bookController.getBook(req, res, next) as { book: Book } | void;
             if (book) {
-                return {...chapters, book:book.book};
+                return {...chapters, book: book.book};
             }
         }
         return chapters
     } else {
         const chapterPromises: Promise<Chapter>[] = chapters.map(async (chapter) => {
             if (chapter.book) {
-                const {req, res, next} = createRESTArgumentsFromGraphqlRequest(context, {id: chapter.book}, 'book', false);
-                const book = await bookController.getBook(req, res, next) as {book:Book} | void;
+                const {
+                    req,
+                    res,
+                    next
+                } = createRESTArgumentsFromGraphqlRequest(context, {id: chapter.book}, 'book', false);
+                const book = await bookController.getBook(req, res, next) as { book: Book } | void;
                 if (book) {
-                    return {...chapter, book:book.book};
+                    return {...chapter, book: book.book};
                 }
             }
             return chapter;
@@ -218,20 +222,28 @@ async function addBooksToChapters(chapters: ChapterWithBookId[] | ChapterWithBoo
 async function addMoviesToQuotes(quotes: Quote[] | Quote, context: IGraphQLContext) {
     if (!Array.isArray(quotes)) {
         if (quotes.movie) {
-            const {req, res, next} = createRESTArgumentsFromGraphqlRequest(context, {id: quotes.movie._id}, 'movie', false);
-            const movie = await movieController.getMovie(req, res, next) as {movie:Movie}  | void;
+            const {
+                req,
+                res,
+                next
+            } = createRESTArgumentsFromGraphqlRequest(context, {id: quotes.movie._id}, 'movie', false);
+            const movie = await movieController.getMovie(req, res, next) as { movie: Movie } | void;
             if (movie) {
-                return {...quotes, movie:movie.movie}
+                return {...quotes, movie: movie.movie}
             }
         }
         return quotes
     } else {
         const quotePromises: Promise<Quote>[] = quotes.map(async (quote) => {
             if (quote.movie) {
-                const {req, res, next} = createRESTArgumentsFromGraphqlRequest(context, {id: quote.movie._id}, 'movie', false);
-                const movie = await movieController.getMovie(req, res, next) as {movie:Movie}  | void;
+                const {
+                    req,
+                    res,
+                    next
+                } = createRESTArgumentsFromGraphqlRequest(context, {id: quote.movie._id}, 'movie', false);
+                const movie = await movieController.getMovie(req, res, next) as { movie: Movie } | void;
                 if (movie) {
-                    return {...quote, movie:movie.movie};
+                    return {...quote, movie: movie.movie};
                 }
             }
             return quote;
@@ -248,9 +260,9 @@ async function addCharacterToQuotes(quote: Quote[] | Quote, context: IGraphQLCon
                 res,
                 next
             } = createRESTArgumentsFromGraphqlRequest(context, {id: quote.character._id}, 'character', false);
-            const character = await characterController.getCharacter(req, res, next) as {character: Character } | void;
+            const character = await characterController.getCharacter(req, res, next) as { character: Character } | void;
             if (character) {
-                return {...quote, character:character.character};
+                return {...quote, character: character.character};
             }
         }
         return quote;
@@ -262,9 +274,11 @@ async function addCharacterToQuotes(quote: Quote[] | Quote, context: IGraphQLCon
                     res,
                     next
                 } = createRESTArgumentsFromGraphqlRequest(context, {id: quote.character._id}, 'character', false);
-                const character = await characterController.getCharacter(req, res, next) as {character: Character } | void;
+                const character = await characterController.getCharacter(req, res, next) as {
+                    character: Character
+                } | void;
                 if (character) {
-                    return {...quote, character:character.character};
+                    return {...quote, character: character.character};
                 }
             }
             return quote;
