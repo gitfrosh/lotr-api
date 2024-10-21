@@ -101,7 +101,7 @@ app.use((req, res, next) => {
         next();
     }
 });
-app.all("/graphql", passportHelpers.graphqlAuthenticate, createHandler({
+app.all("/graphql", passportHelpers.graphqlAuthentication, createHandler({
     schema: schema,
     rootValue: root,
     context: (req) => ({requestInfo: req})

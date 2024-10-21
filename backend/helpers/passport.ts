@@ -13,10 +13,11 @@ export const passportHelpers = {
 				}
 		})(req, res, next);
 	},
-	graphqlAuthenticate: (req: Request, res: Response, next:NextFunction) => {
+	graphqlAuthentication: (req: Request, res: Response, next:NextFunction) => {
+		const allowedOperations = ['getBooks', 'book', 'chaptersByBook', 'IntrospectionQuery'];
 		passport.authenticate('bearer', { session: false }, function (err: Error, token: string) {
 			try {
-				if (err || !token) {
+				if (err || !token || !allowedOperations.includes(req.body.operationName)) {
 					return res.status(HttpCode.UNAUTHORIZED).send({
 						success: false,
 						message: 'Unauthorized.'
