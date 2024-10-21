@@ -51,9 +51,15 @@ export const getOptions = async (req: Request): Promise<PaginateOptions> => {
 };
 
 export const createRESTArgumentsFromGraphqlRequest = (context: IGraphQLContext, bodyPayload: any, dataName: DataNames, addPaginationData:boolean = true) => {
+    const { pagination,  ...body} = bodyPayload
     const req = {
         ...context.requestInfo.req,
-        params: bodyPayload
+        query: {
+            ...pagination
+        },
+        params: {
+            ...body
+        }
     } as Request<{params:typeof bodyPayload}, any, any, ParsedQs, Record<string, any>>;
     function isPlural(dataName: DataNames): boolean {
         return dataName.endsWith('s');

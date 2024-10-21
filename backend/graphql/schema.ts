@@ -2,19 +2,19 @@ import {buildSchema} from "graphql/utilities";
 
 const schema = buildSchema(`
    type Query {
-    books: BooksResponse
+    books(pagination:PaginationInput): BooksResponse
     book(id: ID!, pagination:PaginationInput): BookResponse
-    chaptersByBook(id: ID!): ChaptersResponse
-    chapters: ChaptersResponse
-    chapter(id: ID!): ChapterResponse
-    movies: MoviesResponse
-    movie(id: ID!): MovieResponse
-    quoteByMovie(id: ID!): QuotesResponse
-    characters: CharactersResponse
-    character(id: ID!): CharacterResponse
-    quoteByCharacter(id: ID!): QuotesResponse
-    quotes: QuotesResponse
-    quote(id: ID!): QuoteResponse
+    chaptersByBook(id: ID!, pagination:PaginationInput): ChaptersResponse
+    chapters(pagination:PaginationInput): ChaptersResponse
+    chapter(id: ID!, pagination:PaginationInput): ChapterResponse
+    movies(pagination:PaginationInput): MoviesResponse
+    movie(id: ID!, pagination:PaginationInput): MovieResponse
+    quoteByMovie(id: ID!, pagination:PaginationInput): QuotesResponse
+    characters(pagination:PaginationInput): CharactersResponse
+    character(id: ID!, pagination:PaginationInput): CharacterResponse
+    quoteByCharacter(id: ID!, pagination:PaginationInput): QuotesResponse
+    quotes(pagination:PaginationInput): QuotesResponse
+    quote(id: ID!, pagination:PaginationInput): QuoteResponse
   }
     type BooksResponse {
     books: [Book]
@@ -210,6 +210,13 @@ export type Quote = {
     dialog: string
     movie?: Movie
     character?: Character
+}
+
+export type Pagination = {
+    total?: number
+    limit?: number
+    page?: number
+    pages?: number
 }
 
 export type DataNames =

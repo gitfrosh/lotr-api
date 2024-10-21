@@ -12,23 +12,24 @@ import {
     Character,
     Movie,
     Quote,
+    Pagination,
     DataNames, ChapterWithBookId
 } from "./schema";
 import {createRESTArgumentsFromGraphqlRequest} from '../helpers/config'
 
-export async function getBook(body: GraphQLBody<{ id: string }>, context: IGraphQLContext) {
+export async function getBook(body: GraphQLBody<{ id: string, pagination?:Pagination }>, context: IGraphQLContext) {
     const {req, res, next} = createRESTArgumentsFromGraphqlRequest(context, body, 'book');
     const data = await bookController.getBook(req, res, next);
     return data
 }
 
-export async function getBooks(body: GraphQLBody<{}>, context: IGraphQLContext) {
+export async function getBooks(body: GraphQLBody<{ pagination?:Pagination }>, context: IGraphQLContext) {
     const {req, res, next} = createRESTArgumentsFromGraphqlRequest(context, body, 'books');
     const data = await bookController.getBooks(req, res, next)
     return data
 }
 
-export async function getChaptersByBook(body: GraphQLBody<{ id: string }>, context: IGraphQLContext) {
+export async function getChaptersByBook(body: GraphQLBody<{ id: string,  pagination?:Pagination }>, context: IGraphQLContext) {
     const {
         req: ChaptersReq,
         res: ChaptersRes,
@@ -54,7 +55,7 @@ export async function getChaptersByBook(body: GraphQLBody<{ id: string }>, conte
     }
 }
 
-export async function getChapters(body: GraphQLBody<{}>, context: IGraphQLContext) {
+export async function getChapters(body: GraphQLBody<{  pagination?:Pagination }>, context: IGraphQLContext) {
     const {
         req: ChaptersReq,
         res: ChaptersRes,
@@ -74,7 +75,7 @@ export async function getChapters(body: GraphQLBody<{}>, context: IGraphQLContex
     }
 }
 
-export async function getChapter(body: GraphQLBody<{ id: string }>, context: IGraphQLContext) {
+export async function getChapter(body: GraphQLBody<{ id: string,  pagination?:Pagination } & Pagination>, context: IGraphQLContext) {
     const {req, res, next} = createRESTArgumentsFromGraphqlRequest(context, body, 'chapter');
     const chapter = await chapterController.getChapter(req, res, next) as GraphQLResponse<{
         chapter: ChapterWithBookId
@@ -90,19 +91,19 @@ export async function getChapter(body: GraphQLBody<{ id: string }>, context: IGr
     }
 }
 
-export async function getMovie(body: GraphQLBody<{ id: string }>, context: IGraphQLContext) {
+export async function getMovie(body: GraphQLBody<{ id: string,  pagination?:Pagination }>, context: IGraphQLContext) {
     const {req, res, next} = createRESTArgumentsFromGraphqlRequest(context, body, 'movie');
     const data = await movieController.getMovie(req, res, next);
     return data
 }
 
-export async function getMovies(body: GraphQLBody<{}>, context: IGraphQLContext) {
+export async function getMovies(body: GraphQLBody<{  pagination?:Pagination }>, context: IGraphQLContext) {
     const {req, res, next} = createRESTArgumentsFromGraphqlRequest(context, body, 'movies');
     const data = await movieController.getMovies(req, res, next);
     return data
 }
 
-export async function getQuoteByMovie(body: GraphQLBody<{ movieId: string }>, context: IGraphQLContext) {
+export async function getQuoteByMovie(body: GraphQLBody<{ movieId: string,  pagination?:Pagination }>, context: IGraphQLContext) {
     const {
         req: QuotesReq,
         res: QuotesRes,
@@ -123,19 +124,19 @@ export async function getQuoteByMovie(body: GraphQLBody<{ movieId: string }>, co
     }
 }
 
-export async function getCharacter(body: GraphQLBody<{ id: string }>, context: IGraphQLContext) {
+export async function getCharacter(body: GraphQLBody<{ id: string,  pagination?:Pagination }>, context: IGraphQLContext) {
     const {req, res, next} = createRESTArgumentsFromGraphqlRequest(context, body, 'character');
     const data = await characterController.getCharacter(req, res, next);
     return data
 }
 
-export async function getCharacters(body: GraphQLBody<{}>, context: IGraphQLContext) {
+export async function getCharacters(body: GraphQLBody<{  pagination?:Pagination }>, context: IGraphQLContext) {
     const {req, res, next} = createRESTArgumentsFromGraphqlRequest(context, body, 'characters');
     const data = await characterController.getCharacters(req, res, next);
     return data
 }
 
-export async function getQuoteByCharacter(body: GraphQLBody<{ characterId: string }>, context: IGraphQLContext) {
+export async function getQuoteByCharacter(body: GraphQLBody<{ characterId: string,  pagination?:Pagination }>, context: IGraphQLContext) {
     const {
         req: QuotesReq,
         res: QuotesRes,
@@ -156,7 +157,7 @@ export async function getQuoteByCharacter(body: GraphQLBody<{ characterId: strin
     }
 }
 
-export async function getQuote(body: GraphQLBody<{ id: string }>, context: IGraphQLContext) {
+export async function getQuote(body: GraphQLBody<{ id: string,  pagination?:Pagination }>, context: IGraphQLContext) {
     const {req, res, next} = createRESTArgumentsFromGraphqlRequest(context, body, 'quote');
     let quote = await quoteController.getQuote(req, res, next) as GraphQLResponse<{
         quote: Quote
@@ -172,7 +173,7 @@ export async function getQuote(body: GraphQLBody<{ id: string }>, context: IGrap
     }
 }
 
-export async function getQuotes(body: GraphQLBody<{}>, context: IGraphQLContext) {
+export async function getQuotes(body: GraphQLBody<{ pagination?:Pagination }>, context: IGraphQLContext) {
     const {req, res, next} = createRESTArgumentsFromGraphqlRequest(context, body, 'quotes');
     let quotes = await quoteController.getQuotes(req, res, next) as GraphQLResponse<{
         quotes: Quote[]
