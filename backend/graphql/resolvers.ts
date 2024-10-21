@@ -16,6 +16,7 @@ import {
     DataNames, ChapterWithBookId
 } from "./schema";
 import {createRESTArgumentsFromGraphqlRequest} from '../helpers/config'
+import {passportHelpers} from "../helpers/passport";
 
 export async function getBook(body: GraphQLBody<{ id: string, pagination?:Pagination }>, context: IGraphQLContext) {
     const {req, res, next} = createRESTArgumentsFromGraphqlRequest(context, body, 'book');
@@ -25,6 +26,7 @@ export async function getBook(body: GraphQLBody<{ id: string, pagination?:Pagina
 
 export async function getBooks(body: GraphQLBody<{ pagination?:Pagination }>, context: IGraphQLContext) {
     const {req, res, next} = createRESTArgumentsFromGraphqlRequest(context, body, 'books');
+    await passportHelpers.authenticate(req, res, next)
     const data = await bookController.getBooks(req, res, next)
     return data
 }

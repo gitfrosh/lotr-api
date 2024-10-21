@@ -1,3 +1,5 @@
+import {passportHelpers} from "./helpers/passport";
+
 require('dotenv').config();
 import mongoose from 'mongoose';
 import express from 'express';
@@ -99,7 +101,7 @@ app.use((req, res, next) => {
         next();
     }
 });
-app.all("/graphql", createHandler({
+app.all("/graphql", passportHelpers.graphqlAuthenticate, createHandler({
     schema: schema,
     rootValue: root,
     context: (req) => ({requestInfo: req})
