@@ -78,19 +78,51 @@ describe('quote controller', () => {
 	});
 
 	it("/quotes/random should return a random quote", async () => {
-        const fakeQuote = {
-            _id: '5cd96e05de30eff6ebccedfc',
-            dialog: 'Tomatoes, sausages, nice crispy bacon',
-            movie: '5cd95395de30eff6ebccde5c',
-            character: '5cd99d4bde30eff6ebccfc7c',
-            id: '5cd96e05de30eff6ebccedfc'
-        };
-
-        mockingoose(QuoteModel).toReturn(fakeQuote, 'findOne');
-
-        const response = await request(app).get('/v2/quotes/random');
-
-        expect(response.statusCode).toEqual(HttpCode.OK);
-        expect(response.body).toEqual(fakeQuote);
-    });
+		const fakeQuotes = [
+			{
+				_id: '5cd96e05de30eff6ebccedfc',
+				dialog: 'Tomatoes, sausages, nice crispy bacon',
+				movie: '5cd95395de30eff6ebccde5c',
+				character: '5cd99d4bde30eff6ebccfc7c',
+				id: '5cd96e05de30eff6ebccedfc'
+			},
+			{
+				_id: '5cd96e05de30eff6ebcce99c',
+				dialog: 'Sam, no!',
+				movie: '5cd95395de30eff6ebccde5d',
+				character: '5cd99d4bde30eff6ebccfc15',
+				id: '5cd96e05de30eff6ebcce99c'
+			},
+			{
+				_id: "5cd96e05de30eff6ebcce89a",
+				dialog: "DEATH!",
+				movie: "5cd95395de30eff6ebccde5d",
+				character: "5cdbe49b7ed9587226e794a0",
+				id: "5cd96e05de30eff6ebcce89a"
+			},
+			{
+				_id: "5cd96e05de30eff6ebcce8cd",
+				dialog: "You'll see. Oh yes, you will see.",
+				movie: "5cd95395de30eff6ebccde5d",
+				character: "5cd99d4bde30eff6ebccfe9e",
+				id: "5cd96e05de30eff6ebcce8cd"
+			},
+			{
+				_id: "5cd96e05de30eff6ebcced9d",
+				dialog: "What business does an Elf, a Man and a Dwarf have in the Riddermark? Speak quickly!",
+				movie: "5cd95395de30eff6ebccde5b",
+				character: "5cdbdecb6dc0baeae48cfa5a",
+				id: "5cd96e05de30eff6ebcced9d"
+			}
+		];
+	
+		mockingoose(QuoteModel).toReturn(fakeQuotes.length, 'estimatedDocumentCount');
+		mockingoose(QuoteModel).toReturn(fakeQuotes, 'find');
+	
+		const response = await request(app).get('/v2/quotes/random');
+	
+		expect(response.statusCode).toEqual(HttpCode.OK);
+		expect(fakeQuotes).toContainEqual(response.body); 
+	});
+	
 });

@@ -51,9 +51,10 @@ export const quoteController = {
 			}
 	
 			const randomIndex = Math.floor(Math.random() * count);
-			console.log(randomIndex);
-			const quote = await QuoteModel.findOne().skip(randomIndex);
-			
+
+			const quotes = await QuoteModel.find();
+			const quote = quotes[randomIndex];
+	
 			return res.json(quote);
 		} catch (error) {
 			return next(error);
