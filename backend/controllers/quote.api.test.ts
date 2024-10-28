@@ -13,6 +13,7 @@ const router = Router();
 
 router.route('/quote').get(quoteController.getQuotes);
 router.route('/quote/:id').get(quoteController.getQuote);
+router.route('/quotes/random').get(quoteController.getRandomQuote);
 
 app.use(express.json());
 app.use('/v2', router);
@@ -75,4 +76,21 @@ describe('quote controller', () => {
 		expect(response.body.success).toEqual(false);
 		expect(response.body.message).toEqual('Something went wrong.');
 	});
+
+	it("/quotes/random should return a random quote", async () => {
+        const fakeQuote = {
+            _id: '5cd96e05de30eff6ebccedfc',
+            dialog: 'Tomatoes, sausages, nice crispy bacon',
+            movie: '5cd95395de30eff6ebccde5c',
+            character: '5cd99d4bde30eff6ebccfc7c',
+            id: '5cd96e05de30eff6ebccedfc'
+        };
+
+        mockingoose(QuoteModel).toReturn(fakeQuote, 'findOne');
+
+        const response = await request(app).get('/v2/quotes/random');
+
+        expect(response.statusCode).toEqual(HttpCode.OK);
+        expect(response.body).toEqual(fakeQuote);
+    });
 });

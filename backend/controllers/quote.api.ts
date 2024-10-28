@@ -40,5 +40,23 @@ export const quoteController = {
 		} catch (err) {
 			return next(err);
 		}
+	},
+
+	getRandomQuote: async (_req: Request, res: Response, next: NextFunction) => {
+		try {
+			const count = await QuoteModel.estimatedDocumentCount();
+
+			if (count === 0) {
+				return res.status(404).json({ message: "No quotes found" });
+			}
+	
+			const randomIndex = Math.floor(Math.random() * count);
+			console.log(randomIndex);
+			const quote = await QuoteModel.findOne().skip(randomIndex);
+			
+			return res.json(quote);
+		} catch (error) {
+			return next(error);
+		}
 	}
 };
