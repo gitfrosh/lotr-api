@@ -2,6 +2,7 @@ import { Request, Response, NextFunction } from 'express';
 
 import { getOptions } from './../helpers/config';
 import { QuoteModel } from '../models/quote.model';
+import { HttpCode } from '../helpers/constants';
 
 export const quoteController = {
 	getQuotes: async (req: Request, res: Response, next: NextFunction) => {
@@ -39,6 +40,25 @@ export const quoteController = {
 			return res.json(quote);
 		} catch (err) {
 			return next(err);
+		}
+	},
+
+	getRandomQuote: async (_req: Request, res: Response, next: NextFunction) => {
+		try {
+			const count = await QuoteModel.estimatedDocumentCount();
+
+			if (count === 0) {
+				return res.status(HttpCode.NOT_FOUND).json({ message: "No quotes found" });
+			}
+	
+			const randomIndex = Math.floor(Math.random() * count);
+
+			const quotes = await QuoteModel.find();
+			const quote = quotes[randomIndex];
+	
+			return res.json(quote);
+		} catch (error) {
+			return next(error);
 		}
 	}
 };
