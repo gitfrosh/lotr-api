@@ -28,6 +28,7 @@ router.route('/character/:id/quote').get([passportHelpers.authenticate, characte
 
 router.route('/quote').get([passportHelpers.authenticate, quoteController.getQuotes]);
 router.route('/quote/:id').get([passportHelpers.authenticate, quoteController.getQuote]);
+router.route('/quotes/random').get([passportHelpers.authenticate, quoteController.getRandomQuote]);
 router.route('*').get(async (req, res) => {
 	return res.status(HttpCode.NOT_FOUND).send(notFoundResponse);
 });

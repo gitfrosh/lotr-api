@@ -17,7 +17,7 @@ app.use(express.json());
 app.use('/auth', router);
 app.use(errorHandler);
 
-const requestBody = { email: 'email@mail.com', password: 'P@$$1' };
+const requestBody = { email: 'email@mail.com', password: 'Password@$$1' };
 
 describe('auth controller', () => {
 	afterEach(() => {
@@ -47,6 +47,28 @@ describe('auth controller', () => {
 		const response = await request(app)
 			.post('/auth/register/')
 			.send({ ...requestBody, password: '' });
+
+		expect(response.statusCode).toEqual(HttpCode.SERVER_ERROR);
+		expect(response.body.success).toEqual(false);
+		expect(response.body.message).toEqual('Something went wrong.');
+	});
+
+	it('/register/ should return HTTP 500 when password is one character long', async () => {
+		mockingoose(UserModel).toReturn(null, 'findOne');
+		const response = await request(app)
+			.post('/auth/register/')
+			.send({ ...requestBody, password: 'a' });
+
+		expect(response.statusCode).toEqual(HttpCode.SERVER_ERROR);
+		expect(response.body.success).toEqual(false);
+		expect(response.body.message).toEqual('Something went wrong.');
+	});
+
+	it("/register/ should return HTTP 500 when password doesn't have a special char", async () => {
+		mockingoose(UserModel).toReturn(null, 'findOne');
+		const response = await request(app)
+			.post('/auth/register/')
+			.send({ ...requestBody, password: 'Password123' });
 		expect(response.statusCode).toEqual(HttpCode.SERVER_ERROR);
 		expect(response.body.success).toEqual(false);
 		expect(response.body.message).toEqual('Something went wrong.');

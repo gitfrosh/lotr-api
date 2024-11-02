@@ -231,6 +231,11 @@ const Documentation: React.FC = () => {
                 <td data-label="Token required">yes</td>
               </tr>
               <tr>
+                <td data-label="Endpoint">/quotes/random/</td>
+                <td data-label="Response">Request one random movie quote</td>
+                <td data-label="Token required">yes</td>
+              </tr>
+              <tr>
                 <td data-label="Endpoint">
                   <strong>/chapter</strong>
                 </td>
