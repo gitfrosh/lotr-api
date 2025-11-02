@@ -1,6 +1,6 @@
 {
   "name": "lotr-api-backend",
-  "version": "2.1.0",
+  "version": "2.6.0",
   "description": "the Lord of the Rings API backend",
   "scripts": {
     "dev": "nodemon server.ts",
