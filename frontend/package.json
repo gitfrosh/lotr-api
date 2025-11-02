@@ -6,6 +6,9 @@
     "the lord of the rings",
     "api"
   ],
+  "engines": {
+    "node": "22.x"
+  },
   "author": "Rike Exner",
   "license": "MIT",
   "dependencies": {
