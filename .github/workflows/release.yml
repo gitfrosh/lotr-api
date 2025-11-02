@@ -30,7 +30,7 @@ jobs:
     # FRONTEND #
     # Install Packages
     - name: Install Dependencies for Frontend
-      run: npm ci
+      run: npm ci || (npm install --package-lock-only && npm ci)
       working-directory: frontend
 
     # Include whenver tests are added
