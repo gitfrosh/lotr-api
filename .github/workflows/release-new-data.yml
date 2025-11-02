@@ -57,10 +57,16 @@ jobs:
           name: json-files
           path: db/json/
 
-      - name: Install MongoDB Tools
+      - name: Install MongoDB Database Tools (Ubuntu 24.04)
         run: |
-          wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
-          echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu $(lsb_release -sc)/mongodb-org/5.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
+          # Add MongoDB 8.0 key to keyring (apt-key is deprecated)
+          curl -fsSL https://www.mongodb.org/static/pgp/server-8.0.asc \
+            | sudo gpg --dearmor -o /usr/share/keyrings/mongodb-server-8.0.gpg
+
+          # Add the Ubuntu 24.04 (noble) repo for mongodb-org 8.0
+          echo "deb [arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-8.0.gpg] https://repo.mongodb.org/apt/ubuntu noble/mongodb-org/8.0 multiverse" \
+            | sudo tee /etc/apt/sources.list.d/mongodb-org-8.0.list
+
           sudo apt-get update
           sudo apt-get install -y mongodb-database-tools
 
