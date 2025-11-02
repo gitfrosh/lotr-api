@@ -1,4 +1,4 @@
-import {buildSchema} from "graphql/utilities";
+import { buildSchema } from 'graphql/utilities';
 
 const schema = buildSchema(`
    type Query {
@@ -146,89 +146,88 @@ const schema = buildSchema(`
   }
 `);
 
-
 export default schema;
 
 export interface IGraphQLContext {
-    requestInfo: {
-        req: Express.Request;
-        context: {
-            res: Express.Response;
-        }
-    }
+	requestInfo: {
+		req: Express.Request;
+		context: {
+			res: Express.Response;
+		};
+	};
 }
 
 export type GraphQLBody<T> = T & {
-    sort?: string
-    limit?: string
-    page?: string
-    offset?: string
-}
+	sort?: string;
+	limit?: string;
+	page?: string;
+	offset?: string;
+};
 export type GraphQLResponse<T> = T & {
-    total: number
-    limit: number
-    page: number
-    pages: number
-}
+	total: number;
+	limit: number;
+	page: number;
+	pages: number;
+};
 export type Book = {
-    _id: string
-    name: string
-}
+	_id: string;
+	name: string;
+};
 export type Chapter = {
-    _id: string
-    chapterName: string
-}
+	_id: string;
+	chapterName: string;
+};
 export type ChapterWithBookId = Chapter & {
-    book: string
-}
+	book: string;
+};
 export type Movie = {
-    _id: string
-    name: string
-    runtimeInMinutes: number
-    budgetInMillions: number
-    boxOfficeRevenueInMillions: number
-    academyAwardNominations: number
-    academyAwardWins: number
-    rottenTomatoesScore: number
-}
+	_id: string;
+	name: string;
+	runtimeInMinutes: number;
+	budgetInMillions: number;
+	boxOfficeRevenueInMillions: number;
+	academyAwardNominations: number;
+	academyAwardWins: number;
+	rottenTomatoesScore: number;
+};
 export type Character = {
-    _id: string
-    height: string
-    race: string
-    gender: string
-    birth: string
-    spouse: string
-    death: string
-    realm: string
-    hair: string
-    name: string
-    wikiUrl: string
-}
+	_id: string;
+	height: string;
+	race: string;
+	gender: string;
+	birth: string;
+	spouse: string;
+	death: string;
+	realm: string;
+	hair: string;
+	name: string;
+	wikiUrl: string;
+};
 
 export type Quote = {
-    _id: string
-    dialog: string
-    movie?: Movie
-    character?: Character
-}
+	_id: string;
+	dialog: string;
+	movie?: Movie;
+	character?: Character;
+};
 
 export type Pagination = {
-    total?: number
-    limit?: number
-    page?: number
-    pages?: number
-}
+	total?: number;
+	limit?: number;
+	page?: number;
+	pages?: number;
+};
 
 export type DataNames =
-    'books'
-    | 'book'
-    | 'chapters'
-    | 'chapter'
-    | 'movies'
-    | 'movie'
-    | 'quoteByMovie'
-    | 'characters'
-    | 'character'
-    | 'quoteByCharacter'
-    | 'quotes'
-    | 'quote'
+	| 'books'
+	| 'book'
+	| 'chapters'
+	| 'chapter'
+	| 'movies'
+	| 'movie'
+	| 'quoteByMovie'
+	| 'characters'
+	| 'character'
+	| 'quoteByCharacter'
+	| 'quotes'
+	| 'quote';
