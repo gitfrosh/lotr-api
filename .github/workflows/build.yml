@@ -43,7 +43,7 @@ jobs:
     # Install Packages
     - name: Install Dependencies for Frontend
       working-directory: ./frontend
-      run: npm ci
+      run: npm ci || (npm install --package-lock-only && npm ci)
 
     # Run Jest tests
     - name: Run Tests
