@@ -1,5 +1,6 @@
-require('dotenv').config();
+import { passportHelpers } from './helpers/passport';
 
+require('dotenv').config();
 import mongoose from 'mongoose';
 import express from 'express';
 import bcrypt from 'bcrypt';
@@ -13,15 +14,16 @@ import { apiLimiter } from './middleware/api.limiter';
 import { UserModel } from './models/user.model';
 import { Strategy as LocalStrategy } from 'passport-local';
 import { Strategy as BearerStrategy } from 'passport-http-bearer';
-
 import { HttpCode } from './helpers/constants';
 import apiRoutes from './routes/api';
 import authRoutes from './routes/auth';
 import { User } from './helpers/interfaces';
+import { createHandler } from 'graphql-http/lib/use/express';
+import schema from './graphql/schema';
+import root from './graphql/root';
 
 const app = express();
 const dpwcToken = process.env.DPWC_TOKEN || '';
-
 app.use(helmet());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -85,8 +87,8 @@ passport.use(
 
 app.use((req, res, next) => {
 	const path = req.path;
-	if (path.startsWith('/v2') || path.startsWith('/auth')) {
-		const connected = mongoose.connection.readyState === 1 ? true : false;
+	if (path.startsWith('/v2') || path.startsWith('/auth') || path.startsWith('/graphql')) {
+		const connected = mongoose.connection.readyState === 1;
 		if (connected) {
 			next();
 		} else {
@@ -99,7 +101,15 @@ app.use((req, res, next) => {
 		next();
 	}
 });
-
+app.all(
+	'/graphql',
+	passportHelpers.graphqlAuthentication,
+	createHandler({
+		schema: schema,
+		rootValue: root,
+		context: (req) => ({ requestInfo: req })
+	})
+);
 app.use('/v2/', apiLimiter);
 app.use('/v2', apiRoutes);
 app.use('/auth', authRoutes);

@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { authController } from '../controllers/auth';
-import { passportHelpers } from './../helpers/passport';
+import { passportHelpers } from '../helpers/passport';
 import authLimiter from '../middleware/auth.limiter';
 import { HttpCode, notFoundResponse } from '../helpers/constants';
 

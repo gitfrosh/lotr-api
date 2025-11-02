@@ -24,6 +24,8 @@
     "dotenv": "^8.6.0",
     "express": "^4.21.2",
     "express-rate-limit": "^5.5.1",
+    "graphql": "^16.9.0",
+    "graphql-http": "^1.22.1",
     "helmet": "^4.6.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^5.13.23",

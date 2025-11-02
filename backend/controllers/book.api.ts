@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 
 import mongoose from 'mongoose';
-import { getOptions } from './../helpers/config';
+import { getOptions } from '../helpers/config';
 import { BookModel } from '../models/book.model';
 import { ChapterModel } from '../models/chapter.model';
 
@@ -18,7 +18,6 @@ export const bookController = {
 
 	getBook: async (req: Request, res: Response, next: NextFunction) => {
 		const options = await getOptions(req);
-
 		try {
 			const id = req.params.id;
 			const book = await BookModel.paginate({ _id: id }, options);

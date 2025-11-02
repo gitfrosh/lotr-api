@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 
-import { getOptions } from './../helpers/config';
+import { getOptions } from '../helpers/config';
 import { ChapterModel } from '../models/chapter.model';
 
 export const chapterController = {
