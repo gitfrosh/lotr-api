@@ -5,8 +5,11 @@ const Footer: React.FC = () => {
     <footer>
       <p className="hr-like">
         <br />
-        All we have to decide is what to do with the time that is given to us.{" "}
-        <b>Built with &hearts; 2019-{new Date().getFullYear()}</b> <br />
+        v.2.6.0 | All we have to decide is what to do with the time that is
+        given to us. <b>
+          Built with &hearts; 2019-{new Date().getFullYear()}
+        </b>{" "}
+        <br />
       </p>
     </footer>
   );

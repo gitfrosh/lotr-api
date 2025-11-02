@@ -2,6 +2,7 @@ db/bk
 db/bson/user.bson
 db/bson/user.metadata.json
 db/init-prod.js
+db/db
 db/bson-for-azure
 sample-app/node_modules
 docker-compose.yml
@@ -11,3 +12,5 @@ dump
 bk
 backend/dist
 docker/db
+docker/backend
+docker/frontend

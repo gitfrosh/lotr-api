@@ -1,13 +1,15 @@
 import { Router } from 'express';;
 
-import { notFoundResponse, HttpCode } from '../helpers/constants';
 import { bookController } from '../controllers/book.api';
 import { chapterController } from '../controllers/chapter.api';
 import { movieController } from '../controllers/movie.api';
 import { characterController } from '../controllers/character.api';
 import { quoteController } from '../controllers/quote.api';
+
 import { errorHandler } from '../middleware/api.errors';
+
 import { passportHelpers } from '../helpers/passport';
+import { pluralEndpointHandler } from '../helpers/plural.endpoint.handler';
 
 const router = Router();
 
@@ -28,8 +30,10 @@ router.route('/character/:id/quote').get([passportHelpers.authenticate, characte
 
 router.route('/quote').get([passportHelpers.authenticate, quoteController.getQuotes]);
 router.route('/quote/:id').get([passportHelpers.authenticate, quoteController.getQuote]);
-router.route('*').get(async (req, res) => {
-	return res.status(HttpCode.NOT_FOUND).send(notFoundResponse);
+router.route('/quotes/random').get([passportHelpers.authenticate, quoteController.getRandomQuote]);
+
+router.route('*').get((req, res) => {
+	return pluralEndpointHandler(req, res);
 });
 // global error handler. This should always be the last .use
 // and after all routes

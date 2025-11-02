@@ -45,11 +45,10 @@ jobs:
       working-directory: ./frontend
       run: npm ci
 
-    # Run react-scripts tests
-    # Note: There are currently no tests
-    # - name: Install Dependencies
-    #   working-directory: ./frontend
-    #   run: npm run test
+    # Run Jest tests
+    - name: Run Tests
+      working-directory: ./frontend
+      run: npm run test
 
     # SAMPLE-APP #
       # Install Packages

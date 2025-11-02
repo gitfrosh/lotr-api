@@ -26,15 +26,3 @@ RUN getent passwd $USER_ID || adduser --disabled-password --gecos '' --uid $USER
 USER user
 
 ENTRYPOINT [ "bash" ]
-
-
-
-################
-### DATABASE ###
-################
-
-FROM mongo:7.0-jammy as lotr_mongo
-
-COPY ./db/bson /data/init
-
-RUN echo "mongorestore --archive='/data/init'" > /docker-entrypoint-initdb.d/init.sh

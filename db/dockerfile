@@ -1,0 +1,7 @@
+FROM mongo:7.0-jammy as lotr_mongo
+
+COPY ./bson/* /db/data/init/
+
+EXPOSE 27017
+
+RUN echo "mongorestore -d lotr db/data/init" > /docker-entrypoint-initdb.d/init.sh
