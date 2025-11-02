@@ -74,7 +74,7 @@ jobs:
       working-directory: ./backend
 
     - name: Upload artifact for deployment job
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: node-app
         path: backend/release.zip
