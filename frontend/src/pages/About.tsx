@@ -268,6 +268,16 @@ const About: React.FC = () => {
                 Github
               </a>
             </li>
+            <li>
+              Pedro did some experiments with FastAPI and the LotR API |{" "}
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://github.com/terrotar/LOTRAPI"
+              >
+                Github
+              </a>
+            </li>
           </ul>
         </div>
       </div>
