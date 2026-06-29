@@ -334,7 +334,7 @@ const Documentation: React.FC = () => {
               </tr>
               <tr>
                 <td>
-                  <strong>exists, doesn't exists</strong>
+                  <strong>exists, doesn't exist</strong>
                 </td>
                 <td>/character?name</td>
                 <td>/character?!name</td>
